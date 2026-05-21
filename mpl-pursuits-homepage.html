@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MPL Pursuits — Train With Purpose. Compete With Confidence.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink:    #1e0a2e;
+    --ivory:  #fdf8ff;
+    --warm:   #f5eeff;
+    --border: #ddd0f0;
+    --muted:  #7a6890;
+    --hint:   #a898bc;
+    --gold:   #e8620a;
+    --gold-dk:#c85208;
+    --serif:  'Cormorant Garamond', Georgia, serif;
+    --sans:   'DM Sans', system-ui, sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--ivory); color: var(--ink); }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: var(--ivory); border-bottom: 0.5px solid var(--border);
+    padding: 0 3rem; height: 72px;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    font-family: var(--serif); font-size: 22px; font-weight: 500;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--ink);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+  .nav-links a {
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--muted); text-decoration: none; font-weight: 500;
+    transition: color .2s;
+  }
+  .nav-links a:hover { color: var(--ink); }
+  .nav-cta {
+    background: none; border: 0.5px solid var(--ink); padding: 9px 22px;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    cursor: pointer; font-family: var(--sans); color: var(--ink);
+    transition: all .2s; text-decoration: none;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--ivory); }
+  .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: var(--ink); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 6rem 3rem 5rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    align-items: center; border-bottom: 0.5px solid var(--border);
+    max-width: 1200px; margin: 0 auto;
+  }
+  .hero-eyebrow {
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--hint); margin-bottom: 1.75rem;
+  }
+  .hero h1 {
+    font-family: var(--serif); font-size: 64px; font-weight: 300;
+    line-height: 1.05; color: var(--ink); letter-spacing: -.5px;
+  }
+  .hero h1 em { font-style: italic; color: #7c3aed; }
+  .hero-sub {
+    font-size: 14px; color: var(--muted); line-height: 1.85;
+    margin-top: 1.5rem; max-width: 380px;
+  }
+  .hero-btns { display: flex; gap: 14px; margin-top: 2.25rem; flex-wrap: wrap; }
+  .btn-dark {
+    background: var(--ink); color: var(--ivory); padding: 13px 30px;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    border: none; cursor: pointer; font-family: var(--sans);
+    transition: background .2s; text-decoration: none; display: inline-block;
+  }
+  .btn-dark:hover { background: #333; }
+  .btn-outline {
+    background: none; color: var(--ink); padding: 13px 30px;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    border: 0.5px solid var(--ink); cursor: pointer; font-family: var(--sans);
+    text-decoration: none; display: inline-block; transition: all .2s;
+  }
+  .btn-outline:hover { background: var(--ink); color: var(--ivory); }
+  .hero-stats { border: 0.5px solid var(--border); }
+  .stat-block { padding: 1.75rem; border-bottom: 0.5px solid var(--border); }
+  .stat-block:last-child { border-bottom: none; }
+  .stat-num {
+    font-family: var(--serif); font-size: 48px; font-weight: 300; color: var(--ink);
+  }
+  .stat-lbl {
+    font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+    color: var(--hint); margin-top: 4px;
+  }
+
+  /* ── SHARED SECTION STYLES ── */
+  section { border-bottom: 0.5px solid var(--border); }
+  .inner { max-width: 1200px; margin: 0 auto; padding: 5rem 3rem; }
+  .section-eyebrow {
+    font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
+    color: var(--hint); margin-bottom: 1.5rem;
+  }
+  .serif-heading {
+    font-family: var(--serif); font-weight: 300; line-height: 1.12; color: var(--ink);
+  }
+  .serif-heading em { font-style: italic; color: #7c3aed; }
+  .body-copy { font-size: 13px; color: var(--muted); line-height: 1.85; }
+
+  /* ── MISSION ── */
+  .mission-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+  }
+  .mission-heading { font-size: 44px; }
+  .mission-right p + p { margin-top: 1rem; }
+
+  /* ── PROVIDES ── */
+  .provides-header {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;
+    align-items: end; margin-bottom: 3rem;
+  }
+  .provides-heading { font-size: 44px; }
+  .provides-grid {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 0; background: var(--border);
+  }
+  .pillar {
+    background: var(--ivory); padding: 2.5rem 2rem;
+  }
+  .pillar h3 {
+    font-family: var(--serif); font-size: 24px; font-weight: 400;
+    color: var(--ink); margin-bottom: 1.25rem;
+  }
+  .pillar ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .pillar ul li {
+    font-size: 13px; color: var(--muted); line-height: 1.65;
+    padding-left: 18px; position: relative;
+  }
+  .pillar ul li::before {
+    content: '—'; position: absolute; left: 0;
+    color: var(--gold); font-size: 11px; top: 1px;
+  }
+  .pillar-body { font-size: 13px; color: var(--muted); line-height: 1.85; }
+
+  /* ── ADVANCED ── */
+  .advanced { background: #1e0a2e; border-bottom: 0.5px solid #2e1a3e; }
+  .advanced .inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+  }
+  .advanced .section-eyebrow { color: #6a4a7a; }
+  .advanced-heading { font-size: 44px; color: #fdf8ff !important; }
+  .advanced-heading em { color: #e8620a !important; }
+  .advanced .body-copy { color: #8a6a9a; margin-top: 1rem; }
+  .advanced-items { display: flex; flex-direction: column; gap: 14px; margin-top: 2rem; }
+  .advanced-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 13px; color: #b090c0; line-height: 1.65;
+  }
+  .advanced-item i { font-size: 18px; color: #e8620a; margin-top: 1px; flex-shrink: 0; }
+
+  /* ── TESTIMONIALS ── */
+  .tgrid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem; margin-top: 2.5rem;
+  }
+  .testimonial { border-top: 0.5px solid var(--border); padding-top: 1.75rem; }
+  blockquote {
+    font-family: var(--serif); font-size: 18px; font-weight: 400;
+    color: var(--ink); line-height: 1.65; font-style: italic;
+  }
+  cite {
+    font-style: normal; font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--hint); display: block; margin-top: 1.25rem;
+  }
+
+  /* ── BOOKING ── */
+  .booking-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+  }
+  .booking-heading { font-size: 44px; }
+  .booking-sub { margin-top: 1rem; }
+  .booking-form { display: flex; flex-direction: column; gap: 14px; }
+  .form-input {
+    background: none; border: none; border-bottom: 0.5px solid var(--border);
+    padding: 12px 0; font-size: 14px; color: var(--ink);
+    font-family: var(--sans); outline: none; transition: border .2s; width: 100%;
+  }
+  .form-input::placeholder { color: #ccc; }
+  .form-input:focus { border-bottom-color: var(--gold); }
+  .btn-gold {
+    background: var(--gold); color: var(--ink); padding: 14px 30px;
+    font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+    border: none; cursor: pointer; font-family: var(--sans); font-weight: 500;
+    margin-top: 8px; transition: background .2s; align-self: flex-start;
+  }
+  .btn-gold:hover { background: var(--gold-dk); }
+  .form-note { font-size: 11px; color: var(--hint); margin-top: 4px; }
+
+  /* ── FOOTER ── */
+  footer { background: #130620; border-top: none; }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto; padding: 4rem 3rem 2rem;
+    display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem;
+  }
+  .footer-brand {
+    font-family: var(--serif); font-size: 24px; font-weight: 400;
+    letter-spacing: 3px; text-transform: uppercase; color: var(--ivory);
+    display: block; margin-bottom: 10px;
+  }
+  .footer-tagline { font-size: 12px; color: #4a2a5a; line-height: 1.75; }
+  .footer-col h4 {
+    font-size: 9px; letter-spacing: 3px; text-transform: uppercase;
+    color: #3a1a4a; margin-bottom: 14px;
+  }
+  .footer-col a {
+    display: block; font-size: 13px; color: #5a3a6a;
+    text-decoration: none; margin-bottom: 8px; transition: color .2s;
+  }
+  .footer-col a:hover { color: #fdf8ff; }
+  .footer-copy {
+    max-width: 1200px; margin: 0 auto;
+    padding: 1.25rem 3rem; border-top: 0.5px solid #1e0a2e;
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .footer-copy p { font-size: 11px; color: #2e1a3e; }
+
+  /* ── MOBILE ── */
+  @media (max-width: 768px) {
+    nav { padding: 0 1.5rem; }
+    .nav-links, .nav-cta { display: none; }
+    .nav-mobile-toggle { display: block; }
+    .nav-links.open {
+      display: flex; flex-direction: column; gap: 0;
+      position: absolute; top: 72px; left: 0; right: 0;
+      background: var(--ivory); border-bottom: 0.5px solid var(--border);
+      padding: 1rem 1.5rem;
+    }
+    .nav-links.open li a { padding: 10px 0; display: block; }
+    .hero, .mission-grid, .provides-header, .advanced .inner,
+    .booking-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero { padding: 3rem 1.5rem 3rem; }
+    .hero h1 { font-size: 44px; }
+    .provides-grid { grid-template-columns: 1fr; }
+    .tgrid { grid-template-columns: 1fr; gap: 2rem; }
+    .inner { padding: 3rem 1.5rem; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 2rem; padding: 3rem 1.5rem 1.5rem; }
+    .footer-copy { padding: 1rem 1.5rem; flex-direction: column; gap: 4px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">MPL Pursuits</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="college-route.html">College Route</a></li>
+    <li><a href="shop.html">Shop</a></li>
+  </ul>
+  <a href="#booking" class="nav-cta">Book a Session</a>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+    <i class="ti ti-menu-2"></i>
+  </button>
+</nav>
+
+<!-- HERO -->
+<div style="border-bottom: 0.5px solid var(--border);">
+  <div class="hero">
+    <div>
+      <div class="hero-eyebrow">Elite Athlete Development</div>
+      <h1>Train with purpose.<br>Compete with <em>confidence.</em><br>Build your path.</h1>
+      <p class="hero-sub">At MPL Pursuits, we help athletes reach their highest potential — in performance, competition, development, and long-term success. While rooted in tennis, our approach extends beyond the sport.</p>
+      <div class="hero-btns">
+        <a href="#booking" class="btn-dark">Book a Session</a>
+        <a href="#programs" class="btn-outline">View Programs</a>
+      </div>
+    </div>
+    <div class="hero-stats">
+      <div class="stat-block">
+        <div class="stat-num">4.9</div>
+        <div class="stat-lbl">Average Rating</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">12+</div>
+        <div class="stat-lbl">College Placements</div>
+      </div>
+      <div class="stat-block">
+        <div class="stat-num">10+</div>
+        <div class="stat-lbl">Years of Coaching</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MISSION -->
+<section>
+  <div class="inner">
+    <div class="mission-grid">
+      <div>
+        <div class="section-eyebrow">Our Mission</div>
+        <h2 class="serif-heading mission-heading">When athletes have a <em>clear plan,</em> real progress begins.</h2>
+      </div>
+      <div>
+        <p class="body-copy">Our mission is simple: to give athletes and families the clarity, tools, and direction needed to navigate training, competition, and the journey toward college athletics.</p>
+        <p class="body-copy" style="margin-top: 1.25rem;">While rooted in tennis, our approach extends beyond the sport — providing structure, guidance, and education for athletes pursuing growth at every level.</p>
+        <p class="body-copy" style="margin-top: 1.25rem;">We believe that when athletes are aligned with a clear plan, real progress begins.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE PROVIDE -->
+<section id="programs">
+  <div class="inner">
+    <div class="provides-header">
+      <div>
+        <div class="section-eyebrow">What We Provide</div>
+        <h2 class="serif-heading provides-heading">Built for <em>every level</em> of the game.</h2>
+      </div>
+      <p class="body-copy">We combine personalized coaching, structured development, and strategic guidance to help athletes improve efficiently and consistently.</p>
+    </div>
+    <div class="provides-grid">
+      <div class="pillar">
+        <h3>Athlete Development</h3>
+        <ul>
+          <li>Technical skill development and refinement</li>
+          <li>Footwork and movement efficiency and conditioning</li>
+          <li>Match strategy and tactical awareness</li>
+          <li>Mental performance training and resilience</li>
+          <li>Nutrition guidance and recovery strategies</li>
+        </ul>
+      </div>
+      <div class="pillar">
+        <h3>Virtual Coaching &amp; Video Analysis</h3>
+        <p class="pillar-body">Through virtual coaching and detailed video analysis, athletes receive personalized feedback designed to accelerate improvement and build confidence in their game — from wherever they are in the world.</p>
+        <p class="pillar-body" style="margin-top: 1rem;">Every session is tailored to the athlete's specific needs, goals, and current level of play.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVANCED SUPPORT -->
+<section class="advanced">
+  <div class="inner">
+    <div>
+      <div class="section-eyebrow">Advanced Support</div>
+      <h2 class="serif-heading advanced-heading">A system built for <em>serious competitors.</em></h2>
+      <p class="body-copy">For athletes aiming to compete at higher levels, MPL Pursuits offers a more comprehensive system built around performance and progression. Athletes are not just training — they are developing a system that supports long-term success.</p>
+    </div>
+    <div class="advanced-items">
+      <div class="advanced-item">
+        <i class="ti ti-layout-list" aria-hidden="true"></i>
+        <span>Structured practice planning</span>
+      </div>
+      <div class="advanced-item">
+        <i class="ti ti-target" aria-hidden="true"></i>
+        <span>Pre-match preparation strategies</span>
+      </div>
+      <div class="advanced-item">
+        <i class="ti ti-chart-bar" aria-hidden="true"></i>
+        <span>Post-match analysis and feedback</span>
+      </div>
+      <div class="advanced-item">
+        <i class="ti ti-heartbeat" aria-hidden="true"></i>
+        <span>Injury prevention and recovery guidance</span>
+      </div>
+      <div class="advanced-item">
+        <i class="ti ti-brain" aria-hidden="true"></i>
+        <span>Mental conditioning rooted in sports psychology</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section>
+  <div class="inner">
+    <div class="section-eyebrow">Real Athletes. Real Results.</div>
+    <div class="tgrid">
+      <div class="testimonial">
+        <blockquote>"The college recruiting guidance from MPL Pursuits completely changed my trajectory. I went from overwhelmed to having a clear understanding of the whole process."</blockquote>
+        <cite>— Sarah F.</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>"The video analysis sessions fixed my serve that I'd been struggling with for years. My win rate has doubled since working on my mental game."</blockquote>
+        <cite>— Marcus T.</cite>
+      </div>
+      <div class="testimonial">
+        <blockquote>"The digital playbooks gave me so much confidence in my game and concrete steps to keep growing."</blockquote>
+        <cite>— Elena R.</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+  <div class="inner">
+    <div class="booking-grid">
+      <div>
+        <div class="section-eyebrow">Schedule a Session</div>
+        <h2 class="serif-heading booking-heading">Reserve your <em>session.</em></h2>
+        <p class="body-copy booking-sub">Unleash your potential with one-on-one in-person tennis lessons. Check availability and choose the date and time that works for you.</p>
+        <p class="body-copy" style="margin-top: 1rem;">We'll follow up within 24 hours to confirm your booking and answer any questions.</p>
+      </div>
+      <div>
+        <form class="booking-form" onsubmit="handleSubmit(event)">
+          <input class="form-input" type="text" placeholder="First &amp; last name" required />
+          <input class="form-input" type="email" placeholder="Email address" required />
+          <input class="form-input" type="tel" placeholder="Phone number" />
+          <select class="form-input" required style="cursor:pointer">
+            <option value="">Select a service</option>
+            <option>Tennis Lesson — 60 min</option>
+            <option>Tennis Lesson — 90 min</option>
+            <option>College Guidance Session</option>
+            <option>Video Stroke Analysis</option>
+            <option>Mental Performance Coaching</option>
+          </select>
+          <textarea class="form-input" rows="3" placeholder="Goals or notes for your coach (optional)" style="resize: vertical;"></textarea>
+          <button type="submit" class="btn-gold">Request Booking</button>
+          <p class="form-note">We'll be in touch within 24 hours to confirm.</p>
+        </form>
+        <div id="successMsg" style="display:none; margin-top: 1.5rem; padding: 1.5rem; border: 0.5px solid #e8620a; background: #fff5f0;">
+          <p style="font-family: var(--serif); font-size: 20px; color: var(--ink);">Booking request received.</p>
+          <p style="font-size: 13px; color: var(--muted); margin-top: 6px;">We'll confirm your session within 24 hours. See you on the court.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <span class="footer-brand">MPL Pursuits</span>
+      <p class="footer-tagline">Premium coaching for athletes.<br>Train smarter. Compete harder.<br>Find your college with confidence.<br><br>© 2025 MPL Pursuits LLC.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <a href="#">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="coaching.html">Coaching</a>
+      <a href="college-route.html">College Route</a>
+      <a href="shop.html">Shop</a>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <a href="#">Contact Us</a>
+      <a href="#">FAQ</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms of Service</a>
+    </div>
+    <div class="footer-col">
+      <h4>Follow</h4>
+      <a href="https://www.instagram.com/mary__profit/" target="_blank" rel="noopener">Instagram @mary__profit</a>
+      <a href="https://www.tiktok.com/@mary.profit" target="_blank" rel="noopener">TikTok @mary.profit</a>
+    </div>
+  </div>
+  <div class="footer-copy">
+    <p>© 2025 by MPL Pursuits LLC. All rights reserved.</p>
+    <p style="font-size:11px; color:#333;">Built for athletes who want more.</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('mobileToggle').addEventListener('click', function() {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    e.target.style.display = 'none';
+    document.getElementById('successMsg').style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
