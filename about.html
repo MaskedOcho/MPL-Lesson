@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About Us — MPL Pursuits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#1e0a2e;--ivory:#fdf8ff;--warm:#f5eeff;--border:#ddd0f0;--muted:#7a6890;--hint:#a898bc;--orange:#e8620a;--orange-dk:#c85208;--purple:#7c3aed;--purple-dk:#5b21b6;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
+  html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--ivory);color:var(--ink)}
+  nav{position:sticky;top:0;z-index:100;background:var(--ivory);border-bottom:0.5px solid var(--border);padding:0 3rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+  .nav-logo{font-family:var(--serif);font-size:22px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:var(--ink);text-decoration:none}
+  .nav-links{display:flex;gap:2.5rem;list-style:none}
+  .nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);text-decoration:none;font-weight:500;transition:color .2s}
+  .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+  .nav-cta{background:none;border:0.5px solid var(--ink);padding:9px 22px;font-size:11px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:var(--ink);transition:all .2s;text-decoration:none;display:inline-block}
+  .nav-cta:hover{background:var(--ink);color:var(--ivory)}
+  .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:var(--ink)}
+  .inner{max-width:1200px;margin:0 auto;padding:5rem 3rem}
+  .eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--hint);margin-bottom:1.5rem}
+  .serif-h{font-family:var(--serif);font-weight:300;line-height:1.1;color:var(--ink)}
+  .serif-h em{font-style:italic;color:var(--purple)}
+  .body-copy{font-size:13px;color:var(--muted);line-height:1.85}
+  .btn-dark{background:var(--ink);color:var(--ivory);padding:13px 30px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s;text-decoration:none;display:inline-block}
+  .btn-dark:hover{background:var(--purple-dk)}
+  .btn-orange{background:var(--orange);color:#fff;padding:13px 30px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;transition:background .2s;text-decoration:none;display:inline-block}
+  .btn-orange:hover{background:var(--orange-dk)}
+  section{border-bottom:0.5px solid var(--border)}
+
+  /* HERO */
+  .page-hero{background:var(--ink);padding:6rem 3rem 5rem}
+  .page-hero-inner{max-width:1200px;margin:0 auto}
+  .page-hero h1{font-family:var(--serif);font-size:64px;font-weight:300;line-height:1.05;color:var(--ivory)}
+  .page-hero h1 em{font-style:italic;color:var(--orange)}
+  .page-hero-sub{font-size:15px;color:var(--hint);line-height:1.8;margin-top:1.5rem;max-width:600px}
+  .page-hero-btns{display:flex;gap:14px;margin-top:2.5rem;flex-wrap:wrap}
+  .btn-ivory{background:var(--ivory);color:var(--ink);padding:13px 30px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block;transition:background .2s}
+  .btn-ivory:hover{background:#e8e0f8}
+  .btn-ivory-ol{background:none;color:var(--ivory);padding:13px 30px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:0.5px solid var(--hint);cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block}
+
+  /* STATS BAR */
+  .stats-bar{background:var(--orange);padding:2rem 3rem}
+  .stats-bar-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center}
+  .sbar-num{font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;line-height:1}
+  .sbar-lbl{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.75);margin-top:6px}
+
+  /* WHO WE ARE */
+  .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .who-h{font-size:48px}
+  .who-right p+p{margin-top:1.25rem}
+
+  /* SERVICES */
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);margin-top:2.5rem}
+  .service-card{background:var(--ivory);padding:2.5rem 2rem}
+  .service-icon{font-size:24px;color:var(--orange);margin-bottom:1rem}
+  .service-title{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);margin-bottom:8px}
+
+  /* PHILOSOPHY */
+  .phil-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border)}
+  .phil-card{background:var(--warm);padding:2.5rem 2rem}
+  .phil-num{font-family:var(--serif);font-size:48px;font-weight:300;color:var(--border);line-height:1}
+  .phil-title{font-family:var(--serif);font-size:22px;font-weight:400;color:var(--ink);margin:10px 0 10px}
+
+  /* QUOTE BANNER */
+  .quote-banner{background:var(--purple);padding:5rem 3rem;text-align:center}
+  .quote-banner blockquote{font-family:var(--serif);font-size:36px;font-weight:300;font-style:italic;color:#fff;max-width:800px;margin:0 auto;line-height:1.3}
+
+  /* TEAM */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;margin-top:3rem}
+  .coach-card{display:flex;flex-direction:column}
+  .coach-img{width:100%;aspect-ratio:3/4;object-fit:cover;background:var(--border)}
+  .coach-img-placeholder{width:100%;aspect-ratio:3/4;background:linear-gradient(135deg,var(--warm),var(--border));display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:64px;color:var(--hint)}
+  .coach-tags{display:flex;flex-wrap:wrap;gap:6px;margin:1rem 0 .75rem}
+  .coach-tag{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--orange);border:0.5px solid var(--orange);padding:3px 8px}
+  .coach-name{font-family:var(--serif);font-size:26px;font-weight:400;color:var(--ink);margin-bottom:4px}
+  .coach-title-txt{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--hint);margin-bottom:1rem}
+  .coach-bio{font-size:13px;color:var(--muted);line-height:1.75}
+  .coach-creds{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
+  .coach-cred{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--purple);background:var(--warm);padding:4px 10px}
+
+  /* WHY US */
+  .why-dark{background:var(--ink)}
+  .why-dark .inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+  .why-dark .eyebrow{color:#4a2a6a}
+  .why-dark .serif-h{color:var(--ivory)}
+  .why-dark .serif-h em{color:var(--orange)}
+  .why-items{display:flex;flex-direction:column;gap:0;margin-top:2rem}
+  .why-item{border-top:0.5px solid #2a1a3a;padding:1.5rem 0}
+  .why-item:last-child{border-bottom:0.5px solid #2a1a3a}
+  .why-num{font-family:var(--serif);font-size:36px;font-weight:300;color:#2a1a3a;line-height:1;margin-bottom:6px}
+  .why-title{font-size:14px;font-weight:500;color:var(--ivory);margin-bottom:6px;letter-spacing:.5px}
+  .why-body{font-size:13px;color:#6a4a7a;line-height:1.75}
+
+  /* CTA */
+  .cta-section{background:var(--orange);padding:5rem 3rem;text-align:center}
+  .cta-section h2{font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;margin-bottom:1rem}
+  .cta-section p{font-size:14px;color:rgba(255,255,255,.8);max-width:500px;margin:0 auto 2rem;line-height:1.75}
+  .btn-white{background:#fff;color:var(--orange);padding:13px 30px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;text-decoration:none;display:inline-block;transition:background .2s}
+  .btn-white:hover{background:#f5eeff;color:var(--purple)}
+
+  footer{background:#130620}
+  .footer-inner{max-width:1200px;margin:0 auto;padding:4rem 3rem 2rem;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem}
+  .footer-brand{font-family:var(--serif);font-size:24px;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--ivory);display:block;margin-bottom:10px}
+  .footer-tagline{font-size:12px;color:#4a2a5a;line-height:1.75}
+  .footer-col h4{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#3a1a4a;margin-bottom:14px}
+  .footer-col a{display:block;font-size:13px;color:#5a3a6a;text-decoration:none;margin-bottom:8px;transition:color .2s}
+  .footer-col a:hover{color:var(--ivory)}
+  .footer-copy{max-width:1200px;margin:0 auto;padding:1.25rem 3rem;border-top:0.5px solid #1e0a2e;display:flex;align-items:center;justify-content:space-between}
+  .footer-copy p{font-size:11px;color:#2e1a3e}
+
+  @media(max-width:768px){
+    nav{padding:0 1.5rem}.nav-links,.nav-cta{display:none}.nav-mobile-toggle{display:block}
+    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--ivory);border-bottom:0.5px solid var(--border);padding:1rem 1.5rem;gap:0}
+    .nav-links.open li a{padding:10px 0;display:block}
+    .page-hero{padding:3rem 1.5rem}.page-hero h1{font-size:40px}
+    .stats-bar{padding:2rem 1.5rem}.stats-bar-inner{grid-template-columns:1fr;gap:1.5rem}
+    .who-grid,.services-grid,.phil-grid,.team-grid,.why-dark .inner{grid-template-columns:1fr}
+    .inner{padding:3rem 1.5rem}
+    .footer-inner{grid-template-columns:1fr 1fr;gap:2rem;padding:3rem 1.5rem 1.5rem}
+    .footer-copy{padding:1rem 1.5rem;flex-direction:column;gap:4px}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">MPL Pursuits</a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About Us</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="college-route.html">College Route</a></li>
+    <li><a href="shop.html">Shop</a></li>
+  </ul>
+  <a href="index.html#booking" class="nav-cta">Book a Session</a>
+  <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="ti ti-menu-2"></i></button>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow" style="color:var(--hint)">About MPL Pursuits</div>
+    <h1>We Don't Just Coach Tennis.<br>We Build <em>Athletes.</em></h1>
+    <p class="page-hero-sub">MPL Pursuits exists for one reason — to help tennis players and their families go further than they ever thought possible. On the court. In recruiting. In life.</p>
+    <div class="page-hero-btns">
+      <a href="coaching.html" class="btn-ivory">Explore Our Programs</a>
+      <a href="index.html#booking" class="btn-ivory-ol">Book a Session</a>
+    </div>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div><div class="sbar-num">Division I</div><div class="sbar-lbl">Coaching Experience</div></div>
+    <div><div class="sbar-num">WTA Tour</div><div class="sbar-lbl">Professional Playing Background</div></div>
+    <div><div class="sbar-num">100%</div><div class="sbar-lbl">Athlete-First Philosophy</div></div>
+  </div>
+</div>
+
+<!-- WHO WE ARE -->
+<section>
+  <div class="inner">
+    <div class="who-grid">
+      <div>
+        <div class="eyebrow">Who We Are</div>
+        <h2 class="serif-h who-h">MPL Pursuits was built for the players who want <em>more.</em></h2>
+      </div>
+      <div>
+        <p class="body-copy">We are dedicated to helping tennis players of all levels reach their fullest potential — on the court, in competition, and in their personal development. Designed with both players and parents in mind, our mission is to provide clear instruction, structured development pathways, and the essential knowledge needed to succeed in the ever-evolving world of tennis.</p>
+        <p class="body-copy" style="margin-top:1.25rem">We believe that when athletes and families are educated, supported, and aligned, real progress begins. We equip players with the skills, confidence, and strategic understanding required to perform consistently at their best.</p>
+        <p class="body-copy" style="margin-top:1.25rem">Through private virtual coaching and detailed online video analysis, athletes receive personalized feedback that accelerates growth and helps them master the technical and tactical aspects of their game.</p>
+      </div>
+    </div>
+    <div class="services-grid">
+      <div class="service-card"><div class="service-icon"><i class="ti ti-video" aria-hidden="true"></i></div><div class="service-title">Virtual Private Coaching</div><p class="body-copy">Personalized sessions tailored to your game</p></div>
+      <div class="service-card"><div class="service-icon"><i class="ti ti-chart-bar" aria-hidden="true"></i></div><div class="service-title">Online Video Analysis</div><p class="body-copy">Detailed technical feedback from elite coaches</p></div>
+      <div class="service-card"><div class="service-icon"><i class="ti ti-brain" aria-hidden="true"></i></div><div class="service-title">Mental Performance Training</div><p class="body-copy">Sports psychology applied to match play</p></div>
+      <div class="service-card"><div class="service-icon"><i class="ti ti-school" aria-hidden="true"></i></div><div class="service-title">College Recruiting Guidance</div><p class="body-copy">End-to-end roadmap for college-bound athletes</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section>
+  <div class="inner">
+    <div class="eyebrow">Our Philosophy</div>
+    <h2 class="serif-h" style="font-size:48px;margin-bottom:2.5rem">We Coach the Whole Athlete.<br>Not Just the <em>Forehand.</em></h2>
+    <div class="phil-grid">
+      <div class="phil-card"><div class="phil-num">01</div><div class="phil-title">Holistic Player Development</div><p class="body-copy">We believe in coaching the whole athlete — technically, mentally, physically, and emotionally. True tennis performance comes not just from clean strokes, but from disciplined habits, strong footwork, intentional preparation, and strategic thinking.</p></div>
+      <div class="phil-card"><div class="phil-num">02</div><div class="phil-title">Progress Over Perfection</div><p class="body-copy">We emphasize growth as a continuous journey. Every drill, practice session, and match is an opportunity to improve. We encourage athletes to embrace challenges, reflect honestly on their development, and transform setbacks into lessons.</p></div>
+      <div class="phil-card"><div class="phil-num">03</div><div class="phil-title">Education for Players and Parents</div><p class="body-copy">Tennis requires thoughtful planning and informed decision-making. We provide families with clear guidance on training structure, tournament selection, mental preparation, recovery routines, and long-term pathways including college tennis opportunities.</p></div>
+      <div class="phil-card"><div class="phil-num">04</div><div class="phil-title">Character Through Competition</div><p class="body-copy">We use tennis as a platform to cultivate character. Pressure reveals strengths and areas for growth. We help athletes develop resilience, sportsmanship, confidence, and self-leadership — qualities that carry into every part of their lives.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- QUOTE BANNER -->
+<div class="quote-banner">
+  <blockquote>"We believe that when athletes and families are educated, supported, and aligned, real progress begins."</blockquote>
+</div>
+
+<!-- TEAM -->
+<section>
+  <div class="inner">
+    <div class="eyebrow">Our Team</div>
+    <h2 class="serif-h" style="font-size:48px;margin-bottom:.75rem">Coached by athletes who've done<br>what you're trying to <em>do.</em></h2>
+    <p class="body-copy" style="max-width:600px;margin-bottom:0">Every coach on our team has lived the recruiting process, competed at the highest collegiate levels, and navigated the pressures of elite athletics firsthand.</p>
+    <div class="team-grid">
+      <div class="coach-card">
+        <img class="coach-img" src="https://static.wixstatic.com/media/b7e516_4bd557b2753a47dbb1d04e25c25e6ec1~mv2.webp/v1/fill/w_291,h_367,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202026-04-10%20at%2012_40_14%E2%80%AFAM.webp" alt="Mary Lewis" />
+        <div class="coach-tags"><span class="coach-tag">WTA Professional</span><span class="coach-tag">Division I Coach</span><span class="coach-tag">All-Big Ten ×2</span></div>
+        <div class="coach-name">Mary Lewis</div>
+        <div class="coach-title-txt">Professional Tennis Player, Tennis Coach & Mentor</div>
+        <p class="coach-bio">Mary Lewis's journey encompasses every facet of competitive tennis — from distinguished collegiate play to the professional circuit on the WTA Tour, and into coaching at the Division I level. At Michigan State University, she earned two-time All-Big Ten selection, team captain, and ITA Cissie Leary Sportsmanship Award honors. She currently holds a WTA singles ranking of No. 658 and a doubles ranking of No. 354.</p>
+        <div class="coach-creds"><span class="coach-cred">2× All-Big Ten</span><span class="coach-cred">WTA Singles No. 658</span><span class="coach-cred">ITA Cissie Leary Award</span><span class="coach-cred">D1 Athletic Trainer</span></div>
+      </div>
+      <div class="coach-card">
+        <img class="coach-img" src="https://static.wixstatic.com/media/f3047b_314ec9dfb6404f6494432fd7dd2818b3~mv2.jpg/v1/fill/w_291,h_367,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6925_edited.jpg" alt="Elizabeth Profit" />
+        <div class="coach-tags"><span class="coach-tag">Blue Chip Recruit</span><span class="coach-tag">SMU Program Director</span></div>
+        <div class="coach-name">Elizabeth Profit</div>
+        <div class="coach-title-txt">Tennis Coach & Mentor</div>
+        <p class="coach-bio">Before college, Elizabeth was ranked No. 3 nationally in her class and recognized as a Blue Chip prospect. She competed at Baylor University and the University of Tennessee, navigating the full reality of Division I athletics while managing type 1 diabetes. After her playing career, she served as Director of the SMU Junior Tennis Program for three years.</p>
+        <div class="coach-creds"><span class="coach-cred">No. 3 National Junior</span><span class="coach-cred">Baylor & UT Alum</span><span class="coach-cred">SMU Program Director</span></div>
+      </div>
+      <div class="coach-card">
+        <img class="coach-img" src="https://static.wixstatic.com/media/b7e516_0047a50198f44eb99c27cb8c880bf1b8~mv2.jpeg/v1/fill/w_291,h_367,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_2377.jpeg" alt="Elexis Loving" />
+        <div class="coach-tags"><span class="coach-tag">ATC Professional</span><span class="coach-tag">MSAT · Tarleton State</span><span class="coach-tag">D1 Athletic Trainer</span></div>
+        <div class="coach-name">Elexis Loving</div>
+        <div class="coach-title-txt">Athletic Trainer & Performance Specialist</div>
+        <p class="coach-bio">Elexis Loving brings medical and performance expertise as a Certified Athletic Trainer with a Master of Science in Athletic Training from Tarleton State University. She has worked at Stephen F. Austin State University and Michigan State University supporting Women's Tennis programs directly — bridging injury prevention, athlete longevity, and on-court performance.</p>
+        <div class="coach-creds"><span class="coach-cred">Certified ATC</span><span class="coach-cred">MSAT · Tarleton State</span><span class="coach-cred">SFA Alum</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="why-dark">
+  <div class="inner">
+    <div>
+      <div class="eyebrow" style="color:#4a2a6a">Why Choose Us</div>
+      <h2 class="serif-h" style="font-size:48px;color:var(--ivory)">There Are Coaches Everywhere.<br>There's Only One <em>MPL Pursuits.</em></h2>
+    </div>
+    <div class="why-items">
+      <div class="why-item"><div class="why-num">01</div><div class="why-title">Real Experience, Not Theory</div><p class="why-body">Every program at MPL Pursuits is built on the lived experience of coaches who have been recruited, competed professionally, and coached inside Division I programs. When we teach the college recruiting process, we're sharing what we know from the inside out.</p></div>
+      <div class="why-item"><div class="why-num">02</div><div class="why-title">The Whole Athlete, Always</div><p class="why-body">Every athlete receives development covering their technical game, mental performance, physical conditioning, nutrition awareness, recruiting strategy, and professional presentation. We build complete athletes, not just better groundstrokes.</p></div>
+      <div class="why-item"><div class="why-num">03</div><div class="why-title">Family as Partners</div><p class="why-body">Tennis development is a family journey. We invest in parents just as much as we invest in players, providing the clarity, structure, and strategic guidance that makes the whole team stronger.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <h2>Ready to See What You're Capable Of?</h2>
+  <p>Whether you're just starting your tennis journey or you're a competitive junior with college in your sights, MPL Pursuits has a path for you.</p>
+  <a href="coaching.html" class="btn-white" style="margin-right:12px">Explore Our Programs</a>
+  <a href="index.html#booking" class="btn-white">Book a Session</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><span class="footer-brand">MPL Pursuits</span><p class="footer-tagline">Premium coaching for athletes.<br>Train smarter. Compete harder.<br>Find your college with confidence.</p></div>
+    <div class="footer-col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="coaching.html">Coaching</a><a href="college-route.html">College Route</a><a href="shop.html">Shop</a></div>
+    <div class="footer-col"><h4>Support</h4><a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">Privacy Policy</a></div>
+    <div class="footer-col"><h4>Follow</h4><a href="https://www.instagram.com/mary__profit/" target="_blank">Instagram @mary__profit</a><a href="https://www.tiktok.com/@mary.profit" target="_blank">TikTok @mary.profit</a></div>
+  </div>
+  <div class="footer-copy"><p>© 2025 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#2e1a3e">Built for athletes who want more.</p></div>
+</footer>
+<script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
+</body></html>
