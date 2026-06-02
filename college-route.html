@@ -10,7 +10,7 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{--ink:#1e0a2e;--ivory:#fdf8ff;--warm:#f5eeff;--border:#ddd0f0;--muted:#7a6890;--hint:#a898bc;--gold:#e8620a;--gold-dk:#c85208;--purple:#7c3aed;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
   html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--ink);color:#e8d8ff}
-  nav{position:sticky;top:0;z-index:100;background:#180530;border-bottom:0.5px solid #3d1f5a;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+  nav{position:sticky;top:0;z-index:100;background:#180530;border-bottom:1px solid #7a4a9a;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between}
   .nav-logo{display:flex;align-items:center;text-decoration:none;gap:10px}
   .nav-logo img{height:42px;width:auto;object-fit:contain}
   .nav-logo-text{font-family:var(--serif);font-size:20px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#e8d8ff}
@@ -18,7 +18,7 @@
   .nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c8a8e8;text-decoration:none;font-weight:500;transition:color .2s}
   .nav-links a:hover,.nav-links a.active{color:#e8d8ff}
   .nav-right{display:flex;align-items:center;gap:10px}
-  .nav-login{background:none;border:0.5px solid #3d1f5a;padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:#c8a8e8;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .nav-login{background:none;border:1px solid #5a2a8a;padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:#c8a8e8;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
   .nav-login:hover{border-color:var(--ink);color:#e8d8ff}
   .nav-cta{background:var(--gold);color:#fff;padding:9px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s;text-decoration:none;display:inline-block}
   .nav-cta:hover{background:var(--gold-dk)}
@@ -51,25 +51,25 @@
   .step:last-child{border-bottom:0.5px solid #3d1f5a}
   .step-num{font-family:var(--serif);font-size:36px;font-weight:300;color:#3d1f5a;line-height:1;flex-shrink:0;width:44px}
   .step-title{font-size:14px;font-weight:500;color:#e8d8ff;margin-bottom:6px}
-  .step-body{font-size:13px;color:#c8a8e8;line-height:1.7}
+  .step-body{font-size:13px;color:#ddc8f8;line-height:1.7}
 
-  .included-dark{background:var(--ink);border-bottom:0.5px solid #2e1a3e}
-  .included-dark .eyebrow{color:#4a2a6a}
-  .included-dark h2{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--ivory)}
+  .included-dark{background:#1a0535;border-bottom:1px solid #5a2a8a}
+  .included-dark .eyebrow{color:#e8620a}
+  .included-dark h2{font-family:var(--serif);font-size:44px;font-weight:300;color:#fff}
   .included-dark h2 em{font-style:italic;color:var(--gold)}
-  .included-dark .body-copy{color:#6a4a7a;margin-top:1rem}
+  .included-dark .body-copy{color:#ddc8f8;margin-top:1rem}
   .included-items{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2rem}
-  .inc-item{display:flex;align-items:start;gap:10px;font-size:13px;color:#a898bc;line-height:1.6}
-  .inc-item i{font-size:16px;color:var(--gold);flex-shrink:0;margin-top:1px}
+  .inc-item{display:flex;align-items:start;gap:10px;font-size:13px;color:#ddc8f8;line-height:1.6}
+  .inc-item i{font-size:18px;color:var(--gold);flex-shrink:0;margin-top:1px}
 
   .ncaa-grid{display:flex;flex-direction:column;gap:2px;background:var(--border)}
   .ncaa-box{background:#1a0535;padding:1.5rem 2rem}
   .ncaa-box-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#e8d8ff;margin-bottom:6px}
-  .ncaa-box-body{font-size:13px;color:#c8a8e8;line-height:1.7}
+  .ncaa-box-body{font-size:13px;color:#ddc8f8;line-height:1.7}
 
   /* PRICING - COMING SOON */
   .pricing-section .inner{text-align:center}
-  .pricing-card{max-width:480px;margin:0 auto;border:0.5px solid #3d1f5a;padding:3rem;background:#1a0535;position:relative;overflow:hidden}
+  .pricing-card{max-width:480px;margin:0 auto;border:1px solid #5a2a8a;padding:3rem;background:#1a0535;position:relative;overflow:hidden}
   .coming-soon-overlay{position:absolute;inset:0;background:rgba(30,10,46,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
   .coming-soon-label{font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;font-style:italic}
   .coming-soon-sub{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8}
@@ -99,7 +99,7 @@
 
   @media(max-width:768px){
     nav{padding:0 1.5rem}.nav-links{display:none}.nav-mobile-toggle{display:block}
-    .nav-links.open{display:flex;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:#180530;border-bottom:0.5px solid #3d1f5a;padding:1rem 1.5rem;z-index:99}
+    .nav-links.open{display:flex;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:#180530;border-bottom:1px solid #7a4a9a;padding:1rem 1.5rem;z-index:99}
     .nav-links.open li a{padding:10px 0;display:block}
     .page-hero{padding:3rem 1.5rem}.page-hero h1{font-size:40px}
     .stats-bar{padding:2rem 1.5rem}.stats-bar-inner{grid-template-columns:repeat(2,1fr)}
