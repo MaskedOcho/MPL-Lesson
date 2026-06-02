@@ -10,7 +10,7 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{--ink:#1e0a2e;--ivory:#fdf8ff;--warm:#f5eeff;--border:#ddd0f0;--muted:#7a6890;--hint:#a898bc;--gold:#e8620a;--gold-dk:#c85208;--purple:#7c3aed;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
   html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--ink);color:#e8d8ff}
-  nav{position:sticky;top:0;z-index:100;background:#180530;border-bottom:0.5px solid #3d1f5a;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+  nav{position:sticky;top:0;z-index:100;background:#180530;border-bottom:1px solid #7a4a9a;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between}
   .nav-logo{display:flex;align-items:center;text-decoration:none;gap:10px}
   .nav-logo img{height:42px;width:auto;object-fit:contain}
   .nav-logo-text{font-family:var(--serif);font-size:20px;font-weight:500;letter-spacing:3px;text-transform:uppercase;color:#e8d8ff}
@@ -18,7 +18,7 @@
   .nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c8a8e8;text-decoration:none;font-weight:500;transition:color .2s}
   .nav-links a:hover,.nav-links a.active{color:#e8d8ff}
   .nav-right{display:flex;align-items:center;gap:10px}
-  .nav-login{background:none;border:0.5px solid #3d1f5a;padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:#c8a8e8;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .nav-login{background:none;border:1px solid #5a2a8a;padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:#c8a8e8;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
   .nav-login:hover{border-color:var(--ink);color:#e8d8ff}
   .nav-cta{background:var(--gold);color:#fff;padding:9px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s;text-decoration:none;display:inline-block}
   .nav-cta:hover{background:var(--gold-dk)}
@@ -82,11 +82,11 @@
   .why-dark .inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
   .why-dark .eyebrow{color:#4a2a6a}
   .why-items{display:flex;flex-direction:column;gap:0;margin-top:2rem}
-  .why-item{border-top:0.5px solid #3d1f5a;padding:1.5rem 0}
-  .why-item:last-child{border-bottom:0.5px solid #3d1f5a}
-  .why-num{font-family:var(--serif);font-size:36px;font-weight:300;color:#2a1a3a;line-height:1;margin-bottom:6px}
-  .why-title{font-size:14px;font-weight:500;color:var(--ivory);margin-bottom:6px}
-  .why-body{font-size:13px;color:#a888cc;line-height:1.75}
+  .why-item{border-top:1px solid #5a2a8a;padding:1.5rem 0}
+  .why-item:last-child{border-bottom:1px solid #5a2a8a}
+  .why-num{font-family:var(--serif);font-size:36px;font-weight:300;color:#5a2a8a;line-height:1;margin-bottom:6px}
+  .why-title{font-size:14px;font-weight:500;color:#fff;margin-bottom:6px}
+  .why-body{font-size:13px;color:#c8a8e8;line-height:1.75}
 
   /* CTA */
   .cta-strip{background:var(--gold);padding:5rem 3rem;text-align:center}
@@ -107,7 +107,7 @@
 
   @media(max-width:768px){
     nav{padding:0 1.5rem}.nav-links{display:none}.nav-mobile-toggle{display:block}
-    .nav-links.open{display:flex;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:#180530;border-bottom:0.5px solid #3d1f5a;padding:1rem 1.5rem;z-index:99}
+    .nav-links.open{display:flex;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:#180530;border-bottom:1px solid #7a4a9a;padding:1rem 1.5rem;z-index:99}
     .nav-links.open li a{padding:10px 0;display:block}
     .page-hero{padding:3rem 1.5rem}.page-hero h1{font-size:40px}
     .stats-bar{padding:2rem 1.5rem}.stats-bar-inner{grid-template-columns:1fr;gap:1.5rem}
@@ -230,14 +230,14 @@
   </div>
 </section>
 
-<section style="background:var(--ink);border-bottom:0.5px solid #2e1a3e">
+<section style="background:#1a0535;border-bottom:1px solid #5a2a8a">
   <div class="inner why-dark" style="padding:5rem 3rem">
     <div class="why-dark" style="background:none">
       <div class="inner" style="padding:0">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
           <div>
-            <div class="eyebrow" style="color:#4a2a6a">Why Choose Us</div>
-            <h2 class="serif-h" style="font-size:44px;color:var(--ivory)">There's Only One <em style="color:var(--gold)">MPL Pursuits.</em></h2>
+            <div class="eyebrow" style="color:#e8620a;letter-spacing:3px">Why Choose Us</div>
+            <h2 class="serif-h" style="font-size:44px;color:#fff">There's Only One <em style="color:var(--gold)">MPL Pursuits.</em></h2>
           </div>
           <div class="why-items">
             <div class="why-item"><div class="why-num">01</div><div class="why-title">Real Experience, Not Theory</div><p class="why-body">Every program is built on the lived experience of coaches who have been recruited, competed professionally, and coached inside Division I programs.</p></div>
