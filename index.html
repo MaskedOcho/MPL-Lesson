@@ -30,7 +30,7 @@
   /* ── NAV ── */
   nav {
     position: sticky; top: 0; z-index: 100;
-    background: #180530; border-bottom: 0.5px solid #3d1f5a;
+    background: #180530; border-bottom: 1px solid #7a4a9a;
     padding: 0 2.5rem; height: 72px;
     display: flex; align-items: center; justify-content: space-between;
   }
@@ -64,7 +64,7 @@
   .nav-mobile-toggle { display: none; background: none; border: none; cursor: pointer; font-size: 22px; color: #e8d8ff; }
 
   /* ── HERO CAROUSEL ── */
-  .hero-carousel { position: relative; overflow: hidden; border-bottom: 0.5px solid #3d1f5a; background: var(--ink); }
+  .hero-carousel { position: relative; overflow: hidden; border-bottom: 1px solid #7a4a9a; background: var(--ink); }
   .slides-wrapper { display: flex; transition: transform .65s cubic-bezier(.77,0,.175,1); }
   .slide {
     min-width: 100%; padding: 7rem 3rem 6rem;
@@ -138,7 +138,7 @@
   .dot.active { background: var(--gold); width: 20px; border-radius: 3px; }
 
   /* ── SHARED ── */
-  section { border-bottom: 0.5px solid #3d1f5a; }
+  section { border-bottom: 1px solid #7a4a9a; }
   .inner { max-width: 1200px; margin: 0 auto; padding: 5rem 3rem; }
   .section-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #8a68a8; margin-bottom: 1.5rem; }
   .serif-heading { font-family: var(--serif); font-weight: 300; line-height: 1.12; color: #e8d8ff; }
@@ -175,9 +175,9 @@
   .advanced .section-eyebrow { color: #6a4a7a; }
   .advanced-heading { font-size: 44px; color: #fdf8ff !important; }
   .advanced-heading em { color: var(--gold) !important; }
-  .advanced .body-copy { color: #8a6a9a; margin-top: 1rem; }
+  .advanced .body-copy { color: #c8a8e8; margin-top: 1rem; }
   .advanced-items { display: flex; flex-direction: column; gap: 14px; margin-top: 2rem; }
-  .advanced-item { display: flex; align-items: flex-start; gap: 14px; font-size: 13px; color: #b090c0; line-height: 1.65; }
+  .advanced-item { display: flex; align-items: flex-start; gap: 14px; font-size: 14px; color: #ddc8f8; line-height: 1.65; }
   .advanced-item i { font-size: 18px; color: var(--gold); margin-top: 1px; flex-shrink: 0; }
 
   /* ── MEMBERSHIP TIERS ── */
@@ -229,11 +229,11 @@
   .booking-sub { margin-top: 1rem; }
   .booking-form { display: flex; flex-direction: column; gap: 14px; }
   .form-input {
-    background: none; border: none; border-bottom: 0.5px solid #3d1f5a;
-    padding: 12px 0; font-size: 14px; color: #e8d8ff;
+    background: none; border: none; border-bottom: 1px solid #7a4a9a;
+    padding: 12px 0; font-size: 14px; color: #e8d8ff; background: transparent;
     font-family: var(--sans); outline: none; transition: border .2s; width: 100%;
   }
-  .form-input::placeholder { color: #5a3a7a; }
+  .form-input::placeholder { color: #9a78b8; }
   .form-input:focus { border-bottom-color: var(--gold); }
   .btn-gold {
     background: var(--gold); color: #fff; padding: 14px 30px;
@@ -250,7 +250,7 @@
     max-width: 1200px; margin: 0 auto; padding: 4rem 3rem 2rem;
     display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 3rem;
   }
-  .footer-brand { font-family: var(--serif); font-size: 24px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: var(--ivory); display: block; margin-bottom: 10px; }
+  .footer-brand { font-family: var(--serif); font-size: 24px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase; color: #ffffff; display: block; margin-bottom: 10px; }
   .footer-tagline { font-size: 12px; color: #a888c8; line-height: 1.75; }
   .footer-col h4 { font-size: 9px; letter-spacing: 3px; text-transform: uppercase; color: #7c3aed; margin-bottom: 14px; }
   .footer-col a { display: block; font-size: 13px; color: #c0a0e0; text-decoration: none; margin-bottom: 8px; transition: color .2s; }
@@ -269,7 +269,7 @@
     .nav-links.open {
       display: flex; flex-direction: column; gap: 0;
       position: absolute; top: 72px; left: 0; right: 0;
-      background: #180530; border-bottom: 0.5px solid #3d1f5a;
+      background: #180530; border-bottom: 1px solid #7a4a9a;
       padding: 1rem 1.5rem;
     }
     .nav-links.open li a { padding: 10px 0; display: block; }
@@ -548,7 +548,7 @@
           <input class="form-input" type="text" placeholder="First &amp; last name" required />
           <input class="form-input" type="email" placeholder="Email address" required />
           <input class="form-input" type="tel" placeholder="Phone number" />
-          <select class="form-input" required style="cursor:pointer">
+          <select class="form-input" required style="cursor:pointer;background:#1a0535;color:#e8d8ff">
             <option value="">Select a service</option>
             <option>Tennis Lesson — 60 min · $100</option>
             <option>Tennis Lesson — 90 min · $140</option>
@@ -557,7 +557,7 @@
             <option>Video Review Session — 60 min · $120</option>
             <option>College Guidance Session · $75/mo</option>
           </select>
-          <textarea class="form-input" rows="3" placeholder="Goals or notes for your coach (optional)" style="resize:vertical"></textarea>
+          <textarea class="form-input" rows="3" placeholder="Goals or notes for your coach (optional)" style="resize:vertical;background:transparent;color:#e8d8ff"></textarea>
           <button type="submit" class="btn-gold">Request Booking</button>
           <p class="form-note">We'll be in touch within 24 hours to confirm.</p>
         </form>
@@ -600,7 +600,7 @@
   </div>
   <div class="footer-copy">
     <p>© 2025 by MPL Pursuits LLC. All rights reserved.</p>
-    <p style="font-size:11px;color:#8868a8">Built for athletes who want more.</p>
+    <p style="font-size:11px;color:#c8a8e8">Built for athletes who want more.</p>
   </div>
 </footer>
 
