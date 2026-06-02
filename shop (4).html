@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Shop — MPL Pursuits</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--ink:#1e0a2e;--ivory:#fdf8ff;--warm:#f5eeff;--border:#ddd0f0;--muted:#7a6890;--hint:#a898bc;--gold:#e8620a;--gold-dk:#c85208;--purple:#7c3aed;--serif:'Cormorant Garamond',Georgia,serif;--sans:'DM Sans',system-ui,sans-serif}
+  html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--ink);color:#e8d8ff}
+  nav{position:sticky;top:0;z-index:100;background:#180530;border-bottom:1px solid #7a4a9a;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between}
+  .nav-logo{display:flex;align-items:center;text-decoration:none;gap:10px}
+  .nav-logo img{height:42px;width:42px;object-fit:cover;object-position:left center}
+  .nav-logo-text{display:none}
+  .nav-links{display:flex;gap:2rem;list-style:none}
+  .nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c8a8e8;text-decoration:none;font-weight:500;transition:color .2s}
+  .nav-links a:hover,.nav-links a.active{color:#e8d8ff}
+  .nav-right{display:flex;align-items:center;gap:10px}
+  .nav-login{background:none;border:1px solid #5a2a8a;padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:#c8a8e8;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
+  .nav-login:hover{border-color:var(--ink);color:#e8d8ff}
+  .nav-cta{background:var(--gold);color:#fff;padding:9px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s;text-decoration:none;display:inline-block}
+  .nav-cta:hover{background:var(--gold-dk)}
+  .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:#e8d8ff}
+  section{border-bottom:0.5px solid #3d1f5a}
+  .inner{max-width:1200px;margin:0 auto;padding:5rem 3rem}
+  .eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1.5rem}
+  .serif-h{font-family:var(--serif);font-weight:300;line-height:1.1;color:#e8d8ff}
+  .serif-h em{font-style:italic;color:var(--purple)}
+  .body-copy{font-size:13px;color:#c8a8e8;line-height:1.85}
+
+  .page-hero{background:var(--ink);padding:5rem 3rem 4rem}
+  .page-hero-inner{max-width:1200px;margin:0 auto}
+  .page-hero h1{font-family:var(--serif);font-size:56px;font-weight:300;line-height:1.05;color:var(--ivory)}
+  .page-hero h1 em{font-style:italic;color:var(--gold)}
+  .page-hero-sub{font-size:15px;color:#8a68a8;line-height:1.8;margin-top:1.25rem;max-width:500px}
+
+  .filter-bar{background:#180530;border-bottom:1px solid #7a4a9a;padding:1rem 2.5rem}
+  .filter-bar-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+  .filter-label{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8a68a8}
+  .filter-btn{background:none;border:1px solid #5a2a8a;padding:7px 16px;font-size:11px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:#c8a8e8;transition:all .2s}
+  .filter-btn:hover,.filter-btn.active{background:var(--ink);color:var(--ivory);border-color:#e8d8ff}
+
+  .products-inner{max-width:1200px;margin:0 auto;padding:4rem 3rem}
+  .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
+  .product-card{background:#1a0535;display:flex;flex-direction:column;cursor:pointer;transition:background .2s}
+  .product-card:hover{background:#180530}
+  .product-img{width:100%;aspect-ratio:1;background:linear-gradient(135deg,var(--warm) 0%,var(--border) 100%);display:flex;align-items:center;justify-content:center}
+  .product-img-icon{font-size:48px;color:#8a68a8}
+  .product-info{padding:1.25rem 1.5rem 1.5rem;flex:1;display:flex;flex-direction:column}
+  .product-category{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
+  .product-name{font-family:var(--serif);font-size:20px;font-weight:400;color:#fff;margin-bottom:6px}
+  .product-desc{font-size:12px;color:#ddc8f8;line-height:1.6;flex:1;margin-bottom:1rem}
+  .product-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
+  .product-price{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--gold)}
+  .btn-add{background:var(--ink);color:var(--ivory);padding:8px 16px;font-size:10px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s}
+  .btn-add:hover{background:var(--purple)}
+  .badge-digital{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple);border:0.5px solid var(--purple);padding:2px 8px;margin-left:8px}
+  .badge-coming{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#8a68a8;border:1px solid #5a2a8a;padding:2px 8px}
+
+  .digital-dark{background:#1a0535;border-bottom:1px solid #5a2a8a}
+  .digital-dark .inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
+  .digital-dark .eyebrow{color:#e8620a}
+  .digital-dark h2{font-family:var(--serif);font-size:44px;font-weight:300;color:#fff;line-height:1.1}
+  .digital-dark h2 em{font-style:italic;color:var(--gold)}
+  .digital-dark .body-copy{color:#ddc8f8;margin-top:1rem}
+  .digital-items{display:flex;flex-direction:column;gap:2px;background:rgba(255,255,255,.08)}
+  .digital-item{background:rgba(255,255,255,.04);padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between}
+  .digital-item-left{display:flex;align-items:center;gap:12px}
+  .digital-item-icon{font-size:20px;color:var(--gold)}
+  .digital-item-name{font-size:15px;color:#fff;font-weight:500}
+  .digital-item-sub{font-size:12px;color:#c8a8e8;margin-top:2px}
+  .digital-item-price{font-family:var(--serif);font-size:24px;font-weight:300;color:var(--gold)}
+  .btn-get{background:var(--gold);color:#fff;padding:8px 16px;font-size:10px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;transition:background .2s}
+  .btn-get:hover{background:var(--gold-dk)}
+
+  .cta-strip{background:var(--gold);padding:5rem 3rem;text-align:center}
+  .cta-strip h2{font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;margin-bottom:1rem}
+  .cta-strip p{font-size:14px;color:rgba(255,255,255,.8);max-width:500px;margin:0 auto 2rem;line-height:1.75}
+  .btn-white{background:#fff;color:var(--gold);padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;text-decoration:none;display:inline-block}
+  .btn-white:hover{background:#180530;color:var(--purple)}
+
+  footer{background:#110118}
+  .footer-inner{max-width:1200px;margin:0 auto;padding:4rem 3rem 2rem;display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:3rem}
+  .footer-brand{font-family:var(--serif);font-size:24px;font-weight:400;letter-spacing:3px;text-transform:uppercase;color:var(--ivory);display:block;margin-bottom:10px}
+  .footer-tagline{font-size:12px;color:#a888c8;line-height:1.75}
+  .footer-col h4{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:#7c3aed;margin-bottom:14px}
+  .footer-col a{display:block;font-size:13px;color:#c0a0e0;text-decoration:none;margin-bottom:8px;transition:color .2s}
+  .footer-col a:hover{color:var(--ivory)}
+  .footer-copy{max-width:1200px;margin:0 auto;padding:1.25rem 3rem;border-top:0.5px solid #3a1a5a;display:flex;align-items:center;justify-content:space-between}
+  .footer-copy p{font-size:11px;color:#8868a8}
+
+  @media(max-width:768px){
+    nav{padding:0 1.5rem}.nav-links{display:none}.nav-mobile-toggle{display:block}
+    .nav-links.open{display:flex;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:#180530;border-bottom:1px solid #7a4a9a;padding:1rem 1.5rem;z-index:99}
+    .nav-links.open li a{padding:10px 0;display:block}
+    .page-hero{padding:3rem 1.5rem}.page-hero h1{font-size:40px}
+    .filter-bar{padding:1rem 1.5rem}
+    .products-inner{padding:3rem 1.5rem}
+    .products-grid{grid-template-columns:1fr 1fr}
+    .digital-dark .inner{grid-template-columns:1fr}
+    .inner{padding:3rem 1.5rem}
+    .footer-inner{grid-template-columns:1fr 1fr;gap:2rem;padding:3rem 1.5rem 1.5rem}
+    .footer-copy{padding:1rem 1.5rem;flex-direction:column;gap:4px}
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <img src="https://static.wixstatic.com/media/b7e516_99231caa7062431793f915762ea6c81d~mv2.png/v1/fill/w_96,h_91,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/MPL%20LOGO%20%20(1).png" alt="MPL Pursuits Logo"/>
+    
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="coaching.html">Coaching</a></li>
+    <li><a href="college-route.html">College Route</a></li>
+    <li><a href="shop.html" class="active">Shop</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="#" class="nav-login"><i class="ti ti-user"></i> Log In</a>
+    <a href="index.html#booking" class="nav-cta">Book a Session</a>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="ti ti-menu-2"></i></button>
+  </div>
+</nav>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow" style="color:#8a68a8">MPL Shop</div>
+    <h1>Tools to Train <em>Smarter.</em></h1>
+    <p class="page-hero-sub">Digital playbooks, training guides, and resources built by coaches who've competed at the highest levels.</p>
+  </div>
+</div>
+
+<div class="filter-bar">
+  <div class="filter-bar-inner">
+    <span class="filter-label">Filter:</span>
+    <button class="filter-btn active" onclick="filterProducts('all',this)">All</button>
+    <button class="filter-btn" onclick="filterProducts('digital',this)">Digital Resources</button>
+    <button class="filter-btn" onclick="filterProducts('apparel',this)">Apparel</button>
+    <button class="filter-btn" onclick="filterProducts('gear',this)">Gear</button>
+  </div>
+</div>
+
+<div class="products-inner">
+  <div class="products-grid" id="productsGrid">
+    <div class="product-card" data-cat="digital">
+      <div class="product-img"><i class="ti ti-file-text product-img-icon"></i></div>
+      <div class="product-info">
+        <div class="product-category">Digital <span class="badge-digital">Digital</span></div>
+        <div class="product-name">The College Tennis Playbook</div>
+        <p class="product-desc">A complete step-by-step recruiting guide covering timelines, coach outreach templates, visit preparation, and everything in between.</p>
+        <div class="product-footer"><span class="product-price">$29</span><button class="btn-add">Get It</button></div>
+      </div>
+    </div>
+    <div class="product-card" data-cat="digital">
+      <div class="product-img"><i class="ti ti-brain product-img-icon"></i></div>
+      <div class="product-info">
+        <div class="product-category">Digital <span class="badge-digital">Digital</span></div>
+        <div class="product-name">Mental Game Masterclass</div>
+        <p class="product-desc">Sports psychology principles applied to match play. Overcome anxiety, build focus, and perform under pressure consistently.</p>
+        <div class="product-footer"><span class="product-price">$39</span><button class="btn-add">Get It</button></div>
+      </div>
+    </div>
+    <div class="product-card" data-cat="digital">
+      <div class="product-img"><i class="ti ti-chart-line product-img-icon"></i></div>
+      <div class="product-info">
+        <div class="product-category">Digital <span class="badge-digital">Digital</span></div>
+        <div class="product-name">Training Plan Template Pack</div>
+        <p class="product-desc">12-week structured training templates for competitive juniors covering technical drills, footwork, conditioning, and match play.</p>
+        <div class="product-footer"><span class="product-price">$24</span><button class="btn-add">Get It</button></div>
+      </div>
+    </div>
+    <div class="product-card" data-cat="digital">
+      <div class="product-img"><i class="ti ti-mail product-img-icon"></i></div>
+      <div class="product-info">
+        <div class="product-category">Digital <span class="badge-digital">Digital</span></div>
+        <div class="product-name">Coach Outreach Email Bundle</div>
+        <p class="product-desc">15 done-for-you email templates for every stage of the recruiting process — initial contact, follow-ups, visit requests, and more.</p>
+        <div class="product-footer"><span class="product-price">$19</span><button class="btn-add">Get It</button></div>
+      </div>
+    </div>
+    <div class="product-card" data-cat="apparel">
+      <div class="product-img"><i class="ti ti-shirt product-img-icon"></i></div>
+      <div class="product-info">
+        <div class="product-category">Apparel <span class="badge-coming">Coming Soon</span></div>
+        <div class="product-name">MPL Performance Tee</div>
+        <p class="product-desc">Lightweight performance fabric with the MPL Pursuits mark. Train in something that represents what you stand for.</p>
+        <div class="product-footer"><span class="product-price">$45</span><button class="btn-add" disabled style="opacity:.4;cursor:not-allowed">Soon</button></div>
+      </div>
+    </div>
+    <div class="product-card" data-cat="gear">
+      <div class="product-img"><i class="ti ti-backpack product-img-icon"></i></div>
+      <div class="product-info">
+        <div class="product-category">Gear <span class="badge-coming">Coming Soon</span></div>
+        <div class="product-name">MPL Tennis Bag</div>
+        <p class="product-desc">Tournament-ready tennis bag with dedicated racket compartments, gear storage, and the MPL Pursuits mark.</p>
+        <div class="product-footer"><span class="product-price">$95</span><button class="btn-add" disabled style="opacity:.4;cursor:not-allowed">Soon</button></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="digital-dark">
+  <div class="inner">
+    <div>
+      <div class="eyebrow">Digital Resources</div>
+      <h2>Knowledge built from <em>real experience.</em></h2>
+      <p class="body-copy">Every resource was created by coaches who have lived what they teach — from D1 recruiting to WTA competition. No theory. Just what actually works.</p>
+    </div>
+    <div class="digital-items">
+      <div class="digital-item">
+        <div class="digital-item-left"><i class="ti ti-file-text digital-item-icon"></i><div><div class="digital-item-name">College Tennis Playbook</div><div class="digital-item-sub">Complete recruiting guide · PDF</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><span class="digital-item-price">$29</span><button class="btn-get">Get It</button></div>
+      </div>
+      <div class="digital-item">
+        <div class="digital-item-left"><i class="ti ti-brain digital-item-icon"></i><div><div class="digital-item-name">Mental Game Masterclass</div><div class="digital-item-sub">Sports psychology for athletes · PDF + Audio</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><span class="digital-item-price">$39</span><button class="btn-get">Get It</button></div>
+      </div>
+      <div class="digital-item">
+        <div class="digital-item-left"><i class="ti ti-chart-line digital-item-icon"></i><div><div class="digital-item-name">Training Plan Templates</div><div class="digital-item-sub">12-week plan pack · PDF</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><span class="digital-item-price">$24</span><button class="btn-get">Get It</button></div>
+      </div>
+      <div class="digital-item">
+        <div class="digital-item-left"><i class="ti ti-mail digital-item-icon"></i><div><div class="digital-item-name">Email Template Bundle</div><div class="digital-item-sub">15 coach outreach templates · PDF</div></div></div>
+        <div style="display:flex;align-items:center;gap:12px"><span class="digital-item-price">$19</span><button class="btn-get">Get It</button></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Ready to Go Further?</h2>
+  <p>Pair your resources with one-on-one coaching for the fastest path to your goals.</p>
+  <a href="coaching.html" class="btn-white">View Coaching Services</a>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div><span class="footer-brand">MPL Pursuits</span><p class="footer-tagline">Premium coaching for athletes.<br>Train smarter. Compete harder.<br>Find your college with confidence.</p></div>
+    <div class="footer-col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="coaching.html">Coaching</a><a href="college-route.html">College Route</a><a href="shop.html">Shop</a></div>
+    <div class="footer-col"><h4>Support</h4><a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">Privacy Policy</a></div>
+    <div class="footer-col"><h4>Follow</h4><a href="https://www.instagram.com/mary__profit/" target="_blank">Instagram @mary__profit</a><a href="https://www.tiktok.com/@mary.profit" target="_blank">TikTok @mary.profit</a></div>
+  </div>
+  <div class="footer-copy"><p>© 2025 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8868a8">Built for athletes who want more.</p></div>
+</footer>
+<script>
+  document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+  function filterProducts(cat,btn){
+    document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.product-card').forEach(card=>{
+      card.style.display=(cat==='all'||card.dataset.cat===cat)?'flex':'none';
+    });
+  }
+</script>
+</body></html>
