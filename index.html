@@ -40,7 +40,53 @@
     font-family: var(--serif); font-size: 20px; font-weight: 500;
     letter-spacing: 3px; text-transform: uppercase; color: #e8d8ff;
   }
-  .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+  /* ── DROPDOWN NAV ── */
+  .nav-links { display: flex; gap: 1.5rem; list-style: none; align-items: center; }
+  .nav-links > li { position: relative; }
+  .nav-links > li > a {
+    font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
+    color: #c8a8e8; text-decoration: none; font-weight: 500; transition: color .2s;
+    display: flex; align-items: center; gap: 4px; padding: 8px 0;
+  }
+  .nav-links > li > a:hover, .nav-links > li > a.active { color: #fff; }
+  .nav-links > li > a .drop-arrow { font-size: 9px; opacity: .6; transition: transform .2s; }
+  .nav-links > li:hover > a .drop-arrow { transform: rotate(180deg); }
+  /* Dropdown */
+  .dropdown {
+    position: absolute; top: calc(100% + 8px); left: 50%; transform: translateX(-50%);
+    background: #1a0535; border: 1px solid #5a2a8a; min-width: 200px;
+    display: none; flex-direction: column; z-index: 200;
+    box-shadow: 0 8px 24px rgba(0,0,0,.4);
+  }
+  .nav-links > li:hover .dropdown { display: flex; }
+  .dropdown a {
+    font-size: 12px; color: #c8a8e8; text-decoration: none; padding: 10px 16px;
+    border-bottom: 0.5px solid #2a1040; transition: all .2s; letter-spacing: .5px;
+    white-space: nowrap;
+  }
+  .dropdown a:last-child { border-bottom: none; }
+  .dropdown a:hover { background: #2a0f45; color: #fff; padding-left: 22px; }
+  /* Smaller nav right buttons */
+  .nav-login {
+    background: none; border: 0.5px solid #5a2a8a; padding: 6px 12px;
+    font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+    cursor: pointer; font-family: var(--sans); color: #c8a8e8;
+    transition: all .2s; text-decoration: none; display: inline-flex; align-items: center; gap: 5px;
+  }
+  .nav-login:hover { border-color: #fff; color: #fff; }
+  .nav-cta {
+    background: var(--gold); color: #fff; padding: 7px 14px;
+    font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase;
+    border: none; cursor: pointer; font-family: var(--sans);
+    transition: background .2s; text-decoration: none; display: inline-block;
+  }
+  .nav-cta:hover { background: var(--gold-dk); }
+  @media(max-width:768px){
+    .nav-login, .nav-cta { font-size: 9px; padding: 5px 10px; }
+  }
+
+  /* legacy override */
   .nav-links a {
     font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
     color: #c8a8e8; text-decoration: none; font-weight: 500; transition: color .2s;
@@ -68,9 +114,8 @@
   .slides-wrapper { display: flex; transition: transform .65s cubic-bezier(.77,0,.175,1); }
   .slide {
     min-width: 100%; padding: 7rem 3rem 6rem;
-    display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 4rem;
-    align-items: center; max-width: 1200px; margin: 0 auto;
-    position: relative;
+    display: flex; flex-direction: column; align-items: center; text-align: center;
+    max-width: 800px; margin: 0 auto; position: relative;
   }
   .slide-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
   .slide-wrap { min-width: 100%; }
@@ -86,9 +131,9 @@
   .slide h1 strong { font-style: normal; font-weight: 300; color: var(--gold); }
   .slide-sub {
     font-size: 14px; color: rgba(255,255,255,.65); line-height: 1.8;
-    margin-top: 1.5rem; max-width: 400px;
+    margin-top: 1.5rem; max-width: 560px; text-align: center;
   }
-  .slide-btns { display: flex; gap: 12px; margin-top: 2.25rem; flex-wrap: wrap; }
+  .slide-btns { display: flex; gap: 12px; margin-top: 2.25rem; flex-wrap: wrap; justify-content: center; }
   .btn-orange {
     background: var(--gold); color: #fff; padding: 13px 28px;
     font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
@@ -103,19 +148,8 @@
     text-decoration: none; display: inline-block; transition: all .2s;
   }
   .btn-ghost:hover { border-color: #fff; background: rgba(100,50,150,.15); }
-  .slide-visual {
-    display: flex; align-items: center; justify-content: center;
-  }
-  .slide-visual img {
-    width: 100%; max-height: 420px; object-fit: contain; object-position: center top;
-    border: 0.5px solid rgba(255,255,255,.1);
-  }
-  .slide-visual-placeholder {
-    width: 100%; aspect-ratio: 4/3;
-    background: rgba(255,255,255,.05); border: 0.5px solid rgba(255,255,255,.1);
-    display: flex; align-items: center; justify-content: center;
-    font-family: var(--serif); font-size: 80px; color: rgba(255,255,255,.08);
-  }
+  .slide-visual { display: none; }
+  .slide-visual img { display: none; }
   /* carousel nav */
   .carousel-prev, .carousel-next {
     position: absolute; top: 50%; transform: translateY(-50%);
@@ -275,7 +309,7 @@
     .nav-links.open li a { padding: 10px 0; display: block; }
     .slide { grid-template-columns: 1fr; padding: 3.5rem 1.5rem 4rem; gap: 2rem; }
     .slide h1 { font-size: 42px; }
-    .slide-visual { display: none; }
+
     .mission-grid { grid-template-columns: 1fr; }
     .mission-img, .mission-img-placeholder { min-height: 260px; }
     .mission-text { padding: 3rem 1.5rem; }
@@ -301,11 +335,35 @@
     <img src="https://static.wixstatic.com/media/b7e516_99231caa7062431793f915762ea6c81d~mv2.png/v1/fill/w_96,h_91,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/MPL%20LOGO%20%20(1).png" alt="MPL Pursuits Logo" />
     
   </a>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="index.html">Home</a></li>
+    <ul class="nav-links" id="navLinks">
     <li><a href="about.html">About Us</a></li>
-    <li><a href="coaching.html">Coaching</a></li>
-    <li><a href="college-route.html">College Route</a></li>
+    <li>
+      <a href="tennis.html">Tennis <span class="drop-arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="tennis-learning.html">Learning</a>
+        <a href="tennis-training.html">Training</a>
+        <a href="tennis-competing.html">Competing</a>
+      </div>
+    </li>
+    <li>
+      <a href="athlete-development.html">Athlete Development <span class="drop-arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="coaching.html">Coaching</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="type1-diabetes.html">Type 1 Diabetes</a>
+        <a href="blog.html">Blog</a>
+      </div>
+    </li>
+    <li>
+      <a href="college-route.html">College Route <span class="drop-arrow">▾</span></a>
+      <div class="dropdown">
+        <a href="college-divisions.html">College Divisions</a>
+        <a href="ncaa-rules.html">NCAA Rules &amp; Regulations</a>
+        <a href="nil-education.html">NIL Education</a>
+        <a href="transferring.html">Transferring</a>
+      </div>
+    </li>
     <li><a href="shop.html">Shop</a></li>
   </ul>
   <div class="nav-right">
@@ -330,49 +388,9 @@
           <p class="slide-sub">At MPL Pursuits, we help athletes reach their highest potential — in performance, competition, development, and long-term success.</p>
           <div class="slide-btns">
             <a href="#booking" class="btn-orange">Book a Session</a>
-            <a href="#programs" class="btn-ghost">View Programs</a>
+            <a href="athlete-development.html" class="btn-ghost">View Programs</a>
           </div>
-        </div>
-        <div class="slide-visual">
-          <img src="https://static.wixstatic.com/media/b7e516_4bd557b2753a47dbb1d04e25c25e6ec1~mv2.webp/v1/fill/w_600,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screenshot%202026-04-10%20at%2012_40_14%E2%80%AFAM.webp" alt="MPL Pursuits Coaching" />
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 2 -->
-    <div class="slide-wrap">
-      <div class="slide">
-        <div>
-          <div class="slide-eyebrow">Advanced Performance</div>
-          <h1>A system built for<br><em>serious</em><br>competitors.</h1>
-          <p class="slide-sub">Structured practice planning, match analysis, mental conditioning, and injury prevention — built around your success.</p>
-          <div class="slide-btns">
-            <a href="coaching.html" class="btn-orange">Explore Coaching</a>
-            <a href="#programs" class="btn-ghost">Learn More</a>
-          </div>
-        </div>
-        <div class="slide-visual">
-          <img src="https://static.wixstatic.com/media/b7e516_0047a50198f44eb99c27cb8c880bf1b8~mv2.jpeg/v1/fill/w_600,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_2377.jpeg" alt="Performance Coaching" />
-        </div>
-      </div>
-    </div>
-
-    <!-- SLIDE 3 -->
-    <div class="slide-wrap">
-      <div class="slide">
-        <div>
-          <div class="slide-eyebrow">College Route</div>
-          <h1>Your path to college<br>tennis starts <em>here.</em></h1>
-          <p class="slide-sub">Navigate the NCAA recruiting process with coaches who have lived it — from both sides of the table.</p>
-          <div class="slide-btns">
-            <a href="college-route.html" class="btn-orange">Start Your Path</a>
-            <a href="#booking" class="btn-ghost">Book a Call</a>
-          </div>
-        </div>
-        <div class="slide-visual">
-          <img src="https://static.wixstatic.com/media/f3047b_314ec9dfb6404f6494432fd7dd2818b3~mv2.jpg/v1/fill/w_600,h_500,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/IMG_6925_edited.jpg" alt="College Route" />
-        </div>
-      </div>
+        </div></div>
     </div>
 
   </div>
@@ -540,7 +558,7 @@
       <div>
         <div class="section-eyebrow">Schedule a Session</div>
         <h2 class="serif-heading booking-heading">Reserve your <em>session.</em></h2>
-        <p class="body-copy booking-sub">Unleash your potential with one-on-one in-person tennis lessons. Check availability and choose the date and time that works for you.</p>
+        <p class="body-copy booking-sub">Unleash your potential with one-on-one online sessions. Check availability and choose the date and time that works for you.</p>
         <p class="body-copy" style="margin-top:1rem">We'll follow up within 24 hours to confirm your booking and answer any questions.</p>
       </div>
       <div>
@@ -548,6 +566,12 @@
           <input class="form-input" type="text" placeholder="First &amp; last name" required />
           <input class="form-input" type="email" placeholder="Email address" required />
           <input class="form-input" type="tel" placeholder="Phone number" />
+          <select class="form-input" style="cursor:pointer;background:#1a0535;color:#e8d8ff">
+            <option value="">Select a coach</option>
+            <option>Mary Lewis — Tennis Coach & Mentor</option>
+            <option>Elizabeth Profit — Tennis Coach & Mentor</option>
+            <option>Elexis Loving — Athletic Trainer</option>
+          </select>
           <select class="form-input" required style="cursor:pointer;background:#1a0535;color:#e8d8ff">
             <option value="">Select a service</option>
             <option>Tennis Lesson — 60 min · $100</option>
@@ -559,7 +583,8 @@
           </select>
           <textarea class="form-input" rows="3" placeholder="Goals or notes for your coach (optional)" style="resize:vertical;background:transparent;color:#e8d8ff"></textarea>
           <button type="submit" class="btn-gold">Request Booking</button>
-          <p class="form-note">We'll be in touch within 24 hours to confirm.</p>
+          <p class="form-note" style="font-size:12px;color:#ddc8f8;line-height:1.7;margin-top:8px">A deposit of <strong style="color:var(--gold)">$25</strong> is required to reserve a session and will be applied to your session cost at confirmed booking. Full session payment is required before the booking date is confirmed.</p>
+          <p class="form-note" style="margin-top:6px">We'll be in touch within 24 hours to confirm.</p>
         </form>
         <div id="successMsg" style="display:none;margin-top:1.5rem;padding:1.5rem;border:0.5px solid var(--gold);background:#2a1040;">
           <p style="font-family:var(--serif);font-size:20px;color:#e8d8ff">Booking request received.</p>
