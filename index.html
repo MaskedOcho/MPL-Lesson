@@ -111,14 +111,14 @@
 
   /* ── HERO CAROUSEL ── */
   .hero-carousel { position: relative; overflow: hidden; border-bottom: 1px solid #7a4a9a; background: var(--ink); }
-  .slides-wrapper { display: flex; transition: transform .65s cubic-bezier(.77,0,.175,1); }
+  .slides-wrapper { display: flex; transition: transform .65s cubic-bezier(.77,0,.175,1); width: 100%; }
+  .slide-wrap { min-width: 100%; width: 100%; flex-shrink: 0; }
   .slide {
-    min-width: 100%; padding: 7rem 3rem 6rem;
+    width: 100%; padding: 7rem 3rem 6rem;
     display: flex; flex-direction: column; align-items: center; text-align: center;
-    max-width: 800px; margin: 0 auto; position: relative;
+    position: relative;
   }
-  .slide-inner { max-width: 1200px; margin: 0 auto; width: 100%; }
-  .slide-wrap { min-width: 100%; }
+  .slide-inner { max-width: 800px; margin: 0 auto; width: 100%; }
   .slide-eyebrow {
     font-size: 10px; letter-spacing: 3px; text-transform: uppercase;
     color: rgba(255,255,255,.4); margin-bottom: 1.5rem;
@@ -383,7 +383,7 @@
     <!-- SLIDE 1 -->
     <div class="slide-wrap">
       <div class="slide">
-        <div>
+        <div class="slide-inner">
           <div class="slide-eyebrow">Elite Athlete Development</div>
           <h1>Train with <em>purpose.</em><br>Compete with confidence.<br>Build your path.</h1>
           <p class="slide-sub">At MPL Pursuits, we help athletes reach their highest potential — in performance, competition, development, and long-term success.</p>
@@ -397,7 +397,7 @@
     <!-- SLIDE 2 -->
     <div class="slide-wrap">
       <div class="slide">
-        <div>
+        <div class="slide-inner">
           <div class="slide-eyebrow">Advanced Performance</div>
           <h1>A system built for<br><em>serious</em><br>competitors.</h1>
           <p class="slide-sub">Structured practice planning, match analysis, mental conditioning, and injury prevention — built around your success.</p>
@@ -411,7 +411,7 @@
     <!-- SLIDE 3 -->
     <div class="slide-wrap">
       <div class="slide">
-        <div>
+        <div class="slide-inner">
           <div class="slide-eyebrow">College Route</div>
           <h1>Your path to college<br>tennis starts <em>here.</em></h1>
           <p class="slide-sub">Navigate the NCAA recruiting process with coaches who have lived it — from both sides of the table.</p>
