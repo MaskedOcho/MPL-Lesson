@@ -114,8 +114,8 @@
   .slides-wrapper { display: flex; transition: transform .65s cubic-bezier(.77,0,.175,1); width: 100%; }
   .slide-wrap { min-width: 100%; width: 100%; flex-shrink: 0; }
   .slide {
-    width: 100%; padding: 7rem 3rem 6rem;
-    display: flex; flex-direction: column; align-items: center; text-align: center;
+    width: 100%; min-height: 40vh; padding: 4rem 3rem;
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
     position: relative;
   }
   .slide-inner { max-width: 800px; margin: 0 auto; width: 100%; }
@@ -181,7 +181,7 @@
 
   /* ── MISSION ── */
   .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; }
-  .mission-img { width: 100%; height: 320px; object-fit: cover; display: block; }
+  .mission-img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: #180530; }
   .mission-img-placeholder {
     width: 100%; min-height: 380px;
     background: linear-gradient(135deg, #2e1a4e 0%, #1e0a2e 100%);
