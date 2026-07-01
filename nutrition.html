@@ -18,9 +18,9 @@
   .nav-links>li>a{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#c8a8e8;text-decoration:none;font-weight:500;transition:color .2s;display:flex;align-items:center;gap:4px;padding:8px 0}
   .nav-links>li>a:hover,.nav-links>li>a.active{color:#fff}
   .nav-links>li>a .drop-arrow{font-size:9px;opacity:.6;transition:transform .2s}
-  .nav-links>li:hover>a .drop-arrow{transform:rotate(180deg)}
-  .dropdown{position:absolute;top:calc(100% + 8px);left:50%;transform:translateX(-50%);background:#1a0535;border:1px solid #5a2a8a;min-width:200px;display:none;flex-direction:column;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,.4)}
-  .nav-links>li:hover .dropdown{display:flex}
+  .nav-links>li:hover>a .drop-arrow,.nav-links>li:focus-within>a .drop-arrow{transform:rotate(180deg)}
+  .dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%);background:#1a0535;border:1px solid #5a2a8a;min-width:200px;display:none;flex-direction:column;z-index:200;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+  .nav-links>li:hover .dropdown,.nav-links>li:focus-within .dropdown{display:flex}
   .dropdown a{font-size:12px;color:#c8a8e8;text-decoration:none;padding:10px 16px;border-bottom:0.5px solid #2a1040;transition:all .2s;letter-spacing:.5px;white-space:nowrap}
   .dropdown a:last-child{border-bottom:none}
   .dropdown a:hover{background:#2a0f45;color:#fff;padding-left:22px}
@@ -37,7 +37,7 @@
     .nav-mobile-toggle{display:block}
     .nav-login,.nav-cta{font-size:9px;padding:5px 10px}
     .dropdown{position:static;transform:none;display:none;background:#2a0f45;border:none;box-shadow:none;padding-left:1rem}
-    .nav-links>li:hover .dropdown{display:none}
+    .nav-links>li:hover .dropdown,.nav-links>li:focus-within .dropdown{display:none}
     .nav-links>li.open .dropdown{display:flex;flex-direction:column;position:static;transform:none;border:none;box-shadow:none;background:#2a0f45;padding-left:1rem}
   }
   .page-hero{padding:5rem 2rem 4rem;text-align:center;background:radial-gradient(ellipse at 60% 40%,#2d0a50 0%,#1e0a2e 60%);border-bottom:0.5px solid #3d1f5a}
