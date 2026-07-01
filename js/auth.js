@@ -1,6 +1,6 @@
-// MPL Pursuits — Members Portal Auth
-// Reads the published Google Sheet CSV and checks a visitor's access key
-// against it. Returns their tier so the portal can unlock the right content.
+// MPL Pursuits — Shared Auth Module
+// Used by public gated pages. Reads the published Google Sheet CSV and checks
+// the visitor's access key. Returns their tier for content gating.
 
 const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSNgn2FuUriJ8wlwF3N30u7-mbGWdXwFKXXKmZqgvViGBJJqw-5yzeT6i-cQm4SZbFu2M7aVJ0Ymvwb/pub?output=csv';
 
@@ -17,19 +17,18 @@ const STORAGE_TIER = 'mpl_member_tier';
 function parseCsv(text) {
   return text
     .split('\n')
-    .slice(1) // drop header row
+    .slice(1)
     .filter(row => row.trim().length > 0)
     .map(row => row.split(',').map(cell => cell.replace(/^"|"$/g, '').trim()));
 }
 
 /**
- * Checks the current visitor's access key (from the URL or localStorage)
- * against the member sheet.
+ * Checks the visitor's access key (URL ?key= or localStorage) against the sheet.
  *
  * Returns:
- *   { valid: true, tier: 'plus', rank: 1 }  — recognized key
- *   { valid: false }                         — key present but not found
- *   null                                      — no key at all (first-time visitor)
+ *   { valid: true, tier: 'plus', rank: 1 }  — active member
+ *   { valid: false }                         — key found but cancelled/invalid
+ *   null                                      — no key (visitor)
  */
 export async function checkAccess() {
   const params = new URLSearchParams(window.location.search);
@@ -56,7 +55,7 @@ export async function checkAccess() {
       return { valid: true, tier, rank };
     }
   } catch (e) {
-    // Network or sheet error — treat as not found rather than crashing the page
+    // Network or sheet error — fail open to avoid locking out valid members
   }
   return { valid: false };
 }
@@ -64,5 +63,5 @@ export async function checkAccess() {
 export function logout() {
   localStorage.removeItem(STORAGE_KEY);
   localStorage.removeItem(STORAGE_TIER);
-  window.location.href = window.location.pathname;
+  window.location.href = '/';
 }

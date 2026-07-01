@@ -127,6 +127,17 @@
   .price-features li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.6}
   .price-features li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:11px;top:2px}
 
+  .gate-blur{filter:blur(6px);user-select:none;pointer-events:none;max-height:380px;overflow:hidden}
+  .gate-overlay{display:none;position:relative;z-index:10;text-align:center;padding:3rem 2rem;margin-top:-80px;background:linear-gradient(to bottom,transparent,var(--ink) 40%)}
+  .gate-overlay.visible{display:block}
+  .gate-overlay-inner{background:#1a0535;border:1px solid #5a2a8a;padding:2.5rem 2rem;max-width:440px;margin:0 auto}
+  .gate-icon{font-size:28px;color:#8a68a8;margin-bottom:1rem}
+  .gate-overlay h3{font-family:var(--serif);font-size:22px;font-weight:300;color:#e8d8ff;margin-bottom:.75rem}
+  .gate-overlay p{font-size:13px;color:#a888c8;line-height:1.7;margin-bottom:1.5rem}
+  .gate-btn{display:inline-block;background:var(--gold);color:#fff;padding:11px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .gate-btn:hover{background:var(--gold-dk)}
+  .gate-btn-ghost{display:inline-block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s;margin-left:10px}
+  .gate-btn-ghost:hover{border-color:#fff;color:#fff}
   .cta-strip{background:var(--gold);padding:5rem 3rem;text-align:center}
   .cta-strip h2{font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;margin-bottom:1rem}
   .cta-strip p{font-size:14px;color:rgba(255,255,255,.8);max-width:500px;margin:0 auto 2rem;line-height:1.75}
@@ -180,6 +191,7 @@
         <a href="fitness.html">Fitness</a>
         <a href="nutrition.html">Nutrition</a>
         <a href="type1-diabetes.html">Type 1 Diabetes</a>
+        <a href="mental-performance.html">Mental Performance</a>
         <a href="blog.html">Blog</a>
       </div>
     </li>
@@ -241,6 +253,7 @@
   </div>
 </section>
 
+<div id="gatedContent">
 <section id="what-included" class="included-dark">
   <div class="inner">
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
@@ -309,6 +322,16 @@
   </div>
 </section>
 
+</div><!-- /gatedContent -->
+<div class="gate-overlay" id="gateOverlay">
+  <div class="gate-overlay-inner">
+    <div class="gate-icon"><i class="ti ti-lock"></i></div>
+    <h3>Create a Free Account</h3>
+    <p>Sign up for free to unlock full College Route details — what's included, NCAA divisions, and pricing.</p>
+    <a href="members/" class="gate-btn">Create Free Account</a>
+    <a href="members/" class="gate-btn-ghost">Log In</a>
+  </div>
+</div>
 <div class="cta-strip">
   <h2>Ready to Find Your College?</h2>
   <p>Whether you're a freshman just starting out or a junior with a tight timeline — we have a path for you.</p>
@@ -325,4 +348,14 @@
   <div class="footer-copy"><p>© 2025 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8868a8">Built for athletes who want more.</p></div>
 </footer>
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
+<script type="module">
+  import { checkAccess } from './js/auth.js';
+  (async () => {
+    const user = await checkAccess();
+    if (!user || !user.valid) {
+      document.getElementById('gatedContent').classList.add('gate-blur');
+      document.getElementById('gateOverlay').classList.add('visible');
+    }
+  })();
+</script>
 </body></html>

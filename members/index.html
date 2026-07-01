@@ -110,6 +110,21 @@
   .footer-copy{max-width:1200px;margin:0 auto;padding:1.25rem 3rem;border-top:0.5px solid #3a1a5a;display:flex;align-items:center;justify-content:space-between}
   .footer-copy p{font-size:11px;color:#8868a8}
 
+  /* ── RESOURCE LIBRARY ── */
+  .resource-library{padding:3rem 2.5rem}
+  .resource-library-head{margin-bottom:2.5rem}
+  .resource-library-head h2{font-family:var(--serif);font-size:28px;font-weight:300;color:#e8d8ff;margin-top:.35rem}
+  .resource-category{margin-bottom:3rem}
+  .resource-category-title{font-family:var(--serif);font-size:22px;font-weight:300;color:#e8d8ff;padding-bottom:.75rem;border-bottom:0.5px solid #2a1040;margin-bottom:1.25rem}
+  .resource-section{position:relative;margin-bottom:1.25rem;border:0.5px solid #3d1f5a;padding:1.5rem}
+  .resource-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:.75rem}
+  .resource-section-header h4{font-family:var(--serif);font-size:18px;font-weight:300;color:#e8d8ff}
+  .tier-badge{font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border:1px solid var(--gold);color:var(--gold)}
+  .section-lock-overlay{display:none;position:absolute;inset:0;background:rgba(26,5,53,.88);align-items:center;justify-content:center;flex-direction:column;gap:.75rem;text-align:center;padding:2rem;z-index:10}
+  .section-lock-overlay i{font-size:28px;color:#5a2a8a}
+  .section-lock-overlay p{font-size:12px;color:#a888c8;max-width:280px;line-height:1.7}
+  .section-lock-overlay .btn-book{font-size:10px;padding:10px 20px;margin-top:.25rem}
+
   @media(max-width:768px){
     nav{padding:0 1.5rem}.nav-links{display:none}.nav-mobile-toggle{display:block}
     .nav-links.open{display:flex;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:#180530;border-bottom:0.5px solid #3d1f5a;padding:1rem 1.5rem;z-index:99}
@@ -143,6 +158,7 @@
         <a href="../coaching.html">Coaching</a>
         <a href="../fitness.html">Fitness</a>
         <a href="../nutrition.html">Nutrition</a>
+        <a href="../mental-performance.html">Mental Performance</a>
         <a href="../type1-diabetes.html">Type 1 Diabetes</a>
         <a href="../blog.html">Blog</a>
       </div>
@@ -310,7 +326,7 @@
   </section>
 
   <!-- ELITE ATHLETE -->
-  <section class="member-section" data-tier="elite" data-rank="3" style="border-bottom:none">
+  <section class="member-section" data-tier="elite" data-rank="3">
     <div class="member-section-head">
       <div>
         <div class="eyebrow" style="margin-bottom:.5rem">Elite Athlete</div>
@@ -335,6 +351,394 @@
           <div class="resource-type">Video</div>
         </div>
         <a href="#" class="resource-link" target="_blank">Open →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESOURCE LIBRARY -->
+  <section class="resource-library" style="border-top:0.5px solid #3d1f5a;border-bottom:none">
+    <div class="resource-library-head">
+      <div class="eyebrow" style="margin-bottom:.5rem">Members Only</div>
+      <h2 class="serif-h">Resource <em>Library</em></h2>
+    </div>
+
+    <!-- VIDEO LIBRARY -->
+    <div class="resource-category">
+      <div class="resource-category-title">Video Library</div>
+
+      <div class="resource-section" data-min-rank="1">
+        <div class="resource-section-header">
+          <h4>Foundation Videos</h4>
+          <span class="tier-badge">Athlete Plus+</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-video"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Video Title</div>
+              <div class="resource-type">Video</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Watch →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-video"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Video Title</div>
+              <div class="resource-type">Video</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Watch →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Athlete Plus or higher required to access Foundation Videos</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Athlete%20Plus" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+
+      <div class="resource-section" data-min-rank="2">
+        <div class="resource-section-header">
+          <h4>Intermediate Videos</h4>
+          <span class="tier-badge">Performance Athlete+</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-video"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Video Title</div>
+              <div class="resource-type">Video</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Watch →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-video"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Video Title</div>
+              <div class="resource-type">Video</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Watch →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Performance Athlete or higher required to access Intermediate Videos</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Performance%20Athlete" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+
+      <div class="resource-section" data-min-rank="3">
+        <div class="resource-section-header">
+          <h4>Advanced Videos</h4>
+          <span class="tier-badge">Elite Athlete</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-video"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Video Title</div>
+              <div class="resource-type">Video</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Watch →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-video"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Video Title</div>
+              <div class="resource-type">Video</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Watch →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Elite Athlete membership required to access Advanced Videos</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Elite%20Athlete" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRILL LIBRARY -->
+    <div class="resource-category">
+      <div class="resource-category-title">Premium Drill Library</div>
+
+      <div class="resource-section" data-min-rank="1">
+        <div class="resource-section-header">
+          <h4>Foundation Drills</h4>
+          <span class="tier-badge">Athlete Plus+</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-ball-tennis"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Drill Title</div>
+              <div class="resource-type">Drill Sheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-ball-tennis"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Drill Title</div>
+              <div class="resource-type">Drill Sheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Athlete Plus or higher required to access Foundation Drills</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Athlete%20Plus" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+
+      <div class="resource-section" data-min-rank="2">
+        <div class="resource-section-header">
+          <h4>Intermediate Drills</h4>
+          <span class="tier-badge">Performance Athlete+</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-ball-tennis"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Drill Title</div>
+              <div class="resource-type">Drill Sheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-ball-tennis"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Drill Title</div>
+              <div class="resource-type">Drill Sheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Performance Athlete or higher required to access Intermediate Drills</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Performance%20Athlete" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+
+      <div class="resource-section" data-min-rank="3">
+        <div class="resource-section-header">
+          <h4>Advanced Drills</h4>
+          <span class="tier-badge">Elite Athlete</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-ball-tennis"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Drill Title</div>
+              <div class="resource-type">Drill Sheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-ball-tennis"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Drill Title</div>
+              <div class="resource-type">Drill Sheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Elite Athlete membership required to access Advanced Drills</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Elite%20Athlete" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MONTHLY CONTENT -->
+    <div class="resource-category">
+      <div class="resource-category-title">Exclusive Monthly Content</div>
+
+      <div class="resource-section" data-min-rank="1">
+        <div class="resource-section-header">
+          <h4>Athlete Plus Monthly</h4>
+          <span class="tier-badge">Athlete Plus+</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-calendar-event"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Monthly Content</div>
+              <div class="resource-type">Article</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Read →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-calendar-event"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Monthly Content</div>
+              <div class="resource-type">Article</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Read →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Athlete Plus or higher required to access monthly content</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Athlete%20Plus" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+
+      <div class="resource-section" data-min-rank="2">
+        <div class="resource-section-header">
+          <h4>Performance Monthly</h4>
+          <span class="tier-badge">Performance Athlete+</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-calendar-event"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Monthly Content</div>
+              <div class="resource-type">Article</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Read →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-calendar-event"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Monthly Content</div>
+              <div class="resource-type">Article</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Read →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Performance Athlete or higher required to access this content</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Performance%20Athlete" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+
+      <div class="resource-section" data-min-rank="3">
+        <div class="resource-section-header">
+          <h4>Elite Monthly</h4>
+          <span class="tier-badge">Elite Athlete</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-calendar-event"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Monthly Content</div>
+              <div class="resource-type">Article</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Read →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-calendar-event"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Monthly Content</div>
+              <div class="resource-type">Article</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Read →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Elite Athlete membership required to access Elite monthly content</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Elite%20Athlete" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MENTAL PERFORMANCE PREMIUM -->
+    <div class="resource-category">
+      <div class="resource-category-title">Advanced Mental Performance</div>
+
+      <div class="resource-section" data-min-rank="1">
+        <div class="resource-section-header">
+          <h4>Mental Foundations</h4>
+          <span class="tier-badge">Athlete Plus+</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-brain"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Mental Resource</div>
+              <div class="resource-type">Worksheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-brain"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Mental Resource</div>
+              <div class="resource-type">Worksheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Athlete Plus or higher required to access Mental Foundations content</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Athlete%20Plus" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+
+      <div class="resource-section" data-min-rank="2">
+        <div class="resource-section-header">
+          <h4>Performance Psychology</h4>
+          <span class="tier-badge">Performance Athlete+</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-brain"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Mental Resource</div>
+              <div class="resource-type">Worksheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-brain"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Mental Resource</div>
+              <div class="resource-type">Worksheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Performance Athlete or higher required to access Performance Psychology</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Performance%20Athlete" class="btn-book">Upgrade</a>
+        </div>
+      </div>
+
+      <div class="resource-section" data-min-rank="3">
+        <div class="resource-section-header">
+          <h4>Elite Mental Mastery</h4>
+          <span class="tier-badge">Elite Athlete</span>
+        </div>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-brain"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Mental Resource</div>
+              <div class="resource-type">Worksheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+          <div class="resource-card">
+            <div class="resource-icon"><i class="ti ti-brain"></i></div>
+            <div class="resource-info">
+              <div class="resource-name">Placeholder Mental Resource</div>
+              <div class="resource-type">Worksheet</div>
+            </div>
+            <a href="#" class="resource-link" target="_blank">Open →</a>
+          </div>
+        </div>
+        <div class="section-lock-overlay">
+          <i class="ti ti-lock-filled"></i>
+          <p>Elite Athlete membership required to access Elite Mental Mastery content</p>
+          <a href="mailto:mary.profit@gmail.com?subject=Upgrade%20to%20Elite%20Athlete" class="btn-book">Upgrade</a>
+        </div>
       </div>
     </div>
   </section>
@@ -375,6 +779,13 @@
         const stepRank = parseInt(step.dataset.rank, 10);
         if (stepRank <= result.rank) step.classList.add('unlocked');
         if (stepRank === result.rank) step.classList.add('current');
+      });
+
+      document.querySelectorAll('.resource-section').forEach(function(section) {
+        const minRank = parseInt(section.dataset.minRank ?? '0', 10);
+        if (result.rank < minRank) {
+          section.querySelector('.section-lock-overlay').style.display = 'flex';
+        }
       });
     } else {
       document.getElementById('access-gate').style.display = 'flex';
