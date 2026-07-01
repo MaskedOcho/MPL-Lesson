@@ -60,10 +60,15 @@
     .nav-login, .nav-cta { font-size: 9px; padding: 5px 10px; }
   }
 
-  /* legacy override */
-  .nav-links a{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#c8a8e8;text-decoration:none;font-weight:500;transition:color .2s}
-  .nav-links a:hover,.nav-links a.active{color:#e8d8ff}
   .nav-right{display:flex;align-items:center;gap:10px}
+  /* Sub-page navigation */
+  .subpages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#3d1f5a;margin-top:2.5rem}
+  .subpage-card{background:#1a0535;padding:2.5rem 2rem;text-decoration:none;display:flex;flex-direction:column;gap:.75rem;transition:background .2s}
+  .subpage-card:hover{background:#22084a}
+  .subpage-icon{font-size:28px;color:var(--gold)}
+  .subpage-title{font-family:var(--serif);font-size:22px;font-weight:300;color:#e8d8ff;line-height:1.2}
+  .subpage-desc{font-size:13px;color:#a888c8;line-height:1.7;flex:1}
+  .subpage-link{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:.5rem}
   .nav-login{background:none;border:1px solid #5a2a8a;padding:8px 16px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:#c8a8e8;transition:all .2s;text-decoration:none;display:inline-flex;align-items:center;gap:6px}
   .nav-login:hover{border-color:var(--ink);color:#e8d8ff}
   .nav-cta{background:var(--gold);color:#fff;padding:9px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s;text-decoration:none;display:inline-block}
@@ -250,6 +255,39 @@
     <div><div class="sbar-num">100%</div><div class="sbar-lbl">Athlete-First</div></div>
   </div>
 </div>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Explore College Route</div>
+    <h2 class="serif-h" style="font-size:40px">Navigate every <em>step.</em></h2>
+    <div class="subpages-grid">
+      <a href="college-divisions.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-school"></i></div>
+        <div class="subpage-title">College Divisions</div>
+        <p class="subpage-desc">Understand D1, D2, D3, NAIA, and JUCO — and which division is the right fit for your athletic and academic profile.</p>
+        <div class="subpage-link">Explore →</div>
+      </a>
+      <a href="ncaa-rules.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-clipboard-list"></i></div>
+        <div class="subpage-title">NCAA Rules & Regulations</div>
+        <p class="subpage-desc">Know the recruiting calendar, contact rules, official visits, and everything that determines how coaches can interact with you.</p>
+        <div class="subpage-link">Explore →</div>
+      </a>
+      <a href="nil-education.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-coin"></i></div>
+        <div class="subpage-title">NIL Education</div>
+        <p class="subpage-desc">Learn how to build your brand, find deals, and generate income as a student-athlete while staying NCAA compliant.</p>
+        <div class="subpage-link">Explore →</div>
+      </a>
+      <a href="transferring.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-arrows-exchange"></i></div>
+        <div class="subpage-title">Transferring</div>
+        <p class="subpage-desc">If your current program isn't the right fit, learn how the transfer portal works, your eligibility windows, and how to find your next home.</p>
+        <div class="subpage-link">Explore →</div>
+      </a>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="inner">

@@ -42,17 +42,46 @@
   }
   .nav-membership{color:var(--gold)!important;background:rgba(232,98,10,0.08);border:1px solid var(--gold);padding:7px 18px;display:inline-flex!important;align-items:center;gap:6px;font-weight:600;letter-spacing:1.5px}
   .nav-membership:hover{color:#fff!important;background:var(--gold);border-color:var(--gold)}
-  /* coming soon hero */
-  .cs-hero{min-height:calc(100vh - 72px);display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 2rem;background:radial-gradient(ellipse at 60% 40%,#2d0a50 0%,#1e0a2e 60%)}
-  .cs-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1.5rem}
-  .cs-h{font-family:var(--serif);font-size:clamp(42px,6vw,72px);font-weight:300;line-height:1.1;color:#e8d8ff;margin-bottom:1.5rem}
-  .cs-h em{font-style:italic;color:var(--gold)}
-  .cs-body{font-size:14px;color:#c8a8e8;line-height:1.85;max-width:480px;margin:0 auto 2.5rem}
-  .cs-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:6px 18px;margin-bottom:2.5rem}
-  .cs-btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
-  .cs-btn:hover{background:var(--gold-dk)}
-  .cs-btn-ghost{display:inline-block;border:1px solid #5a2a8a;color:#c8a8e8;padding:12px 28px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s;margin-left:12px}
-  .cs-btn-ghost:hover{border-color:#fff;color:#fff}
+  section{border-bottom:0.5px solid #3d1f5a}
+  .inner{max-width:1200px;margin:0 auto;padding:5rem 3rem}
+  .eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1.5rem}
+  .serif-h{font-family:var(--serif);font-weight:300;line-height:1.1;color:#e8d8ff}
+  .serif-h em{font-style:italic;color:var(--gold)}
+  .page-hero{background:var(--ink);padding:6rem 3rem 5rem;border-bottom:0.5px solid #3d1f5a}
+  .page-hero-inner{max-width:1200px;margin:0 auto}
+  .page-hero h1{font-family:var(--serif);font-size:60px;font-weight:300;line-height:1.05;color:var(--ivory)}
+  .page-hero h1 em{font-style:italic;color:var(--gold)}
+  .page-hero-sub{font-size:15px;color:#8a68a8;line-height:1.8;margin-top:1.5rem;max-width:560px}
+  .subpages-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1px;background:#3d1f5a;margin-top:2.5rem}
+  .subpage-card{background:#1a0535;padding:2.5rem 2rem;text-decoration:none;display:flex;flex-direction:column;gap:.75rem;transition:background .2s}
+  .subpage-card:hover{background:#22084a}
+  .subpage-icon{font-size:28px;color:var(--gold)}
+  .subpage-title{font-family:var(--serif);font-size:22px;font-weight:300;color:#e8d8ff;line-height:1.2}
+  .subpage-desc{font-size:13px;color:#a888c8;line-height:1.7;flex:1}
+  .subpage-link{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:.5rem}
+  .membership-cta{padding:5rem 2rem;background:linear-gradient(180deg,var(--ink) 0%,#0d0118 100%);border-top:0.5px solid #3d1f5a;text-align:center}
+  .cta-wrap{max-width:1100px;margin:0 auto}
+  .cta-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .cta-heading{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:300;color:#e8d8ff;margin-bottom:1rem;line-height:1.2}
+  .cta-heading em{font-style:italic;color:var(--gold)}
+  .cta-body{font-size:14px;color:#c8a8e8;max-width:500px;margin:0 auto 3rem;line-height:1.85}
+  .pricing-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+  .pricing-card{background:#1a0535;border:0.5px solid #3d1f5a;padding:2rem 1.5rem;position:relative;text-align:center}
+  .pricing-card.pricing-featured{border-color:var(--gold)}
+  .pricing-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;white-space:nowrap}
+  .pricing-tier-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#8a68a8;margin-bottom:.75rem}
+  .pricing-featured .pricing-tier-label{color:var(--gold)}
+  .pricing-price{font-family:var(--serif);font-size:36px;font-weight:300;color:#e8d8ff;margin-bottom:.5rem}
+  .pricing-price span{font-size:14px;color:#8a68a8}
+  .pricing-desc{font-size:12px;color:#a888c8;line-height:1.7;margin-bottom:1.5rem;min-height:3rem}
+  .pricing-btn{display:block;background:var(--gold);color:#fff;padding:11px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .pricing-btn:hover{background:var(--gold-dk)}
+  .pricing-btn-ghost{display:block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 24px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s}
+  .pricing-btn-ghost:hover{border-color:#fff;color:#fff}
+  .pricing-note{font-size:10px;color:#5a3a7a;margin-top:.5rem;letter-spacing:.5px}
+  .cta-signin{font-size:12px;color:#8a68a8;margin-top:1.5rem}
+  .cta-signin a{color:var(--gold);text-decoration:none}
+  @media(max-width:768px){.page-hero{padding:3rem 1.5rem}.page-hero h1{font-size:40px}.inner{padding:3rem 1.5rem}}
   /* footer */
   footer{background:#100220;border-top:0.5px solid #3d1f5a;padding:4rem 3rem 2rem}
   .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:0.5px solid #2a1040}
@@ -71,7 +100,6 @@
   <a href="index.html" class="nav-logo">
     <span class="nav-logo-text">MPL Pursuits</span>
   </a>
-  <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   <ul class="nav-links" id="navLinks">
     <li><a href="about.html">About Us</a></li>
     <li>
@@ -107,16 +135,100 @@
   </ul>
   <div class="nav-right">
     <a href="index.html#booking" class="nav-cta">Book a Session</a>
+    <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="ti ti-menu-2"></i></button>
   </div>
 </nav>
-<section class="cs-hero">
-  <div>
-    <div class="cs-eyebrow">Athlete Development</div>
-    <div class="cs-badge">Coming Soon</div>
-    <h1 class="cs-h">Athlete Development<br>is <em>coming soon.</em></h1>
-    <p class="cs-body">Our athlete development hub is coming soon. Check back soon or get notified when we launch new content.</p>
-    <a href="index.html#booking" class="cs-btn">Book a Session</a>
-    <a href="index.html" class="cs-btn-ghost">Back to Home</a>
+
+<div class="page-hero">
+  <div class="page-hero-inner">
+    <div class="eyebrow">Athlete Development</div>
+    <h1>Build the <em>Complete</em><br>Athlete.</h1>
+    <p class="page-hero-sub">Coaching, fitness, nutrition, mental performance, and specialized support for T1D athletes — everything you need to develop on and off the court.</p>
+  </div>
+</div>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Explore Athlete Development</div>
+    <h2 class="serif-h" style="font-size:40px">Choose your <em>focus.</em></h2>
+    <div class="subpages-grid">
+      <a href="coaching.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-device-laptop"></i></div>
+        <div class="subpage-title">Coaching</div>
+        <p class="subpage-desc">1-on-1 virtual sessions, video review, and in-person lessons — professional coaching built around your game and goals.</p>
+        <div class="subpage-link">Explore Coaching →</div>
+      </a>
+      <a href="fitness.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-run"></i></div>
+        <div class="subpage-title">Fitness</div>
+        <p class="subpage-desc">Sport-specific conditioning, strength, speed, and agility training designed for tennis athletes at every development stage.</p>
+        <div class="subpage-link">Explore Fitness →</div>
+      </a>
+      <a href="nutrition.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-salad"></i></div>
+        <div class="subpage-title">Nutrition</div>
+        <p class="subpage-desc">Fueling strategies, match-day nutrition, recovery eating, and how to sustain energy through long training and competition blocks.</p>
+        <div class="subpage-link">Explore Nutrition →</div>
+      </a>
+      <a href="mental-performance.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-brain"></i></div>
+        <div class="subpage-title">Mental Performance</div>
+        <p class="subpage-desc">Pressure management, confidence, focus routines, and the mental skills that separate good players from great competitors.</p>
+        <div class="subpage-link">Explore Mental Performance →</div>
+      </a>
+      <a href="type1-diabetes.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-heartbeat"></i></div>
+        <div class="subpage-title">Type 1 Diabetes</div>
+        <p class="subpage-desc">Specialized guidance for T1D athletes — glucose management around training, insulin timing, and competing safely at any level.</p>
+        <div class="subpage-link">Explore T1D Guidance →</div>
+      </a>
+      <a href="blog.html" class="subpage-card">
+        <div class="subpage-icon"><i class="ti ti-pencil"></i></div>
+        <div class="subpage-title">Blog</div>
+        <p class="subpage-desc">Articles, insights, and stories from Mary's experience as a D1 athlete, coach, and T1D advocate in the world of elite sport.</p>
+        <div class="subpage-link">Read the Blog →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="membership-cta">
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join MPL Pursuits</div>
+    <h2 class="cta-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="cta-body">Get full access to all athlete development content, coaching resources, NIL &amp; transfer guidance, and more. Start free or go all in.</p>
+    <div class="pricing-row">
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-desc">Basic educational content</div>
+        <a href="#" class="pricing-btn-ghost">Create Free Account</a>
+        <p class="pricing-note">Form coming soon</p>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier-label">Athlete Plus</div>
+        <div class="pricing-price">$19<span>/mo</span></div>
+        <div class="pricing-desc">Full content + NIL &amp; Transfer access</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Performance Athlete</div>
+        <div class="pricing-price">$49<span>/mo</span></div>
+        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Elite Athlete</div>
+        <div class="pricing-price">$99<span>/mo</span></div>
+        <div class="pricing-desc">Complete support system</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+    </div>
+    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area →</a></p>
   </div>
 </section>
 <footer>
