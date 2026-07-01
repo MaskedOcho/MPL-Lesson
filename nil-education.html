@@ -46,17 +46,35 @@
   .page-h{font-family:var(--serif);font-size:clamp(38px,5vw,64px);font-weight:300;line-height:1.1;color:#e8d8ff;margin-bottom:1.25rem}
   .page-h em{font-style:italic;color:var(--gold)}
   .page-sub{font-size:14px;color:#c8a8e8;line-height:1.85;max-width:560px;margin:0 auto}
-  /* premium gate — shown by default, hidden if auth passes */
-  .premium-gate{min-height:50vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:5rem 2rem;background:var(--ink)}
-  .premium-gate-icon{font-size:48px;color:#5a2a8a;margin-bottom:1.5rem}
-  .premium-gate h2{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:300;color:#e8d8ff;margin-bottom:1rem}
-  .premium-gate h2 em{font-style:italic;color:var(--gold)}
-  .premium-gate p{font-size:14px;color:#a888c8;line-height:1.8;max-width:460px;margin:0 auto 2rem}
-  .premium-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px;margin-bottom:2rem}
-  .premium-btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
-  .premium-btn:hover{background:var(--gold-dk)}
-  .premium-btn-ghost{display:inline-block;border:1px solid #5a2a8a;color:#c8a8e8;padding:12px 28px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s;margin-left:12px}
-  .premium-btn-ghost:hover{border-color:#fff;color:#fff}
+  /* page overview */
+  .page-overview{padding:3rem 2rem;text-align:center;border-bottom:0.5px solid #3d1f5a}
+  .overview-inner{max-width:600px;margin:0 auto;font-size:14px;color:#c8a8e8;line-height:1.9}
+  /* membership cta */
+  .membership-cta{padding:5rem 2rem;background:linear-gradient(180deg,var(--ink) 0%,#0d0118 100%);border-top:0.5px solid #3d1f5a;text-align:center}
+  .cta-wrap{max-width:1100px;margin:0 auto}
+  .cta-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .cta-heading{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:300;color:#e8d8ff;margin-bottom:1rem;line-height:1.2}
+  .cta-heading em{font-style:italic;color:var(--gold)}
+  .cta-body{font-size:14px;color:#c8a8e8;max-width:500px;margin:0 auto 3rem;line-height:1.85}
+  .pricing-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+  .pricing-card{background:#1a0535;border:0.5px solid #3d1f5a;padding:2rem 1.5rem;position:relative;text-align:center}
+  .pricing-card.pricing-featured{border-color:var(--gold)}
+  .pricing-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;white-space:nowrap}
+  .pricing-tier-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#8a68a8;margin-bottom:.75rem}
+  .pricing-featured .pricing-tier-label{color:var(--gold)}
+  .pricing-price{font-family:var(--serif);font-size:36px;font-weight:300;color:#e8d8ff;margin-bottom:.5rem}
+  .pricing-price span{font-size:14px;color:#8a68a8}
+  .pricing-desc{font-size:12px;color:#a888c8;line-height:1.7;margin-bottom:1.5rem;min-height:3rem}
+  .pricing-btn{display:block;background:var(--gold);color:#fff;padding:11px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .pricing-btn:hover{background:var(--gold-dk)}
+  .pricing-btn-ghost{display:block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 24px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s}
+  .pricing-btn-ghost:hover{border-color:#fff;color:#fff}
+  .pricing-note{font-size:10px;color:#5a3a7a;margin-top:.5rem;letter-spacing:.5px}
+  .cta-signin{font-size:12px;color:#8a68a8;margin-top:1.5rem}
+  .cta-signin a{color:var(--gold);text-decoration:none}
+  .cta-signin a:hover{text-decoration:underline}
+  .nav-membership{color:var(--gold)!important;border:1px solid var(--gold);padding:6px 14px}
+  .nav-membership:hover{color:#fff!important;background:var(--gold);border-color:var(--gold)}
   /* content */
   .content-wrap{max-width:820px;margin:0 auto;padding:4rem 2rem}
   .content-section{margin-bottom:3rem}
@@ -112,9 +130,9 @@
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
+    <li><a href="members/" class="nav-membership">Membership Area</a></li>
   </ul>
   <div class="nav-right">
-    <a href="members/" class="nav-login"><i class="ti ti-user"></i> Log In</a>
     <a href="index.html#booking" class="nav-cta">Book a Session</a>
     <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   </div>
@@ -126,61 +144,51 @@
   <p class="page-sub">Name, Image, and Likeness — understand what it means, what you can earn, and how to build your brand the right way as a college athlete.</p>
 </div>
 
-<!-- Lock gate: shown to visitors and free members, hidden to Plus+ -->
-<div class="premium-gate" id="premiumGate">
-  <div class="premium-gate-icon"><i class="ti ti-lock-filled"></i></div>
-  <div class="premium-badge">Athlete Plus Required</div>
-  <h2>NIL Education is a <em>Premium Resource</em></h2>
-  <p>This content is available exclusively to Athlete Plus members and above. Upgrade to access NIL guides, brand-building strategies, deal structures, and compliance rules.</p>
-  <a href="members/" class="premium-btn">View Membership Plans</a>
-  <a href="members/" class="premium-btn-ghost">Log In</a>
-</div>
+<section class="page-overview">
+  <div class="overview-inner">
+    <p>Our NIL Education content covers everything student-athletes need to know: how to build a personal brand, structure deals, navigate compliance, and work with collectives — all tailored to the realities of college tennis. Available to Athlete Plus members and above.</p>
+  </div>
+</section>
 
-<!-- Full content: hidden by default, shown to Plus+ by JS -->
-<div class="content-wrap" id="pageContent" style="display:none">
-  <section class="content-section">
-    <h2>What Is NIL?</h2>
-    <p>Placeholder: Since July 2021, NCAA college athletes can profit from their Name, Image, and Likeness. This section explains what NIL is, what changed, and what it means for you as a current or prospective college athlete.</p>
-    <p>Placeholder: The key distinction between NIL deals and amateurism rules — what is and isn't allowed, how schools and conferences have adapted, and what to expect as the rules continue to evolve.</p>
-  </section>
-
-  <section class="content-section">
-    <h2>Building Your Personal Brand</h2>
-    <p>Placeholder: NIL value is driven by your audience and your story. How to build a personal brand as a student-athlete — social media presence, content strategy, and how to communicate your value to potential partners.</p>
-    <h3>Social Media Strategy for Athletes</h3>
-    <ul>
-      <li>Placeholder item — choosing the right platforms for your sport and demographic</li>
-      <li>Placeholder item — content pillars: training, lifestyle, academics, and sport insight</li>
-      <li>Placeholder item — consistency and growth strategies for student-athletes</li>
-      <li>Placeholder item — what coaches and compliance departments are watching for</li>
-    </ul>
-  </section>
-
-  <section class="content-section">
-    <h2>NIL Deal Structures</h2>
-    <p>Placeholder: What NIL deals look like in practice — sponsorships, brand ambassador agreements, appearance fees, content creation contracts, and camps/clinics. How to evaluate an offer and what to look for in a contract.</p>
-    <h3>Valuing Your NIL</h3>
-    <p>Placeholder: How to determine your NIL value based on follower count, engagement rate, sport visibility, and school/market size. Realistic expectations for different athlete profiles.</p>
-    <h3>Negotiating and Signing Deals</h3>
-    <p>Placeholder: What to ask for, what to avoid, exclusivity clauses, disclosure requirements, and how to protect yourself when signing NIL agreements.</p>
-  </section>
-
-  <section class="content-section">
-    <h2>NIL Collectives &amp; School Programs</h2>
-    <p>Placeholder: What NIL collectives are, how they operate, and how to connect with them. How individual schools support their athletes in the NIL space and what to look for when choosing a school from an NIL perspective.</p>
-  </section>
-
-  <section class="content-section">
-    <h2>Compliance &amp; What to Avoid</h2>
-    <p>Placeholder: NIL compliance rules that still apply — what you must disclose, what could jeopardize your eligibility, and how to work with your school's compliance office to stay protected.</p>
-    <ul>
-      <li>Placeholder item — required disclosures to your school</li>
-      <li>Placeholder item — prohibited activities and industries</li>
-      <li>Placeholder item — pay-for-play vs. NIL — the key distinction</li>
-      <li>Placeholder item — state law differences and how they affect you</li>
-    </ul>
-  </section>
-</div>
+<section class="membership-cta">
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join MPL Pursuits</div>
+    <h2 class="cta-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="cta-body">Get full access to lesson content, NIL &amp; transfer guidance, the resource library, coaching systems, and more. Start free or go all in.</p>
+    <div class="pricing-row">
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-desc">Basic educational content</div>
+        <a href="#" class="pricing-btn-ghost">Create Free Account</a>
+        <p class="pricing-note">Form coming soon</p>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier-label">Athlete Plus</div>
+        <div class="pricing-price">$19<span>/mo</span></div>
+        <div class="pricing-desc">Full content + NIL &amp; Transfer access</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Performance Athlete</div>
+        <div class="pricing-price">$49<span>/mo</span></div>
+        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Elite Athlete</div>
+        <div class="pricing-price">$99<span>/mo</span></div>
+        <div class="pricing-desc">Complete support system</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+    </div>
+    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area →</a></p>
+  </div>
+</section>
 
 <footer>
   <div class="footer-inner">
@@ -193,15 +201,5 @@
 </footer>
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
-<script type="module">
-  import { checkAccess } from './js/auth.js';
-  (async () => {
-    const user = await checkAccess();
-    if (user?.valid && user.rank >= 1) {
-      document.getElementById('premiumGate').style.display = 'none';
-      document.getElementById('pageContent').style.display = 'block';
-    }
-  })();
-</script>
 </body>
 </html>

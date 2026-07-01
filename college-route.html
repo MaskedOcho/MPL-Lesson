@@ -127,17 +127,32 @@
   .price-features li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.6}
   .price-features li::before{content:'—';position:absolute;left:0;color:var(--gold);font-size:11px;top:2px}
 
-  .gate-blur{filter:blur(6px);user-select:none;pointer-events:none;max-height:380px;overflow:hidden}
-  .gate-overlay{display:none;position:relative;z-index:10;text-align:center;padding:3rem 2rem;margin-top:-80px;background:linear-gradient(to bottom,transparent,var(--ink) 40%)}
-  .gate-overlay.visible{display:block}
-  .gate-overlay-inner{background:#1a0535;border:1px solid #5a2a8a;padding:2.5rem 2rem;max-width:440px;margin:0 auto}
-  .gate-icon{font-size:28px;color:#8a68a8;margin-bottom:1rem}
-  .gate-overlay h3{font-family:var(--serif);font-size:22px;font-weight:300;color:#e8d8ff;margin-bottom:.75rem}
-  .gate-overlay p{font-size:13px;color:#a888c8;line-height:1.7;margin-bottom:1.5rem}
-  .gate-btn{display:inline-block;background:var(--gold);color:#fff;padding:11px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
-  .gate-btn:hover{background:var(--gold-dk)}
-  .gate-btn-ghost{display:inline-block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s;margin-left:10px}
-  .gate-btn-ghost:hover{border-color:#fff;color:#fff}
+  /* membership cta */
+  .membership-cta{padding:5rem 2rem;background:linear-gradient(180deg,var(--ink) 0%,#0d0118 100%);border-top:0.5px solid #3d1f5a;text-align:center}
+  .cta-wrap{max-width:1100px;margin:0 auto}
+  .cta-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .cta-heading{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:300;color:#e8d8ff;margin-bottom:1rem;line-height:1.2}
+  .cta-heading em{font-style:italic;color:var(--gold)}
+  .cta-body{font-size:14px;color:#c8a8e8;max-width:500px;margin:0 auto 3rem;line-height:1.85}
+  .pricing-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+  .pricing-card{background:#1a0535;border:0.5px solid #3d1f5a;padding:2rem 1.5rem;position:relative;text-align:center}
+  .pricing-card.pricing-featured{border-color:var(--gold)}
+  .pricing-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;white-space:nowrap}
+  .pricing-tier-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#8a68a8;margin-bottom:.75rem}
+  .pricing-featured .pricing-tier-label{color:var(--gold)}
+  .pricing-price{font-family:var(--serif);font-size:36px;font-weight:300;color:#e8d8ff;margin-bottom:.5rem}
+  .pricing-price span{font-size:14px;color:#8a68a8}
+  .pricing-desc{font-size:12px;color:#a888c8;line-height:1.7;margin-bottom:1.5rem;min-height:3rem}
+  .pricing-btn{display:block;background:var(--gold);color:#fff;padding:11px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .pricing-btn:hover{background:var(--gold-dk)}
+  .pricing-btn-ghost{display:block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 24px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s}
+  .pricing-btn-ghost:hover{border-color:#fff;color:#fff}
+  .pricing-note{font-size:10px;color:#5a3a7a;margin-top:.5rem;letter-spacing:.5px}
+  .cta-signin{font-size:12px;color:#8a68a8;margin-top:1.5rem}
+  .cta-signin a{color:var(--gold);text-decoration:none}
+  .cta-signin a:hover{text-decoration:underline}
+  .nav-membership{color:var(--gold)!important;border:1px solid var(--gold);padding:6px 14px}
+  .nav-membership:hover{color:#fff!important;background:var(--gold);border-color:var(--gold)}
   .cta-strip{background:var(--gold);padding:5rem 3rem;text-align:center}
   .cta-strip h2{font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;margin-bottom:1rem}
   .cta-strip p{font-size:14px;color:rgba(255,255,255,.8);max-width:500px;margin:0 auto 2rem;line-height:1.75}
@@ -206,9 +221,9 @@
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
+    <li><a href="members/" class="nav-membership">Membership Area</a></li>
   </ul>
   <div class="nav-right">
-    <a href="#" class="nav-login"><i class="ti ti-user"></i> Log In</a>
     <a href="index.html#booking" class="nav-cta">Book a Session</a>
     <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="ti ti-menu-2"></i></button>
   </div>
@@ -254,85 +269,45 @@
   </div>
 </section>
 
-<div id="gatedContent">
-<section id="what-included" class="included-dark">
-  <div class="inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
-      <div>
-        <div class="eyebrow">What's Included</div>
-        <h2>Full-service support from <em>start to finish.</em></h2>
-        <p class="body-copy">The College Path Program gives you everything you need to navigate the NCAA landscape with confidence.</p>
+<section class="membership-cta">
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join MPL Pursuits</div>
+    <h2 class="cta-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="cta-body">Get full access to lesson content, NIL &amp; transfer guidance, the resource library, coaching systems, and more. Start free or go all in.</p>
+    <div class="pricing-row">
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-desc">Basic educational content</div>
+        <a href="#" class="pricing-btn-ghost">Create Free Account</a>
+        <p class="pricing-note">Form coming soon</p>
       </div>
-      <div class="included-items">
-        <div class="inc-item"><i class="ti ti-mail"></i>Email support each month</div>
-        <div class="inc-item"><i class="ti ti-file-text"></i>Coach communication templates</div>
-        <div class="inc-item"><i class="ti ti-list"></i>Target school list development</div>
-        <div class="inc-item"><i class="ti ti-video"></i>Recruiting video guidance</div>
-        <div class="inc-item"><i class="ti ti-calendar"></i>Tournament & visit planning</div>
-        <div class="inc-item"><i class="ti ti-id"></i>NCAA eligibility guidance</div>
-        <div class="inc-item"><i class="ti ti-trophy"></i>Scholarship negotiation prep</div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier-label">Athlete Plus</div>
+        <div class="pricing-price">$19<span>/mo</span></div>
+        <div class="pricing-desc">Full content + NIL &amp; Transfer access</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="inner">
-    <div class="two-col">
-      <div>
-        <div class="eyebrow">Understanding the Landscape</div>
-        <h2 class="serif-h" style="font-size:44px">The NCAA world is <em>complex.</em> We simplify it.</h2>
-        <p class="body-copy" style="margin-top:1.25rem">Division I, II, III — NAIA — Junior College. Each path has different rules, timelines, and opportunities. We help you understand which is right for you.</p>
-        <a href="ncaa-rules.html" style="display:inline-flex;align-items:center;gap:6px;margin-top:1.25rem;font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;border-bottom:1px solid var(--gold);padding-bottom:3px">Dive Deeper →</a>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Performance Athlete</div>
+        <div class="pricing-price">$49<span>/mo</span></div>
+        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
       </div>
-      <div class="ncaa-grid">
-        <div class="ncaa-box"><div class="ncaa-box-title">NCAA Division I</div><p class="ncaa-box-body">The highest level. Scholarship opportunities available. Early recruiting timelines and strict contact rules require expert navigation.</p></div>
-        <div class="ncaa-box"><div class="ncaa-box-title">NCAA Division II</div><p class="ncaa-box-body">Competitive athletics with strong scholarship opportunities. Often an undervalued path with excellent academic and athletic balance.</p></div>
-        <div class="ncaa-box"><div class="ncaa-box-title">NCAA Division III</div><p class="ncaa-box-body">No athletic scholarships, but strong academic financial aid. Known for high academic quality and genuine student-athlete balance.</p></div>
-        <div class="ncaa-box"><div class="ncaa-box-title">NAIA & Junior College</div><p class="ncaa-box-body">Alternative pathways with scholarship opportunities and flexible recruiting timelines — often overlooked but highly valuable.</p></div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Elite Athlete</div>
+        <div class="pricing-price">$99<span>/mo</span></div>
+        <div class="pricing-desc">Complete support system</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
       </div>
     </div>
+    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area →</a></p>
   </div>
 </section>
-
-<!-- PRICING — COMING SOON -->
-<section class="pricing-section">
-  <div class="inner">
-    <div class="eyebrow">Pricing</div>
-    <h2 class="serif-h" style="font-size:44px;margin-bottom:3rem">Simple, <em>transparent</em> pricing.</h2>
-    <div class="pricing-card">
-      <div class="price-amount">$75</div>
-      <div class="price-period">Per Month · Ongoing</div>
-      <ul class="price-features">
-        <li>Unlimited email support throughout the process</li>
-        <li>Monthly 1-on-1 strategy calls</li>
-        <li>Coach outreach communication templates</li>
-        <li>Personalized target school list</li>
-        <li>Recruiting video review and guidance</li>
-        <li>NCAA eligibility & compliance guidance</li>
-        <li>Tournament and visit planning support</li>
-        <li>Scholarship negotiation preparation</li>
-      </ul>
-      <!-- COMING SOON OVERLAY -->
-      <div class="coming-soon-overlay">
-        <div class="coming-soon-label">Coming Soon</div>
-        <div class="coming-soon-sub">Join the presale list</div>
-        <a href="index.html#booking" class="presale-btn">Get Notified</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-</div><!-- /gatedContent -->
-<div class="gate-overlay" id="gateOverlay">
-  <div class="gate-overlay-inner">
-    <div class="gate-icon"><i class="ti ti-lock"></i></div>
-    <h3>Create a Free Account</h3>
-    <p>Sign up for free to unlock full College Route details — what's included, NCAA divisions, and pricing.</p>
-    <a href="members/" class="gate-btn">Create Free Account</a>
-    <a href="members/" class="gate-btn-ghost">Log In</a>
-  </div>
-</div>
 <div class="cta-strip">
   <h2>Ready to Find Your College?</h2>
   <p>Whether you're a freshman just starting out or a junior with a tight timeline — we have a path for you.</p>
@@ -350,14 +325,4 @@
 </footer>
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
-<script type="module">
-  import { checkAccess } from './js/auth.js';
-  (async () => {
-    const user = await checkAccess();
-    if (!user || !user.valid) {
-      document.getElementById('gatedContent').classList.add('gate-blur');
-      document.getElementById('gateOverlay').classList.add('visible');
-    }
-  })();
-</script>
 </body></html>

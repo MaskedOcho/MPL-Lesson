@@ -48,17 +48,35 @@
   .page-h em{font-style:italic;color:var(--gold)}
   .page-sub{font-size:14px;color:#c8a8e8;line-height:1.85;max-width:520px;margin:0 auto}
 
-  /* premium gate */
-  .premium-gate{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:6rem 2rem;min-height:60vh;gap:1.25rem}
-  .premium-gate .gate-icon{font-size:48px;color:#5a2a8a;margin-bottom:.5rem}
-  .premium-gate .gate-badge{display:inline-block;border:1px solid var(--gold);color:var(--gold);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;padding:5px 16px}
-  .premium-gate h2{font-family:var(--serif);font-size:clamp(28px,4vw,44px);font-weight:300;color:#e8d8ff}
-  .premium-gate p{font-size:14px;color:#c8a8e8;max-width:440px;line-height:1.85}
-  .premium-gate .gate-actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;margin-top:.5rem}
-  .cs-btn{display:inline-block;background:var(--gold);color:#fff;padding:13px 32px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
-  .cs-btn:hover{background:var(--gold-dk)}
-  .cs-btn-ghost{display:inline-block;border:1px solid #5a2a8a;color:#c8a8e8;padding:12px 28px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s}
-  .cs-btn-ghost:hover{border-color:#fff;color:#fff}
+  /* page overview */
+  .page-overview{padding:3rem 2rem;text-align:center;border-bottom:0.5px solid #3d1f5a}
+  .overview-inner{max-width:600px;margin:0 auto;font-size:14px;color:#c8a8e8;line-height:1.9}
+  /* membership cta */
+  .membership-cta{padding:5rem 2rem;background:linear-gradient(180deg,var(--ink) 0%,#0d0118 100%);border-top:0.5px solid #3d1f5a;text-align:center}
+  .cta-wrap{max-width:1100px;margin:0 auto}
+  .cta-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .cta-heading{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:300;color:#e8d8ff;margin-bottom:1rem;line-height:1.2}
+  .cta-heading em{font-style:italic;color:var(--gold)}
+  .cta-body{font-size:14px;color:#c8a8e8;max-width:500px;margin:0 auto 3rem;line-height:1.85}
+  .pricing-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+  .pricing-card{background:#1a0535;border:0.5px solid #3d1f5a;padding:2rem 1.5rem;position:relative;text-align:center}
+  .pricing-card.pricing-featured{border-color:var(--gold)}
+  .pricing-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;white-space:nowrap}
+  .pricing-tier-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#8a68a8;margin-bottom:.75rem}
+  .pricing-featured .pricing-tier-label{color:var(--gold)}
+  .pricing-price{font-family:var(--serif);font-size:36px;font-weight:300;color:#e8d8ff;margin-bottom:.5rem}
+  .pricing-price span{font-size:14px;color:#8a68a8}
+  .pricing-desc{font-size:12px;color:#a888c8;line-height:1.7;margin-bottom:1.5rem;min-height:3rem}
+  .pricing-btn{display:block;background:var(--gold);color:#fff;padding:11px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .pricing-btn:hover{background:var(--gold-dk)}
+  .pricing-btn-ghost{display:block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 24px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s}
+  .pricing-btn-ghost:hover{border-color:#fff;color:#fff}
+  .pricing-note{font-size:10px;color:#5a3a7a;margin-top:.5rem;letter-spacing:.5px}
+  .cta-signin{font-size:12px;color:#8a68a8;margin-top:1.5rem}
+  .cta-signin a{color:var(--gold);text-decoration:none}
+  .cta-signin a:hover{text-decoration:underline}
+  .nav-membership{color:var(--gold)!important;border:1px solid var(--gold);padding:6px 14px}
+  .nav-membership:hover{color:#fff!important;background:var(--gold);border-color:var(--gold)}
 
   /* content sections */
   .content-wrap{max-width:860px;margin:0 auto;padding:4rem 2rem}
@@ -126,9 +144,9 @@
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
+    <li><a href="members/" class="nav-membership">Membership Area</a></li>
   </ul>
   <div class="nav-right">
-    <a href="members/" class="nav-login"><i class="ti ti-user"></i> Log In</a>
     <a href="index.html#booking" class="nav-cta">Book a Session</a>
     <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   </div>
@@ -141,127 +159,51 @@
   <p class="page-sub">Navigate the transfer process with confidence — from entering the portal to finding your next program and making the most of your second chance.</p>
 </section>
 
-<!-- Lock overlay — visible to visitors and free members -->
-<section class="premium-gate" id="premiumGate">
-  <i class="ti ti-lock-filled gate-icon"></i>
-  <span class="gate-badge">Athlete Plus Required</span>
-  <h2>Transfer Portal Resources</h2>
-  <p>Upgrade to Athlete Plus or higher to access in-depth transfer portal guidance, eligibility rules, coach communication strategies, and decision-making frameworks.</p>
-  <div class="gate-actions">
-    <a href="members/" class="cs-btn">View Membership Plans</a>
-    <a href="members/" class="cs-btn-ghost">Log In</a>
+<section class="page-overview">
+  <div class="overview-inner">
+    <p>Our Transfer Portal content walks you through every step of the process — from understanding eligibility rules and transfer windows to finding the right fit, communicating with coaches, and making a confident decision. Available to Athlete Plus members and above.</p>
   </div>
 </section>
 
-<!-- Full content — revealed by JS for rank >= 1 -->
-<div id="pageContent" style="display:none">
-  <div class="content-wrap">
-
-    <div class="content-section">
-      <div class="section-eyebrow">The Basics</div>
-      <h2 class="section-title">What Is the <em>Transfer Portal?</em></h2>
-      <p class="section-body">The NCAA Transfer Portal is a database where student-athletes can register their intent to transfer to another school. Once you enter, any NCAA member school can contact you directly — and your current school must release your contact information within two business days.</p>
-      <p class="section-body">Entering the portal does not mean you are committed to leaving. You can withdraw and remain at your current institution. However, timing and communication matter enormously — every decision you make in the portal has academic and athletic consequences.</p>
-      <div class="info-grid">
-        <div class="info-card">
-          <h4>Who Can Enter</h4>
-          <p>Any NCAA student-athlete, regardless of sport or year, can enter the portal. Walk-ons, scholarship athletes, and partial scholarship athletes are all eligible.</p>
-        </div>
-        <div class="info-card">
-          <h4>One-Time Transfer Exception</h4>
-          <p>Most athletes now have a one-time transfer exception allowing immediate eligibility at the new school without sitting out a year — a major rule change from the old model.</p>
-        </div>
-        <div class="info-card">
-          <h4>Portal Windows</h4>
-          <p>Specific sports have defined transfer windows. Tennis has its own window. Entering outside the window may affect your eligibility timeline, so know your sport's dates.</p>
-        </div>
+<section class="membership-cta">
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join MPL Pursuits</div>
+    <h2 class="cta-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="cta-body">Get full access to lesson content, NIL &amp; transfer guidance, the resource library, coaching systems, and more. Start free or go all in.</p>
+    <div class="pricing-row">
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-desc">Basic educational content</div>
+        <a href="#" class="pricing-btn-ghost">Create Free Account</a>
+        <p class="pricing-note">Form coming soon</p>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier-label">Athlete Plus</div>
+        <div class="pricing-price">$19<span>/mo</span></div>
+        <div class="pricing-desc">Full content + NIL &amp; Transfer access</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Performance Athlete</div>
+        <div class="pricing-price">$49<span>/mo</span></div>
+        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Elite Athlete</div>
+        <div class="pricing-price">$99<span>/mo</span></div>
+        <div class="pricing-desc">Complete support system</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
       </div>
     </div>
-
-    <hr class="divider"/>
-
-    <div class="content-section">
-      <div class="section-eyebrow">Know the Rules</div>
-      <h2 class="section-title">Eligibility &amp; <em>Timing</em></h2>
-      <p class="section-body">Eligibility rules for transfers have changed significantly in recent years. Understanding your specific situation — scholarship status, seasons of competition used, academic standing, and the one-time exception — is essential before making any moves.</p>
-      <ul class="step-list">
-        <li><span class="step-num">01</span><span class="step-text"><strong>Check your seasons of competition.</strong> You are allowed four seasons of competition. Know how many you have used and how many remain — this shapes which schools will realistically pursue you.</span></li>
-        <li><span class="step-num">02</span><span class="step-text"><strong>Confirm academic eligibility.</strong> You must be in good academic standing to be eligible to compete at a new school. Contact your academic advisor before entering the portal.</span></li>
-        <li><span class="step-num">03</span><span class="step-text"><strong>Understand the one-time exception.</strong> If this is your first transfer, you are likely eligible to compete immediately at your new school in most sports — but verify this applies to your specific situation.</span></li>
-        <li><span class="step-num">04</span><span class="step-text"><strong>Check your sport's transfer window.</strong> Different sports have different portal windows. Missing your sport's window can delay your eligibility by a full academic year.</span></li>
-        <li><span class="step-num">05</span><span class="step-text"><strong>Review your current scholarship terms.</strong> Some scholarships have language about transfers. Talk to your compliance office — not just your coaches — to understand your financial situation.</span></li>
-      </ul>
-    </div>
-
-    <hr class="divider"/>
-
-    <div class="content-section">
-      <div class="section-eyebrow">Finding Your Fit</div>
-      <h2 class="section-title">Evaluating <em>Programs</em></h2>
-      <p class="section-body">The transfer process is your second chance to find the right environment — academically, athletically, and personally. Be more strategic this time. You know what you want, what you need, and what didn't work at your last school.</p>
-      <div class="info-grid">
-        <div class="info-card">
-          <h4>Athletic Fit</h4>
-          <p>Where do you fit in the lineup? Are you transferring to compete for a spot or to walk into one? Be honest with yourself and with coaches about where you realistically land on a roster.</p>
-        </div>
-        <div class="info-card">
-          <h4>Academic Fit</h4>
-          <p>Can you get into your intended major? Will your credits transfer? Meet with the registrar at prospective schools early — credit loss can delay graduation significantly.</p>
-        </div>
-        <div class="info-card">
-          <h4>Culture &amp; Coaching Style</h4>
-          <p>The coaching relationship is often why athletes transfer. Ask hard questions about daily culture, practice structure, and how coaches handle adversity before committing.</p>
-        </div>
-        <div class="info-card">
-          <h4>Financial Aid</h4>
-          <p>Scholarship offers at the new school start fresh. Don't assume your existing package transfers. Get financial aid details in writing before making any decision.</p>
-        </div>
-      </div>
-    </div>
-
-    <hr class="divider"/>
-
-    <div class="content-section">
-      <div class="section-eyebrow">Coach Outreach</div>
-      <h2 class="section-title">Communicating with <em>Coaches</em></h2>
-      <p class="section-body">Once you are in the portal, coaches can reach out to you — but you should also be proactive. A well-crafted outreach message, a clean highlight reel, and a strong academic profile open more doors than waiting for the phone to ring.</p>
-      <ul class="step-list">
-        <li><span class="step-num">01</span><span class="step-text"><strong>Update your athletic profile.</strong> Make sure your highlight video is current, well-edited, and clearly shows your best competitive moments. Coaches make quick decisions from video.</span></li>
-        <li><span class="step-num">02</span><span class="step-text"><strong>Send targeted outreach.</strong> Identify 15–20 schools that are a realistic fit. Send personalized emails — not mass blasts — that explain why their program specifically interests you.</span></li>
-        <li><span class="step-num">03</span><span class="step-text"><strong>Be transparent about your situation.</strong> Coaches will find out why you transferred. Get ahead of it with an honest, professional explanation that frames your decision positively.</span></li>
-        <li><span class="step-num">04</span><span class="step-text"><strong>Ask the right questions on visits.</strong> Ask about practice structure, travel schedule, academic support, and team culture — not just scholarship amounts. The answers reveal a lot about the program.</span></li>
-        <li><span class="step-num">05</span><span class="step-text"><strong>Get everything in writing.</strong> Verbal scholarship offers are not binding. Before withdrawing from the portal or signing anything, confirm scholarship details and roster spot expectations in writing.</span></li>
-      </ul>
-    </div>
-
-    <hr class="divider"/>
-
-    <div class="content-section">
-      <div class="section-eyebrow">Making the Move</div>
-      <h2 class="section-title">Making <em>the Decision</em></h2>
-      <p class="section-body">Choosing where to transfer is one of the most consequential decisions of your college athletic career. Pressure from coaches, timelines, and limited scholarship availability can make it feel rushed — but getting it right matters more than getting it done fast.</p>
-      <div class="info-grid">
-        <div class="info-card">
-          <h4>Don't Rush</h4>
-          <p>The portal moves fast, but you don't have to take the first offer. If a school is right for you, they will wait. If they won't, that tells you something about the environment you'd be entering.</p>
-        </div>
-        <div class="info-card">
-          <h4>Talk to Current Players</h4>
-          <p>Reach out directly to current team members — not just the players coaches introduce you to. Ask about real daily life, training load, academic support, and coaching relationships.</p>
-        </div>
-        <div class="info-card">
-          <h4>Include Your Support System</h4>
-          <p>Parents, coaches, and mentors who know you well can offer perspective you can't see from inside the process. Make this decision with input, not in isolation.</p>
-        </div>
-        <div class="info-card">
-          <h4>Trust Your Gut</h4>
-          <p>After the research, the visits, and the conversations — trust your instincts. You know what environment brings out your best. Choose the place that feels like a genuine opportunity, not just an escape.</p>
-        </div>
-      </div>
-    </div>
-
+    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area →</a></p>
   </div>
-</div>
+</section>
 
 <footer>
   <div class="footer-inner">
@@ -275,15 +217,5 @@
 
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
-<script type="module">
-  import { checkAccess } from './js/auth.js';
-  (async () => {
-    const user = await checkAccess();
-    if (user?.valid && user.rank >= 1) {
-      document.getElementById('premiumGate').style.display = 'none';
-      document.getElementById('pageContent').style.display = 'block';
-    }
-  })();
-</script>
 </body>
 </html>

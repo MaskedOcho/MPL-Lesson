@@ -54,19 +54,32 @@
   .content-section p{font-size:14px;color:#c8a8e8;line-height:1.9;margin-bottom:1rem}
   .content-section ul{padding-left:1.25rem;margin-bottom:1rem}
   .content-section ul li{font-size:14px;color:#c8a8e8;line-height:1.85;margin-bottom:.4rem}
-  /* gate */
-  .content-gate{position:relative}
-  .gate-blur{filter:blur(6px);user-select:none;pointer-events:none;max-height:320px;overflow:hidden;margin-bottom:0}
-  .gate-overlay{display:none;position:relative;z-index:10;text-align:center;padding:3rem 2rem;margin-top:-80px;background:linear-gradient(to bottom,transparent,#1e0a2e 40%)}
-  .gate-overlay.visible{display:block}
-  .gate-overlay-inner{background:#1a0535;border:1px solid #5a2a8a;padding:2.5rem 2rem;max-width:440px;margin:0 auto}
-  .gate-icon{font-size:28px;color:#8a68a8;margin-bottom:1rem}
-  .gate-overlay h3{font-family:var(--serif);font-size:22px;font-weight:300;color:#e8d8ff;margin-bottom:.75rem}
-  .gate-overlay p{font-size:13px;color:#a888c8;line-height:1.7;margin-bottom:1.5rem}
-  .gate-btn{display:inline-block;background:var(--gold);color:#fff;padding:11px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
-  .gate-btn:hover{background:var(--gold-dk)}
-  .gate-btn-ghost{display:inline-block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 22px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s;margin-left:10px}
-  .gate-btn-ghost:hover{border-color:#fff;color:#fff}
+  /* membership cta */
+  .membership-cta{padding:5rem 2rem;background:linear-gradient(180deg,var(--ink) 0%,#0d0118 100%);border-top:0.5px solid #3d1f5a;text-align:center}
+  .cta-wrap{max-width:1100px;margin:0 auto}
+  .cta-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .cta-heading{font-family:var(--serif);font-size:clamp(32px,4vw,52px);font-weight:300;color:#e8d8ff;margin-bottom:1rem;line-height:1.2}
+  .cta-heading em{font-style:italic;color:var(--gold)}
+  .cta-body{font-size:14px;color:#c8a8e8;max-width:500px;margin:0 auto 3rem;line-height:1.85}
+  .pricing-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-bottom:2rem}
+  .pricing-card{background:#1a0535;border:0.5px solid #3d1f5a;padding:2rem 1.5rem;position:relative;text-align:center}
+  .pricing-card.pricing-featured{border-color:var(--gold)}
+  .pricing-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;white-space:nowrap}
+  .pricing-tier-label{font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:#8a68a8;margin-bottom:.75rem}
+  .pricing-featured .pricing-tier-label{color:var(--gold)}
+  .pricing-price{font-family:var(--serif);font-size:36px;font-weight:300;color:#e8d8ff;margin-bottom:.5rem}
+  .pricing-price span{font-size:14px;color:#8a68a8}
+  .pricing-desc{font-size:12px;color:#a888c8;line-height:1.7;margin-bottom:1.5rem;min-height:3rem}
+  .pricing-btn{display:block;background:var(--gold);color:#fff;padding:11px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
+  .pricing-btn:hover{background:var(--gold-dk)}
+  .pricing-btn-ghost{display:block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 24px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s}
+  .pricing-btn-ghost:hover{border-color:#fff;color:#fff}
+  .pricing-note{font-size:10px;color:#5a3a7a;margin-top:.5rem;letter-spacing:.5px}
+  .cta-signin{font-size:12px;color:#8a68a8;margin-top:1.5rem}
+  .cta-signin a{color:var(--gold);text-decoration:none}
+  .cta-signin a:hover{text-decoration:underline}
+  .nav-membership{color:var(--gold)!important;border:1px solid var(--gold);padding:6px 14px}
+  .nav-membership:hover{color:#fff!important;background:var(--gold);border-color:var(--gold)}
   /* footer */
   footer{background:#100220;border-top:0.5px solid #3d1f5a;padding:4rem 3rem 2rem}
   .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:0.5px solid #2a1040}
@@ -116,9 +129,9 @@
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
+    <li><a href="members/" class="nav-membership">Membership Area</a></li>
   </ul>
   <div class="nav-right">
-    <a href="members/" class="nav-login"><i class="ti ti-user"></i> Log In</a>
     <a href="index.html#booking" class="nav-cta">Book a Session</a>
     <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   </div>
@@ -138,64 +151,48 @@
     <p>This section covers the core pillars of athlete fitness: strength development, sport-specific conditioning, mobility, and recovery. Each principle is designed to complement your sport training, not compete with it.</p>
   </section>
 
-  <!-- Gated content — blurred for visitors -->
-  <div class="content-gate">
-    <div id="gatedContent">
-      <section class="content-section">
-        <h2>Strength Training Foundations</h2>
-        <p>Placeholder: Strength training principles for athletes — compound movements, periodization, and sport-specific loading patterns.</p>
-        <h3>Key Compound Movements</h3>
-        <ul>
-          <li>Placeholder item — squat variations and lower body power</li>
-          <li>Placeholder item — hip hinge patterns for explosive athleticism</li>
-          <li>Placeholder item — upper body push/pull balance</li>
-          <li>Placeholder item — core stability vs. core strength</li>
-        </ul>
-        <h3>Programming Structure</h3>
-        <p>Placeholder: How to structure a strength block around your sport season — in-season vs. off-season training loads, deload weeks, and peaking strategies.</p>
-      </section>
 
-      <section class="content-section">
-        <h2>Sport-Specific Conditioning</h2>
-        <p>Placeholder: Conditioning methods tailored to the demands of your sport — energy system training, sprint intervals, and aerobic base building.</p>
-        <h3>Energy System Training</h3>
-        <p>Placeholder: Understanding alactic, lactic, and aerobic energy systems and how to train each one appropriately for your sport's demands.</p>
-        <ul>
-          <li>Placeholder item — short burst explosive efforts</li>
-          <li>Placeholder item — sustained high-intensity intervals</li>
-          <li>Placeholder item — aerobic base maintenance during season</li>
-        </ul>
-      </section>
+</div>
 
-      <section class="content-section">
-        <h2>Mobility &amp; Flexibility</h2>
-        <p>Placeholder: Joint mobility and flexibility protocols that improve movement quality, reduce injury risk, and maintain performance over a long season.</p>
-        <p>Placeholder: Daily mobility routines, pre-training dynamic warm-up sequences, and post-training static stretching protocols.</p>
-      </section>
-
-      <section class="content-section">
-        <h2>Recovery Protocols</h2>
-        <p>Placeholder: Recovery is where adaptation happens. Sleep quality, active recovery sessions, nutrition timing, and stress management all play a role in how well you bounce back and come back stronger.</p>
-        <ul>
-          <li>Placeholder item — sleep optimization for athletes</li>
-          <li>Placeholder item — active recovery sessions and what to include</li>
-          <li>Placeholder item — signs of overtraining and how to respond</li>
-          <li>Placeholder item — cold/heat therapy basics</li>
-        </ul>
-      </section>
-    </div>
-
-    <div class="gate-overlay" id="gateOverlay">
-      <div class="gate-overlay-inner">
-        <div class="gate-icon"><i class="ti ti-lock"></i></div>
-        <h3>Create a Free Account</h3>
-        <p>Sign up for free to unlock the full Fitness guide — strength training, conditioning, mobility, and recovery protocols.</p>
-        <a href="members/" class="gate-btn">Create Free Account</a>
-        <a href="members/" class="gate-btn-ghost">Log In</a>
+<section class="membership-cta">
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join MPL Pursuits</div>
+    <h2 class="cta-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="cta-body">Get full access to lesson content, NIL &amp; transfer guidance, the resource library, coaching systems, and more. Start free or go all in.</p>
+    <div class="pricing-row">
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-desc">Basic educational content</div>
+        <a href="#" class="pricing-btn-ghost">Create Free Account</a>
+        <p class="pricing-note">Form coming soon</p>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier-label">Athlete Plus</div>
+        <div class="pricing-price">$19<span>/mo</span></div>
+        <div class="pricing-desc">Full content + NIL &amp; Transfer access</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Performance Athlete</div>
+        <div class="pricing-price">$49<span>/mo</span></div>
+        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Elite Athlete</div>
+        <div class="pricing-price">$99<span>/mo</span></div>
+        <div class="pricing-desc">Complete support system</div>
+        <a href="#" class="pricing-btn">Get Started</a>
+        <p class="pricing-note">Stripe link coming soon</p>
       </div>
     </div>
+    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area →</a></p>
   </div>
-</div>
+</section>
 
 <footer>
   <div class="footer-inner">
@@ -209,15 +206,5 @@
 
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
-<script type="module">
-  import { checkAccess } from './js/auth.js';
-  (async () => {
-    const user = await checkAccess();
-    if (!user || !user.valid) {
-      document.getElementById('gatedContent').classList.add('gate-blur');
-      document.getElementById('gateOverlay').classList.add('visible');
-    }
-  })();
-</script>
 </body>
 </html>

@@ -40,6 +40,8 @@
     .nav-links>li:hover .dropdown{display:none}
     .nav-links>li.open .dropdown{display:flex;flex-direction:column;position:static;transform:none;border:none;box-shadow:none;background:#2a0f45;padding-left:1rem}
   }
+  .nav-membership{color:var(--gold)!important;border:1px solid var(--gold);padding:6px 14px}
+  .nav-membership:hover{color:#fff!important;background:var(--gold);border-color:var(--gold)}
   /* coming soon hero */
   .cs-hero{min-height:calc(100vh - 72px);display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 2rem;background:radial-gradient(ellipse at 60% 40%,#2d0a50 0%,#1e0a2e 60%)}
   .cs-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1.5rem}
@@ -101,9 +103,9 @@
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
+    <li><a href="members/" class="nav-membership">Membership Area</a></li>
   </ul>
   <div class="nav-right">
-    <a href="members/" class="nav-login"><i class="ti ti-user"></i> Log In</a>
     <a href="index.html#booking" class="nav-cta">Book a Session</a>
   </div>
 </nav>
