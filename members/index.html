@@ -44,7 +44,7 @@
   .nav-cta{background:var(--gold);color:#fff;padding:9px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s;text-decoration:none;display:inline-block}
   .nav-cta:hover{background:var(--gold-dk)}
   .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:#e8d8ff}
-  .nav-membership{color:var(--gold)!important;border:1px solid var(--gold);padding:6px 14px}
+  .nav-membership{color:var(--gold)!important;background:rgba(232,98,10,0.08);border:1px solid var(--gold);padding:7px 18px;display:inline-flex!important;align-items:center;gap:6px;font-weight:600;letter-spacing:1.5px}
   .nav-membership:hover{color:#fff!important;background:var(--gold);border-color:var(--gold)}
   section{border-bottom:0.5px solid #3d1f5a}
   .eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1.5rem}
@@ -136,6 +136,35 @@
   .topic-head{margin-bottom:2.5rem}
   .topic-head h2{font-size:28px}
   .topic-desc{font-size:13px;color:#a888c8;margin-top:.75rem;line-height:1.7;max-width:600px}
+  /* ── NON-MEMBER PREVIEW ── */
+  #preview-banner{display:none;align-items:center;justify-content:space-between;gap:1rem;background:linear-gradient(135deg,#2a0f45,#1a0535);border-bottom:1px solid var(--gold);padding:1.25rem 2.5rem;flex-wrap:wrap}
+  #preview-banner .preview-text{font-size:13px;color:#c8a8e8;line-height:1.6}
+  #preview-banner .preview-text strong{color:#e8d8ff;font-weight:600}
+  #preview-banner .preview-actions{display:flex;gap:.75rem;align-items:center;flex-shrink:0}
+  .preview-btn{background:var(--gold);color:#fff;padding:9px 20px;font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:background .2s}
+  .preview-btn:hover{background:var(--gold-dk)}
+  .preview-btn-ghost{background:none;border:1px solid #5a2a8a;color:#c8a8e8;padding:8px 16px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .2s}
+  .preview-btn-ghost:hover{border-color:#fff;color:#fff}
+  /* ── MEMBERS PRICING CTA ── */
+  #members-pricing-cta{display:none;padding:4rem 2.5rem;background:linear-gradient(180deg,var(--ink) 0%,#0d0118 100%);border-top:0.5px solid #3d1f5a;text-align:center}
+  .mpc-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .mpc-heading{font-family:var(--serif);font-size:clamp(28px,4vw,48px);font-weight:300;color:#e8d8ff;margin-bottom:1rem;line-height:1.2}
+  .mpc-heading em{font-style:italic;color:var(--gold)}
+  .mpc-body{font-size:13px;color:#c8a8e8;line-height:1.8;max-width:520px;margin:0 auto 2.5rem}
+  .mpc-pricing-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:1000px;margin:0 auto 2rem}
+  .mpc-card{background:#1a0535;border:0.5px solid #3d1f5a;padding:2rem 1.5rem;position:relative;text-align:center}
+  .mpc-card.mpc-featured{border-color:var(--gold)}
+  .mpc-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;white-space:nowrap}
+  .mpc-tier-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:.75rem}
+  .mpc-price{font-family:var(--serif);font-size:36px;font-weight:300;color:#e8d8ff;margin-bottom:.5rem;line-height:1}
+  .mpc-price span{font-size:14px;color:#8a68a8}
+  .mpc-desc{font-size:11px;color:#8a68a8;margin-bottom:1.25rem;line-height:1.5}
+  .mpc-btn{display:block;background:var(--gold);color:#fff;padding:11px 20px;font-size:10px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s;margin-top:.5rem}
+  .mpc-btn:hover{background:var(--gold-dk)}
+  .mpc-btn-ghost{display:block;border:1px solid #5a2a8a;color:#c8a8e8;padding:10px 20px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;transition:all .2s;margin-top:.5rem}
+  .mpc-btn-ghost:hover{border-color:#fff;color:#fff}
+  .mpc-note{font-size:10px;color:#5a3a7a;margin-top:.5rem}
+  .mpc-signin{font-size:12px;color:#8a68a8;margin-top:1.5rem}
 
   @media(max-width:768px){
     nav{padding:0 1.5rem}.nav-links{display:none}.nav-mobile-toggle{display:block}
@@ -187,7 +216,7 @@
       </div>
     </li>
     <li><a href="../shop.html">Shop</a></li>
-    <li><a href="./" class="nav-membership">Membership Area</a></li>
+    <li><a href="./" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a></li>
   </ul>
   <div class="nav-right">
     <a href="../index.html#booking" class="nav-cta">Book a Session</a>
@@ -210,6 +239,15 @@
 
 <!-- MEMBERS CONTENT -->
 <div id="members-content">
+
+  <!-- NON-MEMBER PREVIEW BANNER -->
+  <div id="preview-banner">
+    <div class="preview-text"><strong>You're viewing a preview.</strong> Join MPL Pursuits to unlock full access to all content, resources, and coaching tools.</div>
+    <div class="preview-actions">
+      <a href="#members-pricing-cta" class="preview-btn">View Plans</a>
+      <a href="mailto:mary.profit@gmail.com" class="preview-btn-ghost">Contact Mary</a>
+    </div>
+  </div>
 
   <div class="member-hero">
     <div>
@@ -274,6 +312,11 @@
           <div class="resource-info"><div class="resource-name">Placeholder Tennis Resource</div><div class="resource-type">Article</div></div>
           <a href="#" class="resource-link" target="_blank">Open →</a>
         </div>
+      </div>
+      <div class="section-lock-overlay">
+        <i class="ti ti-lock-filled"></i>
+        <p>Join MPL Pursuits to access this content</p>
+        <a href="#members-pricing-cta" class="btn-book">View Plans</a>
       </div>
     </div>
 
@@ -375,6 +418,11 @@
           <a href="#" class="resource-link" target="_blank">Open →</a>
         </div>
       </div>
+      <div class="section-lock-overlay">
+        <i class="ti ti-lock-filled"></i>
+        <p>Join MPL Pursuits to access this content</p>
+        <a href="#members-pricing-cta" class="btn-book">View Plans</a>
+      </div>
     </div>
 
     <div class="resource-section" data-min-rank="1">
@@ -474,6 +522,11 @@
           <div class="resource-info"><div class="resource-name">Placeholder College Resource</div><div class="resource-type">Article</div></div>
           <a href="#" class="resource-link" target="_blank">Open →</a>
         </div>
+      </div>
+      <div class="section-lock-overlay">
+        <i class="ti ti-lock-filled"></i>
+        <p>Join MPL Pursuits to access this content</p>
+        <a href="#members-pricing-cta" class="btn-book">View Plans</a>
       </div>
     </div>
 
@@ -938,6 +991,43 @@
     </div>
   </section>
 
+  <!-- MEMBERS PRICING CTA (shown for non-members in preview mode) -->
+  <div id="members-pricing-cta">
+    <div class="mpc-eyebrow">Join MPL Pursuits</div>
+    <h2 class="mpc-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="mpc-body">Get full access to all lesson content, NIL &amp; transfer guidance, the resource library, coaching systems, and more.</p>
+    <div class="mpc-pricing-row">
+      <div class="mpc-card">
+        <div class="mpc-tier-label">Free</div>
+        <div class="mpc-price">$0</div>
+        <div class="mpc-desc">Basic educational content</div>
+        <a href="#" class="mpc-btn-ghost">Create Free Account</a>
+        <p class="mpc-note">Form coming soon</p>
+      </div>
+      <div class="mpc-card mpc-featured">
+        <div class="mpc-badge">Most Popular</div>
+        <div class="mpc-tier-label">Athlete Plus</div>
+        <div class="mpc-price">$19<span>/mo</span></div>
+        <div class="mpc-desc">Full content + NIL &amp; Transfer access</div>
+        <a href="#" class="mpc-btn">Get Started</a>
+        <p class="mpc-note">Stripe link coming soon</p>
+      </div>
+      <div class="mpc-card">
+        <div class="mpc-tier-label">Performance Athlete</div>
+        <div class="mpc-price">$49<span>/mo</span></div>
+        <div class="mpc-desc">Advanced training systems</div>
+        <a href="#" class="mpc-btn">Get Started</a>
+      </div>
+      <div class="mpc-card">
+        <div class="mpc-tier-label">Elite Athlete</div>
+        <div class="mpc-price">$99<span>/mo</span></div>
+        <div class="mpc-desc">Full elite access + personal support</div>
+        <a href="#" class="mpc-btn">Get Started</a>
+      </div>
+    </div>
+    <p class="mpc-signin">Already a member? Check your welcome email for your access link.</p>
+  </div>
+
 </div>
 
 <footer>
@@ -984,7 +1074,16 @@ document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link
         }
       });
     } else {
-      document.getElementById('access-gate').style.display = 'flex';
+      // Non-member: show preview mode — all sections visible but fully locked
+      document.getElementById('members-content').style.display = 'block';
+      document.getElementById('preview-banner').style.display = 'flex';
+      document.getElementById('members-pricing-cta').style.display = 'block';
+      document.querySelector('.member-hero').style.display = 'none';
+      document.querySelector('.tier-stepper').style.display = 'none';
+      document.querySelectorAll('.resource-section').forEach(function(section) {
+        var overlay = section.querySelector('.section-lock-overlay');
+        if (overlay) overlay.style.display = 'flex';
+      });
     }
   })();
 </script>
