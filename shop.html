@@ -141,6 +141,7 @@
     nav{padding:0 1.5rem}.nav-links{display:none}.nav-mobile-toggle{display:block}
     .nav-links.open{display:flex;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:#180530;border-bottom:1px solid #7a4a9a;padding:1rem 1.5rem;z-index:99}
     .nav-links.open li a{padding:10px 0;display:block}
+    .nav-links>li.open .dropdown{display:flex;flex-direction:column;position:static;transform:none;border:none;box-shadow:none;background:#2a0f45;padding-left:1rem}
     .page-hero{padding:3rem 1.5rem}.page-hero h1{font-size:40px}
     .filter-bar{padding:1rem 1.5rem}
     .products-inner{padding:3rem 1.5rem}
@@ -329,6 +330,7 @@
 </footer>
 <script>
   document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+  document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});
   function filterProducts(cat,btn){
     document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
     btn.classList.add('active');
