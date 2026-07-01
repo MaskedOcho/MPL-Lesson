@@ -1,0 +1,434 @@
+/* ═══════════════════════════════════════════════════════════
+   MPL PURSUITS — Global Polish Layer
+   Layered on top of page-level styles. No overrides of core
+   layout or color; adds motion, micro-interactions, and detail.
+═══════════════════════════════════════════════════════════ */
+
+/* ── SMOOTH SCROLL ── */
+html { scroll-behavior: smooth; }
+
+/* ── SELECTION COLOR ── */
+::selection {
+  background: rgba(232, 98, 10, 0.28);
+  color: #fff;
+}
+
+/* ── FOCUS RING ── */
+*:focus-visible {
+  outline: 1.5px solid rgba(232, 98, 10, 0.65);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* ── SUBTLE GRAIN OVERLAY ── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9997;
+  opacity: 0.022;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.72' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 200px 200px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   NAV
+───────────────────────────────────────────────────────── */
+
+/* Glass effect on scroll */
+nav {
+  transition: background 0.3s ease, box-shadow 0.3s ease !important;
+  will-change: background;
+}
+nav.nav-scrolled {
+  background: rgba(22, 4, 44, 0.9) !important;
+  backdrop-filter: blur(18px) saturate(150%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(150%) !important;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.05), 0 6px 28px rgba(0,0,0,0.4) !important;
+}
+
+/* Underline reveal on nav links */
+.nav-links > li > a:not(.nav-membership) {
+  position: relative;
+}
+.nav-links > li > a:not(.nav-membership)::after {
+  content: '';
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  opacity: 0.45;
+  transition: width 0.22s ease;
+  pointer-events: none;
+}
+.nav-links > li > a:not(.nav-membership):hover::after {
+  width: 100%;
+}
+
+/* Dropdown fade-in */
+@keyframes mpl-dropdown-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.nav-links > li:hover .dropdown,
+.nav-links > li:focus-within .dropdown {
+  animation: mpl-dropdown-in 0.2s ease forwards;
+}
+
+/* Membership button soft pulse */
+@keyframes mpl-badge-breathe {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 98, 10, 0); }
+  50%       { box-shadow: 0 0 0 4px rgba(232, 98, 10, 0.14); }
+}
+.nav-membership {
+  animation: mpl-badge-breathe 3.5s ease-in-out infinite;
+}
+
+/* ─────────────────────────────────────────────────────────
+   EYEBROW ACCENT LINE
+───────────────────────────────────────────────────────── */
+.eyebrow {
+  display: flex !important;
+  align-items: center;
+  gap: 10px;
+}
+.eyebrow::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 1px;
+  background: #e8620a;
+  flex-shrink: 0;
+  opacity: 0.75;
+}
+
+/* ─────────────────────────────────────────────────────────
+   BUTTON SHINE SWEEP
+───────────────────────────────────────────────────────── */
+.nav-cta,
+.btn-book,
+.cs-btn,
+.pricing-btn,
+.preview-btn,
+.mpc-btn,
+.presale-btn,
+.btn-orange,
+.btn-signout {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.nav-cta::before,
+.btn-book::before,
+.cs-btn::before,
+.pricing-btn::before,
+.preview-btn::before,
+.mpc-btn::before,
+.presale-btn::before,
+.btn-orange::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -80%;
+  bottom: 0;
+  width: 55%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.12),
+    transparent
+  );
+  transform: skewX(-18deg);
+  transition: left 0.5s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.nav-cta:hover::before,
+.btn-book:hover::before,
+.cs-btn:hover::before,
+.pricing-btn:hover::before,
+.preview-btn:hover::before,
+.mpc-btn:hover::before,
+.presale-btn:hover::before,
+.btn-orange:hover::before {
+  left: 160%;
+}
+
+/* ─────────────────────────────────────────────────────────
+   CARD HOVER LIFTS
+───────────────────────────────────────────────────────── */
+.svc-card {
+  transition:
+    transform 0.26s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.26s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.svc-card:hover {
+  transform: translateY(-5px);
+  box-shadow:
+    0 16px 40px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(232, 98, 10, 0.07);
+}
+
+.bundle-card {
+  transition:
+    transform 0.26s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.26s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.26s ease !important;
+}
+.bundle-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(232, 98, 10, 0.4) !important;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.28);
+}
+
+.subpage-card {
+  transition:
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.2s ease !important;
+}
+.subpage-card:hover {
+  transform: translateY(-3px);
+}
+
+.resource-card {
+  transition: border-color 0.2s ease, background 0.2s ease !important;
+}
+.resource-card:hover {
+  border-color: rgba(232, 98, 10, 0.22) !important;
+  background: #200b3e !important;
+}
+
+.pricing-card,
+.mpc-card {
+  transition:
+    transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.22s ease !important;
+}
+.pricing-card:hover,
+.mpc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.22);
+}
+
+/* Featured card persistent glow */
+.pricing-card.pricing-featured,
+.mpc-card.mpc-featured {
+  box-shadow:
+    0 0 0 1px rgba(232, 98, 10, 0.55),
+    0 8px 32px rgba(232, 98, 10, 0.1);
+}
+.pricing-card.pricing-featured:hover,
+.mpc-card.mpc-featured:hover {
+  box-shadow:
+    0 0 0 1px rgba(232, 98, 10, 0.7),
+    0 14px 40px rgba(232, 98, 10, 0.16);
+}
+
+/* Resource sections */
+.resource-section {
+  transition: border-color 0.22s ease !important;
+}
+.resource-section:hover {
+  border-color: rgba(232, 98, 10, 0.18) !important;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SECTION LOCK OVERLAY BLUR
+───────────────────────────────────────────────────────── */
+.section-lock-overlay {
+  backdrop-filter: blur(4px) !important;
+  -webkit-backdrop-filter: blur(4px) !important;
+}
+
+/* ─────────────────────────────────────────────────────────
+   TOPIC NAV
+───────────────────────────────────────────────────────── */
+.topic-nav-link {
+  transition: color 0.2s ease, border-bottom-color 0.2s ease !important;
+}
+
+/* ─────────────────────────────────────────────────────────
+   FOOTER LINK UNDERLINES
+───────────────────────────────────────────────────────── */
+.footer-col a {
+  position: relative;
+  display: inline-block;
+}
+.footer-col a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #e8620a;
+  opacity: 0.5;
+  transition: width 0.22s ease;
+}
+.footer-col a:hover::after {
+  width: 100%;
+}
+
+/* ─────────────────────────────────────────────────────────
+   SCROLL REVEAL
+   Classes added by global.js — not present without JS
+───────────────────────────────────────────────────────── */
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition:
+    opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.scroll-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─────────────────────────────────────────────────────────
+   PAGE HERO ENTRANCE (above-fold, runs immediately)
+───────────────────────────────────────────────────────── */
+@keyframes mpl-hero-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.page-hero-inner > *,
+.cs-hero > div > * {
+  animation: mpl-hero-in 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.page-hero-inner > *:nth-child(2),
+.cs-hero > div > *:nth-child(2) { animation-delay: 0.08s; }
+.page-hero-inner > *:nth-child(3),
+.cs-hero > div > *:nth-child(3) { animation-delay: 0.16s; }
+.page-hero-inner > *:nth-child(4),
+.cs-hero > div > *:nth-child(4) { animation-delay: 0.24s; }
+
+/* Member hero */
+.member-hero > * {
+  animation: mpl-hero-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.member-hero > *:nth-child(2) { animation-delay: 0.1s; }
+
+/* Preview banner */
+#preview-banner {
+  animation: mpl-hero-in 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* ─────────────────────────────────────────────────────────
+   STEP ITEMS (numbered process steps)
+───────────────────────────────────────────────────────── */
+.step {
+  transition: border-top-color 0.2s ease !important;
+}
+.step:hover {
+  border-top-color: rgba(232, 98, 10, 0.35) !important;
+}
+
+/* ─────────────────────────────────────────────────────────
+   GATE CARD
+───────────────────────────────────────────────────────── */
+.gate-card {
+  animation: mpl-hero-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+/* ─────────────────────────────────────────────────────────
+   TIER STEPPER
+───────────────────────────────────────────────────────── */
+.tier-step {
+  transition:
+    border-top-color 0.3s ease,
+    background 0.3s ease !important;
+}
+
+/* ─────────────────────────────────────────────────────────
+   INCLUDED ITEMS
+───────────────────────────────────────────────────────── */
+.inc-item i {
+  transition: transform 0.2s ease;
+}
+.inc-item:hover i {
+  transform: scale(1.15);
+}
+
+/* ─────────────────────────────────────────────────────────
+   PRICING NOTE FADE
+───────────────────────────────────────────────────────── */
+.pricing-note,
+.mpc-note {
+  opacity: 0.65;
+  transition: opacity 0.2s;
+}
+.pricing-card:hover .pricing-note,
+.mpc-card:hover .mpc-note {
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────────────────────
+   STAT NUMBERS (stats bar)
+───────────────────────────────────────────────────────── */
+.stats-bar-inner > div {
+  transition: transform 0.2s ease;
+}
+.stats-bar-inner > div:hover {
+  transform: translateY(-2px);
+}
+
+/* ─────────────────────────────────────────────────────────
+   SUBPAGE LINK ARROW NUDGE
+───────────────────────────────────────────────────────── */
+.subpage-link {
+  transition: letter-spacing 0.2s ease, opacity 0.2s ease;
+  opacity: 0.7;
+}
+.subpage-card:hover .subpage-link {
+  letter-spacing: 2.5px;
+  opacity: 1;
+}
+
+/* ─────────────────────────────────────────────────────────
+   RESOURCE LINK ARROW
+───────────────────────────────────────────────────────── */
+.resource-link {
+  transition: letter-spacing 0.2s ease !important;
+}
+.resource-card:hover .resource-link {
+  letter-spacing: 2px;
+}
+
+/* ─────────────────────────────────────────────────────────
+   MOBILE RESPONSIVE
+───────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  /* Don't play hero animations on mobile (reduce motion overhead) */
+  .page-hero-inner > *,
+  .cs-hero > div > *,
+  .member-hero > * {
+    animation-duration: 0.4s;
+  }
+  /* Reduce card lifts on touch */
+  .svc-card:hover,
+  .bundle-card:hover,
+  .subpage-card:hover,
+  .pricing-card:hover,
+  .mpc-card:hover {
+    transform: none;
+  }
+}
+
+/* ─────────────────────────────────────────────────────────
+   REDUCED MOTION
+───────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  html { scroll-behavior: auto; }
+}
