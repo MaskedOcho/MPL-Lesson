@@ -71,19 +71,27 @@
   .member-hero{background:var(--ink);padding:4rem 2.5rem 3rem;display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
   .member-hero h1{font-family:var(--serif);font-size:42px;font-weight:300;color:var(--ivory)}
   .member-hero h1 em{font-style:italic;color:var(--gold)}
-  .btn-signout{background:none;border:0.5px solid #5a2a8a;padding:10px 18px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#c8a8e8;cursor:pointer;font-family:var(--sans);transition:all .2s}
-  .btn-signout:hover{border-color:#fff;color:#fff}
+  .member-tier-badge{display:inline-flex;align-items:center;gap:6px;margin-top:.75rem;padding:5px 12px;background:rgba(232,98,10,0.1);border:1px solid rgba(232,98,10,0.3);color:var(--gold);font-size:10px;letter-spacing:2px;text-transform:uppercase;font-weight:600}
+  .member-tier-badge i{font-size:12px}
+  .btn-signout{background:none;border:0.5px solid #3d1f5a;padding:8px 16px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#6a4888;cursor:pointer;font-family:var(--sans);transition:all .2s;align-self:flex-start}
+  .btn-signout:hover{border-color:#5a2a8a;color:#c8a8e8}
 
-  /* â”€â”€ TIER STEPPER â”€â”€ */
+  /* TIER STEPPER */
   .tier-stepper{display:flex;max-width:1200px;margin:0 auto;padding:0 2.5rem 3rem;gap:2px}
   .tier-step{flex:1;background:#1a0535;border-top:3px solid #3d1f5a;padding:1.1rem 1.25rem}
   .tier-step.unlocked{border-top-color:var(--gold)}
   .tier-step.current{background:#2a0f45}
-  .tier-step-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:4px}
-  .tier-step.unlocked .tier-step-label{color:var(--gold)}
-  .tier-step-name{font-family:var(--serif);font-size:18px;color:#e8d8ff}
+  .tier-step-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5a3a7a;margin-bottom:4px}
+  .tier-step.unlocked .tier-step-label{color:rgba(232,98,10,0.55)}
+  .tier-step.current .tier-step-label{color:var(--gold)}
+  .tier-step-name{font-family:var(--serif);font-size:17px;color:#8a68a8}
+  .tier-step.unlocked .tier-step-name{color:#e8d8ff}
+  .tier-step.current .tier-step-name{color:#fff}
   .tier-step-you{display:none;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-top:6px}
   .tier-step.current .tier-step-you{display:block}
+
+  /* TOPIC NAV STICKY */
+  .topic-nav-bar{position:sticky;top:72px;z-index:90}
 
   /* â”€â”€ MEMBER SECTIONS â”€â”€ */
   .member-section{padding:3rem 2.5rem}
@@ -254,30 +262,31 @@
   <div class="member-hero">
     <div>
       <div class="eyebrow" style="margin-bottom:.5rem">Members Portal</div>
-      <h1>Welcome back, <em id="currentTierLabel">Member</em>.</h1>
+      <h1>Welcome back, <em id="memberName">Member</em>.</h1>
+      <div class="member-tier-badge" id="memberTierBadge" style="display:none"><i class="ti ti-crown"></i> <span id="memberTierText"></span></div>
     </div>
     <button class="btn-signout" onclick="doLogout()">Sign Out</button>
   </div>
 
   <div class="tier-stepper">
     <div class="tier-step" data-rank="0">
-      <div class="tier-step-label">Tier 1</div>
-      <div class="tier-step-name">Free</div>
+      <div class="tier-step-label">Free</div>
+      <div class="tier-step-name">Basic Access</div>
       <div class="tier-step-you">You are here</div>
     </div>
     <div class="tier-step" data-rank="1">
-      <div class="tier-step-label">Tier 2</div>
-      <div class="tier-step-name">Athlete Plus</div>
+      <div class="tier-step-label">Athlete Plus</div>
+      <div class="tier-step-name">$19 / mo</div>
       <div class="tier-step-you">You are here</div>
     </div>
     <div class="tier-step" data-rank="2">
-      <div class="tier-step-label">Tier 3</div>
-      <div class="tier-step-name">Performance Athlete</div>
+      <div class="tier-step-label">Performance Athlete</div>
+      <div class="tier-step-name">$49 / mo</div>
       <div class="tier-step-you">You are here</div>
     </div>
     <div class="tier-step" data-rank="3">
-      <div class="tier-step-label">Tier 4</div>
-      <div class="tier-step-name">Elite Athlete</div>
+      <div class="tier-step-label">Elite Athlete</div>
+      <div class="tier-step-name">$99 / mo</div>
       <div class="tier-step-you">You are here</div>
     </div>
   </div>
@@ -1054,7 +1063,11 @@ document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link
 
     if (result && result.valid) {
       document.getElementById('members-content').style.display = 'block';
-      document.getElementById('currentTierLabel').textContent = TIER_LABELS[result.tier] || 'Member';
+      const firstName = result.name ? result.name.split(' ')[0] : '';
+      document.getElementById('memberName').textContent = firstName || 'Member';
+      const tierLabel = TIER_LABELS[result.tier] || 'Member';
+      document.getElementById('memberTierText').textContent = tierLabel;
+      document.getElementById('memberTierBadge').style.display = 'inline-flex';
 
       document.querySelectorAll('.member-section').forEach(function(section) {
         const requiredRank = parseInt(section.dataset.rank, 10);

@@ -51,9 +51,10 @@ export async function checkAccess() {
       }
       const tier = (match[TIER_COL] || 'free').toLowerCase();
       const rank = TIER_RANK[tier] ?? 0;
+      const name = (match[1] || '').trim();
       localStorage.setItem(STORAGE_KEY, key);
       localStorage.setItem(STORAGE_TIER, tier);
-      return { valid: true, tier, rank };
+      return { valid: true, tier, rank, name };
     }
   } catch (e) {
     // Network or sheet error — treat as not found rather than crashing the page
