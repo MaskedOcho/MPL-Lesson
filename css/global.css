@@ -7,15 +7,6 @@
 /* ── SMOOTH SCROLL ── */
 html { scroll-behavior: smooth; }
 
-/* ── MAILERLITE BUTTON RESET (match ghost link styles) ── */
-button.pricing-btn-ghost, button.mpc-btn-ghost {
-  background: none;
-  cursor: pointer;
-  font-family: var(--sans, 'DM Sans', sans-serif);
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-}
 
 /* ── SELECTION COLOR ── */
 ::selection {
