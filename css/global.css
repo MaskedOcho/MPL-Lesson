@@ -80,14 +80,6 @@ nav.nav-scrolled {
   animation: mpl-dropdown-in 0.2s ease forwards;
 }
 
-/* Membership button soft pulse */
-@keyframes mpl-badge-breathe {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 98, 10, 0); }
-  50%       { box-shadow: 0 0 0 4px rgba(232, 98, 10, 0.14); }
-}
-.nav-membership {
-  animation: mpl-badge-breathe 3.5s ease-in-out infinite;
-}
 
 /* ─────────────────────────────────────────────────────────
    EYEBROW ACCENT LINE
