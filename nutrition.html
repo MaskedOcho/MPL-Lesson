@@ -76,8 +76,8 @@
   .cta-signin{font-size:12px;color:#8a68a8;margin-top:1.5rem}
   .cta-signin a{color:var(--gold);text-decoration:none}
   .cta-signin a:hover{text-decoration:underline}
-  .nav-membership{color:#c9a96e!important;background:linear-gradient(180deg,rgba(50,18,80,0.7) 0%,rgba(22,8,42,0.7) 100%);padding:7px 18px;display:inline-flex!important;align-items:center;gap:7px;font-weight:600;letter-spacing:1.8px;transition:color .2s,background .2s,box-shadow .2s}
-  .nav-membership:hover{color:#e2c585!important;box-shadow:0 0 16px rgba(201,169,110,0.1)!important;background:linear-gradient(180deg,rgba(65,25,100,0.85) 0%,rgba(32,12,58,0.85) 100%)!important}
+  .nav-membership{color:#c9a96e!important;background:none;padding:7px 0;display:inline-flex!important;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:1.5px;text-decoration:none;transition:color .2s}
+  .nav-membership:hover{color:#e8c882!important}
   footer{background:#100220;border-top:0.5px solid #3d1f5a;padding:4rem 3rem 2rem}
   .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:0.5px solid #2a1040}
   .footer-brand{font-family:var(--serif);font-size:22px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:#e8d8ff;display:block;margin-bottom:1rem}
@@ -128,10 +128,9 @@
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
-    <li><a href="members/" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a></li>
   </ul>
   <div class="nav-right">
-    <a href="index.html#booking" class="nav-cta">Book a Session</a>
+    <a href="members/" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a>
     <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   </div>
 </nav>
@@ -203,6 +202,7 @@
 document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
 </body>
 </html>
+
 
 
 

@@ -44,8 +44,8 @@
   .nav-cta{background:var(--gold);color:#fff;padding:9px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s;text-decoration:none;display:inline-block}
   .nav-cta:hover{background:var(--gold-dk)}
   .nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;font-size:22px;color:#e8d8ff}
-  .nav-membership{color:#c9a96e!important;background:linear-gradient(180deg,rgba(50,18,80,0.7) 0%,rgba(22,8,42,0.7) 100%);padding:7px 18px;display:inline-flex!important;align-items:center;gap:7px;font-weight:600;letter-spacing:1.8px;transition:color .2s,background .2s,box-shadow .2s}
-  .nav-membership:hover{color:#e2c585!important;box-shadow:0 0 16px rgba(201,169,110,0.1)!important;background:linear-gradient(180deg,rgba(65,25,100,0.85) 0%,rgba(32,12,58,0.85) 100%)!important}
+  .nav-membership{color:#c9a96e!important;background:none;padding:7px 0;display:inline-flex!important;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:1.5px;text-decoration:none;transition:color .2s}
+  .nav-membership:hover{color:#e8c882!important}
   section{border-bottom:0.5px solid #3d1f5a}
   .eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1.5rem}
   .serif-h{font-family:var(--serif);font-weight:300;line-height:1.1;color:#e8d8ff}
@@ -226,10 +226,9 @@
       </div>
     </li>
     <li><a href="../shop.html">Shop</a></li>
-    <li><a href="./" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a></li>
   </ul>
   <div class="nav-right">
-    <a href="../index.html#booking" class="nav-cta">Book a Session</a>
+    <a href="./" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a>
     <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="ti ti-menu-2"></i></button>
   </div>
 </nav>
@@ -1101,6 +1100,7 @@ document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link
   })();
 </script>
 </body></html>
+
 
 
 
