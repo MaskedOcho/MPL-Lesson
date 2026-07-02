@@ -9,17 +9,15 @@
 <style>
   /* serif-h em override — use gold */
   .serif-h em{color:var(--gold)}
-  /* STATS — 3-col */
-  .stats-bar-inner{grid-template-columns:repeat(3,1fr)}
   /* WHO / TWO-COL */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
   .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#3d1f5a;margin-top:2.5rem}
-  .svc-mini{background:#1a0535;padding:2rem 1.5rem}
+  .svc-mini{background:#200c40;padding:2rem 1.5rem}
   .svc-mini-icon{font-size:22px;color:var(--gold);margin-bottom:.75rem}
   .svc-mini-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#e8d8ff;margin-bottom:6px}
   /* PHILOSOPHY */
   .phil-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border)}
-  .phil-card{background:#180530;padding:2.5rem 2rem}
+  .phil-card{background:#1e0a3c;padding:2.5rem 2rem}
   .phil-num{font-family:var(--serif);font-size:48px;font-weight:300;color:#3d1f5a;line-height:1}
   .phil-title{font-family:var(--serif);font-size:22px;font-weight:400;color:#e8d8ff;margin:10px 0}
   /* QUOTE */
@@ -35,7 +33,7 @@
   .coach-title-txt{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
   .coach-bio{font-size:13px;color:#c8a8e8;line-height:1.75}
   .coach-creds{display:flex;flex-wrap:wrap;gap:6px;margin-top:1rem}
-  .coach-cred{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--purple);background:#180530;padding:4px 10px}
+  .coach-cred{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--purple);background:#1e0a3c;padding:4px 10px}
   /* WHY DARK */
   .why-dark{background:var(--ink)}
   .why-dark .inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
@@ -106,14 +104,11 @@
       <a href="coaching.html" class="btn-orange">Explore Our Programs</a>
       <a href="index.html#booking" class="btn-ghost">Book a Session</a>
     </div>
-  </div>
-</div>
-
-<div class="stats-bar">
-  <div class="stats-bar-inner">
-    <div><div class="sbar-num">Division I</div><div class="sbar-lbl">Coaching Experience</div></div>
-    <div><div class="sbar-num">WTA Tour</div><div class="sbar-lbl">Professional Playing Background</div></div>
-    <div><div class="sbar-num">100%</div><div class="sbar-lbl">Athlete-First Philosophy</div></div>
+    <div class="hero-creds">
+      <div class="hero-cred"><span class="hero-cred-val">Division I</span><span class="hero-cred-lbl">Coaching Experience</span></div>
+      <div class="hero-cred"><span class="hero-cred-val">WTA Tour</span><span class="hero-cred-lbl">Professional Background</span></div>
+      <div class="hero-cred"><span class="hero-cred-val">100%</span><span class="hero-cred-lbl">Athlete-First Philosophy</span></div>
+    </div>
   </div>
 </div>
 
@@ -189,7 +184,7 @@
   </div>
 </section>
 
-<section style="background:#1a0535;border-bottom:1px solid #5a2a8a">
+<section style="background:#200c40;border-bottom:1px solid #5a2a8a">
   <div class="inner why-dark" style="padding:5rem 3rem">
     <div class="why-dark" style="background:none">
       <div class="inner" style="padding:0">
@@ -228,6 +223,7 @@
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
 </body></html>
+
 
 
 

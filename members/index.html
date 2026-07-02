@@ -14,7 +14,7 @@
 
   /* --- ACCESS GATE --- */
   #access-gate{min-height:70vh;display:none;align-items:center;justify-content:center;padding:3rem 1.5rem}
-  .gate-card{max-width:460px;width:100%;text-align:center;background:#1a0535;border:0.5px solid #3d1f5a;padding:3.5rem 3rem}
+  .gate-card{max-width:460px;width:100%;text-align:center;background:#200c40;border:0.5px solid #3d1f5a;padding:3.5rem 3rem}
   .gate-card h2{font-family:var(--serif);font-size:32px;font-weight:300;color:var(--ivory);margin-bottom:1.25rem}
   .gate-card h2 em{font-style:italic;color:var(--gold)}
   .gate-card p{font-size:13px;color:#c8a8e8;line-height:1.8;margin-bottom:1.5rem}
@@ -31,9 +31,9 @@
 
   /* TIER STEPPER */
   .tier-stepper{display:flex;max-width:1200px;margin:0 auto;padding:0 2.5rem 3rem;gap:2px}
-  .tier-step{flex:1;background:#1a0535;border-top:3px solid #3d1f5a;padding:1.1rem 1.25rem}
+  .tier-step{flex:1;background:#200c40;border-top:3px solid #3d1f5a;padding:1.1rem 1.25rem}
   .tier-step.unlocked{border-top-color:var(--gold)}
-  .tier-step.current{background:#2a0f45}
+  .tier-step.current{background:#301258}
   .tier-step-label{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:#5a3a7a;margin-bottom:4px}
   .tier-step.unlocked .tier-step-label{color:rgba(232,98,10,0.55)}
   .tier-step.current .tier-step-label{color:var(--gold)}
@@ -55,7 +55,7 @@
   .resource-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem}
   .member-section.is-locked .resource-grid{filter:blur(3px);opacity:.4;pointer-events:none;user-select:none}
   .member-section.is-locked{background:#150428}
-  .resource-card{background:#1a0535;border:0.5px solid #3d1f5a;padding:1.5rem;display:flex;align-items:flex-start;gap:1rem}
+  .resource-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.5rem;display:flex;align-items:flex-start;gap:1rem}
   .resource-icon{font-size:22px;color:var(--gold);margin-top:2px}
   .resource-info{flex:1}
   .resource-name{font-family:var(--serif);font-size:17px;color:#e8d8ff;margin-bottom:4px;line-height:1.3}
@@ -68,7 +68,7 @@
   .resource-library-head{margin-bottom:2.5rem}
   .resource-library-head h2{font-family:var(--serif);font-size:28px;font-weight:300;color:#e8d8ff;margin-top:.35rem}
   .resource-category{margin-bottom:3rem}
-  .resource-category-title{font-family:var(--serif);font-size:22px;font-weight:300;color:#e8d8ff;padding-bottom:.75rem;border-bottom:0.5px solid #2a1040;margin-bottom:1.25rem}
+  .resource-category-title{font-family:var(--serif);font-size:22px;font-weight:300;color:#e8d8ff;padding-bottom:.75rem;border-bottom:0.5px solid #2e1448;margin-bottom:1.25rem}
   .resource-section{position:relative;margin-bottom:1.25rem;border:0.5px solid #3d1f5a;padding:1.5rem}
   .resource-section-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem;flex-wrap:wrap;gap:.75rem}
   .resource-section-header h4{font-family:var(--serif);font-size:18px;font-weight:300;color:#e8d8ff}
@@ -88,7 +88,7 @@
   .topic-head h2{font-size:28px}
   .topic-desc{font-size:13px;color:#a888c8;margin-top:.75rem;line-height:1.7;max-width:600px}
   /* --- NON-MEMBER PREVIEW --- */
-  #preview-banner{display:none;align-items:center;justify-content:space-between;gap:1rem;background:linear-gradient(135deg,#2a0f45,#1a0535);border-bottom:1px solid var(--gold);padding:1.25rem 2.5rem;flex-wrap:wrap}
+  #preview-banner{display:none;align-items:center;justify-content:space-between;gap:1rem;background:linear-gradient(135deg,#301258,#200c40);border-bottom:1px solid var(--gold);padding:1.25rem 2.5rem;flex-wrap:wrap}
   #preview-banner .preview-text{font-size:13px;color:#c8a8e8;line-height:1.6}
   #preview-banner .preview-text strong{color:#e8d8ff;font-weight:600}
   #preview-banner .preview-actions{display:flex;gap:.75rem;align-items:center;flex-shrink:0}
@@ -97,13 +97,13 @@
   .preview-btn-ghost{background:none;border:1px solid #5a2a8a;color:#c8a8e8;padding:8px 16px;font-size:10px;letter-spacing:1.5px;text-transform:uppercase;text-decoration:none;display:inline-block;transition:all .2s}
   .preview-btn-ghost:hover{border-color:#fff;color:#fff}
   /* --- MEMBERS PRICING CTA --- */
-  #members-pricing-cta{display:none;padding:4rem 2.5rem;background:linear-gradient(180deg,var(--ink) 0%,#0d0118 100%);border-top:0.5px solid #3d1f5a;text-align:center}
+  #members-pricing-cta{display:none;padding:4rem 2.5rem;background:linear-gradient(180deg,var(--ink) 0%,#150930 100%);border-top:0.5px solid #3d1f5a;text-align:center}
   .mpc-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
   .mpc-heading{font-family:var(--serif);font-size:clamp(28px,4vw,48px);font-weight:300;color:#e8d8ff;margin-bottom:1rem;line-height:1.2}
   .mpc-heading em{font-style:italic;color:var(--gold)}
   .mpc-body{font-size:13px;color:#c8a8e8;line-height:1.8;max-width:520px;margin:0 auto 2.5rem}
   .mpc-pricing-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;max-width:1000px;margin:0 auto 2rem}
-  .mpc-card{background:#1a0535;border:0.5px solid #3d1f5a;padding:2rem 1.5rem;position:relative;text-align:center}
+  .mpc-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem 1.5rem;position:relative;text-align:center}
   .mpc-card.mpc-featured{border-color:var(--gold)}
   .mpc-badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:9px;letter-spacing:2px;text-transform:uppercase;padding:3px 12px;white-space:nowrap}
   .mpc-tier-label{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:.75rem}
@@ -1037,6 +1037,7 @@ document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link
   })();
 </script>
 </body></html>
+
 
 
 

@@ -7,8 +7,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
 <style>
-  /* 4-col stats bar (college-route variant) */
-  .stats-bar-inner{grid-template-columns:repeat(4,1fr)}
   /* STEPS */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
   .steps-list{display:flex;flex-direction:column}
@@ -18,7 +16,7 @@
   .step-title{font-size:14px;font-weight:500;color:#e8d8ff;margin-bottom:6px}
   .step-body{font-size:13px;color:#ddc8f8;line-height:1.7}
   /* INCLUDED */
-  .included-dark{background:#1a0535;border-bottom:1px solid #5a2a8a}
+  .included-dark{background:#200c40;border-bottom:1px solid #5a2a8a}
   .included-dark .eyebrow{color:#e8620a}
   .included-dark h2{font-family:var(--serif);font-size:44px;font-weight:300;color:#fff}
   .included-dark h2 em{font-style:italic;color:var(--gold)}
@@ -28,12 +26,12 @@
   .inc-item i{font-size:18px;color:var(--gold);flex-shrink:0;margin-top:1px}
   /* NCAA GRID */
   .ncaa-grid{display:flex;flex-direction:column;gap:2px;background:var(--border)}
-  .ncaa-box{background:#1a0535;padding:1.5rem 2rem}
+  .ncaa-box{background:#200c40;padding:1.5rem 2rem}
   .ncaa-box-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#e8d8ff;margin-bottom:6px}
   .ncaa-box-body{font-size:13px;color:#ddc8f8;line-height:1.7}
   /* PRICING - COMING SOON */
   .pricing-section .inner{text-align:center}
-  .pricing-card{max-width:480px;margin:0 auto;border:1px solid #5a2a8a;padding:3rem;background:#1a0535;position:relative;overflow:hidden}
+  .pricing-card{max-width:480px;margin:0 auto;border:1px solid #5a2a8a;padding:3rem;background:#200c40;position:relative;overflow:hidden}
   .coming-soon-overlay{position:absolute;inset:0;background:rgba(30,10,46,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
   .coming-soon-label{font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;font-style:italic}
   .coming-soon-sub{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8}
@@ -103,15 +101,12 @@
       <a href="index.html#booking" class="btn-orange">Start Your Path</a>
       <a href="#what-included" class="btn-ghost">What's Included</a>
     </div>
-  </div>
-</div>
-
-<div class="stats-bar">
-  <div class="stats-bar-inner">
-    <div><div class="sbar-num">12+</div><div class="sbar-lbl">College Placements</div></div>
-    <div><div class="sbar-num">D1</div><div class="sbar-lbl">Coaching Experience</div></div>
-    <div><div class="sbar-num">NCAA</div><div class="sbar-lbl">Expert Navigation</div></div>
-    <div><div class="sbar-num">100%</div><div class="sbar-lbl">Athlete-First</div></div>
+    <div class="hero-creds">
+      <div class="hero-cred"><span class="hero-cred-val">12+</span><span class="hero-cred-lbl">College Placements</span></div>
+      <div class="hero-cred"><span class="hero-cred-val">D1</span><span class="hero-cred-lbl">Coaching Experience</span></div>
+      <div class="hero-cred"><span class="hero-cred-val">NCAA</span><span class="hero-cred-lbl">Expert Navigation</span></div>
+      <div class="hero-cred"><span class="hero-cred-val">100%</span><span class="hero-cred-lbl">Athlete-First</span></div>
+    </div>
   </div>
 </div>
 
@@ -220,6 +215,7 @@
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
 </body></html>
+
 
 
 
