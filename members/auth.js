@@ -9,7 +9,7 @@ const KEY_COL = 0;
 const TIER_COL = 3;
 const STATUS_COL = 5;
 
-export const TIER_RANK = { free: 0, plus: 1, performance: 2, elite: 3 };
+export const TIER_RANK = { free: 0, performance: 1, elite: 2 };
 
 const STORAGE_KEY = 'mpl_member_key';
 const STORAGE_TIER = 'mpl_member_tier';
@@ -27,7 +27,7 @@ function parseCsv(text) {
  * against the member sheet.
  *
  * Returns:
- *   { valid: true, tier: 'plus', rank: 1 }  — recognized key
+ *   { valid: true, tier: 'performance', rank: 1 }  — recognized key
  *   { valid: false }                         — key present but not found
  *   null                                      — no key at all (first-time visitor)
  */
