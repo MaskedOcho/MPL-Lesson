@@ -145,6 +145,7 @@ footer{background:#160830;border-top:0.5px solid #3d1f5a;padding:4rem 3rem 2rem}
 .footer-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;border-bottom:0.5px solid #2e1448}
 .footer-brand{font-family:var(--serif);font-size:22px;font-weight:300;letter-spacing:3px;text-transform:uppercase;color:#e8d8ff;display:block;margin-bottom:1rem}
 .footer-tagline{font-size:12px;color:#8868a8;line-height:1.8}
+.footer-col{display:flex;flex-direction:column}
 .footer-col h4{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#7a5a98;margin-bottom:1.25rem}
 .footer-col a{display:block;font-size:12px;color:#8868a8;text-decoration:none;margin-bottom:.6rem;transition:color .2s}
 .footer-col a:hover{color:#e8d8ff}
