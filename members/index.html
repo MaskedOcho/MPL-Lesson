@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Members Portal &mdash; MPL Pursuits</title>
+<link rel="icon" type="image/svg+xml" href="../favicon.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
@@ -42,6 +43,9 @@
   .tier-step.current .tier-step-name{color:#fff}
   .tier-step-you{display:none;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-top:6px}
   .tier-step.current .tier-step-you{display:block}
+  .tier-step-upgrade{display:none;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);text-decoration:none;margin-top:6px}
+  .tier-step-upgrade:hover{color:var(--gold-dk)}
+  .tier-step:not(.unlocked) .tier-step-upgrade{display:inline-block}
 
   /* TOPIC NAV STICKY */
   .topic-nav-bar{position:sticky;top:72px;z-index:90}
@@ -212,11 +216,13 @@
       <div class="tier-step-label">Performance Athlete</div>
       <div class="tier-step-name">$80 / mo</div>
       <div class="tier-step-you">You are here</div>
+      <a href="../index.html#membership" class="tier-step-upgrade">Upgrade &rarr;</a>
     </div>
     <div class="tier-step" data-rank="2">
       <div class="tier-step-label">Elite Athlete</div>
       <div class="tier-step-name">$150 / mo</div>
       <div class="tier-step-you">You are here</div>
+      <a href="../index.html#membership" class="tier-step-upgrade">Upgrade &rarr;</a>
     </div>
   </div>
 
