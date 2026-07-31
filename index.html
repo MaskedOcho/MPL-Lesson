@@ -115,7 +115,7 @@
 
   /* --- MEMBERSHIP TIERS --- */
   .membership { background: #0e0220; }
-  .membership-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; background: #3d1f5a; margin-top: 1.5rem; }
+  .membership-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: #3d1f5a; margin-top: 1.5rem; }
   .tier-card { background: #200c40; padding: 2rem 1.5rem; display: flex; flex-direction: column; position: relative; }
   .tier-card.featured { background: var(--ink); }
   .tier-badge {
@@ -134,7 +134,7 @@
   .tier-card.featured .tier-desc { color: rgba(255,255,255,.6); }
   .tier-items { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 1.25rem; flex: 1; }
   .tier-items li { font-size: 12px; color: #c8a8e8; padding-left: 16px; position: relative; line-height: 1.55; }
-  .tier-items li::before { content: '&rarr;'; position: absolute; left: 0; color: var(--gold); font-size: 11px; }
+  .tier-items li::before { content: '\2192'; position: absolute; left: 0; color: var(--gold); font-size: 11px; }
   .tier-card.featured .tier-items li { color: rgba(255,255,255,.55); }
   .tier-cta {
     margin-top: 1.75rem; background: none; border: 0.5px solid #5a2a7a;
@@ -447,18 +447,6 @@
           <li>Billed once per year</li>
         </ul>
         <a href="https://buy.stripe.com/8x28wR86S9ue9GKcUOa3u0a" class="tier-cta">Join Now</a>
-      </div>
-
-      <div class="tier-card">
-        <div class="tier-name">Single Purchase</div>
-        <div class="tier-price">$7<span style="font-size:28px">&ndash;$15</span></div>
-        <div class="tier-period">One-Time &middot; 7-Day Access</div>
-        <ul class="tier-items">
-          <li>One-topic deep dives</li>
-          <li>Short-term access</li>
-          <li>No commitment required</li>
-        </ul>
-        <a href="shop.html" class="tier-cta">Browse Topics</a>
       </div>
 
     </div>
