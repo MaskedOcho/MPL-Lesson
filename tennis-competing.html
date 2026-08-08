@@ -35,6 +35,61 @@
   .rating-card h5{font-family:var(--serif);font-size:17px;font-weight:400;color:#e8d8ff;margin-bottom:.4rem}
   .rating-card p{font-size:12px;color:#a888c8;line-height:1.6}
 
+  /* TWO COLUMN GENERIC */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;align-items:start}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  .col-title{font-family:var(--serif);font-size:22px;font-weight:400;color:#e8d8ff;margin-bottom:.75rem}
+  .col-body{font-size:13px;color:#a888c8;line-height:1.8;margin-bottom:1.5rem}
+
+  .why-matters-list{display:flex;flex-direction:column;gap:1.25rem;list-style:none}
+  .why-matters-list li{display:flex;gap:12px}
+  .wm-badge{width:34px;height:34px;border-radius:50%;background:rgba(124,58,237,.18);color:var(--purple);display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;flex-shrink:0}
+  .why-matters-list h5{font-size:13px;color:#e8d8ff;margin-bottom:2px}
+  .why-matters-list p{font-size:12px;color:#a888c8;line-height:1.6}
+
+  .level-list{display:flex;flex-direction:column;gap:1rem}
+  .level-row{display:flex;gap:12px;align-items:flex-start}
+  .level-badge{flex-shrink:0;background:var(--purple);color:#fff;font-size:10px;font-weight:600;letter-spacing:.5px;padding:4px 9px;white-space:nowrap;margin-top:2px}
+  .level-row p{font-size:12px;color:#a888c8;line-height:1.6}
+  .level-row strong{color:#e8d8ff}
+
+  /* RATING BOX */
+  .rating-box{background:#150428;border:0.5px solid var(--purple);padding:2.5rem;margin-top:1rem}
+  .rating-box h3{font-family:var(--serif);font-size:19px;font-weight:400;color:#e8d8ff;margin-bottom:.3rem}
+  .rating-box .rating-sub{font-size:12px;color:var(--gold);margin-bottom:1rem}
+  .rating-box p{font-size:12px;color:#a888c8;line-height:1.7}
+  .rating-box ul{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-top:1rem}
+  .rating-box ul li{font-size:12px;color:#a888c8;padding-left:16px;position:relative}
+  .rating-box ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+  .rating-table{width:100%;border-collapse:collapse;margin-top:1rem}
+  .rating-table th,.rating-table td{text-align:left;font-size:11px;padding:.6rem .75rem;border-bottom:0.5px solid #3d1f5a;color:#c8a8e8}
+  .rating-table th{color:#8a68a8;text-transform:uppercase;letter-spacing:1px;font-size:9px}
+  .rating-table td:first-child{color:var(--gold);font-weight:600;white-space:nowrap}
+
+  /* THREE COL: PATHWAY TABLE / LEAGUES / WHY MATTERS */
+  .tri-col-3{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:2.5rem;margin-top:2.5rem;align-items:start}
+  @media(max-width:960px){.tri-col-3{grid-template-columns:1fr}}
+  .pathway-table-row{display:flex;gap:12px;align-items:flex-start;padding:.85rem 0;border-bottom:0.5px solid #2e1448}
+  .pathway-table-row:last-child{border-bottom:none}
+  .pt-num{width:26px;height:26px;border-radius:50%;background:var(--gold);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+  .pathway-table-row h5{font-size:12px;color:#e8d8ff;margin-bottom:2px}
+  .pathway-table-row p{font-size:11px;color:#a888c8;line-height:1.5}
+  .pathway-note{font-size:11px;color:var(--gold);margin-top:1rem;line-height:1.6}
+
+  .league-types{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:1.25rem}
+  .league-types li{font-size:12px;color:#a888c8;padding-left:16px;position:relative}
+  .league-types li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+  .league-benefits{display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.25rem;list-style:none}
+  .league-benefits li{display:flex;gap:8px;align-items:center;font-size:12px;color:#a888c8}
+  .league-benefits i{color:var(--gold);font-size:14px}
+  .league-steps{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.5rem}
+  .league-steps li{counter-increment:step;font-size:12px;color:#a888c8;padding-left:24px;position:relative}
+  .league-steps li::before{content:counter(step);position:absolute;left:0;top:0;width:16px;height:16px;background:var(--purple);color:#fff;font-size:9px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+
+  .matters-check{list-style:none;display:flex;flex-direction:column;gap:.9rem}
+  .matters-check li{font-size:12px;color:#c8a8e8;padding-left:20px;position:relative;line-height:1.5}
+  .matters-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
   /* HELP PLANNING CTA ROW */
   .help-plan{background:#150428;padding:3.5rem 3rem;border-bottom:0.5px solid #3d1f5a;text-align:center}
   .help-plan-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;max-width:800px;margin:2rem auto 0}
@@ -147,14 +202,119 @@
 
 <section>
   <div class="inner">
+    <div class="two-col">
+      <div>
+        <div class="col-title">Why Every Level Matters</div>
+        <p class="col-body">Every level of competition serves a purpose in a player's development. The right tournament at the right time builds skills, confidence, and experience that lead to long-term success.</p>
+        <ul class="why-matters-list">
+          <li><div class="wm-badge">8&ndash;10</div><div><h5>Learning the Game</h5><p>Players learn the fundamentals of competition, sportsmanship, and how tournaments work.</p></div></li>
+          <li><div class="wm-badge">11&ndash;14</div><div><h5>Build Foundations</h5><p>Players develop consistency, learn to prepare for matches, and start building rankings.</p></div></li>
+          <li><div class="wm-badge">15&ndash;18</div><div><h5>Gain Exposure</h5><p>Players compete at higher levels to earn rankings, improve UTR, and gain college exposure.</p></div></li>
+          <li><div class="wm-badge">18+</div><div><h5>Keep Competing</h5><p>Competition doesn't stop after juniors &mdash; adult tournaments and leagues keep it going for life.</p></div></li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-title">USTA Junior Tournament Levels Explained</div>
+        <p class="col-body">The USTA junior pathway is a structured progression from beginner events to national championships. Each level prepares players for the next step.</p>
+        <div class="level-list">
+          <div class="level-row"><span class="level-badge">Level 7</span><p><strong>Learning to Compete</strong> &mdash; local events that introduce players to tournament play in a low-pressure environment.</p></div>
+          <div class="level-row"><span class="level-badge">Level 6</span><p><strong>Building Confidence</strong> &mdash; entry-level tournaments where players earn ranking points.</p></div>
+          <div class="level-row"><span class="level-badge">Level 5</span><p><strong>Establishing Identity</strong> &mdash; stronger sectional competition that builds consistency and toughness.</p></div>
+          <div class="level-row"><span class="level-badge">Level 4</span><p><strong>Advanced Sectional</strong> &mdash; highly competitive events where players start gaining exposure to college coaches.</p></div>
+          <div class="level-row"><span class="level-badge">Level 3</span><p><strong>National-Level Exposure</strong> &mdash; compete against top players from across the country.</p></div>
+          <div class="level-row"><span class="level-badge">Level 2</span><p><strong>National Competition</strong> &mdash; elite junior events with strong recruiting potential.</p></div>
+          <div class="level-row"><span class="level-badge">Level 1</span><p><strong>National Championships</strong> &mdash; the highest level of junior USTA competition.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
     <div class="eyebrow">Ratings &amp; Rankings</div>
-    <h2 class="serif-h" style="font-size:36px">Know where you <em>stand.</em></h2>
-    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Tennis uses a handful of rating systems to measure playing ability and track progress. Each one matters for a different reason &mdash; here's the short version.</p>
-    <div class="rating-grid">
+    <h2 class="serif-h" style="font-size:36px">Understanding your <em>tennis ratings.</em></h2>
+    <div class="rating-box">
+      <h3>World Tennis Number (WTN)</h3>
+      <div class="rating-sub">The global rating system every tennis player should understand</div>
+      <div class="two-col" style="margin-top:1.25rem">
+        <div>
+          <p>WTN is a global rating system developed by the ITF and adopted by many national organizations, including USTA. It measures a player's actual playing ability on a scale that can be understood worldwide.</p>
+          <p style="margin-top:.75rem"><strong style="color:#e8d8ff">Why WTN is becoming more important:</strong></p>
+          <ul>
+            <li>Creates better match quality in tournaments</li>
+            <li>Objective way to track your progress over time</li>
+            <li>Used more often for tournament entry &amp; seeding</li>
+            <li>Helps coaches evaluate player level consistently</li>
+          </ul>
+        </div>
+        <table class="rating-table">
+          <tr><th>WTN Range</th><th>Player Level</th></tr>
+          <tr><td>40+</td><td>Beginner Players</td></tr>
+          <tr><td>30&ndash;40</td><td>Recreational Players</td></tr>
+          <tr><td>20&ndash;30</td><td>Competitive Junior Players</td></tr>
+          <tr><td>15&ndash;20</td><td>Strong High School Players</td></tr>
+          <tr><td>8&ndash;15</td><td>College-Level Players</td></tr>
+          <tr><td>1&ndash;8</td><td>Professional Players</td></tr>
+        </table>
+      </div>
+    </div>
+    <div class="rating-grid" style="margin-top:2rem">
       <div class="rating-card"><h5>WTN</h5><p>A global rating scale (lower is better) that's increasingly used for tournament seeding and coach evaluation.</p></div>
       <div class="rating-card"><h5>UTR</h5><p>The Universal Tennis Rating &mdash; the number college coaches check most often for recruiting.</p></div>
       <div class="rating-card"><h5>USTA Ranking</h5><p>Sectional and national rankings based on tournament results within the USTA system.</p></div>
       <div class="rating-card"><h5>ITF Ranking</h5><p>International junior rankings that open the door to global competition and the pro pathway.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="tri-col-3">
+      <div>
+        <div class="col-title">Suggested Competition Pathway</div>
+        <div class="pathway-table-row"><div class="pt-num">1</div><div><h5>Beginner Player (8&ndash;10)</h5><p>USTA Level 7 &rarr; Level 6 &rarr; UTR Events</p></div></div>
+        <div class="pathway-table-row"><div class="pt-num">2</div><div><h5>Developing Player (11&ndash;14)</h5><p>USTA Level 5 &rarr; Level 4 &rarr; UTR Events</p></div></div>
+        <div class="pathway-table-row"><div class="pt-num">3</div><div><h5>College Recruiting Focus (15&ndash;18)</h5><p>USTA Level 4-1 &rarr; UTR &rarr; ITA Summer Series</p></div></div>
+        <div class="pathway-table-row"><div class="pt-num">4</div><div><h5>Elite National Player (15&ndash;18)</h5><p>USTA National Events &rarr; ITF Juniors &rarr; ITA Events</p></div></div>
+        <div class="pathway-table-row"><div class="pt-num">5</div><div><h5>Professional Aspirations (15&ndash;18+)</h5><p>USTA Nationals &rarr; ITF Juniors &rarr; ITF World Tennis Tour &rarr; Pro Circuit</p></div></div>
+        <p class="pathway-note">This is a general pathway. Every player is unique &mdash; we help you create a plan that fits your level, goals, and development.</p>
+      </div>
+      <div>
+        <div class="col-title">About USTA Leagues</div>
+        <p class="col-body" style="margin-bottom:1rem">Leagues are one of the most popular ways to play tennis in the U.S. Team up with friends, meet new people, and compete in a fun, supportive environment.</p>
+        <ul class="league-types">
+          <li>Local &amp; sectional leagues</li>
+          <li>National leagues</li>
+          <li>Combo leagues (men, women, mixed)</li>
+          <li>18 &amp; over, 40 &amp; over, 55+, 65+, 70+ divisions</li>
+        </ul>
+        <ul class="league-benefits">
+          <li><i class="ti ti-users"></i> Team environment</li>
+          <li><i class="ti ti-calendar"></i> Flexible schedule, match play every week</li>
+          <li><i class="ti ti-heart"></i> Great way to stay active &amp; socialize</li>
+        </ul>
+        <div class="col-title" style="font-size:14px;margin-bottom:.5rem">How to Join</div>
+        <ul class="league-steps">
+          <li>Find a league near you</li>
+          <li>Register online with USTA</li>
+          <li>Get placed on a team</li>
+          <li>Play &amp; have fun!</li>
+        </ul>
+        <a href="https://www.usta.com" class="btn-ghost" target="_blank">Find a USTA League</a>
+      </div>
+      <div>
+        <div class="col-title">Why Competition Matters</div>
+        <p class="col-body">Competition builds more than just tennis skills &mdash; it builds character.</p>
+        <ul class="matters-check">
+          <li>Improves decision-making under pressure</li>
+          <li>Builds resilience and mental toughness</li>
+          <li>Creates measurable goals and motivation</li>
+          <li>Develops discipline and time management</li>
+          <li>Opens doors to college and career opportunities</li>
+          <li>Provides lifelong friendships and community</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
