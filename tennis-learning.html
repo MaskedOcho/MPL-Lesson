@@ -7,7 +7,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* HUB HERO */
+  .hub-hero{padding:5rem 2rem 4rem}
+  .hub-feat-row{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin:2.5rem 0}
+  .feat-item{max-width:170px;text-align:center}
+  .feat-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .feat-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#e8d8ff;margin-bottom:.35rem}
+  .feat-item p{font-size:11px;color:#a888c8;line-height:1.5}
+  .hub-hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+  /* MASTER GRID */
+  .master-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.75rem;margin-top:2.5rem}
+  @media(max-width:900px){.master-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.master-grid{grid-template-columns:1fr}}
+  .master-item{text-align:center}
+  .master-item i{font-size:26px;color:var(--purple);margin-bottom:.75rem;display:block}
+  .master-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#e8d8ff;margin-bottom:.35rem}
+  .master-item p{font-size:11px;color:#a888c8;line-height:1.5}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -53,21 +71,41 @@
   </div>
 </nav>
 
-<div class="page-hero page-hero--center">
-  <div class="page-eyebrow">Tennis</div>
-  <h1 class="page-h">Learning the <em>Game</em></h1>
-  <p class="page-sub">From your first swing to your first match &mdash; the fundamentals that form the foundation of every great tennis player.</p>
+<div class="page-hero page-hero--center hub-hero">
+  <div class="page-eyebrow">Tennis Learning Hub</div>
+  <h1 class="page-h">Better Every Day.<br><em>Stronger Every Match.</em></h1>
+  <p class="page-sub">Master the skills, strategies, and mindset to take your game to the next level. Access expert coaching, drills, video lessons, and proven guidance &mdash; all in one place.</p>
+  <div class="hub-feat-row">
+    <div class="feat-item"><i class="ti ti-school"></i><h4>Learn</h4><p>Step-by-step instruction from experts.</p></div>
+    <div class="feat-item"><i class="ti ti-target-arrow"></i><h4>Practice</h4><p>On-court drills to build muscle memory and consistency.</p></div>
+    <div class="feat-item"><i class="ti ti-trophy"></i><h4>Perform</h4><p>Match-play strategies to help you compete with confidence.</p></div>
+    <div class="feat-item"><i class="ti ti-chart-arrows"></i><h4>Improve</h4><p>Track progress and keep leveling up every day.</p></div>
+  </div>
+  <div class="hub-hero-btns">
+    <a href="members/#topic-tennis" class="btn-orange">Explore Drills &amp; Lessons</a>
+  </div>
 </div>
 
-<div class="content-wrap">
-  <section class="content-section">
-    <h2>Overview</h2>
-    <p>Learning tennis properly from the start makes everything easier later. Good technique learned early becomes instinct; bad habits learned early require years of correction. This section covers the technical foundations every developing player needs to understand &mdash; from grip and stance to swing mechanics and court positioning.</p>
-    <p>Whether you're brand new to the game or looking to rebuild your technical base, these fundamentals are where championship tennis begins.</p>
-  </section>
+<section>
+  <div class="inner">
+    <div class="eyebrow">What You Can Master</div>
+    <h2 class="serif-h" style="font-size:36px">A complete system to <em>improve your game.</em></h2>
+    <div class="master-grid">
+      <div class="master-item"><i class="ti ti-swipe"></i><h4>Stroke Development</h4><p>Clean, powerful strokes with technical precision.</p></div>
+      <div class="master-item"><i class="ti ti-chess-knight"></i><h4>Tactics &amp; Strategy</h4><p>Smarter decisions on the court.</p></div>
+      <div class="master-item"><i class="ti ti-run"></i><h4>Footwork &amp; Movement</h4><p>Better speed, balance, and coverage.</p></div>
+      <div class="master-item"><i class="ti ti-ball-tennis"></i><h4>Serve &amp; Return</h4><p>A more consistent, effective game.</p></div>
+      <div class="master-item"><i class="ti ti-brain"></i><h4>Mental Toughness</h4><p>Stay calm, focused, and confident.</p></div>
+    </div>
+  </div>
+</section>
 
-
-</div>
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Get Personalized Help</div>
+  <h2>Struggling with something <em style="font-style:italic;color:#fff">specific?</em></h2>
+  <p>Our 1-on-1 online sessions give you focused attention and a custom plan to fix what's holding your game back.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Book%20a%201-on-1%20Session" class="btn-white">Book a 1-on-1 Session</a>
+</section>
 
 <section class="membership-cta">
   <div class="cta-wrap">

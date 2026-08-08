@@ -7,7 +7,41 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* ICON FEATURE ROW (hero) */
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;margin-top:2.5rem}
+  .feat-item{text-align:center}
+  .feat-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .feat-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#e8d8ff;margin-bottom:.35rem}
+  .feat-item p{font-size:11px;color:#a888c8;line-height:1.5}
+  @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
+
+  /* AGE PATHWAY */
+  .age-path{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.age-path{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.age-path{grid-template-columns:1fr}}
+  .age-card{background:#200c40;border-top:3px solid var(--purple);padding:1.5rem}
+  .age-card i{font-size:22px;color:var(--purple);margin-bottom:.75rem;display:block}
+  .age-card h4{font-family:var(--serif);font-size:17px;font-weight:400;color:#e8d8ff;margin-bottom:2px}
+  .age-card .age-sub{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:.75rem}
+  .age-card p{font-size:12px;color:#a888c8;line-height:1.6}
+
+  /* RATINGS ROW */
+  .rating-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.rating-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.rating-grid{grid-template-columns:1fr}}
+  .rating-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.5rem}
+  .rating-card h5{font-family:var(--serif);font-size:17px;font-weight:400;color:#e8d8ff;margin-bottom:.4rem}
+  .rating-card p{font-size:12px;color:#a888c8;line-height:1.6}
+
+  /* HELP PLANNING CTA ROW */
+  .help-plan{background:#150428;padding:3.5rem 3rem;border-bottom:0.5px solid #3d1f5a;text-align:center}
+  .help-plan-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;max-width:800px;margin:2rem auto 0}
+
+  .closing-strip{background:var(--ink);border-bottom:0.5px solid #3d1f5a;padding:1.5rem 2rem;text-align:center}
+  .closing-strip p{font-size:12px;color:#a888c8;max-width:700px;margin:0 auto;line-height:1.7;font-style:italic}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -54,19 +88,78 @@
 </nav>
 
 <div class="page-hero page-hero--center">
-  <div class="page-eyebrow">Tennis</div>
-  <h1 class="page-h">Competing to <em>Win</em></h1>
-  <p class="page-sub">Tournament preparation, match strategy, and the mental edge that separates good practice players from great competitors.</p>
+  <div class="page-eyebrow">Tennis &middot; Your Path. Your Level. Your Goals.</div>
+  <h1 class="page-h">Tennis <em>Competition</em></h1>
+  <p class="page-sub">From junior tournaments to adult leagues, competing is where development gets tested. The right event at the right time builds skills, confidence, and experience that carry into everything else.</p>
+  <div class="feat-grid">
+    <div class="feat-item"><i class="ti ti-trophy"></i><h4>Build Confidence</h4><p>Gain match experience and learn to compete.</p></div>
+    <div class="feat-item"><i class="ti ti-chart-line"></i><h4>Improve Rankings</h4><p>Track progress and set meaningful goals.</p></div>
+    <div class="feat-item"><i class="ti ti-school"></i><h4>Earn Exposure</h4><p>Open doors to college and beyond.</p></div>
+    <div class="feat-item"><i class="ti ti-heart"></i><h4>Have Fun</h4><p>Compete for life and enjoy the journey.</p></div>
+  </div>
 </div>
 
-<div class="content-wrap">
-  <section class="content-section">
-    <h2>Overview</h2>
-    <p>Competition is where development is tested &mdash; and where real growth happens. The mental, tactical, and physical demands of match play are different from anything you experience in practice. This section covers how to prepare for tournaments, how to think tactically during matches, and how to develop the mental resilience that great competitors have.</p>
-    <p>Compete smarter, not just harder.</p>
-  </section>
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Pathway</div>
+    <h2 class="serif-h" style="font-size:36px">From junior events to <em>lifelong competing.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Every level of competition serves a purpose. Here's roughly how that progression looks &mdash; though every athlete's timeline is different.</p>
+    <div class="age-path">
+      <div class="age-card">
+        <i class="ti ti-mood-smile"></i>
+        <h4>Ages 8&ndash;10</h4>
+        <div class="age-sub">Learning the Game</div>
+        <p>Local, low-pressure events that build sportsmanship, confidence, and a love for the game.</p>
+      </div>
+      <div class="age-card">
+        <i class="ti ti-run"></i>
+        <h4>Ages 11&ndash;14</h4>
+        <div class="age-sub">Build Foundations</div>
+        <p>Consistent sectional play that starts building rankings and match toughness.</p>
+      </div>
+      <div class="age-card">
+        <i class="ti ti-trophy"></i>
+        <h4>Ages 15&ndash;18</h4>
+        <div class="age-sub">Gain Exposure</div>
+        <p>Higher-level national and international events that shape recruiting opportunities.</p>
+      </div>
+      <div class="age-card">
+        <i class="ti ti-users"></i>
+        <h4>18+ &amp; Beyond</h4>
+        <div class="age-sub">Keep Competing</div>
+        <p>Adult tournaments and leagues keep the game &mdash; and the community &mdash; going for life.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section>
+  <div class="inner">
+    <div class="eyebrow">Ratings &amp; Rankings</div>
+    <h2 class="serif-h" style="font-size:36px">Know where you <em>stand.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Tennis uses a handful of rating systems to measure playing ability and track progress. Each one matters for a different reason &mdash; here's the short version.</p>
+    <div class="rating-grid">
+      <div class="rating-card"><h5>WTN</h5><p>A global rating scale (lower is better) that's increasingly used for tournament seeding and coach evaluation.</p></div>
+      <div class="rating-card"><h5>UTR</h5><p>The Universal Tennis Rating &mdash; the number college coaches check most often for recruiting.</p></div>
+      <div class="rating-card"><h5>USTA Ranking</h5><p>Sectional and national rankings based on tournament results within the USTA system.</p></div>
+      <div class="rating-card"><h5>ITF Ranking</h5><p>International junior rankings that open the door to global competition and the pro pathway.</p></div>
+    </div>
+  </div>
+</section>
 
+<section class="help-plan">
+  <div class="eyebrow">Need Help Planning Your Competition Journey?</div>
+  <h2 class="serif-h" style="font-size:32px">Not every athlete should play <em>every tournament.</em></h2>
+  <p class="body-copy" style="margin:1rem auto 0;max-width:600px">We help athletes and families build a smart plan based on their goals, level, and resources &mdash; from tournament recommendations to college recruiting timelines.</p>
+  <div class="help-plan-btns">
+    <a href="mailto:mary.profit@gmail.com?subject=Build%20My%20Competition%20Plan" class="btn-orange">Build My Competition Plan</a>
+    <a href="mailto:mary.profit@gmail.com?subject=Recruiting%20Assessment" class="btn-ghost">Recruiting Assessment</a>
+    <a href="mailto:mary.profit@gmail.com?subject=College%20Tennis%20Readiness%20Review" class="btn-ghost">College Readiness Review</a>
+  </div>
+</section>
+
+<div class="closing-strip">
+  <p>&ldquo;The goal isn't to play more tournaments &mdash; it's to play the right tournaments at the right time. Every match is a chance to learn, grow, and get closer to your goals.&rdquo;</p>
 </div>
 
 <section class="membership-cta">

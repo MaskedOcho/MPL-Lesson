@@ -7,7 +7,29 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* HERO TRUST BULLETS */
+  .hero-trust{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.75rem}
+  .hero-trust-item{display:flex;align-items:center;gap:8px;font-size:12px;color:#c8a8e8}
+  .hero-trust-item i{color:var(--gold);font-size:16px}
+
+  /* ICON FEATURE GRID */
+  .feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2rem;margin-top:2.5rem}
+  .feat-item{text-align:center}
+  .feat-item i{font-size:30px;color:var(--gold);margin-bottom:1rem;display:block}
+  .feat-item h4{font-family:var(--serif);font-size:17px;font-weight:400;color:#e8d8ff;margin-bottom:.5rem}
+  .feat-item p{font-size:12px;color:#a888c8;line-height:1.6}
+  @media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
+
+  /* FEATURE RESOURCE CARDS */
+  .resource-feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  .resource-feat-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;text-align:center}
+  .resource-feat-card i{font-size:32px;color:var(--gold);margin-bottom:1rem;display:block}
+  .resource-feat-card h4{font-family:var(--serif);font-size:19px;font-weight:400;color:#e8d8ff;margin-bottom:.6rem}
+  .resource-feat-card p{font-size:12px;color:#a888c8;line-height:1.6;margin-bottom:1.5rem}
+  @media(max-width:900px){.resource-feat-grid{grid-template-columns:1fr}}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -58,34 +80,58 @@
 <div class="page-hero">
   <div class="page-hero-inner">
     <div class="eyebrow">Tennis</div>
-    <h1>Develop Your Game<br>at Every <em>Level.</em></h1>
-    <p class="page-hero-sub">From foundational mechanics to competitive match strategy &mdash; our tennis content is built to meet you wherever you are in your development.</p>
+    <h1>Develop Your Game<br>With <em>Purpose.</em></h1>
+    <p class="page-hero-sub">Success in tennis doesn't happen by accident &mdash; it happens with the right plan. MPL Pursuits gives athletes a clear, step-by-step system to build skills, confidence, and character on and off the court.</p>
+    <div class="hero-trust">
+      <div class="hero-trust-item"><i class="ti ti-circle-check"></i> Proven system for all ages</div>
+      <div class="hero-trust-item"><i class="ti ti-circle-check"></i> Expert coaches who care</div>
+      <div class="hero-trust-item"><i class="ti ti-circle-check"></i> Resources that drive results</div>
+    </div>
+    <div class="page-hero-btns">
+      <a href="tennis-training.html" class="btn-orange">Explore the Pathway</a>
+      <a href="tennis-learning.html" class="btn-ghost">Start Learning</a>
+    </div>
   </div>
 </div>
 
 <section>
   <div class="inner">
+    <div class="eyebrow">How MPL Pursuits Helps</div>
+    <h2 class="serif-h" style="font-size:40px">We solve the guesswork. <em>You get a plan.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:640px">We help athletes develop in every area that matters so they can perform their best when it counts.</p>
+    <div class="feat-grid">
+      <div class="feat-item"><i class="ti ti-target-arrow"></i><h4>Technical Skills</h4><p>Grips, strokes, serves, volleys, footwork, and positioning.</p></div>
+      <div class="feat-item"><i class="ti ti-chess-knight"></i><h4>Tactical Understanding</h4><p>Smarter decisions and point construction.</p></div>
+      <div class="feat-item"><i class="ti ti-run"></i><h4>Physical Development</h4><p>Movement, conditioning, and recovery habits.</p></div>
+      <div class="feat-item"><i class="ti ti-brain"></i><h4>Mental Performance</h4><p>Focus, composure, and controlling the controllables.</p></div>
+      <div class="feat-item"><i class="ti ti-chart-arrows"></i><h4>Long-Term Direction</h4><p>Know your level and your next step.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
     <div class="eyebrow">Explore Tennis</div>
     <h2 class="serif-h" style="font-size:40px">Choose your <em>focus.</em></h2>
-    <div class="subpages-grid">
-      <a href="tennis-learning.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-book"></i></div>
-        <div class="subpage-title">Learning</div>
-        <p class="subpage-desc">Foundational technique, stroke mechanics, and the fundamentals every player needs to build a solid, consistent game.</p>
-        <div class="subpage-link">Explore Learning &rarr;</div>
-      </a>
-      <a href="tennis-training.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-run"></i></div>
-        <div class="subpage-title">Training</div>
-        <p class="subpage-desc">Structured drills, fitness integration, and practice routines that turn lessons into lasting improvement on the court.</p>
-        <div class="subpage-link">Explore Training &rarr;</div>
-      </a>
-      <a href="tennis-competing.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-trophy"></i></div>
-        <div class="subpage-title">Competing</div>
-        <p class="subpage-desc">Match strategy, tournament preparation, mental performance under pressure, and how to compete at your peak level.</p>
-        <div class="subpage-link">Explore Competing &rarr;</div>
-      </a>
+    <div class="resource-feat-grid">
+      <div class="resource-feat-card">
+        <i class="ti ti-book"></i>
+        <h4>Learning</h4>
+        <p>Foundational technique and the fundamentals every player needs to build a consistent game.</p>
+        <a href="tennis-learning.html" class="btn-orange">Explore Learning</a>
+      </div>
+      <div class="resource-feat-card">
+        <i class="ti ti-run"></i>
+        <h4>Training</h4>
+        <p>Structured drills and practice routines that turn lessons into lasting improvement.</p>
+        <a href="tennis-training.html" class="btn-orange">Explore Training</a>
+      </div>
+      <div class="resource-feat-card">
+        <i class="ti ti-trophy"></i>
+        <h4>Competing</h4>
+        <p>Match strategy, tournament preparation, and how to compete at your peak level.</p>
+        <a href="tennis-competing.html" class="btn-orange">Explore Competing</a>
+      </div>
     </div>
   </div>
 </section>
