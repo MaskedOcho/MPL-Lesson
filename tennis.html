@@ -22,6 +22,18 @@
   @media(max-width:900px){.feat-grid{grid-template-columns:repeat(2,1fr)}}
   @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
 
+  /* PATHWAY STEPS */
+  .path-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:3rem}
+  .path-step{background:#200c40;border-top:3px solid var(--gold);padding:1.75rem 1.5rem}
+  .path-step-num{width:38px;height:38px;border-radius:50%;background:var(--purple);display:flex;align-items:center;justify-content:center;font-size:16px;color:#fff;margin-bottom:1rem}
+  .path-step h4{font-family:var(--serif);font-size:18px;font-weight:400;color:#e8d8ff;margin-bottom:.75rem}
+  .path-step ul{list-style:none;display:flex;flex-direction:column;gap:.4rem;margin-bottom:.9rem}
+  .path-step ul li{font-size:12px;color:#a888c8;padding-left:14px;position:relative}
+  .path-step ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+  .path-step-goal{font-size:11px;color:var(--gold);line-height:1.6}
+  @media(max-width:900px){.path-steps{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.path-steps{grid-template-columns:1fr}}
+
   /* FEATURE RESOURCE CARDS */
   .resource-feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
   .resource-feat-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;text-align:center}
@@ -29,6 +41,18 @@
   .resource-feat-card h4{font-family:var(--serif);font-size:19px;font-weight:400;color:#e8d8ff;margin-bottom:.6rem}
   .resource-feat-card p{font-size:12px;color:#a888c8;line-height:1.6;margin-bottom:1.5rem}
   @media(max-width:900px){.resource-feat-grid{grid-template-columns:1fr}}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
@@ -111,6 +135,64 @@
 
 <section>
   <div class="inner">
+    <div class="eyebrow">The Journey</div>
+    <h2 class="serif-h" style="font-size:40px">A clear path. <em>Continuous growth.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Every athlete's journey is different, but the process is the same: build a strong foundation, develop your skills, learn to compete, and maximize your potential.</p>
+    <div class="path-steps">
+      <div class="path-step">
+        <div class="path-step-num">1</div>
+        <h4>Build Your Foundation</h4>
+        <ul>
+          <li>Fundamentals &amp; technique</li>
+          <li>Footwork &amp; movement</li>
+          <li>Serving &amp; returning</li>
+          <li>Court positioning</li>
+          <li>Rules &amp; scoring</li>
+        </ul>
+        <div class="path-step-goal">Goal: Feel comfortable, confident, and ready to play.</div>
+      </div>
+      <div class="path-step">
+        <div class="path-step-num">2</div>
+        <h4>Develop Your Game</h4>
+        <ul>
+          <li>Rally consistency</li>
+          <li>Shot control &amp; spin</li>
+          <li>Court coverage</li>
+          <li>Tactics &amp; shot selection</li>
+          <li>Fitness fundamentals</li>
+        </ul>
+        <div class="path-step-goal">Goal: Become a reliable and consistent player.</div>
+      </div>
+      <div class="path-step">
+        <div class="path-step-num">3</div>
+        <h4>Compete With Confidence</h4>
+        <ul>
+          <li>Point construction</li>
+          <li>Match strategy</li>
+          <li>Mental toughness</li>
+          <li>Tournament preparation</li>
+          <li>Goal setting &amp; reflection</li>
+        </ul>
+        <div class="path-step-goal">Goal: Perform under pressure and handle match challenges.</div>
+      </div>
+      <div class="path-step">
+        <div class="path-step-num">4</div>
+        <h4>Perform at Your Highest Level</h4>
+        <ul>
+          <li>Advanced tactics</li>
+          <li>Opponent analysis</li>
+          <li>Performance tracking</li>
+          <li>College &amp; recruiting prep</li>
+          <li>Leadership &amp; planning</li>
+        </ul>
+        <div class="path-step-goal">Goal: Reach the highest level and achieve your goals.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
     <div class="eyebrow">Explore Tennis</div>
     <h2 class="serif-h" style="font-size:40px">Choose your <em>focus.</em></h2>
     <div class="resource-feat-grid">
@@ -131,6 +213,35 @@
         <h4>Competing</h4>
         <p>Match strategy, tournament preparation, and how to compete at your peak level.</p>
         <a href="tennis-competing.html" class="btn-orange">Explore Competing</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic education resources</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>Full training &amp; learning library</li>
+          <li>Structured drill progressions</li>
+          <li>Exclusive video lessons</li>
+          <li>Discounted 1-on-1 coaching</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
       </div>
     </div>
   </div>
