@@ -7,7 +7,58 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* HERO FEATURE ROW */
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;margin-top:2.5rem}
+  .feat-item{text-align:center}
+  .feat-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .feat-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#e8d8ff;margin-bottom:.35rem}
+  .feat-item p{font-size:11px;color:#a888c8;line-height:1.5}
+  @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
+
+  /* CORE AREAS GRID */
+  .core-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.core-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.core-grid{grid-template-columns:1fr}}
+  .core-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.75rem}
+  .core-card i{font-size:24px;color:var(--purple);margin-bottom:.75rem;display:block}
+  .core-card h4{font-family:var(--serif);font-size:17px;font-weight:400;color:#e8d8ff;margin-bottom:.5rem}
+  .core-card p{font-size:12px;color:#a888c8;line-height:1.6}
+
+  /* MINDSET CHECKLIST BANNER */
+  .mindset-banner{background:#150428;border:0.5px solid var(--purple);padding:2.5rem;margin-top:1rem}
+  .mindset-banner h3{font-family:var(--serif);font-size:20px;font-weight:400;color:#e8d8ff;margin-bottom:1.25rem}
+  .mindset-check{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+  .mindset-check li{font-size:13px;color:#c8a8e8;padding-left:20px;position:relative;line-height:1.5}
+  .mindset-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* THREE COL: HABITS / READING / QUOTES */
+  .tri-col-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2.5rem;margin-top:2.5rem;align-items:start}
+  @media(max-width:960px){.tri-col-3{grid-template-columns:1fr}}
+  .col-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#e8d8ff;margin-bottom:1rem}
+  .habit-steps{list-style:none;counter-reset:step;display:flex;flex-direction:column;gap:.6rem}
+  .habit-steps li{counter-increment:step;font-size:12px;color:#a888c8;padding-left:26px;position:relative;line-height:1.6}
+  .habit-steps li::before{content:counter(step);position:absolute;left:0;top:0;width:18px;height:18px;background:var(--purple);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+  .reading-list{list-style:none;display:flex;flex-direction:column;gap:.9rem}
+  .reading-list li{font-size:12px;color:#a888c8;line-height:1.5}
+  .reading-list strong{display:block;color:#e8d8ff;font-size:13px}
+  .quote-list{list-style:none;display:flex;flex-direction:column;gap:1rem}
+  .quote-list li{font-size:12px;color:#c8a8e8;font-style:italic;line-height:1.6;border-left:2px solid var(--gold);padding-left:12px}
+  .quote-list span{display:block;font-style:normal;color:var(--gold);font-size:10px;letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -34,6 +85,7 @@
         <a href="nutrition.html">Nutrition</a>
         <a href="type1-diabetes.html">Type 1 Diabetes</a>
         <a href="mental-performance.html" class="active">Mental Performance</a>
+        <a href="injury-prevention.html">Injury Prevention</a>
       </div>
     </li>
     <li>
@@ -55,20 +107,123 @@
 
 <div class="page-hero page-hero--center">
   <div class="page-eyebrow">Athlete Development</div>
-  <h1 class="page-h">Mental <em>Performance</em></h1>
-  <p class="page-sub">Your mind is your most powerful tool. Learn how to train it with the same intentionality you bring to your physical game.</p>
+  <h1 class="page-h">Strong Mind. Composed Heart.<br><em>Elite Performance.</em></h1>
+  <p class="page-sub">Tennis is 90% mental. The strongest players aren't just physically prepared &mdash; they're mentally trained to handle pressure, overcome adversity, and stay locked in when it matters most.</p>
+  <div class="feat-grid">
+    <div class="feat-item"><i class="ti ti-shield-check"></i><h4>Build Confidence</h4><p>Develop unshakable self-belief.</p></div>
+    <div class="feat-item"><i class="ti ti-focus-2"></i><h4>Stay Focused</h4><p>Eliminate distractions and stay present.</p></div>
+    <div class="feat-item"><i class="ti ti-flame"></i><h4>Perform Under Pressure</h4><p>Use pressure as fuel, not a threat.</p></div>
+    <div class="feat-item"><i class="ti ti-mood-smile"></i><h4>Bounce Back Stronger</h4><p>Learn, adapt, and come back better.</p></div>
+  </div>
+  <div class="page-hero-btns" style="justify-content:center;margin-top:2.5rem">
+    <a href="mailto:mary.profit@gmail.com?subject=Book%20a%20Mental%20Performance%20Session" class="btn-orange">Book a 1-on-1 Session</a>
+    <a href="members/#topic-athlete-dev" class="btn-ghost">Explore Mental Tools</a>
+  </div>
 </div>
 
-<div class="content-wrap">
-  <!-- Always visible intro section -->
-  <section class="content-section">
-    <h2>Overview</h2>
-    <p>Physical talent gets you on the court. Mental performance keeps you there when it matters. The ability to stay focused under pressure, bounce back from mistakes, and compete with confidence is trainable &mdash; just like any technical skill.</p>
-    <p>This section covers the core mental performance skills that elite athletes develop: focus, confidence, emotional regulation, pre-performance routines, and how to perform when the stakes are highest.</p>
-  </section>
+<section>
+  <div class="inner">
+    <div class="eyebrow">Core Areas of Mental Performance</div>
+    <h2 class="serif-h" style="font-size:36px">Train your mind <em>like you train your body.</em></h2>
+    <div class="core-grid">
+      <div class="core-card"><i class="ti ti-focus-2"></i><h4>Focus &amp; Concentration</h4><p>Quiet the noise, block distractions, and stay fully present in every point.</p></div>
+      <div class="core-card"><i class="ti ti-shield-check"></i><h4>Confidence &amp; Self-Belief</h4><p>Build a strong self-image through positive self-talk and success routines.</p></div>
+      <div class="core-card"><i class="ti ti-heart-bolt"></i><h4>Emotional Control</h4><p>Manage nerves and frustration so they fuel your performance, not hold you back.</p></div>
+      <div class="core-card"><i class="ti ti-mood-smile"></i><h4>Resilience &amp; Mental Toughness</h4><p>Bounce back from mistakes quickly and embrace challenges.</p></div>
+      <div class="core-card"><i class="ti ti-eye"></i><h4>Visualization &amp; Rehearsal</h4><p>See it. Believe it. Mentally prepare for every scenario.</p></div>
+      <div class="core-card"><i class="ti ti-target"></i><h4>Goal Setting &amp; Habits</h4><p>Build daily habits and a championship mindset for long-term growth.</p></div>
+    </div>
+  </div>
+</section>
 
+<section>
+  <div class="inner">
+    <div class="mindset-banner">
+      <h3>The Mindset of Champions</h3>
+      <p class="body-copy" style="margin-bottom:1.25rem">Elite athletes have one thing in common: they train their mind as intensely as their body. A strong mindset leads to:</p>
+      <ul class="mindset-check">
+        <li>Better decision-making under pressure</li>
+        <li>Greater confidence and self-trust</li>
+        <li>Improved focus and shot execution</li>
+        <li>Stronger resilience and emotional control</li>
+        <li>More joy and freedom in your game</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-</div>
+<section>
+  <div class="inner">
+    <div class="tri-col-3">
+      <div>
+        <div class="col-title">Daily Mental Training Habits</div>
+        <ol class="habit-steps">
+          <li>Start your day with gratitude and intention</li>
+          <li>Visualize your best performance before practice</li>
+          <li>Use positive self-talk and affirmations</li>
+          <li>Focus on controllables, not outcomes</li>
+          <li>Take 5 deep breaths to reset between points</li>
+          <li>Reflect on what you did well each day</li>
+          <li>Review and adjust your goals weekly</li>
+        </ol>
+      </div>
+      <div>
+        <div class="col-title">Recommended Reading</div>
+        <ul class="reading-list">
+          <li><strong>The Inner Game of Tennis</strong> &mdash; W. Timothy Gallwey</li>
+          <li><strong>Mind Gym: An Athlete's Guide to Inner Excellence</strong> &mdash; Gary Mack</li>
+          <li><strong>The Champion's Mind</strong> &mdash; Jim Afremow, PhD</li>
+          <li><strong>Peak: Secrets from the New Science of Expertise</strong> &mdash; Anders Ericsson &amp; Robert Pool</li>
+          <li><strong>Atomic Habits</strong> &mdash; James Clear</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-title">Powerful Quotes</div>
+        <ul class="quote-list">
+          <li>"You have to believe in yourself when no one else does."<span>Venus Williams</span></li>
+          <li>"Pressure is a privilege. It means you've earned the opportunity."<span>Billie Jean King</span></li>
+          <li>"I don't focus on what I'm up against. I focus on my goals."<span>Serena Williams</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Want a Game Plan Built for You?</div>
+  <h2>Your mindset is your <em style="font-style:italic;color:#fff">competitive advantage.</em></h2>
+  <p>Book a 1-on-1 mental performance consultation and get personalized strategies based on your goals, challenges, and playing style.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Book%20Mental%20Performance%20Consultation" class="btn-white">Book Your Consultation</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic mental performance tips</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>In-depth mental performance courses</li>
+          <li>Guided visualization &amp; routines</li>
+          <li>Goal tracking &amp; progress tools</li>
+          <li>1-on-1 expert guidance</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="membership-cta">
   <div class="cta-wrap">
@@ -117,16 +272,6 @@
 </footer>
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
 document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
-<script type="module">
-  import { checkAccess } from './js/auth.js';
-  (async () => {
-    const user = await checkAccess();
-    if (!user || !user.valid) {
-      document.getElementById('gatedContent').classList.add('gate-blur');
-      document.getElementById('gateOverlay').classList.add('visible');
-    }
-  })();
-</script>
 </body>
 </html>
 

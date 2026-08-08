@@ -7,7 +7,58 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* HERO FEATURE ROW */
+  .feat-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:1.25rem;margin-top:2.5rem}
+  .feat-item{text-align:center}
+  .feat-item i{font-size:22px;color:var(--gold);margin-bottom:.6rem;display:block}
+  .feat-item h4{font-size:12px;font-weight:500;color:#e8d8ff;line-height:1.3}
+  @media(max-width:900px){.feat-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:500px){.feat-grid{grid-template-columns:1fr 1fr}}
+
+  /* MACRO CARDS */
+  .macro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.macro-grid{grid-template-columns:1fr}}
+  .macro-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.75rem}
+  .macro-card h4{font-family:var(--serif);font-size:19px;font-weight:400;color:#e8d8ff;margin-bottom:.3rem}
+  .macro-card .macro-tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+  .macro-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-bottom:.9rem}
+  .macro-card ul li{font-size:12px;color:#a888c8;padding-left:14px;position:relative}
+  .macro-card ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+  .macro-card .macro-sources{font-size:11px;color:#8a68a8;line-height:1.6}
+
+  /* MICRONUTRIENT GRID */
+  .micro-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+  @media(max-width:768px){.micro-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.micro-grid{grid-template-columns:1fr}}
+  .micro-item{background:#200c40;border:0.5px solid #3d1f5a;padding:1.25rem}
+  .micro-item h5{font-size:13px;color:#e8d8ff;margin-bottom:.35rem}
+  .micro-item p{font-size:11px;color:#a888c8;line-height:1.5}
+
+  /* HYDRATION TWO COL */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;align-items:start}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  .col-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#e8d8ff;margin-bottom:1rem}
+  .electrolyte-list{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+  .electrolyte-list li{font-size:13px;color:#c8a8e8;line-height:1.6}
+  .electrolyte-list strong{color:#e8d8ff}
+  .hydration-steps{list-style:none;display:flex;flex-direction:column;gap:1rem}
+  .hydration-steps li{padding-left:20px;position:relative;font-size:13px;color:#c8a8e8;line-height:1.6}
+  .hydration-steps li::before{content:'\2192';position:absolute;left:0;color:var(--gold)}
+  .hydration-steps strong{display:block;color:#e8d8ff;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -36,6 +87,7 @@
         <a href="nutrition.html" class="active">Nutrition</a>
         <a href="type1-diabetes.html">Type 1 Diabetes</a>
         <a href="mental-performance.html">Mental Performance</a>
+        <a href="injury-prevention.html">Injury Prevention</a>
       </div>
     </li>
     <li>
@@ -57,20 +109,142 @@
 
 <div class="page-hero page-hero--center">
   <div class="page-eyebrow">Athlete Development</div>
-  <h1 class="page-h">Nutrition for <em>Performance</em></h1>
-  <p class="page-sub">Fuel your training and competition with intention. Learn how to eat for energy, recovery, and peak performance at every stage of your season.</p>
+  <h1 class="page-h">Fuel Your Body.<br><em>Elevate Every Part of Your Game.</em></h1>
+  <p class="page-sub">Nutrition is the foundation of athletic performance, recovery, and long-term health. Every choice you make fuels who you are today and shapes who you become tomorrow.</p>
+  <div class="feat-grid">
+    <div class="feat-item"><i class="ti ti-bolt"></i><h4>Better Performance</h4></div>
+    <div class="feat-item"><i class="ti ti-refresh"></i><h4>Faster Recovery</h4></div>
+    <div class="feat-item"><i class="ti ti-shield-check"></i><h4>Stronger Immunity</h4></div>
+    <div class="feat-item"><i class="ti ti-brain"></i><h4>Mental Edge</h4></div>
+    <div class="feat-item"><i class="ti ti-scale"></i><h4>Body Composition</h4></div>
+    <div class="feat-item"><i class="ti ti-heart"></i><h4>Long-Term Health</h4></div>
+  </div>
 </div>
 
-<div class="content-wrap">
-  <!-- Always visible intro section -->
-  <section class="content-section">
-    <h2>Overview</h2>
-    <p>What you eat directly impacts how you train, how you recover, and how you perform when it matters most. Nutrition for athletes isn't about restriction &mdash; it's about fueling your body with the right things at the right times.</p>
-    <p>This section walks you through the fundamentals of athlete nutrition: macronutrients, meal timing, hydration, and competition-day fueling strategies. Everything here is practical and built for the demands of a competitive athlete's schedule.</p>
-  </section>
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Building Blocks</div>
+    <h2 class="serif-h" style="font-size:36px">Macronutrients: <em>build, fuel, support.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Macronutrients are the nutrients your body needs in large amounts to fuel performance, support growth, and maintain daily function. There's no single "perfect" nutrient &mdash; it's the balance that creates results.</p>
+    <div class="macro-grid">
+      <div class="macro-card">
+        <h4>Protein</h4>
+        <div class="macro-tag">Build. Repair. Recover.</div>
+        <ul>
+          <li>Muscle repair and growth</li>
+          <li>Supports immune &amp; hormone function</li>
+          <li>Preserves lean muscle during fat loss</li>
+          <li>Provides lasting satiety</li>
+        </ul>
+        <div class="macro-sources">Best sources: chicken, turkey, lean beef, fish, eggs, Greek yogurt, tofu, lentils, protein powder.</div>
+      </div>
+      <div class="macro-card">
+        <h4>Carbohydrates</h4>
+        <div class="macro-tag">Fuel. Perform. Endure.</div>
+        <ul>
+          <li>Primary fuel for high-intensity activity</li>
+          <li>Stored in muscles and liver</li>
+          <li>Improves endurance, delays fatigue</li>
+          <li>Supports brain function</li>
+        </ul>
+        <div class="macro-sources">Best sources: oats, rice, whole grain pasta, quinoa, whole grain bread, beans, lentils, fruit.</div>
+      </div>
+      <div class="macro-card">
+        <h4>Fats</h4>
+        <div class="macro-tag">Support. Protect. Balance.</div>
+        <ul>
+          <li>Supports hormone production</li>
+          <li>Aids absorption of vitamins A, D, E, K</li>
+          <li>Provides long-lasting energy</li>
+          <li>Supports brain and heart health</li>
+        </ul>
+        <div class="macro-sources">Best sources: avocados, nuts, seeds, olive oil, nut butters, fatty fish, eggs.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<section>
+  <div class="inner">
+    <div class="eyebrow">Micronutrients</div>
+    <h2 class="serif-h" style="font-size:36px">Small nutrients. <em>Big impact.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Vitamins and minerals are needed in smaller amounts but play a critical role in hundreds of body functions. Eat a variety of colorful fruits, vegetables, and proteins to cover your bases.</p>
+    <div class="micro-grid">
+      <div class="micro-item"><h5>Iron</h5><p>Oxygen transport &amp; energy production.</p></div>
+      <div class="micro-item"><h5>Calcium</h5><p>Bone strength &amp; muscle function.</p></div>
+      <div class="micro-item"><h5>Vitamin D</h5><p>Bone, immune, &amp; hormone health.</p></div>
+      <div class="micro-item"><h5>B Vitamins</h5><p>Energy production.</p></div>
+      <div class="micro-item"><h5>Vitamin C</h5><p>Immune support &amp; recovery.</p></div>
+      <div class="micro-item"><h5>Magnesium</h5><p>Muscle function &amp; recovery.</p></div>
+      <div class="micro-item"><h5>Potassium</h5><p>Fluid balance &amp; muscle function.</p></div>
+      <div class="micro-item"><h5>Sodium</h5><p>Fluid balance &amp; nerve function.</p></div>
+    </div>
+  </div>
+</section>
 
-</div>
+<section>
+  <div class="inner">
+    <div class="eyebrow">Hydration &amp; Electrolytes</div>
+    <h2 class="serif-h" style="font-size:36px">The foundation of <em>performance.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Water is essential for every function in your body. When you train, sweat, and go about your day, you lose fluid and electrolytes &mdash; both must be replaced to perform and recover at your best.</p>
+    <div class="two-col">
+      <div>
+        <div class="col-title">The Key Electrolytes</div>
+        <ul class="electrolyte-list">
+          <li><strong>Sodium</strong> &mdash; maintains fluid balance and supports nerve function.</li>
+          <li><strong>Potassium</strong> &mdash; supports muscle function and heart rhythm.</li>
+          <li><strong>Magnesium</strong> &mdash; aids muscle relaxation and reduces cramping.</li>
+          <li><strong>Calcium</strong> &mdash; important for muscle contraction and bone health.</li>
+          <li><strong>Chloride</strong> &mdash; helps maintain fluid balance and digestion.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-title">Hydration Strategy</div>
+        <ul class="hydration-steps">
+          <li><strong>Before</strong>Drink 16&ndash;24 oz of water 2&ndash;3 hours before activity, then another 8&ndash;12 oz 10&ndash;20 minutes before you start.</li>
+          <li><strong>During</strong>Drink 7&ndash;10 oz every 10&ndash;20 minutes and include electrolytes for longer sessions.</li>
+          <li><strong>After</strong>Refuel within 30&ndash;60 minutes to replace fluid and electrolytes lost in sweat.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Fuel With a Plan</div>
+  <h2>Get a nutrition plan built <em style="font-style:italic;color:#fff">for your training.</em></h2>
+  <p>Every meal is an opportunity to fuel your pursuit. We'll help you build a practical, sustainable nutrition plan around your schedule and goals.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Book%20a%20Nutrition%20Consultation" class="btn-white">Book a Consultation</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic nutrition education</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>Personalized meal &amp; fueling plans</li>
+          <li>Competition-day nutrition strategy</li>
+          <li>Hydration &amp; recovery tracking</li>
+          <li>Direct access to coaching support</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="membership-cta">
   <div class="cta-wrap">

@@ -7,7 +7,60 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* HERO FEATURE CARDS */
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  .feat-item{background:#200c40;border:0.5px solid #3d1f5a;padding:1.5rem;text-align:left}
+  .feat-item i{font-size:22px;color:var(--gold);margin-bottom:.6rem;display:block}
+  .feat-item h4{font-size:13px;color:#e8d8ff;margin-bottom:.35rem}
+  .feat-item p{font-size:11px;color:#a888c8;line-height:1.5}
+  @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
+
+  /* INFO BOX */
+  .info-box{background:#150428;border:0.5px solid var(--purple);padding:2.25rem;margin-top:1rem}
+  .info-box p{font-size:13px;color:#c8a8e8;line-height:1.85}
+
+  /* ROADMAP */
+  .roadmap-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.roadmap-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.roadmap-grid{grid-template-columns:1fr}}
+  .roadmap-step{background:#200c40;border-top:3px solid var(--gold);padding:1.5rem}
+  .roadmap-num{width:32px;height:32px;border-radius:50%;background:var(--purple);color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+  .roadmap-step h4{font-size:14px;color:#e8d8ff;margin-bottom:.4rem}
+  .roadmap-step p{font-size:11px;color:#a888c8;line-height:1.5}
+
+  /* TWO COL */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;align-items:start}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  .col-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#e8d8ff;margin-bottom:1rem}
+  .plain-list{list-style:none;display:flex;flex-direction:column;gap:.9rem}
+  .plain-list li{font-size:13px;color:#a888c8;line-height:1.6}
+  .plain-list strong{display:block;color:#e8d8ff;font-size:13px}
+  .safety-check{list-style:none;display:flex;flex-direction:column;gap:.7rem}
+  .safety-check li{font-size:13px;color:#c8a8e8;padding-left:20px;position:relative;line-height:1.5}
+  .safety-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* CHALLENGES GRID */
+  .challenge-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.challenge-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.challenge-grid{grid-template-columns:1fr}}
+  .challenge-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.25rem}
+  .challenge-card h5{font-size:12px;color:var(--gold);letter-spacing:.5px;margin-bottom:.4rem}
+  .challenge-card p{font-size:12px;color:#a888c8;line-height:1.5}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -36,6 +89,7 @@
         <a href="nutrition.html">Nutrition</a>
         <a href="type1-diabetes.html" class="active">Type 1 Diabetes</a>
         <a href="mental-performance.html">Mental Performance</a>
+        <a href="injury-prevention.html">Injury Prevention</a>
       </div>
     </li>
     <li>
@@ -57,20 +111,118 @@
 
 <div class="page-hero page-hero--center">
   <div class="page-eyebrow">Athlete Development</div>
-  <h1 class="page-h">Type 1 Diabetes &amp; <em>Athletic Performance</em></h1>
-  <p class="page-sub">T1D doesn't stop you from competing at the highest level. Learn how to manage your blood sugar, fuel your training, and perform with confidence.</p>
+  <h1 class="page-h">Compete Confidently.<br><em>Manage Blood Sugar. Perform at Your Best.</em></h1>
+  <p class="page-sub">Type 1 Diabetes does not define your limits. With the right knowledge, planning, and support, athletes with T1D can train hard, compete at their highest level, and achieve their goals safely.</p>
+  <div class="feat-grid">
+    <div class="feat-item"><i class="ti ti-droplet"></i><h4>Blood Sugar Management</h4><p>Understand how food, exercise, stress, and insulin impact your glucose.</p></div>
+    <div class="feat-item"><i class="ti ti-apple"></i><h4>Nutrition</h4><p>Fuel your training and recovery with balanced meals and smart carb choices.</p></div>
+    <div class="feat-item"><i class="ti ti-run"></i><h4>Exercise Strategies</h4><p>Learn how different exercise types affect blood sugar before, during, and after.</p></div>
+    <div class="feat-item"><i class="ti ti-shield-check"></i><h4>Health &amp; Safety</h4><p>Reduce risks, handle emergencies, and build confidence in every situation.</p></div>
+  </div>
 </div>
 
-<div class="content-wrap">
-  <!-- Always visible intro section -->
-  <section class="content-section">
-    <h2>Overview</h2>
-    <p>Athletes with Type 1 Diabetes face unique challenges that go beyond standard sport training &mdash; managing blood glucose before, during, and after intense exercise requires knowledge, planning, and the right support system.</p>
-    <p>This section is built specifically for T1D athletes and their coaches. It covers blood sugar management strategies for training and competition, how to adjust insulin and nutrition around exercise, and how to handle the unexpected so it never derails your performance.</p>
-  </section>
+<section>
+  <div class="inner">
+    <div class="info-box">
+      <h3 style="font-family:var(--serif);font-size:19px;font-weight:400;color:#e8d8ff;margin-bottom:.75rem">Understanding Type 1 Diabetes</h3>
+      <p>Type 1 Diabetes is an autoimmune condition in which the body stops producing insulin. Insulin is required for glucose to enter cells and be used for energy. Exercise, nutrition, stress, illness, and other factors can cause blood sugar levels to rise or fall.</p>
+      <p style="margin-top:.75rem">With proper education and preparation, athletes with Type 1 Diabetes can perform at the highest levels while staying safe.</p>
+    </div>
+  </div>
+</section>
 
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Diabetes Athlete Roadmap</div>
+    <h2 class="serif-h" style="font-size:36px">A clear path to <em>confident competing.</em></h2>
+    <div class="roadmap-grid">
+      <div class="roadmap-step"><div class="roadmap-num">1</div><h4>Learn Your Patterns</h4><p>Track your blood sugar throughout the day and with different activities to understand your unique trends.</p></div>
+      <div class="roadmap-step"><div class="roadmap-num">2</div><h4>Understand Exercise Effects</h4><p>Learn how various types of exercise impact blood sugar before, during, and after workouts.</p></div>
+      <div class="roadmap-step"><div class="roadmap-num">3</div><h4>Develop Nutrition Strategies</h4><p>Choose the right foods, timing, and carbs to fuel training and recover effectively.</p></div>
+      <div class="roadmap-step"><div class="roadmap-num">4</div><h4>Prepare for Competition</h4><p>Plan for practices, tournaments, travel, and game days with confidence and clear routines.</p></div>
+      <div class="roadmap-step"><div class="roadmap-num">5</div><h4>Optimize Recovery</h4><p>Use the right nutrition, hydration, sleep, and insulin adjustments to recover and come back stronger.</p></div>
+      <div class="roadmap-step"><div class="roadmap-num">6</div><h4>Build Long-Term Confidence</h4><p>Develop habits and systems you can trust to perform your best every day.</p></div>
+    </div>
+  </div>
+</section>
 
-</div>
+<section>
+  <div class="inner">
+    <div class="two-col">
+      <div>
+        <div class="col-title">How Exercise Affects Blood Sugar</div>
+        <ul class="plain-list">
+          <li><strong>Aerobic Exercise</strong>Activities like running, cycling, and swimming usually lower blood sugar levels.</li>
+          <li><strong>High Intensity Exercise</strong>Short bursts of intense activity can cause blood sugar to rise temporarily.</li>
+          <li><strong>Strength Training</strong>Weight training can lower or raise blood sugar depending on intensity and duration.</li>
+          <li><strong>Competition Stress</strong>Adrenaline and stress hormones can increase blood sugar levels.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-title">Essential Safety Habits</div>
+        <ul class="safety-check">
+          <li>Carry fast-acting carbohydrates at all times</li>
+          <li>Wear medical identification</li>
+          <li>Monitor glucose before, during, and after activity</li>
+          <li>Have an emergency plan &mdash; know what to do and who to contact</li>
+          <li>Communicate with coaches about your needs</li>
+          <li>Know the early warning signs of hypoglycemia</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Common Challenges &amp; Solutions</div>
+    <h2 class="serif-h" style="font-size:36px">Real situations, <em>real strategies.</em></h2>
+    <div class="challenge-grid">
+      <div class="challenge-card"><h5>Managing Travel</h5><p>Plan ahead, pack supplies, and know time zone adjustments.</p></div>
+      <div class="challenge-card"><h5>Tournament Nutrition</h5><p>Bring your own food when possible and plan meals ahead.</p></div>
+      <div class="challenge-card"><h5>School Sports</h5><p>Balance academics, sports, and diabetes care with a plan everyone understands.</p></div>
+      <div class="challenge-card"><h5>Insulin Adjustments</h5><p>Work with your healthcare team to fine-tune doses around training.</p></div>
+      <div class="challenge-card"><h5>Competition Anxiety</h5><p>Use routines and breathing techniques to stay calm under pressure.</p></div>
+      <div class="challenge-card"><h5>Overnight Recovery</h5><p>Monitor before bed and be prepared for delayed lows after hard sessions.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">You Can Compete. You Can Succeed.</div>
+  <h2>Know your numbers. <em style="font-style:italic;color:#fff">Fuel properly. Compete with confidence.</em></h2>
+  <p>Get the tools and education built specifically for athletes managing Type 1 Diabetes.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Type%201%20Diabetes%20Athlete%20Support" class="btn-white">Get Support</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic T1D education</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>Competition day planning tools</li>
+          <li>Blood sugar tracking system</li>
+          <li>Travel &amp; nutrition strategy guides</li>
+          <li>Parent &amp; coach education resources</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="membership-cta">
   <div class="cta-wrap">
