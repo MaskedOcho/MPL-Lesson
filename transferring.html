@@ -31,6 +31,26 @@
   .step-num{flex-shrink:0;width:28px;height:28px;border:1px solid var(--gold);color:var(--gold);font-size:11px;display:flex;align-items:center;justify-content:center;font-weight:500}
   .step-text{font-size:13px;color:#c8a8e8;line-height:1.8;padding-top:4px}
   .divider{border:none;border-top:0.5px solid #2e1448;margin:3rem 0}
+
+  /* TWO COL */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1.5rem;align-items:start}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  .col-title{font-family:var(--serif);font-size:19px;font-weight:400;color:#e8d8ff;margin-bottom:1rem}
+  .transfer-check{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+  .transfer-check li{font-size:13px;color:#c8a8e8;padding-left:20px;position:relative;line-height:1.5}
+  .transfer-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
@@ -70,6 +90,7 @@
         <a href="ncaa-rules.html">NCAA Rules &amp; Regulations</a>
         <a href="nil-education.html">NIL Education</a>
         <a href="transferring.html">Transferring</a>
+        <a href="life-after-college.html">Life After College</a>
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
@@ -87,9 +108,107 @@
   <p class="page-sub">Navigate the transfer process with confidence &mdash; from entering the portal to finding your next program and making the most of your second chance.</p>
 </section>
 
-<section class="page-overview">
-  <div class="overview-inner">
-    <p>Our Transfer Portal content walks you through every step of the process &mdash; from understanding eligibility rules and transfer windows to finding the right fit, communicating with coaches, and making a confident decision. Available to Performance Athlete members and above.</p>
+<div class="content-wrap" style="margin:0 auto;padding:4rem 2rem 1rem">
+  <section class="content-section">
+    <h2 class="section-title">Why Student-Athletes <em>Transfer</em></h2>
+    <p class="section-body">Transferring can open new doors academically, athletically, and personally. Here's what typically drives the decision:</p>
+    <div class="info-grid">
+      <div class="info-card"><h4>Academic Fit</h4><p>Find the right academic environment, major opportunities, and support systems.</p></div>
+      <div class="info-card"><h4>Athletic Opportunity</h4><p>Increase playing time, compete at a different level, or find a program that better fits your goals.</p></div>
+      <div class="info-card"><h4>Culture &amp; Environment</h4><p>Seek a campus culture, coaching staff, and team environment that aligns with your values.</p></div>
+      <div class="info-card"><h4>Coaching Changes</h4><p>New coaches or staff changes can impact your role and future at the institution.</p></div>
+      <div class="info-card"><h4>Personal Growth</h4><p>A new start can provide the chance to grow, reset, and reach your full potential.</p></div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2 class="section-title">The Transfer Process: <em>Step-by-Step</em></h2>
+    <ul class="step-list">
+      <li><div class="step-num">1</div><div class="step-text">Evaluate your reasons &mdash; be honest about why you want to transfer and make sure it aligns with your long-term goals.</div></li>
+      <li><div class="step-num">2</div><div class="step-text">Know the rules &mdash; understand NCAA transfer rules, eligibility requirements, and your conference policies.</div></li>
+      <li><div class="step-num">3</div><div class="step-text">Notify your coach &amp; advisors &mdash; communicate professionally with your coaching staff and academic advisors.</div></li>
+      <li><div class="step-num">4</div><div class="step-text">Enter the transfer portal &mdash; create your profile to connect with other schools.</div></li>
+      <li><div class="step-num">5</div><div class="step-text">Research &amp; connect &mdash; identify schools that fit academically, athletically, and culturally, and reach out to coaches.</div></li>
+      <li><div class="step-num">6</div><div class="step-text">Visit &amp; evaluate &mdash; visit campuses, talk with players, and evaluate if it's the right fit.</div></li>
+      <li><div class="step-num">7</div><div class="step-text">Make your decision &mdash; choose the school that gives you the best opportunity to succeed on and off the field.</div></li>
+    </ul>
+  </section>
+
+  <hr class="divider">
+
+  <section class="content-section">
+    <div class="two-col">
+      <div>
+        <div class="col-title">NCAA Transfer Eligibility</div>
+        <p class="section-body" style="margin-bottom:1rem">Eligibility depends on several factors, including division level, whether you've used a season of competition, academic progress, and time in residence at your current school.</p>
+        <ul class="transfer-check">
+          <li><strong style="color:#e8d8ff">One-Time Transfer Exception (D1):</strong> may be immediately eligible if you haven't used a season of competition</li>
+          <li><strong style="color:#e8d8ff">Season of Competition:</strong> used when you compete in more than 30% of your team's contests</li>
+          <li><strong style="color:#e8d8ff">Residence Requirements:</strong> may need a year in residence before becoming eligible</li>
+          <li>Always check with the NCAA Eligibility Center and your compliance office before deciding</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-title">What Coaches Look For</div>
+        <ul class="transfer-check">
+          <li>Strong academic record</li>
+          <li>Positive leadership and character</li>
+          <li>Immediate or future athletic impact</li>
+          <li>Coachability and work ethic</li>
+          <li>Culture fit with the team</li>
+          <li>A clear reason for transferring</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2 class="section-title">Transfer Tips for <em>Success</em></h2>
+    <ul class="transfer-check">
+      <li>Be transparent and honest in your communication</li>
+      <li>Keep your grades a top priority</li>
+      <li>Have a highlight video and updated athletic profile</li>
+      <li>Respond to coaches quickly and professionally</li>
+      <li>Use your support system &mdash; family, mentors, and advisors</li>
+      <li>Be patient and trust the process</li>
+    </ul>
+    <p class="section-body" style="margin-top:1.5rem"><strong style="color:#e8d8ff">Timeline:</strong> the best time to enter the portal is typically after your season ends. The most active recruiting periods are Spring and Summer, though fall transfers are possible.</p>
+  </section>
+</div>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Considering a Transfer?</div>
+  <h2>A transfer is not giving up. <em style="font-style:italic;color:#fff">It's choosing a better path.</em></h2>
+  <p>Get help evaluating your options, navigating the portal, and making the right decision for your future.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Transfer%20Guidance%20Consultation" class="btn-white">Get Transfer Guidance</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic transfer portal education</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>Personalized transfer strategy</li>
+          <li>Eligibility &amp; timeline review</li>
+          <li>Coach outreach guidance</li>
+          <li>Direct access to coaching support</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
   </div>
 </section>
 

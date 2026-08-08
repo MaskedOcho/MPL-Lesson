@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Life After College &mdash; MPL Pursuits</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+<style>
+  /* HERO FEATURE ROW */
+  .feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin-top:2.5rem}
+  .feat-item{text-align:center}
+  .feat-item i{font-size:24px;color:var(--gold);margin-bottom:.6rem;display:block}
+  .feat-item h4{font-family:var(--serif);font-size:14px;font-weight:400;color:#e8d8ff;line-height:1.3}
+  @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr 1fr}}
+  @media(max-width:500px){.feat-grid{grid-template-columns:1fr 1fr}}
+
+  /* TRANSITION STEPS */
+  .transition-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.transition-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.transition-grid{grid-template-columns:1fr}}
+  .transition-card{background:#200c40;border-top:3px solid var(--purple);padding:1.5rem}
+  .transition-num{width:32px;height:32px;border-radius:50%;background:var(--purple);color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+  .transition-card h4{font-size:14px;color:#e8d8ff;margin-bottom:.4rem}
+  .transition-card p{font-size:11px;color:#a888c8;line-height:1.5}
+
+  /* TWO COL CHECKLISTS */
+  .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;align-items:start}
+  @media(max-width:900px){.two-col{grid-template-columns:1fr}}
+  .col-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#e8d8ff;margin-bottom:1rem}
+  .life-check{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+  .life-check li{font-size:13px;color:#c8a8e8;padding-left:20px;position:relative;line-height:1.5}
+  .life-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* PATHWAYS GRID */
+  .pathway-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+  @media(max-width:900px){.pathway-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.pathway-grid{grid-template-columns:1fr}}
+  .pathway-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.5rem}
+  .pathway-card i{font-size:22px;color:var(--gold);margin-bottom:.6rem;display:block}
+  .pathway-card h4{font-size:14px;color:#e8d8ff;margin-bottom:.5rem}
+  .pathway-card p{font-size:11px;color:#a888c8;line-height:1.6}
+
+  /* 30/60/90 PLAN */
+  .plan-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.plan-grid{grid-template-columns:1fr}}
+  .plan-card{background:#150428;border:0.5px solid var(--purple);padding:1.75rem}
+  .plan-day{font-family:var(--serif);font-size:28px;color:var(--gold);margin-bottom:.25rem}
+  .plan-focus{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .plan-card ul{list-style:none;display:flex;flex-direction:column;gap:.4rem}
+  .plan-card ul li{font-size:12px;color:#a888c8;padding-left:14px;position:relative;line-height:1.5}
+  .plan-card ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+</style>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/global.css"/>
+<script src="js/global.js" defer></script>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="nav-logo-text">MPL Pursuits</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="about.html">About Us</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li>
+      <a href="tennis.html">Tennis <span class="drop-arrow">&#9662;</span></a>
+      <div class="dropdown">
+        <a href="tennis-learning.html">Learning</a>
+        <a href="tennis-training.html">Training</a>
+        <a href="tennis-competing.html">Competing</a>
+      </div>
+    </li>
+    <li>
+      <a href="athlete-development.html">Athlete Development <span class="drop-arrow">&#9662;</span></a>
+      <div class="dropdown">
+        <a href="coaching.html">Coaching</a>
+        <a href="fitness.html">Fitness</a>
+        <a href="nutrition.html">Nutrition</a>
+        <a href="type1-diabetes.html">Type 1 Diabetes</a>
+        <a href="mental-performance.html">Mental Performance</a>
+        <a href="injury-prevention.html">Injury Prevention</a>
+      </div>
+    </li>
+    <li>
+      <a href="college-route.html">College Route <span class="drop-arrow">&#9662;</span></a>
+      <div class="dropdown">
+        <a href="college-divisions.html">College Divisions</a>
+        <a href="ncaa-rules.html">NCAA Rules &amp; Regulations</a>
+        <a href="nil-education.html">NIL Education</a>
+        <a href="transferring.html">Transferring</a>
+        <a href="life-after-college.html" class="active">Life After College</a>
+      </div>
+    </li>
+    <li><a href="shop.html">Shop</a></li>
+  </ul>
+  <div class="nav-right">
+    <a href="members/" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a>
+    <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
+  </div>
+</nav>
+
+<div class="page-hero page-hero--center">
+  <div class="page-eyebrow">College Route</div>
+  <h1 class="page-h">Life After College:<br><em>Your Next Chapter. Your Biggest Opportunity.</em></h1>
+  <p class="page-sub">Your college career is a chapter, not the whole book. The preparation you do today shapes the opportunities you'll have tomorrow. The goal isn't just to prepare for the next game &mdash; it's to prepare for the rest of your life.</p>
+  <div class="feat-grid">
+    <div class="feat-item"><i class="ti ti-compass"></i><h4>Discover Your Purpose</h4></div>
+    <div class="feat-item"><i class="ti ti-route"></i><h4>Build Your Pathway</h4></div>
+    <div class="feat-item"><i class="ti ti-briefcase"></i><h4>Develop Professional Skills</h4></div>
+    <div class="feat-item"><i class="ti ti-heart-handshake"></i><h4>Create a Life of Impact</h4></div>
+    <div class="feat-item"><i class="ti ti-star"></i><h4>Live With Confidence &amp; Direction</h4></div>
+  </div>
+</div>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Transition Is Real</div>
+    <h2 class="serif-h" style="font-size:36px">You're not alone. <em>You don't have to figure it out alone.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Leaving the structure, identity, and daily routine of college athletics is one of the biggest transitions of your life.</p>
+    <div class="transition-grid">
+      <div class="transition-card"><div class="transition-num">1</div><h4>Identity Shift</h4><p>Redefine who you are beyond your sport and what drives you.</p></div>
+      <div class="transition-card"><div class="transition-num">2</div><h4>Uncertainty</h4><p>Navigate uncertainty with a clear plan and support.</p></div>
+      <div class="transition-card"><div class="transition-num">3</div><h4>Mental Adjustment</h4><p>Adjust to new routines, responsibilities, and expectations.</p></div>
+      <div class="transition-card"><div class="transition-num">4</div><h4>New Opportunities</h4><p>Embrace new opportunities and possibilities.</p></div>
+    </div>
+    <div class="two-col">
+      <div>
+        <div class="col-title">Keys to a Successful Transition</div>
+        <ul class="life-check">
+          <li><strong style="color:#e8d8ff">Plan Ahead</strong> &mdash; preparation today creates confidence for tomorrow</li>
+          <li><strong style="color:#e8d8ff">Invest in Yourself</strong> &mdash; keep learning, growing, and building your skillset</li>
+          <li><strong style="color:#e8d8ff">Build Your Network</strong> &mdash; relationships open doors, stay connected</li>
+          <li><strong style="color:#e8d8ff">Stay Adaptable</strong> &mdash; flexibility helps you thrive in any environment</li>
+          <li><strong style="color:#e8d8ff">Lead Your Life</strong> &mdash; take ownership of your future and your decisions</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-title">Your Career Won't Last Forever</div>
+        <ul class="life-check">
+          <li>Athletic careers can end due to age, performance, or injury</li>
+          <li>Life after sports can be even more demanding &mdash; with the right plan</li>
+          <li>Your future is in your hands, starting now</li>
+          <li>Resilience is your greatest asset when the unexpected happens</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Potential Pathways After College</div>
+    <h2 class="serif-h" style="font-size:36px">Continue your career. <em>Apply your discipline.</em></h2>
+    <div class="pathway-grid">
+      <div class="pathway-card"><i class="ti ti-trophy"></i><h4>Professional Sports</h4><p>Pro leagues, overseas opportunities, independent leagues, tryout pathways.</p></div>
+      <div class="pathway-card"><i class="ti ti-briefcase"></i><h4>Careers &amp; Employment</h4><p>Corporate careers, sales &amp; business development, government &amp; nonprofits.</p></div>
+      <div class="pathway-card"><i class="ti ti-school"></i><h4>Graduate School</h4><p>MBA &amp; business, sports management, education, health professions.</p></div>
+      <div class="pathway-card"><i class="ti ti-rocket"></i><h4>Entrepreneurship</h4><p>E-commerce, coaching &amp; training, digital content, consulting.</p></div>
+      <div class="pathway-card"><i class="ti ti-users"></i><h4>Coaching &amp; Mentoring</h4><p>Coaching, training, youth programs, mentorship.</p></div>
+      <div class="pathway-card"><i class="ti ti-heart-handshake"></i><h4>Service &amp; Impact</h4><p>Community leadership, advocacy, international work, nonprofit leadership.</p></div>
+      <div class="pathway-card"><i class="ti ti-compass"></i><h4>Beyond Sports</h4><p>Creative arts, technology, real estate, skilled trades.</p></div>
+      <div class="pathway-card"><i class="ti ti-cash"></i><h4>Aiming to Go Pro?</h4><p>Research leagues, work with trusted advisors, build your brand, and always have a backup plan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="two-col">
+      <div>
+        <div class="col-title">Injuries Can Happen. Be Prepared.</div>
+        <ul class="life-check">
+          <li>Have a support system in place</li>
+          <li>Stay proactive with rehab and recovery</li>
+          <li>Understand your insurance and healthcare options</li>
+          <li>Keep developing skills on and off the field</li>
+          <li>Have a plan for different outcomes</li>
+        </ul>
+      </div>
+      <div>
+        <div class="col-title">The Power of Saving &amp; Money Management</div>
+        <ul class="life-check">
+          <li>Live below your means</li>
+          <li>Save consistently and invest wisely</li>
+          <li>Avoid lifestyle inflation</li>
+          <li>Plan ahead for taxes</li>
+          <li>Build multiple income streams</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Your Plan</div>
+    <h2 class="serif-h" style="font-size:36px">The 30/60/90 day plan <em>after college.</em></h2>
+    <div class="plan-grid">
+      <div class="plan-card">
+        <div class="plan-day">30 Days</div>
+        <div class="plan-focus">Focus: Stabilize</div>
+        <ul><li>Set up your financial accounts</li><li>Create a budget</li><li>Update your resume &amp; LinkedIn</li><li>Explore career options</li></ul>
+      </div>
+      <div class="plan-card">
+        <div class="plan-day">60 Days</div>
+        <div class="plan-focus">Focus: Build Momentum</div>
+        <ul><li>Attend networking events</li><li>Build new relationships</li><li>Apply to jobs &amp; opportunities</li><li>Develop new skills</li></ul>
+      </div>
+      <div class="plan-card">
+        <div class="plan-day">90 Days</div>
+        <div class="plan-focus">Focus: Grow &amp; Commit</div>
+        <ul><li>Secure interviews &amp; offers</li><li>Set long-term goals (6&ndash;12 months)</li><li>Keep developing professionally</li><li>Give back &amp; mentor others</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">The Best Is Still Ahead</div>
+  <h2>Your discipline. Your work ethic. <em style="font-style:italic;color:#fff">Your mindset.</em></h2>
+  <p>These are your advantages. Now it's time to use them to create a life you're proud of. Let's build a plan for what's next.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Life%20After%20College%20Consultation" class="btn-white">Schedule a Consultation</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic transition guidance</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>Personalized career &amp; transition planning</li>
+          <li>Resume, LinkedIn &amp; interview coaching</li>
+          <li>Financial literacy &amp; goal-setting tools</li>
+          <li>Direct access to coaching support</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="membership-cta">
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join MPL Pursuits</div>
+    <h2 class="cta-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="cta-body">Get full access to lesson content, NIL &amp; transfer guidance, the resource library, coaching systems, and more. Start free or go all in.</p>
+    <div class="pricing-row">
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-desc">Basic educational content</div>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="pricing-btn-ghost" target="_blank">Create Free Account</a>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier-label">Performance Athlete</div>
+        <div class="pricing-price">$80<span>/mo</span></div>
+        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <a href="https://buy.stripe.com/6oU4gB0Eq8qacSW1c6a3u09" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Elite Athlete</div>
+        <div class="pricing-price">$150<span>/mo</span></div>
+        <div class="pricing-desc">Complete support system</div>
+        <a href="https://buy.stripe.com/aFa9AVgDobCm2ei2gaa3u08" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Annual Membership</div>
+        <div class="pricing-price">$500<span>/yr</span></div>
+        <div class="pricing-desc">All-access pass &mdash; save vs. monthly</div>
+        <a href="https://buy.stripe.com/5kQ5kFbj4ayiaKOcUOa3u0b" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+    </div>
+    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area &rarr;</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div><span class="footer-brand">MPL Pursuits</span><p class="footer-tagline">Premium coaching for athletes.<br>Train smarter. Compete harder.<br>Find your college with confidence.</p></div>
+    <div class="footer-col"><h4>Explore</h4><a href="index.html">Home</a><a href="about.html">About Us</a><a href="coaching.html">Coaching</a><a href="college-route.html">College Route</a><a href="shop.html">Shop</a></div>
+    <div class="footer-col"><h4>Support</h4><a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">Privacy Policy</a></div>
+    <div class="footer-col"><h4>Follow</h4><a href="https://www.instagram.com/mary__profit/" target="_blank">Instagram @mary__profit</a><a href="https://www.tiktok.com/@mary.profit" target="_blank">TikTok @mary.profit</a></div>
+  </div>
+  <div class="footer-copy"><p>&copy; 2026 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8868a8">Built for athletes who want more.</p></div>
+</footer>
+
+<script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('.nav-links > li > a').forEach(function(link){if(!link.parentElement.querySelector('.dropdown'))return;link.addEventListener('click',function(e){if(window.innerWidth<=768){e.preventDefault();link.parentElement.classList.toggle('open')}})});</script>
+</body>
+</html>

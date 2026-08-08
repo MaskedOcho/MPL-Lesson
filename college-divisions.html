@@ -7,7 +7,36 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* DIVISION CARDS */
+  .division-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.division-grid{grid-template-columns:1fr}}
+  .division-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem}
+  .division-card h4{font-family:var(--serif);font-size:22px;font-weight:400;color:#e8d8ff;margin-bottom:.5rem}
+  .division-card .division-tag{font-size:12px;color:var(--gold);margin-bottom:1rem;line-height:1.5}
+  .division-card .division-best{font-size:12px;color:#a888c8;margin-bottom:1.25rem;line-height:1.6}
+  .division-best strong{color:#e8d8ff}
+  .division-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.25rem}
+  @media(max-width:560px){.division-cols{grid-template-columns:1fr}}
+  .division-cols h5{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#8a68a8;margin-bottom:.6rem}
+  .division-cols ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+  .division-cols ul li{font-size:11px;color:#a888c8;padding-left:14px;position:relative;line-height:1.5}
+  .division-cols ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+  .division-note{background:#150428;border-left:2px solid var(--gold);padding:.9rem 1.1rem;font-size:12px;color:#c8a8e8;line-height:1.6}
+  .division-note strong{color:var(--gold)}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -17,7 +46,6 @@
   <a href="index.html" class="nav-logo">
     <span class="nav-logo-text">MPL Pursuits</span>
   </a>
-  <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   <ul class="nav-links" id="navLinks">
     <li><a href="about.html">About Us</a></li>
     <li><a href="blog.html">Blog</a></li>
@@ -47,24 +75,205 @@
         <a href="ncaa-rules.html">NCAA Rules &amp; Regulations</a>
         <a href="nil-education.html">NIL Education</a>
         <a href="transferring.html">Transferring</a>
+        <a href="life-after-college.html">Life After College</a>
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
   </ul>
   <div class="nav-right">
     <a href="members/" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a>
+    <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   </div>
 </nav>
-<section class="cs-hero">
-  <div>
-    <div class="cs-eyebrow">College Route</div>
-    <div class="cs-badge">Coming Soon</div>
-    <h1 class="cs-h">College Divisions<br>is <em>coming soon.</em></h1>
-    <p class="cs-body">A breakdown of every NCAA division is coming soon. Check back soon or get notified when we launch new content.</p>
-    <a href="index.html#booking" class="cs-btn">Book a Session</a>
-    <a href="index.html" class="cs-btn-ghost">Back to Home</a>
+
+<div class="page-hero page-hero--center">
+  <div class="page-eyebrow">College Route</div>
+  <h1 class="page-h">Understanding College <em>Divisions</em></h1>
+  <p class="page-sub">Navigating the college recruiting process can feel overwhelming, especially when every sport, division, and school has its own expectations. Here's how divisions break down so you can approach recruiting with clarity and a strong plan.</p>
+</div>
+
+<section>
+  <div class="inner">
+    <div class="division-grid">
+      <div class="division-card">
+        <h4>NCAA Division I (D1)</h4>
+        <div class="division-tag">Elite competition with high training demands. Scholarships available. Recruiting often starts early.</div>
+        <div class="division-best"><strong>Best for:</strong> athletes seeking the highest level of competition and a full-time athletic commitment.</div>
+        <div class="division-cols">
+          <div>
+            <h5>Key Characteristics</h5>
+            <ul>
+              <li>Most competitive level of college athletics</li>
+              <li>Intense schedules, frequent travel</li>
+              <li>Scholarships available (headcount or equivalency)</li>
+              <li>Recruiting can begin as early as freshman year</li>
+            </ul>
+          </div>
+          <div>
+            <h5>What to Expect</h5>
+            <ul>
+              <li>Highly structured daily schedules</li>
+              <li>Strength &amp; conditioning programs</li>
+              <li>Academic support services</li>
+              <li>Limited flexibility due to athletic demands</li>
+            </ul>
+          </div>
+        </div>
+        <div class="division-note"><strong>Reality check:</strong> D1 isn't automatically the "best" option &mdash; it's simply the most demanding. Consider academic fit, mental readiness, and lifestyle balance.</div>
+      </div>
+
+      <div class="division-card">
+        <h4>NCAA Division II (D2)</h4>
+        <div class="division-tag">High-level athletics with more balance. Partial scholarships and strong academic-athletic fit.</div>
+        <div class="division-best"><strong>Best for:</strong> athletes seeking a balance between competitive athletics, academics, and personal life.</div>
+        <div class="division-cols">
+          <div>
+            <h5>Key Characteristics</h5>
+            <ul>
+              <li>High-level competition, more flexibility than D1</li>
+              <li>Partial athletic scholarships available</li>
+              <li>Recruiting timeline typically later than D1</li>
+              <li>Smaller campuses, more individual attention</li>
+            </ul>
+          </div>
+          <div>
+            <h5>What to Expect</h5>
+            <ul>
+              <li>Room for academic and social involvement</li>
+              <li>Opportunities for earlier playing time</li>
+              <li>Supportive coaching environments</li>
+            </ul>
+          </div>
+        </div>
+        <div class="division-note"><strong>Key advantage:</strong> D2 often provides the best blend of competition, scholarship opportunities, and personal balance.</div>
+      </div>
+
+      <div class="division-card">
+        <h4>NCAA Division III (D3)</h4>
+        <div class="division-tag">No athletic scholarships, but competitive programs with academic and need-based aid.</div>
+        <div class="division-best"><strong>Best for:</strong> academically driven athletes who want competitive sports without the pressure of athletic scholarships.</div>
+        <div class="division-cols">
+          <div>
+            <h5>Key Characteristics</h5>
+            <ul>
+              <li>No athletic scholarships (academic &amp; need-based aid available)</li>
+              <li>Coaches still recruit actively</li>
+              <li>Shorter seasons, reduced travel</li>
+              <li>Strong emphasis on academics</li>
+            </ul>
+          </div>
+          <div>
+            <h5>What to Expect</h5>
+            <ul>
+              <li>Competitive athletics without full-time intensity</li>
+              <li>Flexibility for internships &amp; study abroad</li>
+            </ul>
+          </div>
+        </div>
+        <div class="division-note"><strong>Important note:</strong> D3 programs can be extremely competitive &mdash; lack of athletic scholarships does not mean lack of talent.</div>
+      </div>
+
+      <div class="division-card">
+        <h4>Junior College (JUCO / NJCAA)</h4>
+        <div class="division-tag">Two-year programs offering development, scholarships, and pathways to NCAA schools.</div>
+        <div class="division-best"><strong>Best for:</strong> late-developing athletes, students needing academic improvement, or those seeking a second recruiting opportunity or transfer pathway.</div>
+        <div class="division-cols">
+          <div>
+            <h5>Key Characteristics</h5>
+            <ul>
+              <li>Two-year programs with athletic scholarships</li>
+              <li>Strong developmental environment</li>
+              <li>Opportunity to compete immediately</li>
+              <li>Pathway to NCAA D1 or D2 after two years</li>
+            </ul>
+          </div>
+          <div>
+            <h5>What to Expect</h5>
+            <ul>
+              <li>Fast-paced improvement</li>
+              <li>High-level competition in many regions</li>
+              <li>A chance to rebuild academic or athletic profiles</li>
+            </ul>
+          </div>
+        </div>
+        <div class="division-note"><strong>Often overlooked:</strong> JUCO can be a powerful stepping stone for athletes who need more time to grow.</div>
+      </div>
+    </div>
   </div>
 </section>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Not Sure Which Division Fits You?</div>
+  <h2>Find the level that matches <em style="font-style:italic;color:#fff">your goals.</em></h2>
+  <p>We'll help you honestly assess your level and find the division where you'll thrive academically and athletically.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Division%20Fit%20Consultation" class="btn-white">Get a Division Assessment</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic division overview</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>Personalized division fit assessment</li>
+          <li>School &amp; program research guidance</li>
+          <li>Recruiting timeline planning</li>
+          <li>Direct access to coaching support</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="membership-cta">
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join MPL Pursuits</div>
+    <h2 class="cta-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="cta-body">Get full access to lesson content, NIL &amp; transfer guidance, the resource library, coaching systems, and more. Start free or go all in.</p>
+    <div class="pricing-row">
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-desc">Basic educational content</div>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="pricing-btn-ghost" target="_blank">Create Free Account</a>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier-label">Performance Athlete</div>
+        <div class="pricing-price">$80<span>/mo</span></div>
+        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <a href="https://buy.stripe.com/6oU4gB0Eq8qacSW1c6a3u09" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Elite Athlete</div>
+        <div class="pricing-price">$150<span>/mo</span></div>
+        <div class="pricing-desc">Complete support system</div>
+        <a href="https://buy.stripe.com/aFa9AVgDobCm2ei2gaa3u08" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Annual Membership</div>
+        <div class="pricing-price">$500<span>/yr</span></div>
+        <div class="pricing-desc">All-access pass &mdash; save vs. monthly</div>
+        <a href="https://buy.stripe.com/5kQ5kFbj4ayiaKOcUOa3u0b" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+    </div>
+    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area &rarr;</a></p>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
     <div><span class="footer-brand">MPL Pursuits</span><p class="footer-tagline">Premium coaching for athletes.<br>Train smarter. Compete harder.<br>Find your college with confidence.</p></div>

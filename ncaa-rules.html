@@ -7,7 +7,53 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* COMPLIANCE NOTICE */
+  .notice-box{background:#150428;border:0.5px solid var(--purple);padding:1.25rem 1.75rem;margin-top:2rem;display:flex;gap:12px;align-items:flex-start;max-width:900px;margin-left:auto;margin-right:auto}
+  .notice-box i{color:var(--gold);font-size:18px;margin-top:2px;flex-shrink:0}
+  .notice-box p{font-size:12px;color:#a888c8;line-height:1.6;text-align:left}
+
+  /* COMMS GRID */
+  .comms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.comms-grid{grid-template-columns:1fr}}
+  .comms-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.75rem}
+  .comms-card i{font-size:22px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .comms-card h4{font-size:15px;color:#e8d8ff;margin-bottom:.5rem}
+  .comms-card p{font-size:12px;color:#a888c8;line-height:1.6}
+
+  /* CALENDAR GRID */
+  .calendar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.calendar-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.calendar-grid{grid-template-columns:1fr}}
+  .calendar-card{background:#200c40;border-top:3px solid var(--purple);padding:1.5rem}
+  .calendar-card h4{font-size:14px;color:#e8d8ff;margin-bottom:.75rem}
+  .calendar-card .allow-label{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-top:.75rem;margin-bottom:.35rem}
+  .calendar-card .deny-label{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#c85252;margin-top:.75rem;margin-bottom:.35rem}
+  .calendar-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem}
+  .calendar-card ul li{font-size:11px;color:#a888c8;line-height:1.5}
+  .calendar-card p{font-size:12px;color:#a888c8;line-height:1.6}
+
+  /* MISCONCEPTIONS */
+  .myth-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.myth-grid{grid-template-columns:1fr}}
+  .myth-card{background:#150428;border:0.5px solid #3d1f5a;padding:1.5rem}
+  .myth-card .myth-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#c85252;margin-bottom:.4rem}
+  .myth-card .myth-text{font-size:13px;color:#e8d8ff;font-style:italic;margin-bottom:.9rem}
+  .myth-card .reality-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
+  .myth-card .reality-text{font-size:12px;color:#a888c8;line-height:1.6}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -17,7 +63,6 @@
   <a href="index.html" class="nav-logo">
     <span class="nav-logo-text">MPL Pursuits</span>
   </a>
-  <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   <ul class="nav-links" id="navLinks">
     <li><a href="about.html">About Us</a></li>
     <li><a href="blog.html">Blog</a></li>
@@ -47,24 +92,176 @@
         <a href="ncaa-rules.html">NCAA Rules &amp; Regulations</a>
         <a href="nil-education.html">NIL Education</a>
         <a href="transferring.html">Transferring</a>
+        <a href="life-after-college.html">Life After College</a>
       </div>
     </li>
     <li><a href="shop.html">Shop</a></li>
   </ul>
   <div class="nav-right">
     <a href="members/" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a>
+    <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   </div>
 </nav>
-<section class="cs-hero">
-  <div>
-    <div class="cs-eyebrow">College Route</div>
-    <div class="cs-badge">Coming Soon</div>
-    <h1 class="cs-h">NCAA Rules & Regulations<br>is <em>coming soon.</em></h1>
-    <p class="cs-body">NCAA recruiting rules and timelines are coming soon. Check back soon or get notified when we launch new content.</p>
-    <a href="index.html#booking" class="cs-btn">Book a Session</a>
-    <a href="index.html" class="cs-btn-ghost">Back to Home</a>
+
+<div class="page-hero page-hero--center">
+  <div class="page-eyebrow">College Route</div>
+  <h1 class="page-h">NCAA Recruiting <em>Rules</em></h1>
+  <p class="page-sub">Everything student-athletes and families need to understand about NCAA recruiting rules, communication guidelines, and recruiting calendars &mdash; across Division I, II, and III.</p>
+  <div class="notice-box">
+    <i class="ti ti-info-circle"></i>
+    <p><strong style="color:#e8d8ff">Compliance notice:</strong> NCAA recruiting regulations change periodically and vary by division, sport, and communication method. Always verify current rules directly through NCAA resources and the colleges you're pursuing. This page is for educational purposes and should not replace official NCAA guidance.</p>
+  </div>
+</div>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Communication Rules</div>
+    <h2 class="serif-h" style="font-size:36px">How coaches can <em>reach you.</em></h2>
+    <div class="comms-grid">
+      <div class="comms-card"><i class="ti ti-phone"></i><h4>Phone Calls</h4><p>Calls are governed by sport-specific communication dates. These rules differ by sport and division.</p></div>
+      <div class="comms-card"><i class="ti ti-message-circle"></i><h4>Text &amp; Direct Messaging</h4><p>Texting and social media DMs have become common as NCAA rules continue to evolve around them.</p></div>
+      <div class="comms-card"><i class="ti ti-brand-instagram"></i><h4>Social Media Recruiting</h4><p>Coaches assess character and maturity online &mdash; in reality, your public presence becomes part of your recruiting profile.</p></div>
+    </div>
   </div>
 </section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Recruiting Calendar Structure</div>
+    <h2 class="serif-h" style="font-size:36px">All sports, <em>one overview.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Recruiting calendars vary by sport and division, but generally follow four types of periods:</p>
+    <div class="calendar-grid">
+      <div class="calendar-card">
+        <h4>Contact Period</h4>
+        <p>Coaches may actively recruit &mdash; visit schools, conduct home visits, attend competitions, and hold recruiting conversations. Generally the most active period.</p>
+      </div>
+      <div class="calendar-card">
+        <h4>Evaluation Period</h4>
+        <p>Coaches may observe athletes at competitions, showcases, and camps to gather information &mdash; rather than direct recruiting.</p>
+      </div>
+      <div class="calendar-card">
+        <h4>Quiet Period</h4>
+        <div class="allow-label">Allowed</div>
+        <ul><li>On-campus visits &amp; meetings</li><li>Email &amp; phone communication</li></ul>
+        <div class="deny-label">Not Allowed</div>
+        <ul><li>Off-campus recruiting</li><li>Event-side recruiting</li></ul>
+      </div>
+      <div class="calendar-card">
+        <h4>Dead Period</h4>
+        <div class="allow-label">Allowed</div>
+        <ul><li>Text messages &amp; video calls</li><li>Digital communication</li></ul>
+        <div class="deny-label">Not Allowed</div>
+        <ul><li>Meeting recruits in person</li><li>Visiting schools or attending competitions</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Common Misunderstandings</div>
+    <h2 class="serif-h" style="font-size:36px">Myth vs. <em>reality.</em></h2>
+    <div class="myth-grid">
+      <div class="myth-card">
+        <div class="myth-label">Misconception</div>
+        <div class="myth-text">"If a coach doesn't respond, they aren't interested."</div>
+        <div class="reality-label">Reality</div>
+        <div class="reality-text">They may be in a restricted period, evaluating your film, or waiting for verified data before reaching out.</div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-label">Misconception</div>
+        <div class="myth-text">"All sports follow the same recruiting calendar."</div>
+        <div class="reality-label">Reality</div>
+        <div class="reality-text">Each sport has its own calendar, and timelines can differ significantly even within the same division.</div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-label">Misconception</div>
+        <div class="myth-text">"Dead period means no recruiting happens."</div>
+        <div class="reality-label">Reality</div>
+        <div class="reality-text">Digital recruiting continues &mdash; evaluation shifts to film review, academic review, and communication.</div>
+      </div>
+      <div class="myth-card">
+        <div class="myth-label">Misconception</div>
+        <div class="myth-text">"Coaches only care about athletic ability."</div>
+        <div class="reality-label">Reality</div>
+        <div class="reality-text">Academics, character, and potential are critical parts of the evaluation.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Need Help Navigating Recruiting?</div>
+  <h2>Understand the rules. <em style="font-style:italic;color:#fff">Gain the advantage.</em></h2>
+  <p>Athletes who understand structured communication windows, contact periods, and sport-specific timelines gain a real edge &mdash; not because they train harder, but because they recruit smarter.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Recruiting%20Consultation" class="btn-white">Schedule a Consultation</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic recruiting education</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>Personalized recruiting timeline</li>
+          <li>Sport-specific calendar guidance</li>
+          <li>Coach outreach &amp; communication templates</li>
+          <li>Direct access to coaching support</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="membership-cta">
+  <div class="cta-wrap">
+    <div class="cta-eyebrow">Join MPL Pursuits</div>
+    <h2 class="cta-heading">Ready to <em>unlock everything?</em></h2>
+    <p class="cta-body">Get full access to lesson content, NIL &amp; transfer guidance, the resource library, coaching systems, and more. Start free or go all in.</p>
+    <div class="pricing-row">
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-desc">Basic educational content</div>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="pricing-btn-ghost" target="_blank">Create Free Account</a>
+      </div>
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier-label">Performance Athlete</div>
+        <div class="pricing-price">$80<span>/mo</span></div>
+        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <a href="https://buy.stripe.com/6oU4gB0Eq8qacSW1c6a3u09" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Elite Athlete</div>
+        <div class="pricing-price">$150<span>/mo</span></div>
+        <div class="pricing-desc">Complete support system</div>
+        <a href="https://buy.stripe.com/aFa9AVgDobCm2ei2gaa3u08" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+      <div class="pricing-card">
+        <div class="pricing-tier-label">Annual Membership</div>
+        <div class="pricing-price">$500<span>/yr</span></div>
+        <div class="pricing-desc">All-access pass &mdash; save vs. monthly</div>
+        <a href="https://buy.stripe.com/5kQ5kFbj4ayiaKOcUOa3u0b" class="pricing-btn" target="_blank">Get Started</a>
+      </div>
+    </div>
+    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area &rarr;</a></p>
+  </div>
+</section>
+
 <footer>
   <div class="footer-inner">
     <div><span class="footer-brand">MPL Pursuits</span><p class="footer-tagline">Premium coaching for athletes.<br>Train smarter. Compete harder.<br>Find your college with confidence.</p></div>
