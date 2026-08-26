@@ -13,18 +13,62 @@
   .hub-feat-row{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin:2.5rem 0}
   .feat-item{max-width:170px;text-align:center}
   .feat-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
-  .feat-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#e8d8ff;margin-bottom:.35rem}
-  .feat-item p{font-size:11px;color:#a888c8;line-height:1.5}
+  .feat-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#EDEBF2;margin-bottom:.35rem}
+  .feat-item p{font-size:11px;color:#b6b2c2;line-height:1.5}
   .hub-hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 
-  /* MASTER GRID */
-  .master-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.75rem;margin-top:2.5rem}
-  @media(max-width:900px){.master-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:500px){.master-grid{grid-template-columns:1fr}}
-  .master-item{text-align:center}
-  .master-item i{font-size:26px;color:var(--purple);margin-bottom:.75rem;display:block}
-  .master-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#e8d8ff;margin-bottom:.35rem}
-  .master-item p{font-size:11px;color:#a888c8;line-height:1.5}
+  /* LEARNING SYSTEM — 3-COLUMN (Master / Drills / Videos) */
+  .learn-tri-col{display:grid;grid-template-columns:1fr 1.3fr 1fr;gap:2.5rem;margin-top:2.5rem;align-items:start}
+  @media(max-width:960px){.learn-tri-col{grid-template-columns:1fr}}
+  .learn-col-title{font-family:var(--serif);font-size:19px;font-weight:400;color:#EDEBF2;margin-bottom:.3rem}
+  .learn-col-sub{font-size:12px;color:#8d8a9c;margin-bottom:1.25rem}
+
+  .master-list{list-style:none;display:flex;flex-direction:column;gap:1.1rem}
+  .master-list li{display:flex;gap:12px;align-items:flex-start}
+  .master-list i{font-size:18px;color:var(--purple);margin-top:2px;flex-shrink:0}
+  .master-list h5{font-size:13px;color:#EDEBF2;margin-bottom:2px}
+  .master-list p{font-size:11.5px;color:#b6b2c2;line-height:1.55}
+
+  .filter-tabs{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.25rem}
+  .filter-tab{background:none;border:0.5px solid #2b2833;color:#b6b2c2;font-size:10px;letter-spacing:1px;text-transform:uppercase;padding:7px 12px;cursor:pointer;font-family:var(--sans);transition:all .2s}
+  .filter-tab:hover{border-color:var(--purple);color:#EDEBF2}
+  .filter-tab.active{background:var(--purple);border-color:var(--purple);color:#fff}
+
+  .drill-list{display:flex;flex-direction:column;gap:.85rem}
+  .drill-card{display:flex;gap:12px;background:#1a1720;border:0.5px solid #2b2833;padding:.85rem}
+  .drill-thumb{width:52px;height:52px;background:#100d14;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+  .drill-thumb i{font-size:16px;color:var(--gold)}
+  .drill-info h5{font-size:12.5px;color:#EDEBF2;margin-bottom:2px}
+  .drill-info p{font-size:11px;color:#8d8a9c;line-height:1.45;margin-bottom:.4rem}
+  .drill-meta{display:flex;gap:10px;align-items:center}
+  .level-tag{font-size:9px;letter-spacing:.5px;text-transform:uppercase;color:var(--gold);border:0.5px solid var(--gold);padding:2px 7px}
+  .drill-time{font-size:10px;color:#8d8a9c;display:flex;align-items:center;gap:3px}
+
+  .video-featured{width:100%;aspect-ratio:16/9;background:#1a1720;border:0.5px solid #2b2833;display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem}
+  .video-featured i{font-size:32px;color:var(--gold)}
+  .video-list{display:flex;flex-direction:column;gap:.75rem}
+  .video-item{display:flex;gap:10px;align-items:center}
+  .video-item-thumb{width:44px;height:44px;background:#1a1720;border:0.5px solid #2b2833;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+  .video-item-thumb i{font-size:13px;color:var(--gold)}
+  .video-item h5{font-size:12px;color:#EDEBF2;margin-bottom:1px}
+  .video-item p{font-size:10.5px;color:#8d8a9c;line-height:1.4}
+  .video-time{font-size:10px;color:#8d8a9c;flex-shrink:0;margin-left:auto}
+
+  /* GROW FASTER ICON ROW */
+  .grow-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin:2.5rem 0}
+  @media(max-width:900px){.grow-grid{grid-template-columns:1fr 1fr 1fr}}
+  @media(max-width:560px){.grow-grid{grid-template-columns:1fr 1fr}}
+  .grow-item{text-align:center}
+  .grow-item i{font-size:22px;color:var(--gold);margin-bottom:.6rem;display:block}
+  .grow-item h5{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:#EDEBF2}
+
+  /* MORE WAYS TO LEARN — CLOSING STRIP */
+  .more-ways-strip{background:#100d14;padding:3rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:2rem}
+  .more-ways-icons{display:flex;gap:2.5rem;flex-wrap:wrap}
+  .more-ways-icons div{display:flex;align-items:center;gap:10px}
+  .more-ways-icons i{font-size:18px;color:var(--gold)}
+  .more-ways-icons h5{font-size:12px;color:#EDEBF2}
+  .more-ways-quote{font-size:13px;font-style:italic;color:#d6d3e0;max-width:280px;text-align:center}
 
   /* 1-ON-1 HELP */
   .help-1on1-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;max-width:900px;margin:2rem auto 2rem;text-align:left}
@@ -38,13 +82,13 @@
   /* FREE VS PREMIUM */
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
   @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
-  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card{background:#1a1720;border:0.5px solid #2b2833;padding:2rem;position:relative}
   .compare-card.featured{border-color:var(--gold)}
   .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
-  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8d8a9c;margin-bottom:1rem}
   .compare-card.featured .compare-label{color:var(--gold)}
   .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
-  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li{font-size:13px;color:#d6d3e0;padding-left:18px;position:relative;line-height:1.5}
   .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
@@ -84,14 +128,63 @@
 
 <section>
   <div class="inner">
-    <div class="eyebrow">What You Can Master</div>
-    <h2 class="serif-h" style="font-size:36px">A complete system to <em>improve your game.</em></h2>
-    <div class="master-grid">
-      <div class="master-item"><i class="ti ti-swipe"></i><h4>Stroke Development</h4><p>Clean, powerful strokes with technical precision.</p></div>
-      <div class="master-item"><i class="ti ti-chess-knight"></i><h4>Tactics &amp; Strategy</h4><p>Smarter decisions on the court.</p></div>
-      <div class="master-item"><i class="ti ti-run"></i><h4>Footwork &amp; Movement</h4><p>Better speed, balance, and coverage.</p></div>
-      <div class="master-item"><i class="ti ti-ball-tennis"></i><h4>Serve &amp; Return</h4><p>A more consistent, effective game.</p></div>
-      <div class="master-item"><i class="ti ti-brain"></i><h4>Mental Toughness</h4><p>Stay calm, focused, and confident.</p></div>
+    <div class="eyebrow">Your Complete Learning System</div>
+    <h2 class="serif-h" style="font-size:36px">Everything you need <em>to level up.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">A complete system to improve every part of your game &mdash; what to master, drills to build confidence, and video lessons to learn from.</p>
+    <div class="learn-tri-col">
+      <div>
+        <div class="learn-col-title">What You Can Master</div>
+        <p class="learn-col-sub">A complete system to improve every part of your game.</p>
+        <ul class="master-list">
+          <li><i class="ti ti-swipe"></i><div><h5>Stroke Development</h5><p>Build clean, powerful strokes with technical precision.</p></div></li>
+          <li><i class="ti ti-chess-knight"></i><div><h5>Tactics &amp; Strategy</h5><p>Understand the game. Make smarter decisions on court.</p></div></li>
+          <li><i class="ti ti-run"></i><div><h5>Footwork &amp; Movement</h5><p>Improve speed, balance, and court coverage.</p></div></li>
+          <li><i class="ti ti-ball-tennis"></i><div><h5>Serve &amp; Return</h5><p>Develop a more consistent, effective serve and return.</p></div></li>
+          <li><i class="ti ti-brain"></i><div><h5>Mental Toughness</h5><p>Train your mind to stay calm, focused, and confident.</p></div></li>
+        </ul>
+        <a href="members/#topic-tennis" class="btn-ghost" style="margin-top:1.5rem">View All Categories</a>
+      </div>
+      <div>
+        <div class="learn-col-title">Drills to Build Confidence</div>
+        <p class="learn-col-sub">Structured drills for every skill level.</p>
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-level="all">All Drills</button>
+          <button class="filter-tab" data-level="beginner">Beginner</button>
+          <button class="filter-tab" data-level="intermediate">Intermediate</button>
+          <button class="filter-tab" data-level="advanced">Advanced</button>
+        </div>
+        <div class="drill-list" id="drillList">
+          <div class="drill-card" data-level="all">
+            <div class="drill-thumb"><i class="ti ti-player-play"></i></div>
+            <div class="drill-info"><h5>Forehand Consistency Drill</h5><p>Builds smooth, controlled forehands with depth and accuracy.</p><div class="drill-meta"><span class="level-tag">All Levels</span><span class="drill-time"><i class="ti ti-clock"></i>5:12</span></div></div>
+          </div>
+          <div class="drill-card" data-level="intermediate">
+            <div class="drill-thumb"><i class="ti ti-player-play"></i></div>
+            <div class="drill-info"><h5>Serve Placement Drill</h5><p>Improve serve accuracy, power, and placement under pressure.</p><div class="drill-meta"><span class="level-tag">Intermediate</span><span class="drill-time"><i class="ti ti-clock"></i>6:45</span></div></div>
+          </div>
+          <div class="drill-card" data-level="advanced">
+            <div class="drill-thumb"><i class="ti ti-player-play"></i></div>
+            <div class="drill-info"><h5>Approach &amp; Volley Drill</h5><p>Perfect timing and finish at the net with confidence.</p><div class="drill-meta"><span class="level-tag">Advanced</span><span class="drill-time"><i class="ti ti-clock"></i>7:03</span></div></div>
+          </div>
+          <div class="drill-card" data-level="all">
+            <div class="drill-thumb"><i class="ti ti-player-play"></i></div>
+            <div class="drill-info"><h5>Defensive Recovery Drill</h5><p>Learn how to recover, reset, and turn defense into offense.</p><div class="drill-meta"><span class="level-tag">All Levels</span><span class="drill-time"><i class="ti ti-clock"></i>6:18</span></div></div>
+          </div>
+        </div>
+        <a href="members/#topic-tennis" class="btn-ghost" style="margin-top:1.5rem">View All Drills</a>
+      </div>
+      <div>
+        <div class="learn-col-title">Video Lessons &amp; Tips</div>
+        <p class="learn-col-sub">Learn from coaches. Watch. Apply. Improve.</p>
+        <div class="video-featured"><i class="ti ti-player-play"></i></div>
+        <div class="video-list">
+          <div class="video-item"><div class="video-item-thumb"><i class="ti ti-player-play"></i></div><div><h5>How to Create More Topspin on Your Forehand</h5><p>Coach breakdown, slow motion &amp; key mistakes to avoid.</p></div><span class="video-time">8:24</span></div>
+          <div class="video-item"><div class="video-item-thumb"><i class="ti ti-player-play"></i></div><div><h5>Backhand Technique Breakdown</h5><p>Key positions, contact points, and follow-through.</p></div><span class="video-time">9:15</span></div>
+          <div class="video-item"><div class="video-item-thumb"><i class="ti ti-player-play"></i></div><div><h5>How to Read Your Opponent</h5><p>Anticipation, patterns, and decision-making.</p></div><span class="video-time">7:30</span></div>
+          <div class="video-item"><div class="video-item-thumb"><i class="ti ti-player-play"></i></div><div><h5>3 Mental Shifts to Win More Matches</h5><p>Focus, belief, and composure under pressure.</p></div><span class="video-time">6:09</span></div>
+        </div>
+        <a href="members/#topic-tennis" class="btn-ghost" style="margin-top:1.5rem">Browse All Videos</a>
+      </div>
     </div>
   </div>
 </section>
@@ -112,7 +205,16 @@
 
 <section>
   <div class="inner">
-    <div class="eyebrow">Free vs. Premium</div>
+    <div class="eyebrow">Grow Faster</div>
+    <h2 class="serif-h" style="font-size:36px">More content. More structure. <em>More results.</em></h2>
+    <div class="grow-grid">
+      <div class="grow-item"><i class="ti ti-device-tv"></i><h5>Full Access</h5></div>
+      <div class="grow-item"><i class="ti ti-clipboard-list"></i><h5>Structured Learning</h5></div>
+      <div class="grow-item"><i class="ti ti-star"></i><h5>Exclusive Content</h5></div>
+      <div class="grow-item"><i class="ti ti-chart-arrows"></i><h5>Track Your Progress</h5></div>
+      <div class="grow-item"><i class="ti ti-users"></i><h5>Supportive Community</h5></div>
+    </div>
+    <div class="eyebrow" style="margin-top:2.5rem">Free vs. Premium</div>
     <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
     <div class="compare-grid">
       <div class="compare-card">
@@ -138,6 +240,16 @@
     </div>
   </div>
 </section>
+
+<div class="more-ways-strip">
+  <div class="more-ways-icons">
+    <div><i class="ti ti-notebook"></i><h5>Blog &amp; Articles</h5></div>
+    <div><i class="ti ti-download"></i><h5>Downloadable Resources</h5></div>
+    <div><i class="ti ti-brain"></i><h5>Court Smarts</h5></div>
+  </div>
+  <p class="more-ways-quote">&ldquo;The more you learn, the more dangerous you become.&rdquo; &mdash; MPL Pursuits</p>
+  <a href="index.html#membership" class="btn-orange">Ready to Take Your Game to the Next Level?</a>
+</div>
 
 <section class="membership-cta">
   <div class="cta-wrap">
@@ -182,9 +294,22 @@
     <div class="footer-col"><h4>Support</h4><a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">Privacy Policy</a></div>
     <div class="footer-col"><h4>Follow</h4><a href="https://www.instagram.com/mary__profit/" target="_blank">Instagram @mary__profit</a><a href="https://www.tiktok.com/@mary.profit" target="_blank">TikTok @mary.profit</a></div>
   </div>
-  <div class="footer-copy"><p>&copy; 2026 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8868a8">Built for athletes who want more.</p></div>
+  <div class="footer-copy"><p>&copy; 2026 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8d8a9c">Built for athletes who want more.</p></div>
 </footer>
-<script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
+<script>
+document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});
+document.querySelectorAll('.filter-tab').forEach(function(tab){
+  tab.addEventListener('click',function(){
+    document.querySelectorAll('.filter-tab').forEach(function(t){t.classList.remove('active')});
+    this.classList.add('active');
+    var level=this.dataset.level;
+    document.querySelectorAll('.drill-card').forEach(function(card){
+      var show=level==='all'||card.dataset.level==='all'||card.dataset.level===level;
+      card.style.display=show?'flex':'none';
+    });
+  });
+});
+</script>
 </body>
 </html>
 

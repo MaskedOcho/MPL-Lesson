@@ -9,49 +9,49 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
 <style>
   /* COMPLIANCE NOTICE */
-  .notice-box{background:#150428;border:0.5px solid var(--purple);padding:1.25rem 1.75rem;margin-top:2rem;display:flex;gap:12px;align-items:flex-start;max-width:900px;margin-left:auto;margin-right:auto}
+  .notice-box{background:#100d14;border:0.5px solid var(--purple);padding:1.25rem 1.75rem;margin-top:2rem;display:flex;gap:12px;align-items:flex-start;max-width:900px;margin-left:auto;margin-right:auto}
   .notice-box i{color:var(--gold);font-size:18px;margin-top:2px;flex-shrink:0}
-  .notice-box p{font-size:12px;color:#a888c8;line-height:1.6;text-align:left}
+  .notice-box p{font-size:12px;color:#b6b2c2;line-height:1.6;text-align:left}
 
   /* COMMS GRID */
   .comms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
   @media(max-width:768px){.comms-grid{grid-template-columns:1fr}}
-  .comms-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.75rem}
+  .comms-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.75rem}
   .comms-card i{font-size:22px;color:var(--gold);margin-bottom:.75rem;display:block}
-  .comms-card h4{font-size:15px;color:#e8d8ff;margin-bottom:.5rem}
-  .comms-card p{font-size:12px;color:#a888c8;line-height:1.6}
+  .comms-card h4{font-size:15px;color:#EDEBF2;margin-bottom:.5rem}
+  .comms-card p{font-size:12px;color:#b6b2c2;line-height:1.6}
 
   /* CALENDAR GRID */
   .calendar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
   @media(max-width:900px){.calendar-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.calendar-grid{grid-template-columns:1fr}}
-  .calendar-card{background:#200c40;border-top:3px solid var(--purple);padding:1.5rem}
-  .calendar-card h4{font-size:14px;color:#e8d8ff;margin-bottom:.75rem}
+  .calendar-card{background:#1a1720;border-top:3px solid var(--purple);padding:1.5rem}
+  .calendar-card h4{font-size:14px;color:#EDEBF2;margin-bottom:.75rem}
   .calendar-card .allow-label{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-top:.75rem;margin-bottom:.35rem}
   .calendar-card .deny-label{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#c85252;margin-top:.75rem;margin-bottom:.35rem}
   .calendar-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem}
-  .calendar-card ul li{font-size:11px;color:#a888c8;line-height:1.5}
-  .calendar-card p{font-size:12px;color:#a888c8;line-height:1.6}
+  .calendar-card ul li{font-size:11px;color:#b6b2c2;line-height:1.5}
+  .calendar-card p{font-size:12px;color:#b6b2c2;line-height:1.6}
 
   /* MISCONCEPTIONS */
   .myth-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
   @media(max-width:768px){.myth-grid{grid-template-columns:1fr}}
-  .myth-card{background:#150428;border:0.5px solid #3d1f5a;padding:1.5rem}
+  .myth-card{background:#100d14;border:0.5px solid #2b2833;padding:1.5rem}
   .myth-card .myth-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:#c85252;margin-bottom:.4rem}
-  .myth-card .myth-text{font-size:13px;color:#e8d8ff;font-style:italic;margin-bottom:.9rem}
+  .myth-card .myth-text{font-size:13px;color:#EDEBF2;font-style:italic;margin-bottom:.9rem}
   .myth-card .reality-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
-  .myth-card .reality-text{font-size:12px;color:#a888c8;line-height:1.6}
+  .myth-card .reality-text{font-size:12px;color:#b6b2c2;line-height:1.6}
 
   /* FREE VS PREMIUM */
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
   @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
-  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card{background:#1a1720;border:0.5px solid #2b2833;padding:2rem;position:relative}
   .compare-card.featured{border-color:var(--gold)}
   .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
-  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8d8a9c;margin-bottom:1rem}
   .compare-card.featured .compare-label{color:var(--gold)}
   .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
-  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li{font-size:13px;color:#d6d3e0;padding-left:18px;position:relative;line-height:1.5}
   .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
@@ -82,7 +82,7 @@
   <p class="page-sub">Everything student-athletes and families need to understand about NCAA recruiting rules, communication guidelines, and recruiting calendars &mdash; across Division I, II, and III.</p>
   <div class="notice-box">
     <i class="ti ti-info-circle"></i>
-    <p><strong style="color:#e8d8ff">Compliance notice:</strong> NCAA recruiting regulations change periodically and vary by division, sport, and communication method. Always verify current rules directly through NCAA resources and the colleges you're pursuing. This page is for educational purposes and should not replace official NCAA guidance.</p>
+    <p><strong style="color:#EDEBF2">Compliance notice:</strong> NCAA recruiting regulations change periodically and vary by division, sport, and communication method. Always verify current rules directly through NCAA resources and the colleges you're pursuing. This page is for educational purposes and should not replace official NCAA guidance.</p>
   </div>
 </div>
 
@@ -242,7 +242,7 @@
     <div class="footer-col"><h4>Support</h4><a href="#">Contact Us</a><a href="#">FAQ</a><a href="#">Privacy Policy</a></div>
     <div class="footer-col"><h4>Follow</h4><a href="https://www.instagram.com/mary__profit/" target="_blank">Instagram @mary__profit</a><a href="https://www.tiktok.com/@mary.profit" target="_blank">TikTok @mary.profit</a></div>
   </div>
-  <div class="footer-copy"><p>&copy; 2026 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8868a8">Built for athletes who want more.</p></div>
+  <div class="footer-copy"><p>&copy; 2026 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8d8a9c">Built for athletes who want more.</p></div>
 </footer>
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
 </body>

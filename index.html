@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
 <style>
   /* --- HERO CAROUSEL --- */
-  .hero-carousel { position: relative; overflow: hidden; border-bottom: 1px solid #7a4a9a; background: var(--ink); }
+  .hero-carousel { position: relative; overflow: hidden; border-bottom: 1px solid #3a3742; background: var(--ink); }
   .slides-wrapper { display: flex; transition: transform .65s cubic-bezier(.77,0,.175,1); width: 100%; }
   .slide-wrap { min-width: 100%; width: 100%; flex-shrink: 0; }
   .slide {
@@ -72,19 +72,19 @@
   .dot.active { background: var(--gold); width: 20px; border-radius: 3px; }
 
   /* --- SHARED SECTION --- */
-  section { border-bottom: 1px solid #7a4a9a; }
+  section { border-bottom: 1px solid #3a3742; }
   .inner { max-width: 1200px; margin: 0 auto; padding: 5rem 3rem; }
-  .section-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #8a68a8; margin-bottom: 1.5rem; }
-  .serif-heading { font-family: var(--serif); font-weight: 300; line-height: 1.12; color: #e8d8ff; }
+  .section-eyebrow { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #8d8a9c; margin-bottom: 1.5rem; }
+  .serif-heading { font-family: var(--serif); font-weight: 300; line-height: 1.12; color: #EDEBF2; }
   .serif-heading em { font-style: italic; color: var(--purple); }
-  .body-copy { font-size: 13px; color: #c8a8e8; line-height: 1.85; }
+  .body-copy { font-size: 13px; color: #d6d3e0; line-height: 1.85; }
 
   /* --- MISSION --- */
   .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; }
-  .mission-img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: #1e0a3c; }
+  .mission-img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: #0d0c11; }
   .mission-img-placeholder {
     width: 100%; min-height: 380px;
-    background: linear-gradient(135deg, #2e1a4e 0%, #23103c 100%);
+    background: linear-gradient(135deg, #2e1a4e 0%, #120f17 100%);
     display: flex; align-items: center; justify-content: center;
     font-size: 80px; color: rgba(255,255,255,.06);
   }
@@ -95,29 +95,29 @@
   /* --- PROVIDES --- */
   .provides-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 3rem; }
   .provides-heading { font-size: 44px; }
-  .provides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #3d1f5a; }
-  .pillar { background: #200c40; padding: 2.5rem 2rem; }
-  .pillar h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; color: #e8d8ff; margin-bottom: 1.25rem; }
+  .provides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #2b2833; }
+  .pillar { background: #1a1720; padding: 2.5rem 2rem; }
+  .pillar h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; color: #EDEBF2; margin-bottom: 1.25rem; }
   .pillar ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .pillar ul li { font-size: 13px; color: #c8a8e8; line-height: 1.65; padding-left: 18px; position: relative; }
+  .pillar ul li { font-size: 13px; color: #d6d3e0; line-height: 1.65; padding-left: 18px; position: relative; }
   .pillar ul li::before { content: '\2014'; position: absolute; left: 0; color: var(--gold); font-size: 11px; top: 1px; }
-  .pillar-body { font-size: 13px; color: #c8a8e8; line-height: 1.85; }
+  .pillar-body { font-size: 13px; color: #d6d3e0; line-height: 1.85; }
 
   /* --- ADVANCED --- */
-  .advanced { background: var(--ink); border-bottom: 0.5px solid #2e1a3e; }
+  .advanced { background: var(--ink); border-bottom: 0.5px solid #211d27; }
   .advanced .inner { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
   .advanced .section-eyebrow { color: #6a4a7a; }
   .advanced-heading { font-size: 44px; color: #fdf8ff !important; }
   .advanced-heading em { color: var(--gold) !important; }
-  .advanced .body-copy { color: #c8a8e8; margin-top: 1rem; }
+  .advanced .body-copy { color: #d6d3e0; margin-top: 1rem; }
   .advanced-items { display: flex; flex-direction: column; gap: 14px; margin-top: 2rem; }
-  .advanced-item { display: flex; align-items: flex-start; gap: 14px; font-size: 14px; color: #ddc8f8; line-height: 1.65; }
+  .advanced-item { display: flex; align-items: flex-start; gap: 14px; font-size: 14px; color: #d6d3e0; line-height: 1.65; }
   .advanced-item i { font-size: 18px; color: var(--gold); margin-top: 1px; flex-shrink: 0; }
 
   /* --- MEMBERSHIP TIERS --- */
   .membership { background: #0e0220; }
-  .membership-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: #3d1f5a; margin-top: 1.5rem; }
-  .tier-card { background: #200c40; padding: 2rem 1.5rem; display: flex; flex-direction: column; position: relative; }
+  .membership-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: #2b2833; margin-top: 1.5rem; }
+  .tier-card { background: #1a1720; padding: 2rem 1.5rem; display: flex; flex-direction: column; position: relative; }
   .tier-card.featured { background: var(--ink); }
   .tier-badge {
     position: absolute; top: -1px; right: -1px;
@@ -125,37 +125,37 @@
     font-size: 9px; letter-spacing: 1.5px; text-transform: uppercase;
     padding: 4px 10px;
   }
-  .tier-name { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: #8a68a8; margin-bottom: .75rem; }
+  .tier-name { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; color: #8d8a9c; margin-bottom: .75rem; }
   .tier-card.featured .tier-name { color: rgba(255,255,255,.45); }
-  .tier-price { font-family: var(--serif); font-size: 48px; font-weight: 300; color: #e8d8ff; line-height: 1; }
+  .tier-price { font-family: var(--serif); font-size: 48px; font-weight: 300; color: #EDEBF2; line-height: 1; }
   .tier-card.featured .tier-price { color: #fff; }
-  .tier-period { font-size: 11px; color: #8a68a8; margin-top: 4px; margin-bottom: 1.25rem; }
+  .tier-period { font-size: 11px; color: #8d8a9c; margin-top: 4px; margin-bottom: 1.25rem; }
   .tier-card.featured .tier-period { color: rgba(255,255,255,.4); }
-  .tier-desc { font-size: 13px; color: #c8a8e8; line-height: 1.7; flex: 1; }
+  .tier-desc { font-size: 13px; color: #d6d3e0; line-height: 1.7; flex: 1; }
   .tier-card.featured .tier-desc { color: rgba(255,255,255,.6); }
   .tier-items { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 1.25rem; flex: 1; }
-  .tier-items li { font-size: 12px; color: #c8a8e8; padding-left: 16px; position: relative; line-height: 1.55; }
+  .tier-items li { font-size: 12px; color: #d6d3e0; padding-left: 16px; position: relative; line-height: 1.55; }
   .tier-items li::before { content: '\2192'; position: absolute; left: 0; color: var(--gold); font-size: 11px; }
   .tier-card.featured .tier-items li { color: rgba(255,255,255,.55); }
   .tier-cta {
     margin-top: 1.75rem; background: none; border: 0.5px solid #5a2a7a;
     padding: 10px 0; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase;
-    cursor: pointer; font-family: var(--sans); color: #c8a8e8;
+    cursor: pointer; font-family: var(--sans); color: #d6d3e0;
     transition: all .2s; text-align: center; text-decoration: none; display: block;
   }
   .tier-cta:hover { border-color: var(--gold); color: var(--gold); }
   .tier-card.featured .tier-cta { background: var(--gold); border-color: var(--gold); color: #fff; }
   .tier-card.featured .tier-cta:hover { background: var(--gold-dk); }
-  .single-purchase { margin-top: 2rem; padding: 1.5rem 2rem; background: #200c40; border: 0.5px solid #3d1f5a; display: flex; align-items: center; justify-content: space-between; }
-  .single-purchase-left h4 { font-family: var(--serif); font-size: 22px; font-weight: 400; color: #e8d8ff; margin-bottom: 4px; }
-  .single-purchase-left p { font-size: 13px; color: #c8a8e8; }
+  .single-purchase { margin-top: 2rem; padding: 1.5rem 2rem; background: #1a1720; border: 0.5px solid #2b2833; display: flex; align-items: center; justify-content: space-between; }
+  .single-purchase-left h4 { font-family: var(--serif); font-size: 22px; font-weight: 400; color: #EDEBF2; margin-bottom: 4px; }
+  .single-purchase-left p { font-size: 13px; color: #d6d3e0; }
   .single-price { font-family: var(--serif); font-size: 32px; font-weight: 300; color: var(--gold); }
 
   /* --- TESTIMONIALS --- */
   .tgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-top: 2.5rem; }
-  .testimonial { border-top: 0.5px solid #3d1f5a; padding-top: 1.75rem; }
-  blockquote { font-family: var(--serif); font-size: 18px; font-weight: 400; color: #e8d8ff; line-height: 1.65; font-style: italic; }
-  cite { font-style: normal; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8a68a8; display: block; margin-top: 1.25rem; }
+  .testimonial { border-top: 0.5px solid #2b2833; padding-top: 1.75rem; }
+  blockquote { font-family: var(--serif); font-size: 18px; font-weight: 400; color: #EDEBF2; line-height: 1.65; font-style: italic; }
+  cite { font-style: normal; font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: #8d8a9c; display: block; margin-top: 1.25rem; }
 
   /* --- BOOKING --- */
   .booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
@@ -163,8 +163,8 @@
   .booking-sub { margin-top: 1rem; }
   .booking-form { display: flex; flex-direction: column; gap: 14px; }
   .form-input {
-    background: none; border: none; border-bottom: 1px solid #7a4a9a;
-    padding: 12px 0; font-size: 14px; color: #e8d8ff; background: transparent;
+    background: none; border: none; border-bottom: 1px solid #3a3742;
+    padding: 12px 0; font-size: 14px; color: #EDEBF2; background: transparent;
     font-family: var(--sans); outline: none; transition: border .2s; width: 100%;
   }
   .form-input::placeholder { color: #9a78b8; }
@@ -176,7 +176,7 @@
     margin-top: 8px; transition: background .2s; align-self: flex-start;
   }
   .btn-gold:hover { background: var(--gold-dk); }
-  .form-note { font-size: 11px; color: #8a68a8; margin-top: 4px; }
+  .form-note { font-size: 11px; color: #8d8a9c; margin-top: 4px; }
 
   /* --- MOBILE --- */
   @media (max-width: 768px) {
@@ -465,26 +465,26 @@
           <input class="form-input" type="text" placeholder="First &amp; last name" required />
           <input class="form-input" type="email" placeholder="Email address" required />
           <input class="form-input" type="tel" placeholder="Phone number" />
-          <select class="form-input" style="cursor:pointer;background:#200c40;color:#e8d8ff">
+          <select class="form-input" style="cursor:pointer;background:#1a1720;color:#EDEBF2">
             <option value="">Select a coach</option>
             <option>Mary Lewis &mdash; Tennis Coach & Mentor</option>
             <option>Elizabeth Profit &mdash; Tennis Coach & Mentor</option>
           </select>
-          <select class="form-input" required style="cursor:pointer;background:#200c40;color:#e8d8ff">
+          <select class="form-input" required style="cursor:pointer;background:#1a1720;color:#EDEBF2">
             <option value="">Select a service</option>
             <option>Online Consultation &mdash; 20 min &middot; $45</option>
             <option>1-on-1 Virtual Coaching &mdash; 30 min &middot; $100</option>
             <option>Video Review Session &mdash; 60 min &middot; $120</option>
             <option>1-on-1 Diabetes Guidance &mdash; 30 min &middot; $100</option>
           </select>
-          <textarea class="form-input" rows="3" placeholder="Goals or notes for your coach (optional)" style="resize:vertical;background:transparent;color:#e8d8ff"></textarea>
+          <textarea class="form-input" rows="3" placeholder="Goals or notes for your coach (optional)" style="resize:vertical;background:transparent;color:#EDEBF2"></textarea>
           <button type="submit" class="btn-gold">Request Booking</button>
-          <p class="form-note" style="font-size:12px;color:#ddc8f8;line-height:1.7;margin-top:8px">A deposit of <strong style="color:var(--gold)">$25</strong> is required to reserve a session and will be applied to your session cost at confirmed booking. Full session payment is required before the booking date is confirmed.</p>
+          <p class="form-note" style="font-size:12px;color:#d6d3e0;line-height:1.7;margin-top:8px">A deposit of <strong style="color:var(--gold)">$25</strong> is required to reserve a session and will be applied to your session cost at confirmed booking. Full session payment is required before the booking date is confirmed.</p>
           <p class="form-note" style="margin-top:6px">We'll be in touch within 24 hours to confirm.</p>
         </form>
-        <div id="successMsg" style="display:none;margin-top:1.5rem;padding:1.5rem;border:0.5px solid var(--gold);background:#2e1448;">
-          <p style="font-family:var(--serif);font-size:20px;color:#e8d8ff">Booking request received.</p>
-          <p style="font-size:13px;color:#c8a8e8;margin-top:6px">We'll confirm your session within 24 hours. See you on the court.</p>
+        <div id="successMsg" style="display:none;margin-top:1.5rem;padding:1.5rem;border:0.5px solid var(--gold);background:#211e28;">
+          <p style="font-family:var(--serif);font-size:20px;color:#EDEBF2">Booking request received.</p>
+          <p style="font-size:13px;color:#d6d3e0;margin-top:6px">We'll confirm your session within 24 hours. See you on the court.</p>
         </div>
       </div>
     </div>
@@ -521,7 +521,7 @@
   </div>
   <div class="footer-copy">
     <p>&copy; 2026 by MPL Pursuits LLC. All rights reserved.</p>
-    <p style="font-size:11px;color:#c8a8e8">Built for athletes who want more.</p>
+    <p style="font-size:11px;color:#d6d3e0">Built for athletes who want more.</p>
   </div>
 </footer>
 
