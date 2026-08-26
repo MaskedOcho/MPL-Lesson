@@ -7,14 +7,52 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* HERO FEATURE ROW */
+  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;margin-top:2.5rem}
+  .feat-item{text-align:center}
+  .feat-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .feat-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#e8d8ff;margin-bottom:.35rem}
+  .feat-item p{font-size:11px;color:#a888c8;line-height:1.5}
+  @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
+
+  /* PILLAR CARDS */
+  .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.pillar-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.pillar-grid{grid-template-columns:1fr}}
+  .pillar-card{background:#200c40;border:0.5px solid #3d1f5a;padding:1.75rem}
+  .pillar-card i{font-size:24px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .pillar-card h4{font-family:var(--serif);font-size:18px;font-weight:400;color:#e8d8ff;margin-bottom:.6rem}
+  .pillar-card p{font-size:12px;color:#a888c8;line-height:1.6}
+
+  /* SESSION STRUCTURE */
+  .session-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.session-grid{grid-template-columns:1fr}}
+  .session-card{background:#200c40;border-top:3px solid var(--purple);padding:1.75rem}
+  .session-num{width:32px;height:32px;border-radius:50%;background:var(--purple);color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;margin-bottom:.9rem}
+  .session-card h4{font-size:16px;color:#e8d8ff;margin-bottom:.5rem;font-family:var(--serif);font-weight:400}
+  .session-card p{font-size:12px;color:#a888c8;line-height:1.6}
+
+  /* FREE VS PREMIUM */
+  .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
+  .compare-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;position:relative}
+  .compare-card.featured{border-color:var(--gold)}
+  .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8a68a8;margin-bottom:1rem}
+  .compare-card.featured .compare-label{color:var(--gold)}
+  .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
+  .compare-card ul li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-logo"><span class="nav-logo-text">MPL Pursuits</span></a>
+  <a href="index.html" class="nav-logo"><img src="https://static.wixstatic.com/media/b7e516_99231caa7062431793f915762ea6c81d~mv2.png/v1/fill/w_96,h_91,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/MPL%20LOGO%20%20(1).png" alt="MPL Pursuits Logo"/></a>
   <ul class="nav-links" id="navLinks">
     <li><a href="about.html">About Us</a></li>
     <li><a href="tennis.html" class="active">Tennis</a></li>
@@ -34,15 +72,77 @@
   <p class="page-sub">Practice doesn't make perfect &mdash; purposeful practice does. How to structure your training sessions to build real, transferable game improvements.</p>
 </div>
 
-<div class="content-wrap">
-  <section class="content-section">
-    <h2>Overview</h2>
-    <p>The difference between players who improve quickly and those who plateau is almost always how they practice &mdash; not how much. Hitting balls for two hours without intention rarely translates to better match results. This section is about training smarter: how to structure sessions, what drills actually develop your game, and how to bridge the gap between practice and performance.</p>
-    <p>Use these principles to get more out of every hour you spend on court.</p>
-  </section>
-
-
+  <div class="feat-grid">
+    <div class="feat-item"><i class="ti ti-target"></i><h4>Structured Sessions</h4><p>Every practice has a clear purpose.</p></div>
+    <div class="feat-item"><i class="ti ti-repeat"></i><h4>Purposeful Reps</h4><p>Quality repetition builds real change.</p></div>
+    <div class="feat-item"><i class="ti ti-trending-up"></i><h4>Progressive Overload</h4><p>Each session builds on the last.</p></div>
+    <div class="feat-item"><i class="ti ti-clipboard-check"></i><h4>Track &amp; Adjust</h4><p>Know what's working and what isn't.</p></div>
+  </div>
 </div>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Training Pillars</div>
+    <h2 class="serif-h" style="font-size:36px">Practice with <em>intention.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">The difference between players who improve quickly and those who plateau is almost always how they practice &mdash; not how much.</p>
+    <div class="pillar-grid">
+      <div class="pillar-card"><i class="ti ti-target-arrow"></i><h4>Technical Reps</h4><p>Isolated, repeatable drills that build clean mechanics before adding speed or pressure.</p></div>
+      <div class="pillar-card"><i class="ti ti-ball-tennis"></i><h4>Live-Ball Drilling</h4><p>Fed and rally-based drills that bridge the gap between technique and real point play.</p></div>
+      <div class="pillar-card"><i class="ti ti-chess-knight"></i><h4>Point Play &amp; Situations</h4><p>Practice the specific situations that show up in real matches, not just clean rallies.</p></div>
+      <div class="pillar-card"><i class="ti ti-run"></i><h4>Physical Conditioning</h4><p>Footwork, speed, and endurance work integrated directly into on-court sessions.</p></div>
+      <div class="pillar-card"><i class="ti ti-moon"></i><h4>Recovery Between Sessions</h4><p>Give your body and your strokes time to adapt &mdash; improvement happens between sessions too.</p></div>
+      <div class="pillar-card"><i class="ti ti-notebook"></i><h4>Reflection &amp; Notes</h4><p>Track what you worked on and what actually improved to guide your next session.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Structure Your Sessions</div>
+    <h2 class="serif-h" style="font-size:36px">A simple framework <em>for every practice.</em></h2>
+    <div class="session-grid">
+      <div class="session-card"><div class="session-num">1</div><h4>Warm-Up &amp; Activation</h4><p>Get your body and strokes ready with movement prep and easy rallying before adding intensity.</p></div>
+      <div class="session-card"><div class="session-num">2</div><h4>Skill Block</h4><p>Focused, purposeful drilling on one or two specific things you're actively trying to improve.</p></div>
+      <div class="session-card"><div class="session-num">3</div><h4>Live Play</h4><p>Apply what you worked on in point play or match situations so it transfers to real games.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Not Sure What to Work On?</div>
+  <h2>Get a training plan <em style="font-style:italic;color:#fff">built for your game.</em></h2>
+  <p>We'll help you identify what's actually holding your game back and build a session structure to fix it.</p>
+  <a href="mailto:mary.profit@gmail.com?subject=Book%20a%20Training%20Consultation" class="btn-white">Book a Consultation</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Free vs. Premium</div>
+    <h2 class="serif-h" style="font-size:36px">What's the <em>difference?</em></h2>
+    <div class="compare-grid">
+      <div class="compare-card">
+        <div class="compare-label">Free Membership</div>
+        <ul>
+          <li>Basic training tips</li>
+          <li>Newsletter &amp; tips</li>
+          <li>Community access</li>
+        </ul>
+        <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-ghost" target="_blank">Join Free</a>
+      </div>
+      <div class="compare-card featured">
+        <div class="compare-badge">Premium</div>
+        <div class="compare-label">Performance Athlete</div>
+        <ul>
+          <li>Structured training programs</li>
+          <li>Drill library &amp; session plans</li>
+          <li>Progress tracking tools</li>
+          <li>Discounted 1-on-1 coaching</li>
+        </ul>
+        <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="membership-cta">
   <div class="cta-wrap">
