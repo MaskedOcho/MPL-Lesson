@@ -7,7 +7,23 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
-<style></style>
+<style>
+  /* QUICK LINKS BAR */
+  .quick-links-bar{display:flex;gap:0;border-bottom:0.5px solid #3d1f5a;overflow-x:auto;background:#150428;position:sticky;top:72px;z-index:90}
+  .quick-link{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8a68a8;text-decoration:none;padding:1rem 1.5rem;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;display:block}
+  .quick-link:hover{color:#e8d8ff;border-bottom-color:var(--gold)}
+
+  /* SUBPAGE DETAIL SECTIONS */
+  .subpage-detail{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2.5rem 0;border-bottom:0.5px solid #2e1448;align-items:start;scroll-margin-top:140px}
+  .subpage-detail:last-child{border-bottom:none}
+  .subpage-detail-icon{width:60px;height:60px;border-radius:50%;background:rgba(232,98,10,.12);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--gold);flex-shrink:0}
+  .subpage-detail h3{font-family:var(--serif);font-size:26px;font-weight:300;color:#e8d8ff;margin-bottom:.6rem}
+  .subpage-detail p{font-size:13px;color:#a888c8;line-height:1.8;margin-bottom:1rem;max-width:620px}
+  .subpage-detail ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-bottom:1.5rem}
+  .subpage-detail ul li{font-size:12px;color:#c8a8e8;padding-left:16px;position:relative}
+  .subpage-detail ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+  @media(max-width:600px){.subpage-detail{grid-template-columns:1fr}}
+</style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
 <script src="js/global.js" defer></script>
@@ -38,53 +54,122 @@
   </div>
 </div>
 
+<div class="quick-links-bar">
+  <a href="#coaching" class="quick-link">Coaching</a>
+  <a href="#fitness" class="quick-link">Fitness</a>
+  <a href="#nutrition" class="quick-link">Nutrition</a>
+  <a href="#mental-performance" class="quick-link">Mental Performance</a>
+  <a href="#type1-diabetes" class="quick-link">Type 1 Diabetes</a>
+  <a href="#injury-prevention" class="quick-link">Injury Prevention</a>
+  <a href="#blog" class="quick-link">Blog</a>
+</div>
+
 <section>
   <div class="inner">
     <div class="eyebrow">Explore Athlete Development</div>
-    <h2 class="serif-h" style="font-size:40px">Choose your <em>focus.</em></h2>
-    <div class="subpages-grid">
-      <a href="coaching.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-device-laptop"></i></div>
-        <div class="subpage-title">Coaching</div>
-        <p class="subpage-desc">1-on-1 virtual sessions, video review, and in-person lessons &mdash; professional coaching built around your game and goals.</p>
-        <div class="subpage-link">Explore Coaching &rarr;</div>
-      </a>
-      <a href="fitness.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-run"></i></div>
-        <div class="subpage-title">Fitness</div>
-        <p class="subpage-desc">Sport-specific conditioning, strength, speed, and agility training designed for tennis athletes at every development stage.</p>
-        <div class="subpage-link">Explore Fitness &rarr;</div>
-      </a>
-      <a href="nutrition.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-salad"></i></div>
-        <div class="subpage-title">Nutrition</div>
-        <p class="subpage-desc">Fueling strategies, match-day nutrition, recovery eating, and how to sustain energy through long training and competition blocks.</p>
-        <div class="subpage-link">Explore Nutrition &rarr;</div>
-      </a>
-      <a href="mental-performance.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-brain"></i></div>
-        <div class="subpage-title">Mental Performance</div>
-        <p class="subpage-desc">Pressure management, confidence, focus routines, and the mental skills that separate good players from great competitors.</p>
-        <div class="subpage-link">Explore Mental Performance &rarr;</div>
-      </a>
-      <a href="type1-diabetes.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-heartbeat"></i></div>
-        <div class="subpage-title">Type 1 Diabetes</div>
-        <p class="subpage-desc">Specialized guidance for T1D athletes &mdash; glucose management around training, insulin timing, and competing safely at any level.</p>
-        <div class="subpage-link">Explore T1D Guidance &rarr;</div>
-      </a>
-      <a href="injury-prevention.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-shield-check"></i></div>
-        <div class="subpage-title">Injury Prevention</div>
-        <p class="subpage-desc">Prevention, smart recovery, and time management &mdash; a proven system to stay healthy and keep performing.</p>
-        <div class="subpage-link">Explore Injury Prevention &rarr;</div>
-      </a>
-      <a href="blog.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-pencil"></i></div>
-        <div class="subpage-title">Blog</div>
-        <p class="subpage-desc">Articles, insights, and stories from Mary's experience as a D1 athlete, coach, and T1D advocate in the world of elite sport.</p>
-        <div class="subpage-link">Read the Blog &rarr;</div>
-      </a>
+    <h2 class="serif-h" style="font-size:40px">What's inside <em>each area.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:640px">Here's what you'll find when you click into each section below.</p>
+
+    <div class="subpage-detail" id="coaching">
+      <div class="subpage-detail-icon"><i class="ti ti-device-laptop"></i></div>
+      <div>
+        <h3>Coaching</h3>
+        <p>Professional coaching services built around your game and goals, from quick consultations to full recruiting support.</p>
+        <ul>
+          <li>Online Consultation</li>
+          <li>1-on-1 Virtual Coaching</li>
+          <li>Video Review Sessions</li>
+          <li>In-Person Lessons</li>
+          <li>College Path Program</li>
+        </ul>
+        <a href="coaching.html" class="btn-orange">Explore Coaching</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="fitness">
+      <div class="subpage-detail-icon"><i class="ti ti-run"></i></div>
+      <div>
+        <h3>Fitness</h3>
+        <p>The physical pillars every competitive athlete needs, plus programs built for every level from beginner to advanced.</p>
+        <ul>
+          <li>Strength</li>
+          <li>Speed &amp; Agility</li>
+          <li>Endurance</li>
+          <li>Mobility &amp; Flexibility</li>
+          <li>Recovery &amp; Regeneration</li>
+        </ul>
+        <a href="fitness.html" class="btn-orange">Explore Fitness</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="nutrition">
+      <div class="subpage-detail-icon"><i class="ti ti-salad"></i></div>
+      <div>
+        <h3>Nutrition</h3>
+        <p>How to fuel your body for performance, recovery, and long-term health &mdash; from macronutrients to hydration strategy.</p>
+        <ul>
+          <li>Macronutrients</li>
+          <li>Micronutrients</li>
+          <li>Hydration &amp; Electrolytes</li>
+        </ul>
+        <a href="nutrition.html" class="btn-orange">Explore Nutrition</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="mental-performance">
+      <div class="subpage-detail-icon"><i class="ti ti-brain"></i></div>
+      <div>
+        <h3>Mental Performance</h3>
+        <p>The mental skills that separate good players from great competitors &mdash; trainable, just like any technical skill.</p>
+        <ul>
+          <li>Focus &amp; Concentration</li>
+          <li>Confidence &amp; Self-Belief</li>
+          <li>Emotional Control</li>
+          <li>Resilience</li>
+          <li>Visualization</li>
+          <li>Goal Setting</li>
+        </ul>
+        <a href="mental-performance.html" class="btn-orange">Explore Mental Performance</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="type1-diabetes">
+      <div class="subpage-detail-icon"><i class="ti ti-heartbeat"></i></div>
+      <div>
+        <h3>Type 1 Diabetes</h3>
+        <p>Specialized guidance for athletes managing T1D &mdash; blood sugar management, nutrition, and competing safely at any level.</p>
+        <ul>
+          <li>Blood Sugar Management</li>
+          <li>Exercise Strategies</li>
+          <li>Health &amp; Safety</li>
+          <li>The Diabetes Athlete Roadmap</li>
+        </ul>
+        <a href="type1-diabetes.html" class="btn-orange">Explore T1D Guidance</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="injury-prevention">
+      <div class="subpage-detail-icon"><i class="ti ti-shield-check"></i></div>
+      <div>
+        <h3>Injury Prevention</h3>
+        <p>A proven system combining prevention, recovery, and time management so you can stay healthy and keep performing.</p>
+        <ul>
+          <li>Injury Prevention</li>
+          <li>Smart Recovery</li>
+          <li>Time Management</li>
+          <li>Individual Rehab Programs</li>
+        </ul>
+        <a href="injury-prevention.html" class="btn-orange">Explore Injury Prevention</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="blog">
+      <div class="subpage-detail-icon"><i class="ti ti-pencil"></i></div>
+      <div>
+        <h3>Blog</h3>
+        <p>Articles, insights, and stories from Mary's experience as a D1 athlete, coach, and T1D advocate in the world of elite sport.</p>
+        <a href="blog.html" class="btn-orange">Read the Blog</a>
+      </div>
     </div>
   </div>
 </section>

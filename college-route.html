@@ -44,6 +44,22 @@
   .price-features li{font-size:13px;color:#c8a8e8;padding-left:18px;position:relative;line-height:1.6}
   .price-features li::before{content:'\2014';position:absolute;left:0;color:var(--gold);font-size:11px;top:2px}
   @media(max-width:768px){.two-col,.included-dark .inner{grid-template-columns:1fr}.included-items{grid-template-columns:1fr}.stats-bar-inner{grid-template-columns:repeat(2,1fr)}}
+
+  /* QUICK LINKS BAR */
+  .quick-links-bar{display:flex;gap:0;border-bottom:0.5px solid #3d1f5a;overflow-x:auto;background:#150428;position:sticky;top:72px;z-index:90}
+  .quick-link{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8a68a8;text-decoration:none;padding:1rem 1.5rem;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;display:block}
+  .quick-link:hover{color:#e8d8ff;border-bottom-color:var(--gold)}
+
+  /* SUBPAGE DETAIL SECTIONS */
+  .subpage-detail{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2.5rem 0;border-bottom:0.5px solid #2e1448;align-items:start;scroll-margin-top:140px}
+  .subpage-detail:last-child{border-bottom:none}
+  .subpage-detail-icon{width:60px;height:60px;border-radius:50%;background:rgba(232,98,10,.12);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--gold);flex-shrink:0}
+  .subpage-detail h3{font-family:var(--serif);font-size:26px;font-weight:300;color:#e8d8ff;margin-bottom:.6rem}
+  .subpage-detail p{font-size:13px;color:#a888c8;line-height:1.8;margin-bottom:1rem;max-width:620px}
+  .subpage-detail ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-bottom:1.5rem}
+  .subpage-detail ul li{font-size:12px;color:#c8a8e8;padding-left:16px;position:relative}
+  .subpage-detail ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+  @media(max-width:600px){.subpage-detail{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
@@ -86,41 +102,91 @@
   </div>
 </div>
 
+<div class="quick-links-bar">
+  <a href="#college-divisions" class="quick-link">College Divisions</a>
+  <a href="#ncaa-rules" class="quick-link">NCAA Rules &amp; Regulations</a>
+  <a href="#nil-education" class="quick-link">NIL Education</a>
+  <a href="#transferring" class="quick-link">Transferring</a>
+  <a href="#life-after-college" class="quick-link">Life After College</a>
+</div>
+
 <section>
   <div class="inner">
     <div class="eyebrow">Explore College Route</div>
-    <h2 class="serif-h" style="font-size:40px">Navigate every <em>step.</em></h2>
-    <div class="subpages-grid">
-      <a href="college-divisions.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-school"></i></div>
-        <div class="subpage-title">College Divisions</div>
-        <p class="subpage-desc">Understand D1, D2, D3, NAIA, and JUCO &mdash; and which division is the right fit for your athletic and academic profile.</p>
-        <div class="subpage-link">Explore &rarr;</div>
-      </a>
-      <a href="ncaa-rules.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-clipboard-list"></i></div>
-        <div class="subpage-title">NCAA Rules & Regulations</div>
-        <p class="subpage-desc">Know the recruiting calendar, contact rules, official visits, and everything that determines how coaches can interact with you.</p>
-        <div class="subpage-link">Explore &rarr;</div>
-      </a>
-      <a href="nil-education.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-coin"></i></div>
-        <div class="subpage-title">NIL Education</div>
-        <p class="subpage-desc">Learn how to build your brand, find deals, and generate income as a student-athlete while staying NCAA compliant.</p>
-        <div class="subpage-link">Explore &rarr;</div>
-      </a>
-      <a href="transferring.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-arrows-exchange"></i></div>
-        <div class="subpage-title">Transferring</div>
-        <p class="subpage-desc">If your current program isn't the right fit, learn how the transfer portal works, your eligibility windows, and how to find your next home.</p>
-        <div class="subpage-link">Explore &rarr;</div>
-      </a>
-      <a href="life-after-college.html" class="subpage-card">
-        <div class="subpage-icon"><i class="ti ti-compass"></i></div>
-        <div class="subpage-title">Life After College</div>
-        <p class="subpage-desc">Your college career is a chapter, not the whole book. Plan your transition, explore career pathways, and prepare for what's next.</p>
-        <div class="subpage-link">Explore &rarr;</div>
-      </a>
+    <h2 class="serif-h" style="font-size:40px">What's inside <em>each area.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:640px">Here's what you'll find when you click into each section below.</p>
+
+    <div class="subpage-detail" id="college-divisions">
+      <div class="subpage-detail-icon"><i class="ti ti-school"></i></div>
+      <div>
+        <h3>College Divisions</h3>
+        <p>Understand D1, D2, D3, and JUCO &mdash; what each level actually demands, and which division is the right fit for your athletic and academic profile.</p>
+        <ul>
+          <li>NCAA Division I</li>
+          <li>NCAA Division II</li>
+          <li>NCAA Division III</li>
+          <li>Junior College (JUCO)</li>
+        </ul>
+        <a href="college-divisions.html" class="btn-orange">Explore College Divisions</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="ncaa-rules">
+      <div class="subpage-detail-icon"><i class="ti ti-clipboard-list"></i></div>
+      <div>
+        <h3>NCAA Rules &amp; Regulations</h3>
+        <p>Know the recruiting calendar, contact rules, and communication guidelines that determine how and when coaches can interact with you.</p>
+        <ul>
+          <li>Communication Rules</li>
+          <li>Recruiting Calendar Periods</li>
+          <li>Common Misunderstandings</li>
+        </ul>
+        <a href="ncaa-rules.html" class="btn-orange">Explore NCAA Rules</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="nil-education">
+      <div class="subpage-detail-icon"><i class="ti ti-coin"></i></div>
+      <div>
+        <h3>NIL Education</h3>
+        <p>Learn how to build your brand, earn income, and grow long-term wealth as a student-athlete while staying NCAA compliant.</p>
+        <ul>
+          <li>Ways to Earn Through NIL</li>
+          <li>The NIL Roadmap</li>
+          <li>Compliance &amp; Tax Basics</li>
+          <li>Wealth-Building Blueprint</li>
+        </ul>
+        <a href="nil-education.html" class="btn-orange">Explore NIL Education</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="transferring">
+      <div class="subpage-detail-icon"><i class="ti ti-arrows-exchange"></i></div>
+      <div>
+        <h3>Transferring</h3>
+        <p>If your current program isn't the right fit, learn how the transfer portal works, your eligibility windows, and how to find your next home.</p>
+        <ul>
+          <li>Why Athletes Transfer</li>
+          <li>The Transfer Process</li>
+          <li>NCAA Eligibility Rules</li>
+          <li>What Coaches Look For</li>
+        </ul>
+        <a href="transferring.html" class="btn-orange">Explore Transferring</a>
+      </div>
+    </div>
+
+    <div class="subpage-detail" id="life-after-college">
+      <div class="subpage-detail-icon"><i class="ti ti-compass"></i></div>
+      <div>
+        <h3>Life After College</h3>
+        <p>Your college career is a chapter, not the whole book. Plan your transition, explore career pathways, and prepare for what's next.</p>
+        <ul>
+          <li>Managing the Transition</li>
+          <li>Career Pathways</li>
+          <li>The 30/60/90 Day Plan</li>
+        </ul>
+        <a href="life-after-college.html" class="btn-orange">Explore Life After College</a>
+      </div>
     </div>
   </div>
 </section>

@@ -34,6 +34,22 @@
   @media(max-width:900px){.path-steps{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.path-steps{grid-template-columns:1fr}}
 
+  /* QUICK LINKS BAR */
+  .quick-links-bar{display:flex;gap:0;border-bottom:0.5px solid #3d1f5a;overflow-x:auto;background:#150428;position:sticky;top:72px;z-index:90}
+  .quick-link{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8a68a8;text-decoration:none;padding:1rem 1.5rem;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;display:block}
+  .quick-link:hover{color:#e8d8ff;border-bottom-color:var(--gold)}
+
+  /* SUBPAGE DETAIL SECTIONS */
+  .subpage-detail{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2.5rem 0;border-bottom:0.5px solid #2e1448;align-items:start;scroll-margin-top:140px}
+  .subpage-detail:last-child{border-bottom:none}
+  .subpage-detail-icon{width:60px;height:60px;border-radius:50%;background:rgba(232,98,10,.12);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--gold);flex-shrink:0}
+  .subpage-detail h3{font-family:var(--serif);font-size:26px;font-weight:300;color:#e8d8ff;margin-bottom:.6rem}
+  .subpage-detail p{font-size:13px;color:#a888c8;line-height:1.8;margin-bottom:1rem;max-width:620px}
+  .subpage-detail ul{list-style:none;display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;margin-bottom:1.5rem}
+  .subpage-detail ul li{font-size:12px;color:#c8a8e8;padding-left:16px;position:relative}
+  .subpage-detail ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+  @media(max-width:600px){.subpage-detail{grid-template-columns:1fr}}
+
   /* FEATURE RESOURCE CARDS */
   .resource-feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
   .resource-feat-card{background:#200c40;border:0.5px solid #3d1f5a;padding:2rem;text-align:center}
@@ -91,6 +107,12 @@
       <a href="tennis-learning.html" class="btn-ghost">Start Learning</a>
     </div>
   </div>
+</div>
+
+<div class="quick-links-bar">
+  <a href="#learning" class="quick-link">Learning</a>
+  <a href="#training" class="quick-link">Training</a>
+  <a href="#competing" class="quick-link">Competing</a>
 </div>
 
 <section>
@@ -169,24 +191,54 @@
 <section>
   <div class="inner">
     <div class="eyebrow">Explore Tennis</div>
-    <h2 class="serif-h" style="font-size:40px">Choose your <em>focus.</em></h2>
-    <div class="resource-feat-grid">
-      <div class="resource-feat-card">
-        <i class="ti ti-book"></i>
-        <h4>Learning</h4>
-        <p>Foundational technique and the fundamentals every player needs to build a consistent game.</p>
+    <h2 class="serif-h" style="font-size:40px">What's inside <em>each area.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:640px">Here's what you'll find when you click into each section below.</p>
+
+    <div class="subpage-detail" id="learning">
+      <div class="subpage-detail-icon"><i class="ti ti-book"></i></div>
+      <div>
+        <h3>Learning</h3>
+        <p>A structured hub for mastering technique and strategy &mdash; the fundamentals every player needs before speed, power, or pressure get added in. Includes access to 1-on-1 coaching when you need personalized help fixing something specific.</p>
+        <ul>
+          <li>Stroke Development</li>
+          <li>Tactics &amp; Strategy</li>
+          <li>Footwork &amp; Movement</li>
+          <li>Serve &amp; Return</li>
+          <li>Mental Toughness</li>
+          <li>1-on-1 Coaching</li>
+        </ul>
         <a href="tennis-learning.html" class="btn-orange">Explore Learning</a>
       </div>
-      <div class="resource-feat-card">
-        <i class="ti ti-run"></i>
-        <h4>Training</h4>
-        <p>Structured drills and practice routines that turn lessons into lasting improvement.</p>
+    </div>
+
+    <div class="subpage-detail" id="training">
+      <div class="subpage-detail-icon"><i class="ti ti-run"></i></div>
+      <div>
+        <h3>Training</h3>
+        <p>How to structure your practice sessions so time on court actually translates to match improvement &mdash; covering the training pillars that matter and a simple framework for every session.</p>
+        <ul>
+          <li>Technical Reps</li>
+          <li>Live-Ball Drilling</li>
+          <li>Point Play &amp; Situations</li>
+          <li>Physical Conditioning</li>
+          <li>Recovery Between Sessions</li>
+        </ul>
         <a href="tennis-training.html" class="btn-orange">Explore Training</a>
       </div>
-      <div class="resource-feat-card">
-        <i class="ti ti-trophy"></i>
-        <h4>Competing</h4>
-        <p>Match strategy, tournament preparation, and how to compete at your peak level.</p>
+    </div>
+
+    <div class="subpage-detail" id="competing">
+      <div class="subpage-detail-icon"><i class="ti ti-trophy"></i></div>
+      <div>
+        <h3>Competing</h3>
+        <p>Everything about tournament play &mdash; a competition pathway by age, how to read tennis ratings like UTR and WTN, USTA leagues, and help building a smart, personalized competition plan.</p>
+        <ul>
+          <li>Competition Pathway by Age</li>
+          <li>Tennis Ratings Explained</li>
+          <li>USTA Tournament Levels</li>
+          <li>USTA Leagues</li>
+          <li>Competition Planning Help</li>
+        </ul>
         <a href="tennis-competing.html" class="btn-orange">Explore Competing</a>
       </div>
     </div>

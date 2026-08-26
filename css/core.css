@@ -51,6 +51,12 @@ section{border-bottom:0.5px solid #3d1f5a}
 .inner{max-width:1200px;margin:0 auto;padding:5rem 3rem}
 @media(max-width:768px){.inner{padding:3rem 1.5rem}}
 
+/* Center each section's intro (eyebrow/heading/intro copy) without
+   forcing alignment on nested grids, cards, or lists. */
+.inner>.eyebrow,.inner>.section-eyebrow{text-align:center}
+.inner>h2.serif-h,.inner>h2.serif-heading{text-align:center}
+.inner>p.body-copy{text-align:center;margin-left:auto;margin-right:auto}
+
 /* TYPOGRAPHY */
 .eyebrow,.section-eyebrow,.page-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a68a8;margin-bottom:1.5rem}
 .serif-h,.serif-heading{font-family:var(--serif);font-weight:300;line-height:1.1;color:#e8d8ff}
@@ -68,13 +74,15 @@ section{border-bottom:0.5px solid #3d1f5a}
 .btn-book{background:var(--gold);color:#fff;padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;transition:background .2s;text-decoration:none;display:inline-block;align-self:flex-start}
 .btn-book:hover{background:var(--gold-dk)}
 
-/* PAGE HERO — wide/left-aligned (hub pages: about, tennis, coaching, etc.) */
-.page-hero{background:var(--ink);padding:6rem 3rem 5rem;border-bottom:0.5px solid #3d1f5a}
+/* PAGE HERO — wide hero (hub pages: about, tennis, coaching, etc.) */
+.page-hero{background:var(--ink);padding:6rem 3rem 5rem;border-bottom:0.5px solid #3d1f5a;text-align:center}
 .page-hero-inner{max-width:1200px;margin:0 auto}
 .page-hero h1{font-family:var(--serif);font-size:60px;font-weight:300;line-height:1.05;color:var(--ivory)}
 .page-hero h1 em{font-style:italic;color:var(--gold)}
-.page-hero-sub{font-size:15px;color:#8a68a8;line-height:1.8;margin-top:1.5rem;max-width:560px}
-.page-hero-btns{display:flex;gap:14px;margin-top:2.5rem;flex-wrap:wrap}
+.page-hero-sub{font-size:15px;color:#8a68a8;line-height:1.8;margin-top:1.5rem;max-width:560px;margin-left:auto;margin-right:auto}
+.page-hero-btns{display:flex;gap:14px;margin-top:2.5rem;flex-wrap:wrap;justify-content:center}
+.hero-trust{justify-content:center}
+.hero-creds{justify-content:center}
 
 /* PAGE HERO — centered variant (content pages; add class page-hero--center) */
 .page-hero--center{padding:5rem 2rem 4rem;text-align:center;background:radial-gradient(ellipse at 60% 40%,#341460 0%,var(--ink) 65%)}
