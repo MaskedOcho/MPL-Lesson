@@ -115,10 +115,11 @@
     <li><a href="tennis.html" class="active">Tennis</a></li>
     <li><a href="athlete-development.html">Athlete Development</a></li>
     <li><a href="college-route.html">College Route</a></li>
+    <li><a href="library.html">Library</a></li>
     <li><a href="shop.html">Shop</a></li>
   </ul>
   <div class="nav-right">
-    <a href="members/" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a>
+    <div class="nav-account" id="navAccount"></div>
     <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   </div>
 </nav>
@@ -134,8 +135,27 @@
     <div class="feat-item"><i class="ti ti-chart-arrows"></i><h4>Improve</h4><p>Track progress and keep leveling up every day.</p></div>
   </div>
   <div class="hub-hero-btns">
-    <a href="members/#topic-tennis" class="btn-orange">Explore Drills &amp; Lessons</a>
-    <a href="members/#topic-tennis" class="btn-ghost">Watch Intro Video</a>
+    <a href="library.html" class="btn-orange">Explore Drills &amp; Lessons</a>
+    <a href="library.html" class="btn-ghost">Watch Intro Video</a>
+  </div>
+</div>
+
+<div class="lock-cta" id="visitorLockCta">
+  <i class="ti ti-lock-filled"></i>
+  <h3>Create a free account to unlock full access.</h3>
+  <p>You're seeing a preview. Sign up free, then upgrade to Performance Athlete or higher to unlock this page.</p>
+  <div class="lock-cta-btns">
+    <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-orange" target="_blank">Create Free Account</a>
+    <a href="login.html" class="btn-ghost-dark">Log In</a>
+  </div>
+</div>
+
+<div class="lock-cta" id="tierLockCta">
+  <i class="ti ti-lock-filled"></i>
+  <h3>This page needs a higher membership tier.</h3>
+  <p><span class="tier-lock-need">Performance Athlete or higher</span> unlocks this subpage. Upgrade anytime to get full access.</p>
+  <div class="lock-cta-btns">
+    <a href="index.html#membership" class="btn-orange">Upgrade Membership</a>
   </div>
 </div>
 
@@ -155,7 +175,7 @@
           <li><i class="ti ti-ball-tennis"></i><div><h5>Serve &amp; Return</h5><p>Develop a more consistent, effective serve and return.</p></div></li>
           <li><i class="ti ti-brain"></i><div><h5>Mental Toughness</h5><p>Train your mind to stay calm, focused, and confident.</p></div></li>
         </ul>
-        <a href="members/#topic-tennis" class="btn-ghost-dark" style="margin-top:1.5rem">View All Categories</a>
+        <a href="library.html" class="btn-ghost-dark" style="margin-top:1.5rem">View All Categories</a>
       </div>
       <div>
         <div class="learn-col-title">Drills to Build Confidence</div>
@@ -184,7 +204,7 @@
             <div class="drill-info"><h5>Defensive Recovery Drill</h5><p>Learn how to recover, reset, and turn defense into offense.</p><div class="drill-meta"><span class="level-tag">All Levels</span><span class="drill-time"><i class="ti ti-clock"></i>6:18</span></div></div>
           </div>
         </div>
-        <a href="members/#topic-tennis" class="btn-ghost-dark" style="margin-top:1.5rem">View All Drills</a>
+        <a href="library.html" class="btn-ghost-dark" style="margin-top:1.5rem">View All Drills</a>
       </div>
       <div>
         <div class="learn-col-title">Video Lessons &amp; Tips</div>
@@ -196,7 +216,7 @@
           <div class="video-item"><div class="video-item-thumb"><i class="ti ti-player-play"></i></div><div><h5>How to Read Your Opponent</h5><p>Anticipation, patterns, and decision-making.</p></div><span class="video-time">7:30</span></div>
           <div class="video-item"><div class="video-item-thumb"><i class="ti ti-player-play"></i></div><div><h5>3 Mental Shifts to Win More Matches</h5><p>Focus, belief, and composure under pressure.</p></div><span class="video-time">6:09</span></div>
         </div>
-        <a href="members/#topic-tennis" class="btn-ghost-dark" style="margin-top:1.5rem">Browse All Videos</a>
+        <a href="library.html" class="btn-ghost-dark" style="margin-top:1.5rem">Browse All Videos</a>
       </div>
     </div>
   </div>
@@ -312,7 +332,7 @@
         <a href="https://buy.stripe.com/5kQ5kFbj4ayiaKOcUOa3u0b" class="pricing-btn" target="_blank">Get Started</a>
       </div>
     </div>
-    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area &rarr;</a></p>
+    <p class="cta-signin">Already a member? <a href="login.html">Log In &rarr;</a></p>
   </div>
 </section>
 
@@ -338,6 +358,10 @@ document.querySelectorAll('.filter-tab').forEach(function(tab){
     });
   });
 });
+</script>
+<script type="module">
+  import { initPage } from './js/auth.js';
+  initPage({ gate: 'subpage' });
 </script>
 </body>
 </html>

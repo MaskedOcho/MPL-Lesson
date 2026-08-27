@@ -105,10 +105,11 @@
     <li><a href="tennis.html" class="active">Tennis</a></li>
     <li><a href="athlete-development.html">Athlete Development</a></li>
     <li><a href="college-route.html">College Route</a></li>
+    <li><a href="library.html">Library</a></li>
     <li><a href="shop.html">Shop</a></li>
   </ul>
   <div class="nav-right">
-    <a href="members/" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a>
+    <div class="nav-account" id="navAccount"></div>
     <button class="nav-mobile-toggle" id="mobileToggle" aria-label="Toggle navigation"><i class="ti ti-menu-2"></i></button>
   </div>
 </nav>
@@ -127,6 +128,16 @@
       <a href="tennis-training.html" class="btn-orange">Explore the Pathway</a>
       <a href="tennis-learning.html" class="btn-ghost">Start Learning</a>
     </div>
+  </div>
+</div>
+
+<div class="lock-cta" id="visitorLockCta">
+  <i class="ti ti-lock-filled"></i>
+  <h3>Create a free account to unlock full access.</h3>
+  <p>You're seeing a preview. Sign up free to unlock this entire page and every core educational page on the site.</p>
+  <div class="lock-cta-btns">
+    <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-orange" target="_blank">Create Free Account</a>
+    <a href="login.html" class="btn-ghost-dark">Log In</a>
   </div>
 </div>
 
@@ -322,7 +333,7 @@
           <li>Footwork &amp; movement</li>
           <li>Conditioning &amp; more</li>
         </ul>
-        <a href="members/#topic-tennis" class="btn-ghost">Browse Drills</a>
+        <a href="library.html" class="btn-ghost">Browse Drills</a>
       </div>
     </div>
   </div>
@@ -438,7 +449,7 @@
         <a href="https://buy.stripe.com/5kQ5kFbj4ayiaKOcUOa3u0b" class="pricing-btn" target="_blank">Get Started</a>
       </div>
     </div>
-    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area &rarr;</a></p>
+    <p class="cta-signin">Already a member? <a href="login.html">Log In &rarr;</a></p>
   </div>
 </section>
 <footer>
@@ -451,6 +462,10 @@
   <div class="footer-copy"><p>&copy; 2026 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8d8a9c">Built for athletes who want more.</p></div>
 </footer>
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
+<script type="module">
+  import { initPage } from './js/auth.js';
+  initPage({ gate: 'visitor' });
+</script>
 </body>
 </html>
 

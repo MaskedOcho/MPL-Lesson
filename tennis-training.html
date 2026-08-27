@@ -58,10 +58,11 @@
     <li><a href="tennis.html" class="active">Tennis</a></li>
     <li><a href="athlete-development.html">Athlete Development</a></li>
     <li><a href="college-route.html">College Route</a></li>
+    <li><a href="library.html">Library</a></li>
     <li><a href="shop.html">Shop</a></li>
   </ul>
   <div class="nav-right">
-    <a href="members/" class="nav-membership"><i class="ti ti-crown"></i> Membership Area</a>
+    <div class="nav-account" id="navAccount"></div>
     <button class="nav-mobile-toggle" id="mobileToggle">&#9776;</button>
   </div>
 </nav>
@@ -70,13 +71,30 @@
   <div class="page-eyebrow">Tennis</div>
   <h1 class="page-h">Training with <em>Purpose</em></h1>
   <p class="page-sub">Practice doesn't make perfect &mdash; purposeful practice does. How to structure your training sessions to build real, transferable game improvements.</p>
-</div>
-
   <div class="feat-grid">
     <div class="feat-item"><i class="ti ti-target"></i><h4>Structured Sessions</h4><p>Every practice has a clear purpose.</p></div>
     <div class="feat-item"><i class="ti ti-repeat"></i><h4>Purposeful Reps</h4><p>Quality repetition builds real change.</p></div>
     <div class="feat-item"><i class="ti ti-trending-up"></i><h4>Progressive Overload</h4><p>Each session builds on the last.</p></div>
     <div class="feat-item"><i class="ti ti-clipboard-check"></i><h4>Track &amp; Adjust</h4><p>Know what's working and what isn't.</p></div>
+  </div>
+</div>
+
+<div class="lock-cta" id="visitorLockCta">
+  <i class="ti ti-lock-filled"></i>
+  <h3>Create a free account to unlock full access.</h3>
+  <p>You're seeing a preview. Sign up free, then upgrade to Performance Athlete or higher to unlock this page.</p>
+  <div class="lock-cta-btns">
+    <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-orange" target="_blank">Create Free Account</a>
+    <a href="login.html" class="btn-ghost-dark">Log In</a>
+  </div>
+</div>
+
+<div class="lock-cta" id="tierLockCta">
+  <i class="ti ti-lock-filled"></i>
+  <h3>This page needs a higher membership tier.</h3>
+  <p><span class="tier-lock-need">Performance Athlete or higher</span> unlocks this subpage. Upgrade anytime to get full access.</p>
+  <div class="lock-cta-btns">
+    <a href="index.html#membership" class="btn-orange">Upgrade Membership</a>
   </div>
 </div>
 
@@ -176,7 +194,7 @@
         <a href="https://buy.stripe.com/5kQ5kFbj4ayiaKOcUOa3u0b" class="pricing-btn" target="_blank">Get Started</a>
       </div>
     </div>
-    <p class="cta-signin">Already a member? <a href="members/">Go to Membership Area &rarr;</a></p>
+    <p class="cta-signin">Already a member? <a href="login.html">Log In &rarr;</a></p>
   </div>
 </section>
 
@@ -190,6 +208,10 @@
   <div class="footer-copy"><p>&copy; 2026 MPL Pursuits LLC. All rights reserved.</p><p style="font-size:11px;color:#8d8a9c">Built for athletes who want more.</p></div>
 </footer>
 <script>document.getElementById('mobileToggle').addEventListener('click',function(){document.getElementById('navLinks').classList.toggle('open')});</script>
+<script type="module">
+  import { initPage } from './js/auth.js';
+  initPage({ gate: 'subpage' });
+</script>
 </body>
 </html>
 

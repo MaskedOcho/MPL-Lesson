@@ -190,3 +190,27 @@ footer{background:#160830;border-top:0.5px solid #2b2833;padding:4rem 3rem 2rem}
 .subpage-title{font-family:var(--serif);font-size:22px;font-weight:300;color:#EDEBF2;line-height:1.2}
 .subpage-desc{font-size:13px;color:#b6b2c2;line-height:1.7;flex:1}
 .subpage-link{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:.5rem}
+
+/* NAV ACCOUNT WIDGET — replaces the old "Membership Area" link once
+   logged in; #navAccount is populated by js/auth.js on every page. */
+.nav-account{display:flex;align-items:center;gap:10px}
+.nav-welcome{font-size:12px;color:#d6d3e0;white-space:nowrap}
+.nav-welcome strong{color:#EDEBF2;font-weight:600}
+.nav-tier-badge{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 8px;white-space:nowrap}
+.nav-logout{background:none;border:0.5px solid #3a3742;color:#8d8a9c;padding:5px 12px;font-size:10px;letter-spacing:1px;text-transform:uppercase;cursor:pointer;font-family:var(--sans);transition:all .2s}
+.nav-logout:hover{border-color:#fff;color:#fff}
+@media(max-width:900px){.nav-welcome{display:none}}
+@media(max-width:768px){.nav-tier-badge{display:none}}
+
+/* CONTENT LOCK — visitor preview (5% access) and tier-gated subpages.
+   Every <section> except pricing/CTA blurs; a sticky card floats over it
+   with the relevant unlock message. js/auth.js toggles the body classes
+   and CTA visibility based on login state and tier. */
+body.visitor-locked section:not(.cta-strip):not(.membership-cta),
+body.tier-locked section:not(.cta-strip):not(.membership-cta){filter:blur(6px);pointer-events:none;user-select:none}
+.lock-cta{display:none;position:sticky;top:110px;z-index:60;max-width:480px;margin:2rem auto;background:#fff;border:0.5px solid var(--border);box-shadow:0 10px 34px rgba(20,15,30,.2);padding:2.25rem 2.5rem;text-align:center;flex-direction:column;align-items:center;gap:.9rem}
+.lock-cta i{font-size:26px;color:var(--gold)}
+.lock-cta h3{font-family:var(--serif);font-size:20px;font-weight:400;color:#241c30}
+.lock-cta p{font-size:13px;color:#4a3f57;line-height:1.6;max-width:360px}
+.lock-cta .tier-lock-need{color:var(--gold);font-weight:600}
+.lock-cta .lock-cta-btns{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:.25rem}
