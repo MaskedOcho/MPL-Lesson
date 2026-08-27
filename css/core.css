@@ -20,20 +20,6 @@
 html{scroll-behavior:smooth;scroll-padding-top:88px}
 body{font-family:var(--sans);background:var(--ink);color:#EDEBF2}
 
-/* LIGHT SECTION VARIANT — apply to a <section> to break up long stretches
-   of dark background on content-heavy pages. Overrides the shared card/
-   text components (which assume a dark section bg) with light equivalents. */
-.section-light{background:var(--ivory);border-bottom:0.5px solid var(--border)}
-.section-light .eyebrow,.section-light .section-eyebrow,.section-light .page-eyebrow{color:#8a7a9c}
-.section-light .serif-h,.section-light .serif-heading,.section-light .col-title{color:#241c30}
-.section-light .body-copy,.section-light .col-body{color:#4a3f57}
-.section-light .pillar-card,.section-light .compare-card,.section-light .rating-card{background:#fff;border-color:var(--border)}
-.section-light .level-card,.section-light .age-card{background:#fff}
-.section-light .pillar-card h4,.section-light .level-card h4,.section-light .age-card h4,.section-light .rating-card h5{color:#241c30}
-.section-light .pillar-card p,.section-light .pillar-card ul li,.section-light .level-card p,.section-light .age-card p,.section-light .rating-card p{color:#5c5169}
-.section-light .matters-check li,.section-light .why-matters-list p,.section-light .level-row p{color:#332a3d}
-.section-light .why-matters-list h5,.section-light .level-row strong{color:#241c30}
-
 /* NAV */
 nav{position:sticky;top:0;z-index:100;background:#0d0c11;border-bottom:0.5px solid #2b2833;padding:0 2.5rem;height:72px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{display:flex;align-items:center;text-decoration:none;gap:10px}
@@ -62,8 +48,18 @@ nav{position:sticky;top:0;z-index:100;background:#0d0c11;border-bottom:0.5px sol
   .nav-login,.nav-cta{font-size:9px;padding:5px 10px}
 }
 
-/* LAYOUT */
-section{border-bottom:0.5px solid #2b2833}
+/* LAYOUT
+   Content sections are light by default (nav/hero/footer/CTA/pricing stay
+   dark as bookends). Two soft, low-opacity blobs give each section a hint
+   of purple/orange instead of a flat, sterile white. */
+section{
+  background:
+    radial-gradient(circle at 6% 12%, rgba(124,58,237,.10) 0%, transparent 42%),
+    radial-gradient(circle at 96% 88%, rgba(232,98,10,.09) 0%, transparent 42%),
+    var(--ivory);
+  border-bottom:0.5px solid var(--border);
+  color:#332a3d;
+}
 .inner{max-width:1200px;margin:0 auto;padding:5rem 3rem}
 @media(max-width:768px){.inner{padding:3rem 1.5rem}}
 
@@ -73,25 +69,34 @@ section{border-bottom:0.5px solid #2b2833}
 .inner>h2.serif-h,.inner>h2.serif-heading{text-align:center}
 .inner>p.body-copy{text-align:center;margin-left:auto;margin-right:auto}
 
-/* TYPOGRAPHY */
-.eyebrow,.section-eyebrow,.page-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8d8a9c;margin-bottom:1.5rem}
-.serif-h,.serif-heading{font-family:var(--serif);font-weight:300;line-height:1.1;color:#EDEBF2}
-.serif-h em,.serif-heading em{font-style:italic;color:var(--gold)}
-.body-copy{font-size:13px;color:#d6d3e0;line-height:1.85}
+/* TYPOGRAPHY — .page-eyebrow is excluded here on purpose: it's only ever
+   used inside the dark hero, where it needs to stay light-on-dark. */
+.eyebrow,.section-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8a7a9c;margin-bottom:1.5rem}
+.page-eyebrow{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:#8d8a9c;margin-bottom:1.5rem}
+.serif-h,.serif-heading{font-family:var(--serif);font-weight:300;line-height:1.1;color:#241c30}
+.serif-h em,.serif-heading em{font-style:italic;color:var(--gold-dk)}
+.body-copy{font-size:13px;color:#4a3f57;line-height:1.85}
 
 /* BUTTONS */
 .btn-orange{background:var(--gold);color:#fff;padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s;text-decoration:none;display:inline-block}
 .btn-orange:hover{background:var(--gold-dk)}
 .btn-ghost{background:none;color:var(--ivory);padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:0.5px solid rgba(255,255,255,.35);cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block;transition:all .2s}
 .btn-ghost:hover{border-color:#fff;background:rgba(100,50,150,.15)}
+/* Ghost button for use directly on a light section (not inside a dark
+   hero/card), where .btn-ghost's light-on-transparent styling disappears. */
+.btn-ghost-dark{background:none;color:#241c30;padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:0.5px solid #cabfd6;cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block;transition:all .2s}
+.btn-ghost-dark:hover{border-color:var(--purple);color:var(--purple)}
 .btn-ivory{background:var(--ink);color:#EDEBF2;padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block}
 .btn-white{background:#fff;color:var(--gold);padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;text-decoration:none;display:inline-block;margin:0 6px}
 .btn-white:hover{background:#0d0c11;color:var(--purple)}
 .btn-book{background:var(--gold);color:#fff;padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;transition:background .2s;text-decoration:none;display:inline-block;align-self:flex-start}
 .btn-book:hover{background:var(--gold-dk)}
 
-/* PAGE HERO — wide hero (hub pages: about, tennis, coaching, etc.) */
-.page-hero{background:var(--ink);padding:6rem 3rem 5rem;border-bottom:0.5px solid #2b2833;text-align:center}
+/* PAGE HERO — wide hero (hub pages: about, tennis, coaching, etc.)
+   No border-bottom: the ::after fade blends the dark hero into the light
+   section below instead of a hard line. */
+.page-hero{background:var(--ink);padding:6rem 3rem 5rem;text-align:center;position:relative}
+.page-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(to bottom,transparent,var(--ivory));pointer-events:none}
 .page-hero-inner{max-width:1200px;margin:0 auto}
 .page-hero h1{font-family:var(--serif);font-size:60px;font-weight:300;line-height:1.05;color:var(--ivory)}
 .page-hero h1 em{font-style:italic;color:var(--gold)}
