@@ -36,6 +36,58 @@
   .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
   .compare-card ul li{font-size:13px;color:#d6d3e0;padding-left:18px;position:relative;line-height:1.5}
   .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+
+  /* INTRO FRAMING ROW */
+  .intro-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;margin-top:2.5rem}
+  @media(max-width:700px){.intro-grid{grid-template-columns:1fr}}
+  .intro-item{text-align:center}
+  .intro-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .intro-item h4{font-family:var(--serif);font-size:18px;font-weight:400;color:#241c30;margin-bottom:.5rem}
+  .intro-item p{font-size:13px;color:#4a3f57;line-height:1.6}
+
+  /* TIMELINE (4-STEP) */
+  .timeline-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.timeline-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.timeline-grid{grid-template-columns:1fr}}
+  .timeline-step{text-align:center}
+  .timeline-badge{width:56px;height:56px;border-radius:50%;background:var(--purple);color:#fff;font-size:12px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto .85rem;text-align:center;line-height:1.2;padding:4px}
+  .timeline-step h4{font-size:14px;color:#241c30;margin-bottom:.4rem}
+  .timeline-step p{font-size:12px;color:#4a3f57;line-height:1.6}
+  .pull-quote{font-family:var(--serif);font-size:20px;font-style:italic;font-weight:400;color:#241c30;text-align:center;max-width:640px;margin:2.5rem auto 0;line-height:1.5}
+
+  /* PROCESS STEPS (5-STEP) */
+  .system-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;margin-top:2.5rem}
+  @media(max-width:900px){.system-steps{grid-template-columns:1fr 1fr 1fr}}
+  @media(max-width:560px){.system-steps{grid-template-columns:1fr 1fr}}
+  .system-step{text-align:center}
+  .system-step-num{width:44px;height:44px;border-radius:50%;background:var(--purple);color:#fff;font-size:16px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem}
+  .system-step h4{font-size:13px;color:#241c30;margin-bottom:.35rem}
+  .system-step p{font-size:11px;color:#4a3f57;line-height:1.5}
+
+  /* RULES GRID */
+  .rules-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+  @media(max-width:900px){.rules-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.rules-grid{grid-template-columns:1fr}}
+  .rule-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.5rem}
+  .rule-card i{font-size:20px;color:var(--gold);margin-bottom:.6rem;display:block}
+  .rule-card h4{font-family:var(--serif);font-size:16px;font-weight:400;color:#EDEBF2;margin-bottom:.5rem}
+  .rule-card p{font-size:12px;color:#b6b2c2;line-height:1.6}
+
+  /* CHECKLISTS (BEST PRACTICES / WHY MPL) */
+  .benefits-check{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.85rem 2rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:600px){.benefits-check{grid-template-columns:1fr}}
+  .benefits-check li{font-size:13px;color:#332a3d;padding-left:22px;position:relative;line-height:1.5}
+  .benefits-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* TRUST / CLOSING ICON ROW */
+  .trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem 2.5rem;margin-top:1.5rem}
+  .trust-row div{display:flex;align-items:center;gap:8px;font-size:12px;color:#332a3d}
+  .trust-row i{color:var(--gold);font-size:16px}
+
+  /* GUIDANCE LIST (inside cta-strip) */
+  .guidance-list{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:.6rem 1.75rem;margin:0 auto 2rem;max-width:680px;padding:0}
+  .guidance-list li{font-size:13px;color:rgba(255,255,255,.9);padding-left:20px;position:relative}
+  .guidance-list li::before{content:'\2713';position:absolute;left:0;color:#fff;font-weight:700}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
@@ -67,6 +119,19 @@
 
 <section>
   <div class="inner">
+    <div class="eyebrow">Your Recruiting Roadmap</div>
+    <h2 class="serif-h" style="font-size:36px">Clarity, confidence, <em>success.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">College recruiting has a lot of moving parts &mdash; divisions, timelines, rules, and outreach. This guide breaks the entire process down so you always know what's next and why it matters.</p>
+    <div class="intro-grid">
+      <div class="intro-item"><i class="ti ti-eye"></i><h4>Clarity</h4><p>See exactly how recruiting works, division by division, so nothing catches you off guard.</p></div>
+      <div class="intro-item"><i class="ti ti-shield-check"></i><h4>Confidence</h4><p>Know the rules, the timeline, and what coaches expect &mdash; and walk into every conversation prepared.</p></div>
+      <div class="intro-item"><i class="ti ti-trophy"></i><h4>Success</h4><p>Turn preparation into results &mdash; visits, offers, and a program that's the right fit for you.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
     <div class="division-grid">
       <div class="division-card">
         <h4>NCAA Division I (D1)</h4>
@@ -80,6 +145,7 @@
               <li>Intense schedules, frequent travel</li>
               <li>Scholarships available (headcount or equivalency)</li>
               <li>Recruiting can begin as early as freshman year</li>
+              <li>Coaches prioritize proven performance, tournament results, rankings, and consistency</li>
             </ul>
           </div>
           <div>
@@ -107,6 +173,7 @@
               <li>Partial athletic scholarships available</li>
               <li>Recruiting timeline typically later than D1</li>
               <li>Smaller campuses, more individual attention</li>
+              <li>Strong academic and athletic balance</li>
             </ul>
           </div>
           <div>
@@ -180,6 +247,109 @@
   <h2>Find the level that matches <em style="font-style:italic;color:#fff">your goals.</em></h2>
   <p>We'll help you honestly assess your level and find the division where you'll thrive academically and athletically.</p>
   <a href="mailto:mary.profit@gmail.com?subject=Division%20Fit%20Consultation" class="btn-white">Get a Division Assessment</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Recruiting Timeline At-a-Glance</div>
+    <h2 class="serif-h" style="font-size:36px">Know what to do, <em>and when.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Recruiting doesn't happen all at once &mdash; it builds year over year. Here's the general shape of the timeline, though exact rules vary by sport and division.</p>
+    <div class="timeline-grid">
+      <div class="timeline-step"><div class="timeline-badge">9th&ndash;10th</div><h4>Build Your Foundation</h4><p>Academics, training, and early exposure lay the groundwork for everything that follows.</p></div>
+      <div class="timeline-step"><div class="timeline-badge">11th</div><h4>Begin Coach Outreach</h4><p>Camps, tournaments, and showcases start putting you in front of the coaches who matter.</p></div>
+      <div class="timeline-step"><div class="timeline-badge">12th<br>Fall</div><h4>Evaluation &amp; Recruitment</h4><p>Coaches evaluate seriously &mdash; unofficial visits and early offers may begin.</p></div>
+      <div class="timeline-step"><div class="timeline-badge">12th<br>Winter/Spring</div><h4>Visits &amp; Commitments</h4><p>Official visits and verbal commitments bring the process to a close.</p></div>
+    </div>
+    <p class="pull-quote">&ldquo;Every sport is different. Know the rules. Work the plan. Trust the process.&rdquo;</p>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">How College Recruiting Works</div>
+    <h2 class="serif-h" style="font-size:36px">The same five steps, <em>in every sport.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Whatever sport you play, the recruiting process follows the same basic path from first research to final decision.</p>
+    <div class="system-steps">
+      <div class="system-step"><div class="system-step-num">1</div><h4>Research &amp; Identify</h4><p>Build a list of programs that match your academic, athletic, and financial goals.</p></div>
+      <div class="system-step"><div class="system-step-num">2</div><h4>Create a Strong Profile</h4><p>Put together grades, test scores, film, and stats coaches can act on.</p></div>
+      <div class="system-step"><div class="system-step-num">3</div><h4>Outreach to Coaches</h4><p>Introduce yourself directly &mdash; camps, emails, and events open doors.</p></div>
+      <div class="system-step"><div class="system-step-num">4</div><h4>Evaluation &amp; Recruitment</h4><p>Coaches assess fit through film, visits, and direct conversation.</p></div>
+      <div class="system-step"><div class="system-step-num">5</div><h4>Offers &amp; Decisions</h4><p>Compare offers and commit to the program that fits you best.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Important Rules to Know</div>
+    <h2 class="serif-h" style="font-size:36px">Don't get tripped up <em>by the fine print.</em></h2>
+    <div class="rules-grid">
+      <div class="rule-card"><i class="ti ti-gavel"></i><h4>NCAA Non-Negotiables</h4><p>Register with the NCAA Eligibility Center, meet core-course and GPA requirements, and know your sport's rules before you reach out to coaches.</p></div>
+      <div class="rule-card"><i class="ti ti-phone"></i><h4>Communication Rules Vary</h4><p>When coaches can call, text, or email you depends on your grad year, sport, and division &mdash; know your window before you expect a response.</p></div>
+      <div class="rule-card"><i class="ti ti-map-pin"></i><h4>Unofficial vs. Official Visits</h4><p>Unofficial visits are self-funded and unlimited; official visits are paid by the school and tightly regulated. Know the difference before you plan a trip.</p></div>
+      <div class="rule-card"><i class="ti ti-signature"></i><h4>Verbal vs. Signed Commitments</h4><p>A verbal commitment is a promise, not a contract &mdash; nothing is official until you sign a National Letter of Intent.</p></div>
+      <div class="rule-card"><i class="ti ti-school"></i><h4>Academics Come First</h4><p>Eligibility, scholarships, and roster spots all start with your transcript. Grades open doors that talent alone can't.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Best Practices for Athletes</div>
+    <h2 class="serif-h" style="font-size:36px">Habits that make you <em>easy to recruit.</em></h2>
+    <ul class="benefits-check">
+      <li>Keep your grades up</li>
+      <li>Build a strong highlight video</li>
+      <li>Respond to coaches promptly</li>
+      <li>Be honest about your level</li>
+      <li>Research programs thoroughly</li>
+      <li>Attend camps &amp; showcases</li>
+      <li>Communicate professionally</li>
+      <li>Have a backup plan</li>
+    </ul>
+    <p class="pull-quote">&ldquo;Coaches recruit the athlete, but people commit to the program.&rdquo;</p>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Why MPL Pursuits?</div>
+    <h2 class="serif-h" style="font-size:36px">Everything you need, <em>in one place.</em></h2>
+    <ul class="benefits-check">
+      <li>Sport-specific recruiting guides</li>
+      <li>Ready-to-send email templates</li>
+      <li>Step-by-step video tutorials</li>
+      <li>Expert advice from experienced coaches</li>
+      <li>Tools to evaluate your recruiting fit</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-strip">
+  <div class="eyebrow" style="color:rgba(255,255,255,.7)">Need 1-on-1 Guidance?</div>
+  <h2>Get a recruiting plan built <em style="font-style:italic;color:#fff">around you.</em></h2>
+  <p>Every athlete's path looks different. Work directly with a coach who can turn this roadmap into your plan.</p>
+  <ul class="guidance-list">
+    <li>Personalized Recruiting Plan</li>
+    <li>Profile &amp; Film Review</li>
+    <li>School &amp; Coach Recommendations</li>
+    <li>Email &amp; Communication Strategy</li>
+    <li>Q&amp;A &amp; Ongoing Support</li>
+  </ul>
+  <a href="mailto:mary.profit@gmail.com?subject=1-on-1%20Recruiting%20Guidance" class="btn-white">Book a 1-on-1 Session</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Ready to Start Your Journey?</div>
+    <h2 class="serif-h" style="font-size:36px">Your next <em>four steps.</em></h2>
+    <div class="trust-row">
+      <div><i class="ti ti-compass"></i> Explore the Hub</div>
+      <div><i class="ti ti-download"></i> Download Guides</div>
+      <div><i class="ti ti-user-plus"></i> Create a Free Account</div>
+      <div><i class="ti ti-rocket"></i> Start Building Your Future</div>
+    </div>
+  </div>
 </section>
 
 <section>

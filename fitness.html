@@ -17,6 +17,58 @@
   @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
 
+  /* HERO "WHY MPL" BOX */
+  .why-mpl-box{background:#100d14;border:0.5px solid var(--purple);padding:2rem 2.5rem;margin-top:2.5rem;text-align:left}
+  .why-mpl-box h3{font-family:var(--serif);font-size:19px;font-weight:400;color:#EDEBF2;margin-bottom:1.1rem;text-align:center}
+  .why-mpl-check{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.75rem 2rem}
+  @media(max-width:700px){.why-mpl-check{grid-template-columns:1fr}}
+  .why-mpl-check li{font-size:13px;color:#d6d3e0;padding-left:22px;position:relative;line-height:1.5}
+  .why-mpl-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* PULL QUOTE */
+  .pull-quote{font-family:var(--serif);font-size:20px;font-style:italic;font-weight:400;color:#241c30;text-align:center;max-width:640px;margin:2.5rem auto 0;line-height:1.5}
+  .pull-quote-cite{display:block;margin-top:.6rem;font-style:normal;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+
+  /* CTA STRIP ICON ROW */
+  .cta-icon-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem 3rem;margin-top:2rem}
+  .cta-icon-row div{display:flex;align-items:center;gap:8px;font-size:12px;color:#fff}
+  .cta-icon-row i{color:#fff;font-size:16px}
+
+  /* 1-ON-1 CHECKLIST (on dark cta-strip) */
+  .oneone-check{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;margin:1.5rem auto 0;max-width:760px;text-align:left}
+  @media(max-width:700px){.oneone-check{grid-template-columns:1fr}}
+  .oneone-check li{font-size:12px;color:#fff;padding-left:20px;position:relative;line-height:1.5}
+  .oneone-check li::before{content:'\2713';position:absolute;left:0;color:#fff;font-weight:700}
+
+  /* WHO IS THIS FOR */
+  .whofor-box{background:#1a1720;border:0.5px solid #2b2833;padding:2rem 2.5rem;margin-top:2.5rem}
+  .whofor-grid{display:grid;grid-template-columns:1fr 1fr;gap:.85rem 2rem;margin-bottom:1.25rem}
+  @media(max-width:600px){.whofor-grid{grid-template-columns:1fr}}
+  .whofor-grid li{list-style:none;font-size:13px;color:#d6d3e0;padding-left:22px;position:relative;line-height:1.5}
+  .whofor-grid li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+  .whofor-note{font-size:12px;color:#b6b2c2;line-height:1.6;border-top:0.5px solid #2b2833;padding-top:1rem}
+
+  /* TESTIMONIALS */
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.testi-grid{grid-template-columns:1fr}}
+  .testi-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.75rem;text-align:center}
+  .testi-card .stars{color:var(--gold);font-size:13px;margin-bottom:.85rem}
+  .testi-card blockquote{font-family:var(--serif);font-size:15px;font-style:italic;font-weight:400;color:#EDEBF2;line-height:1.6;margin-bottom:.85rem}
+  .testi-card cite{font-style:normal;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#8d8a9c}
+
+  /* STATS BAR */
+  .stats-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2.5rem 3.5rem;margin-top:2.5rem}
+  .stats-row div{text-align:center}
+  .stats-row .stat-val{font-family:var(--serif);font-size:32px;font-weight:400;color:var(--gold)}
+  .stats-row .stat-label{font-size:11px;color:#4a3f57;margin-top:.35rem;letter-spacing:.5px}
+
+  /* CLOSING TAGLINE ROW */
+  .tagline-row{text-align:center;margin-top:1.5rem}
+  .tagline-row p{font-family:var(--serif);font-size:19px;font-style:italic;color:#241c30;margin-bottom:1rem}
+  .tagline-check{display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem 2.5rem}
+  .tagline-check div{display:flex;align-items:center;gap:8px;font-size:12px;color:#332a3d}
+  .tagline-check i{color:var(--gold);font-size:16px}
+
   /* PILLAR CARDS */
   .pillar-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
   @media(max-width:900px){.pillar-grid{grid-template-columns:1fr 1fr}}
@@ -88,6 +140,16 @@
     <div class="feat-item"><i class="ti ti-barbell"></i><h4>Build Strength &amp; Confidence</h4><p>Handle pressure and perform at your highest level.</p></div>
     <div class="feat-item"><i class="ti ti-heart"></i><h4>Support Overall Health</h4><p>Energy, mental clarity, and long-term wellness.</p></div>
   </div>
+  <div class="why-mpl-box">
+    <h3>Why MPL Is the Best Place for Fitness Education</h3>
+    <ul class="why-mpl-check">
+      <li>Experienced coaches who've trained athletes at every level</li>
+      <li>Science-backed strategies, not fitness fads</li>
+      <li>Practical, actionable guidance you can use today</li>
+      <li>Content designed for tennis players &amp; athletes at every level</li>
+      <li>A supportive, accountable community behind you</li>
+    </ul>
+  </div>
 </div>
 
 <section>
@@ -100,6 +162,12 @@
         <h4>Strength</h4>
         <p>Build lean muscle and overall strength to generate more power and stability.</p>
         <ul><li>Full-body strength</li><li>Functional movements</li><li>Progressive overload</li><li>Core stability</li></ul>
+      </div>
+      <div class="pillar-card">
+        <i class="ti ti-clipboard-list"></i>
+        <h4>Workouts &amp; Training Programs</h4>
+        <p>Sport-specific and general fitness programs built for every level, from beginner to advanced.</p>
+        <ul><li>Tennis-specific programs</li><li>General fitness programs</li><li>Structured progressions</li><li>Programs for every level</li></ul>
       </div>
       <div class="pillar-card">
         <i class="ti ti-bolt"></i>
@@ -177,6 +245,7 @@
         </ul>
       </div>
     </div>
+    <p class="pull-quote">&ldquo;Great athletes aren't just born &mdash; they train with purpose. Your future self will thank you for the work you put in today.&rdquo;</p>
   </div>
 </section>
 
@@ -184,7 +253,64 @@
   <div class="eyebrow" style="color:rgba(255,255,255,.7)">Get Specific 1-on-1 Assistance</div>
   <h2>Ready to take your fitness <em style="font-style:italic;color:#fff">to the next level?</em></h2>
   <p>Custom guidance can help you break through plateaus, fix weaknesses, and create a plan that's tailored to your sport, goals, and experience level.</p>
-  <a href="mailto:mary.profit@gmail.com?subject=Book%20a%20Fitness%20Consultation" class="btn-white">Book a Consultation</a>
+  <ul class="oneone-check">
+    <li>Personalized assessments &amp; goal setting</li>
+    <li>Technique and movement analysis</li>
+    <li>Injury rehabilitation &amp; performance optimization</li>
+    <li>Accountability and ongoing support</li>
+  </ul>
+  <div class="cta-icon-row">
+    <div><i class="ti ti-clipboard-list"></i> Personalized Plan</div>
+    <div><i class="ti ti-message-circle"></i> Expert Feedback</div>
+    <div><i class="ti ti-rocket"></i> Faster Results</div>
+  </div>
+  <a href="mailto:mary.profit@gmail.com?subject=Book%20a%20Fitness%20Consultation" class="btn-white" style="margin-top:2rem">Book a Consultation</a>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Who Is This For?</div>
+    <h2 class="serif-h" style="font-size:36px">Built for athletes <em>at every stage.</em></h2>
+    <div class="whofor-box">
+      <ul class="whofor-grid">
+        <li>Athletes looking to improve performance</li>
+        <li>Players returning from injury</li>
+        <li>Those wanting expert guidance</li>
+        <li>Those wanting a tailored plan</li>
+      </ul>
+      <p class="whofor-note">Scheduling is flexible &mdash; virtual or in-person, a single session or ongoing support, built around your calendar.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">What Athletes Are Saying</div>
+    <h2 class="serif-h" style="font-size:36px">Results, <em>in their own words.</em></h2>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;My footwork and endurance have taken off since I started this program. I feel faster and stronger every match.&rdquo;</blockquote>
+        <cite>&mdash; College Tennis Player</cite>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;The workouts are easy to follow but actually challenging. I've gotten so much stronger this season.&rdquo;</blockquote>
+        <cite>&mdash; High School Athlete</cite>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote>&ldquo;Having a real plan instead of guessing at the gym has made all the difference in how I perform on court.&rdquo;</blockquote>
+        <cite>&mdash; Competitive Tennis Player</cite>
+      </div>
+    </div>
+    <div class="stats-row">
+      <div><div class="stat-val">500+</div><div class="stat-label">Workouts &amp; Drills</div></div>
+      <div><div class="stat-val">100+</div><div class="stat-label">Expert Guides &amp; Articles</div></div>
+      <div><div class="stat-val">200+</div><div class="stat-label">Step-by-Step Videos</div></div>
+      <div><div class="stat-val">24/7</div><div class="stat-label">Access Anywhere</div></div>
+    </div>
+  </div>
 </section>
 
 <section>
@@ -211,6 +337,19 @@
           <li>Personalized 1-on-1 guidance</li>
         </ul>
         <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="tagline-row">
+      <p>&ldquo;Train with purpose. Learn with confidence. Perform for life.&rdquo;</p>
+      <div class="tagline-check">
+        <div><i class="ti ti-circle-check"></i> Free Membership</div>
+        <div><i class="ti ti-circle-check"></i> Instant Access</div>
+        <div><i class="ti ti-circle-check"></i> Upgrade Anytime</div>
       </div>
     </div>
   </div>

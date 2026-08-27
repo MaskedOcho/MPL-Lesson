@@ -9,13 +9,13 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
 <style>
   /* ICON FEATURE ROW (hero) */
-  .feat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;margin-top:2.5rem}
+  .feat-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin-top:2.5rem}
   .feat-item{text-align:center}
   .feat-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
   .feat-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#EDEBF2;margin-bottom:.35rem}
   .feat-item p{font-size:11px;color:#b6b2c2;line-height:1.5}
-  @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
+  @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr 1fr}}
+  @media(max-width:560px){.feat-grid{grid-template-columns:1fr 1fr}}
 
   /* AGE PATHWAY */
   .age-path{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
@@ -34,6 +34,9 @@
   .rating-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.5rem}
   .rating-card h5{font-family:var(--serif);font-size:17px;font-weight:400;color:#EDEBF2;margin-bottom:.4rem}
   .rating-card p{font-size:12px;color:#b6b2c2;line-height:1.6}
+  .rating-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-top:.75rem}
+  .rating-card ul li{font-size:11px;color:#8d8a9c;padding-left:14px;position:relative}
+  .rating-card ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
 
   /* TWO COLUMN GENERIC */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;align-items:start}
@@ -90,9 +93,30 @@
   .matters-check li{font-size:12px;color:#332a3d;padding-left:20px;position:relative;line-height:1.5}
   .matters-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold-dk);font-weight:700}
 
+  /* TOURNAMENT TYPE CARDS */
+  .tourney-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.tourney-grid{grid-template-columns:1fr}}
+  .tourney-card{background:#1a1720;border:0.5px solid #2b2833;padding:2rem}
+  .tourney-card h4{font-family:var(--serif);font-size:19px;font-weight:400;color:#EDEBF2;margin-bottom:.6rem}
+  .tourney-desc{font-size:12px;color:#b6b2c2;line-height:1.7;margin-bottom:1.25rem}
+  .tourney-cols{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem}
+  @media(max-width:560px){.tourney-cols{grid-template-columns:1fr}}
+  .tourney-cols h6{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+  .tourney-cols ul{list-style:none;display:flex;flex-direction:column;gap:.35rem}
+  .tourney-cols ul li{font-size:11.5px;color:#b6b2c2;padding-left:14px;position:relative;line-height:1.5}
+  .tourney-cols ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+
+  /* NOT SURE WHAT RATINGS MEAN CALLOUT */
+  .rating-callout{text-align:center}
+  .rating-callout .help-plan-btns{margin:1.5rem auto 0}
+
   /* HELP PLANNING CTA ROW */
   .help-plan{background:#100d14;padding:3.5rem 3rem;border-bottom:0.5px solid #2b2833;text-align:center}
   .help-plan-btns{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;max-width:800px;margin:2rem auto 0}
+  .help-plan-check{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;max-width:700px;margin:1.5rem auto 0;text-align:left}
+  @media(max-width:600px){.help-plan-check{grid-template-columns:1fr}}
+  .help-plan-check li{font-size:12px;color:#d6d3e0;padding-left:20px;position:relative;line-height:1.5}
+  .help-plan-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
 
   .closing-strip{background:var(--ink);border-bottom:0.5px solid #2b2833;padding:1.5rem 2rem;text-align:center}
   .closing-strip p{font-size:12px;color:#b6b2c2;max-width:700px;margin:0 auto;line-height:1.7;font-style:italic}
@@ -138,6 +162,7 @@
     <div class="feat-item"><i class="ti ti-chart-line"></i><h4>Improve Rankings</h4><p>Track progress and set meaningful goals.</p></div>
     <div class="feat-item"><i class="ti ti-school"></i><h4>Earn Exposure</h4><p>Open doors to college and beyond.</p></div>
     <div class="feat-item"><i class="ti ti-heart"></i><h4>Have Fun</h4><p>Compete for life and enjoy the journey.</p></div>
+    <div class="feat-item"><i class="ti ti-target-arrow"></i><h4>Develop Skills</h4><p>Technical, tactical &amp; mental growth.</p></div>
   </div>
 </div>
 
@@ -151,25 +176,25 @@
         <i class="ti ti-mood-smile"></i>
         <h4>Ages 8&ndash;10</h4>
         <div class="age-sub">Learning the Game</div>
-        <p>Local, low-pressure events that build sportsmanship, confidence, and a love for the game.</p>
+        <p>Local, low-pressure events that build sportsmanship, confidence, and a love for the game. Popular events include USTA 8 &amp; Under Red Ball and USTA 10 &amp; Under Orange/Green Ball.</p>
       </div>
       <div class="age-card">
         <i class="ti ti-run"></i>
         <h4>Ages 11&ndash;14</h4>
         <div class="age-sub">Build Foundations</div>
-        <p>Consistent sectional play that starts building rankings and match toughness.</p>
+        <p>Consistent sectional play that starts building rankings and match toughness. Common events include USTA Level 7&ndash;5 Tournaments and UTR Events.</p>
       </div>
       <div class="age-card">
         <i class="ti ti-trophy"></i>
         <h4>Ages 15&ndash;18</h4>
         <div class="age-sub">Gain Exposure</div>
-        <p>Higher-level national and international events that shape recruiting opportunities.</p>
+        <p>Higher-level national and international events that shape recruiting opportunities. Key events include USTA Level 4&ndash;1 National Events, UTR Tournaments, ITF Junior Events, and ITA Events.</p>
       </div>
       <div class="age-card">
         <i class="ti ti-users"></i>
         <h4>18+ &amp; Beyond</h4>
         <div class="age-sub">Keep Competing</div>
-        <p>Adult tournaments and leagues keep the game &mdash; and the community &mdash; going for life.</p>
+        <p>Adult tournaments and leagues keep the game &mdash; and the community &mdash; going for life. Options include USTA Adult Tournaments and USTA Leagues.</p>
       </div>
     </div>
   </div>
@@ -235,10 +260,178 @@
       </div>
     </div>
     <div class="rating-grid" style="margin-top:2rem">
-      <div class="rating-card"><h5>WTN</h5><p>A global rating scale (lower is better) that's increasingly used for tournament seeding and coach evaluation.</p></div>
-      <div class="rating-card"><h5>UTR</h5><p>The Universal Tennis Rating &mdash; the number college coaches check most often for recruiting.</p></div>
-      <div class="rating-card"><h5>USTA Ranking</h5><p>Sectional and national rankings based on tournament results within the USTA system.</p></div>
-      <div class="rating-card"><h5>ITF Ranking</h5><p>International junior rankings that open the door to global competition and the pro pathway.</p></div>
+      <div class="rating-card">
+        <h5>WTN</h5>
+        <p>A global rating scale (lower is better) that's increasingly used for tournament seeding and coach evaluation.</p>
+        <ul>
+          <li>ITF Supported</li>
+          <li>Growing Rapidly</li>
+          <li>Tournament Placement</li>
+          <li>Global Comparison</li>
+        </ul>
+      </div>
+      <div class="rating-card">
+        <h5>UTR</h5>
+        <p>The Universal Tennis Rating &mdash; the number college coaches check most often for recruiting.</p>
+        <ul>
+          <li>Recruiting Tool</li>
+          <li>College Exposure</li>
+          <li>Match Analytics</li>
+          <li>Universal Rating</li>
+        </ul>
+      </div>
+      <div class="rating-card">
+        <h5>USTA Ranking</h5>
+        <p>Sectional and national rankings based on tournament results within the USTA system.</p>
+        <ul>
+          <li>Tournament Results</li>
+          <li>Sectional Competition</li>
+          <li>National Competition</li>
+          <li>Ranking Points</li>
+        </ul>
+      </div>
+      <div class="rating-card">
+        <h5>ITF Ranking</h5>
+        <p>International junior rankings that open the door to global competition and the pro pathway.</p>
+        <ul>
+          <li>International Competition</li>
+          <li>Global Exposure</li>
+          <li>Professional Pathway</li>
+          <li>ITF World Tennis Tour</li>
+        </ul>
+      </div>
+    </div>
+    <div class="rating-box" style="margin-top:2rem">
+      <h3>WTN vs. UTR</h3>
+      <div class="rating-sub">Two different systems &mdash; both worth understanding</div>
+      <table class="rating-table">
+        <tr><th>WTN</th><th>UTR</th></tr>
+        <tr><td>Managed by ITF</td><td>Managed by UTR Sports</td></tr>
+        <tr><td>Global federation system</td><td>Independent rating platform</td></tr>
+        <tr><td>Increasing use in USTA &amp; ITA</td><td>Widely used by college coaches</td></tr>
+        <tr><td>Measures playing ability</td><td>Measures playing ability</td></tr>
+        <tr><td>Used internationally</td><td>Used heavily in recruiting</td></tr>
+        <tr><td>Becoming more important annually</td><td>Currently dominant in recruiting</td></tr>
+      </table>
+      <p style="margin-top:.75rem;font-size:11px">Both systems are built to measure a player's actual on-court ability &mdash; they just go about it differently.</p>
+    </div>
+    <div class="rating-box rating-callout" style="margin-top:1.5rem">
+      <h3>Not Sure What Your Ratings Mean?</h3>
+      <p>We'll help you make sense of your numbers &mdash; and turn them into a plan.</p>
+      <div class="help-plan-btns">
+        <a href="mailto:mary.profit@gmail.com?subject=WTN%20Evaluation" class="btn-orange">WTN Evaluation</a>
+        <a href="mailto:mary.profit@gmail.com?subject=UTR%20Assessment" class="btn-ghost">UTR Assessment</a>
+        <a href="mailto:mary.profit@gmail.com?subject=Competition%20Planning%20Consultation" class="btn-ghost">Competition Planning Consultation</a>
+        <a href="mailto:mary.profit@gmail.com?subject=Recruiting%20Readiness%20Review" class="btn-ghost">Recruiting Readiness Review</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Tournament Types</div>
+    <h2 class="serif-h" style="font-size:36px">Know your options <em>before you enter.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Not every tournament type serves the same purpose. Here's what each one is for, why it matters, and what it takes to get started.</p>
+    <div class="tourney-grid">
+      <div class="tourney-card">
+        <h4>UTR Tournaments</h4>
+        <p class="tourney-desc">UTR-sanctioned events built to help you establish and grow a verified rating that coaches and players trust.</p>
+        <div class="tourney-cols">
+          <div>
+            <h6>Why It Matters</h6>
+            <ul>
+              <li>Recruiting visibility</li>
+              <li>Skill-based matching</li>
+              <li>Flexible entry</li>
+              <li>National database</li>
+            </ul>
+          </div>
+          <div>
+            <h6>Requirements</h6>
+            <ul>
+              <li>Create a UTR account</li>
+              <li>Verify results</li>
+              <li>Play sanctioned events</li>
+              <li>Track rating changes</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://www.myutr.com" class="btn-ghost" target="_blank">Learn More About UTR</a>
+      </div>
+      <div class="tourney-card">
+        <h4>ITF Junior Tournaments</h4>
+        <p class="tourney-desc">International junior competition for players ready to test themselves against top talent from around the world.</p>
+        <div class="tourney-cols">
+          <div>
+            <h6>Why It Matters</h6>
+            <ul>
+              <li>Global ranking points</li>
+              <li>International exposure</li>
+              <li>Pathway to pro tour</li>
+              <li>Strong college recruiting signal</li>
+            </ul>
+          </div>
+          <div>
+            <h6>Requirements</h6>
+            <ul>
+              <li>ITF player account</li>
+              <li>Age-eligible events</li>
+              <li>Travel for international play</li>
+              <li>Strong sectional/national results first</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://www.itftennis.com/en/tournament-calendar/junior-calendar/" class="btn-ghost" target="_blank">Explore ITF Juniors</a>
+      </div>
+      <div class="tourney-card">
+        <h4>ITA Tournaments</h4>
+        <p class="tourney-desc">ITA-sanctioned summer and collegiate-adjacent events that put you directly in front of college coaches.</p>
+        <div class="tourney-cols">
+          <div>
+            <h6>Why It Matters</h6>
+            <ul>
+              <li>Direct exposure to college coaches</li>
+              <li>College-style match formats</li>
+              <li>Regional &amp; national reach</li>
+              <li>Strong recruiting signal</li>
+            </ul>
+          </div>
+          <div>
+            <h6>Requirements</h6>
+            <ul>
+              <li>Age/eligibility rules vary by event</li>
+              <li>Registration through ITA</li>
+              <li>Some events invitation-based</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://www.itacollegetennis.com" class="btn-ghost" target="_blank">Learn More About ITA</a>
+      </div>
+      <div class="tourney-card">
+        <h4>USTA Adult &amp; Leagues</h4>
+        <p class="tourney-desc">Adult tournaments and league play built for lifelong competing &mdash; whatever your level or goals.</p>
+        <div class="tourney-cols">
+          <div>
+            <h6>Why It Matters</h6>
+            <ul>
+              <li>Flexible team-based competition</li>
+              <li>Community &amp; social play</li>
+              <li>Year-round opportunities</li>
+              <li>All skill levels welcome</li>
+            </ul>
+          </div>
+          <div>
+            <h6>Options</h6>
+            <ul>
+              <li>Local/sectional/national leagues</li>
+              <li>Combo leagues (men, women, mixed)</li>
+              <li>Age divisions (18+, 40+, 55+, 65+, 70+)</li>
+            </ul>
+          </div>
+        </div>
+        <a href="https://www.usta.com" class="btn-ghost" target="_blank">Find a League Near You</a>
+      </div>
     </div>
   </div>
 </section>
@@ -298,10 +491,20 @@
   <div class="eyebrow" style="color:#8d8a9c">Need Help Planning Your Competition Journey?</div>
   <h2 class="serif-h" style="font-size:32px;color:#EDEBF2">Not every athlete should play <em>every tournament.</em></h2>
   <p class="body-copy" style="margin:1rem auto 0;max-width:600px;color:#d6d3e0">We help athletes and families build a smart plan based on their goals, level, and resources &mdash; from tournament recommendations to college recruiting timelines.</p>
+  <ul class="help-plan-check">
+    <li>Tournament Recommendations</li>
+    <li>College Recruiting Timeline</li>
+    <li>ITF Readiness Evaluation</li>
+    <li>Long-Term Player Development</li>
+    <li>Budget &amp; Travel Planning</li>
+    <li>Schedule Optimization</li>
+    <li>Recruiting Strategy</li>
+  </ul>
   <div class="help-plan-btns">
     <a href="mailto:mary.profit@gmail.com?subject=Build%20My%20Competition%20Plan" class="btn-orange">Build My Competition Plan</a>
     <a href="mailto:mary.profit@gmail.com?subject=Recruiting%20Assessment" class="btn-ghost">Recruiting Assessment</a>
     <a href="mailto:mary.profit@gmail.com?subject=College%20Tennis%20Readiness%20Review" class="btn-ghost">College Readiness Review</a>
+    <a href="mailto:mary.profit@gmail.com?subject=Professional%20Tennis%20Pathway%20Consultation" class="btn-ghost">Professional Tennis Pathway Consultation</a>
   </div>
 </section>
 

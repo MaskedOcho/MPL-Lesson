@@ -90,6 +90,18 @@
   .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
   .compare-card ul li{font-size:13px;color:#d6d3e0;padding-left:18px;position:relative;line-height:1.5}
   .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+
+  /* TRUST BAR */
+  .trust-bar{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2rem}
+  @media(max-width:900px){.trust-bar{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.trust-bar{grid-template-columns:1fr}}
+  .trust-bar-item{text-align:center}
+  .trust-bar-item i{font-size:22px;color:var(--gold);margin-bottom:.6rem;display:block}
+  .trust-bar-item h5{font-size:13px;color:#241c30;margin-bottom:.3rem}
+  .trust-bar-item p{font-size:11px;color:#6b6578;line-height:1.5}
+
+  /* CLOSING TAGLINE */
+  .closing-tagline{font-family:var(--serif);font-size:16px;font-style:italic;font-weight:400;color:#EDEBF2;margin-bottom:.9rem}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
@@ -123,6 +135,7 @@
   </div>
   <div class="hub-hero-btns">
     <a href="members/#topic-tennis" class="btn-orange">Explore Drills &amp; Lessons</a>
+    <a href="members/#topic-tennis" class="btn-ghost">Watch Intro Video</a>
   </div>
 </div>
 
@@ -241,6 +254,19 @@
   </div>
 </section>
 
+<section>
+  <div class="inner" style="padding-bottom:2rem">
+    <div class="eyebrow">Why MPL Pursuits</div>
+    <h2 class="serif-h" style="font-size:32px">Built to help you <em>actually improve.</em></h2>
+    <div class="trust-bar">
+      <div class="trust-bar-item"><i class="ti ti-award"></i><h5>Expert Coaching</h5><p>Learn from experienced coaches and players.</p></div>
+      <div class="trust-bar-item"><i class="ti ti-device-mobile"></i><h5>Anytime, Anywhere</h5><p>Access on any device, anytime you want.</p></div>
+      <div class="trust-bar-item"><i class="ti ti-stairs-up"></i><h5>Step-by-Step Progression</h5><p>From fundamentals to advanced game mastery.</p></div>
+      <div class="trust-bar-item"><i class="ti ti-trophy"></i><h5>Built for Real Results</h5><p>Train smarter. Play better. Win more.</p></div>
+    </div>
+  </div>
+</section>
+
 <div class="more-ways-strip">
   <div class="more-ways-icons">
     <div><i class="ti ti-notebook"></i><h5>Blog &amp; Articles</h5></div>
@@ -248,7 +274,10 @@
     <div><i class="ti ti-brain"></i><h5>Court Smarts</h5></div>
   </div>
   <p class="more-ways-quote">&ldquo;The more you learn, the more dangerous you become.&rdquo; &mdash; MPL Pursuits</p>
-  <a href="index.html#membership" class="btn-orange">Ready to Take Your Game to the Next Level?</a>
+  <div>
+    <p class="closing-tagline">Start learning today. Start winning tomorrow.</p>
+    <a href="index.html#membership" class="btn-orange">Ready to Take Your Game to the Next Level?</a>
+  </div>
 </div>
 
 <section class="membership-cta">

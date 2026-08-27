@@ -25,12 +25,42 @@
   .income-item i{color:var(--gold);font-size:16px}
 
   /* ROADMAP STEPS */
-  .roadmap-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  .roadmap-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
   @media(max-width:768px){.roadmap-steps{grid-template-columns:1fr 1fr}}
   @media(max-width:500px){.roadmap-steps{grid-template-columns:1fr}}
   .roadmap-step{background:#1a1720;border-top:3px solid var(--gold);padding:1.5rem;text-align:center}
   .roadmap-num{width:34px;height:34px;border-radius:50%;background:var(--purple);color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem}
   .roadmap-step h4{font-size:13px;color:#EDEBF2}
+  .roadmap-step ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-top:.75rem;text-align:left}
+  .roadmap-step ul li{font-size:11px;color:#b6b2c2;padding-left:14px;position:relative;line-height:1.5}
+  .roadmap-step ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+
+  /* WHY NIL MATTERS */
+  .matters-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;margin-top:2.5rem}
+  @media(max-width:900px){.matters-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.matters-grid{grid-template-columns:1fr}}
+  .matters-item{text-align:center}
+  .matters-item i{font-size:24px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .matters-item h4{font-size:14px;color:#241c30;margin-bottom:.4rem}
+  .matters-item p{font-size:12px;color:#4a3f57;line-height:1.5}
+
+  /* WHAT MOST ATHLETES DON'T KNOW */
+  .pitfall-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.pitfall-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.pitfall-grid{grid-template-columns:1fr}}
+  .pitfall-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.75rem}
+  .pitfall-card i{font-size:24px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .pitfall-card h4{font-family:var(--serif);font-size:16px;font-weight:400;color:#EDEBF2;margin-bottom:.5rem}
+  .pitfall-card p{font-size:12px;color:#b6b2c2;line-height:1.6}
+
+  /* EXPLORE MORE NIL RESOURCES */
+  .locked-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
+  @media(max-width:768px){.locked-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.locked-grid{grid-template-columns:1fr}}
+  .locked-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.5rem;position:relative;display:flex;align-items:center;gap:12px}
+  .locked-card i{color:var(--gold);font-size:18px;flex-shrink:0}
+  .locked-card span{font-size:13px;color:#d6d3e0;line-height:1.4}
+  .locked-card::after{content:'Members Only';position:absolute;top:10px;right:10px;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 7px;background:#100d14}
 
   /* TWO COL */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:2.5rem;align-items:start}
@@ -86,11 +116,25 @@
 
 <section>
   <div class="inner">
+    <div class="eyebrow">The Opportunity</div>
+    <h2 class="serif-h" style="font-size:36px">Why NIL <em>matters.</em></h2>
+    <div class="matters-grid">
+      <div class="matters-item"><i class="ti ti-cash"></i><h4>Earn Before Going Pro</h4><p>Start generating real income while you're still competing in college.</p></div>
+      <div class="matters-item"><i class="ti ti-briefcase"></i><h4>Build Career Opportunities</h4><p>Turn NIL relationships into internships, jobs, and connections after school.</p></div>
+      <div class="matters-item"><i class="ti ti-wallet"></i><h4>Develop Financial Independence</h4><p>Learn to manage your own money and rely less on outside support.</p></div>
+      <div class="matters-item"><i class="ti ti-trending-up"></i><h4>Create Long-Term Wealth</h4><p>Use early income and experience to build habits that last well past graduation.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
     <div class="eyebrow">Understanding NIL</div>
     <h2 class="serif-h" style="font-size:36px">Ways to earn <em>through NIL.</em></h2>
     <p class="body-copy" style="margin-top:.75rem;max-width:680px">Name, Image, and Likeness gives athletes the ability to earn income from their personal brand through endorsements and more &mdash; while learning entrepreneurship, marketing, and wealth-building at the same time.</p>
     <div class="income-grid">
       <div class="income-item"><i class="ti ti-circle-check"></i> Brand Endorsements</div>
+      <div class="income-item"><i class="ti ti-circle-check"></i> Sponsorships</div>
       <div class="income-item"><i class="ti ti-circle-check"></i> Paid Appearances</div>
       <div class="income-item"><i class="ti ti-circle-check"></i> Merchandise Sales</div>
       <div class="income-item"><i class="ti ti-circle-check"></i> Coaching &amp; Training Services</div>
@@ -107,10 +151,54 @@
     <div class="eyebrow">The NIL Roadmap</div>
     <h2 class="serif-h" style="font-size:36px">Start local. <em>Scale nationally.</em></h2>
     <div class="roadmap-steps">
-      <div class="roadmap-step"><div class="roadmap-num">1</div><h4>Stay Compliant</h4></div>
-      <div class="roadmap-step"><div class="roadmap-num">2</div><h4>Create a Professional Setup</h4></div>
-      <div class="roadmap-step"><div class="roadmap-num">3</div><h4>Start With Local Partnerships</h4></div>
-      <div class="roadmap-step"><div class="roadmap-num">4</div><h4>Scale Nationally</h4></div>
+      <div class="roadmap-step">
+        <div class="roadmap-num">1</div><h4>Stay Compliant</h4>
+        <ul>
+          <li>Report your NIL activities</li>
+          <li>Keep detailed records</li>
+          <li>Get approval when required</li>
+        </ul>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-num">2</div><h4>Create a Professional Setup</h4>
+        <ul>
+          <li>Business email</li>
+          <li>Media kit</li>
+          <li>Rate sheet</li>
+        </ul>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-num">3</div><h4>Build Your Personal Brand</h4>
+        <ul>
+          <li>Find your niche &mdash; performance, lifestyle, leadership, motivation, fashion, or health &amp; wellness</li>
+        </ul>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-num">4</div><h4>Grow Your Audience</h4>
+        <ul>
+          <li>Focus on engagement</li>
+          <li>Stay consistent</li>
+          <li>Be authentic</li>
+          <li>Build real influence</li>
+        </ul>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-num">5</div><h4>Start With Local Partnerships</h4>
+        <ul>
+          <li>Gyms</li>
+          <li>Restaurants</li>
+          <li>Local businesses</li>
+          <li>Training facilities</li>
+        </ul>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-num">6</div><h4>Scale Nationally</h4>
+        <ul>
+          <li>Join NIL marketplaces</li>
+          <li>Pitch to larger brands</li>
+          <li>Seek long-term partnerships</li>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -126,18 +214,56 @@
           <li>Follow NCAA, conference, and college-specific policies</li>
           <li>Disclose your NIL deals as required</li>
           <li>Ask questions &mdash; staying informed protects your eligibility</li>
+          <li>Never use your school's marks, logos, or facilities in promotions without written permission</li>
+          <li>Don't accept compensation tied to athletic performance or enrollment</li>
+          <li>Avoid deals in prohibited categories &mdash; alcohol, gambling, tobacco, adult content, and similar industries</li>
         </ul>
       </div>
       <div>
         <div class="col-title">NIL Tax Basics</div>
         <p class="body-copy" style="margin-bottom:1rem">Always consult a tax professional for guidance specific to you.</p>
         <ul class="nil-check">
-          <li>Know which tax forms you'll receive</li>
+          <li>1099-NEC reports nonemployee compensation from brand deals</li>
+          <li>1099-K reports payments made through third-party platforms like PayPal or Venmo</li>
+          <li>W-9 gives payers your tax information before they pay you</li>
+          <li>Set aside 25&ndash;35% of every NIL payment for taxes</li>
+          <li>Track all income and expenses year-round, not just at tax time</li>
+          <li>Consider quarterly estimated tax payments to avoid surprises</li>
+          <li>NIL athletes are typically treated as independent contractors, not employees</li>
           <li>Ordinary and necessary business expenses may be deductible</li>
-          <li>Set aside a portion of NIL income for taxes</li>
-          <li>Keep receipts and records of all NIL-related deals</li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Maximize Your Deductions</div>
+    <h2 class="serif-h" style="font-size:36px">Deductible business <em>expenses.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Ordinary and necessary expenses tied to your NIL activity may reduce your taxable income. Always confirm with a tax professional.</p>
+    <div class="income-grid">
+      <div class="income-item"><i class="ti ti-circle-check"></i> Training Equipment</div>
+      <div class="income-item"><i class="ti ti-circle-check"></i> Travel for Appearances</div>
+      <div class="income-item"><i class="ti ti-circle-check"></i> Phone &amp; Internet</div>
+      <div class="income-item"><i class="ti ti-circle-check"></i> Camera &amp; Lighting Equipment</div>
+      <div class="income-item"><i class="ti ti-circle-check"></i> Website Hosting &amp; Design</div>
+      <div class="income-item"><i class="ti ti-circle-check"></i> Merchandise Production</div>
+      <div class="income-item"><i class="ti ti-circle-check"></i> Agent Fees</div>
+      <div class="income-item"><i class="ti ti-circle-check"></i> Gym Memberships</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Protect Yourself</div>
+    <h2 class="serif-h" style="font-size:36px">What most athletes <em>don't know.</em></h2>
+    <div class="pitfall-grid">
+      <div class="pitfall-card"><i class="ti ti-percentage"></i><h4>Agent Fees</h4><p>Agents commonly take 10&ndash;20% of your earnings &mdash; know the cost before you sign.</p></div>
+      <div class="pitfall-card"><i class="ti ti-file-alert"></i><h4>Contract Risks</h4><p>Watch for exclusivity clauses, automatic renewals, ownership language, and long-term rights that outlast the deal.</p></div>
+      <div class="pitfall-card"><i class="ti ti-fingerprint"></i><h4>Protect Your Identity</h4><p>Never give up ownership of your name, image, likeness, or future content &mdash; no matter how good the offer looks.</p></div>
+      <div class="pitfall-card"><i class="ti ti-users"></i><h4>NIL Collectives</h4><p>Most collectives are donor-funded, not guaranteed income &mdash; funding can change year to year.</p></div>
     </div>
   </div>
 </section>
@@ -152,14 +278,35 @@
         <li>Focus on long-term partnerships over one-off deals</li>
         <li>Create your own products for ownership and higher margins</li>
         <li>Build an email list to reach your audience directly</li>
+        <li>Monetize your brand strategically</li>
+        <li>Stay consistent, professional, and patient</li>
       </ul>
       <ul class="nil-check">
         <li>Invest your earnings wisely and save consistently</li>
         <li>Protect your reputation &mdash; it opens doors long-term</li>
         <li>Agents are optional; collectives are not the same as NIL deals</li>
         <li>Understand your school's specific NIL restrictions</li>
+        <li>Protect your income with tax planning and compliance</li>
+        <li>Avoid harmful contracts and protect your rights</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Go Deeper</div>
+    <h2 class="serif-h" style="font-size:36px">Explore more <em>NIL resources.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Members get full access to in-depth guides that walk you through every part of building and protecting your NIL business.</p>
+    <div class="locked-grid">
+      <div class="locked-card"><i class="ti ti-lock-filled"></i><span>How to Build a Personal Brand as an Athlete</span></div>
+      <div class="locked-card"><i class="ti ti-lock-filled"></i><span>How to Set NIL Pricing</span></div>
+      <div class="locked-card"><i class="ti ti-lock-filled"></i><span>LLC vs. Sole Proprietor for NIL Athletes</span></div>
+      <div class="locked-card"><i class="ti ti-lock-filled"></i><span>How to Avoid Bad NIL Contracts</span></div>
+      <div class="locked-card"><i class="ti ti-lock-filled"></i><span>How to Invest NIL Money Safely</span></div>
+      <div class="locked-card"><i class="ti ti-lock-filled"></i><span>NIL Tax Planning Guide</span></div>
+    </div>
+    <a href="members/" class="btn-ghost-dark" style="margin-top:1.5rem">Unlock Full Access</a>
   </div>
 </section>
 

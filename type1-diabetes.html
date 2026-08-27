@@ -49,6 +49,31 @@
   .challenge-card h5{font-size:12px;color:var(--gold);letter-spacing:.5px;margin-bottom:.4rem}
   .challenge-card p{font-size:12px;color:#b6b2c2;line-height:1.5}
 
+  /* HERO PULL QUOTE */
+  .hero-pull-quote{font-family:var(--serif);font-size:19px;font-style:italic;font-weight:300;color:#EDEBF2;max-width:600px;margin:2.5rem auto 0;line-height:1.6}
+  .hero-pull-quote span{display:block;font-size:11px;font-style:normal;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-top:.75rem}
+
+  /* BENEFITS ROW */
+  .benefit-row{display:grid;grid-template-columns:repeat(4,1fr);gap:1.75rem;margin-top:2.5rem}
+  @media(max-width:900px){.benefit-row{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.benefit-row{grid-template-columns:1fr}}
+  .benefit-item{text-align:center}
+  .benefit-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .benefit-item h4{font-family:var(--serif);font-size:16px;font-weight:400;color:#241c30;margin-bottom:.4rem}
+  .benefit-item p{font-size:12px;color:#4a3f57;line-height:1.5}
+
+  /* RESOURCE LIBRARY */
+  .resource-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.5rem}
+  @media(max-width:600px){.resource-grid{grid-template-columns:1fr}}
+  .resource-item{background:#1a1720;border:0.5px solid #2b2833;padding:1rem 1.25rem;font-size:13px;color:#d6d3e0;display:flex;align-items:center;gap:10px}
+  .resource-item i{color:var(--gold);font-size:16px;flex-shrink:0}
+
+  /* BLUEPRINT CHECKLIST */
+  .blueprint-check{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.85rem 2rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:600px){.blueprint-check{grid-template-columns:1fr}}
+  .blueprint-check li{font-size:13px;color:#332a3d;padding-left:22px;position:relative;line-height:1.5}
+  .blueprint-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
   /* FREE VS PREMIUM */
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
   @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
@@ -93,6 +118,7 @@
     <div class="feat-item"><i class="ti ti-run"></i><h4>Exercise Strategies</h4><p>Learn how different exercise types affect blood sugar before, during, and after.</p></div>
     <div class="feat-item"><i class="ti ti-shield-check"></i><h4>Health &amp; Safety</h4><p>Reduce risks, handle emergencies, and build confidence in every situation.</p></div>
   </div>
+  <p class="hero-pull-quote">&ldquo;You don't have to be perfect, you just have to be prepared.&rdquo;<span>Keep Competing</span></p>
 </div>
 
 <section>
@@ -101,6 +127,19 @@
       <h3 style="font-family:var(--serif);font-size:19px;font-weight:400;color:#EDEBF2;margin-bottom:.75rem">Understanding Type 1 Diabetes</h3>
       <p>Type 1 Diabetes is an autoimmune condition in which the body stops producing insulin. Insulin is required for glucose to enter cells and be used for energy. Exercise, nutrition, stress, illness, and other factors can cause blood sugar levels to rise or fall.</p>
       <p style="margin-top:.75rem">With proper education and preparation, athletes with Type 1 Diabetes can perform at the highest levels while staying safe.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Why It Matters</div>
+    <h2 class="serif-h" style="font-size:36px">The right systems <em>change everything.</em></h2>
+    <div class="benefit-row">
+      <div class="benefit-item"><i class="ti ti-trending-up"></i><h4>Improve Performance</h4><p>Stable blood sugar means more consistent energy on court.</p></div>
+      <div class="benefit-item"><i class="ti ti-mood-smile"></i><h4>Reduce Fear</h4><p>Preparation replaces uncertainty with confidence.</p></div>
+      <div class="benefit-item"><i class="ti ti-repeat"></i><h4>Increase Consistency</h4><p>Reliable routines lead to reliable results.</p></div>
+      <div class="benefit-item"><i class="ti ti-shield-check"></i><h4>Stay Safe</h4><p>Know your plan before you need it.</p></div>
     </div>
   </div>
 </section>
@@ -140,7 +179,7 @@
           <li>Monitor glucose before, during, and after activity</li>
           <li>Have an emergency plan &mdash; know what to do and who to contact</li>
           <li>Communicate with coaches about your needs</li>
-          <li>Know the early warning signs of hypoglycemia</li>
+          <li>Know the early warning signs of hypoglycemia &mdash; shaky, dizzy, sweaty, confused, irritated, or sudden hunger</li>
         </ul>
       </div>
     </div>
@@ -159,6 +198,38 @@
       <div class="challenge-card"><h5>Competition Anxiety</h5><p>Use routines and breathing techniques to stay calm under pressure.</p></div>
       <div class="challenge-card"><h5>Overnight Recovery</h5><p>Monitor before bed and be prepared for delayed lows after hard sessions.</p></div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Resources Library</div>
+    <h2 class="serif-h" style="font-size:36px">Everything you need, <em>members only.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">A full library of guides and tools built specifically for athletes managing Type 1 Diabetes.</p>
+    <div class="resource-grid">
+      <div class="resource-item"><i class="ti ti-lock"></i> Type 1 Diabetes Performance Guide</div>
+      <div class="resource-item"><i class="ti ti-lock"></i> Competition Day Planning</div>
+      <div class="resource-item"><i class="ti ti-lock"></i> Blood Sugar Tracking System</div>
+      <div class="resource-item"><i class="ti ti-lock"></i> Nutrition Strategies</div>
+      <div class="resource-item"><i class="ti ti-lock"></i> Travel Preparation Checklist</div>
+      <div class="resource-item"><i class="ti ti-lock"></i> Parent &amp; Coach Education Guide</div>
+    </div>
+    <a href="members/#topic-athlete-dev" class="btn-ghost-dark" style="margin-top:1.5rem">View All Resources</a>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Blueprint</div>
+    <h2 class="serif-h" style="font-size:36px">The Diabetes Athlete <em>Success Blueprint.</em></h2>
+    <ul class="blueprint-check">
+      <li>Know Your Numbers</li>
+      <li>Prepare Before Training</li>
+      <li>Fuel Properly</li>
+      <li>Monitor Consistently</li>
+      <li>Recover Effectively</li>
+      <li>Compete With Confidence</li>
+    </ul>
   </div>
 </section>
 

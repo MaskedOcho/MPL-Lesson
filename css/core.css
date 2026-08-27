@@ -113,11 +113,11 @@ section{
 /* CONTENT PAGE BODY */
 .content-wrap{max-width:820px;margin:0 auto;padding:4rem 2rem}
 .content-section{margin-bottom:3rem}
-.content-section h2{font-family:var(--serif);font-size:clamp(26px,3vw,36px);font-weight:300;color:#EDEBF2;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:0.5px solid #2b2833}
-.content-section h3{font-family:var(--serif);font-size:20px;font-weight:400;color:#d6d3e0;margin:1.5rem 0 .5rem}
-.content-section p{font-size:14px;color:#d6d3e0;line-height:1.9;margin-bottom:1rem}
+.content-section h2{font-family:var(--serif);font-size:clamp(26px,3vw,36px);font-weight:300;color:#241c30;margin-bottom:1rem;padding-bottom:.75rem;border-bottom:0.5px solid var(--border)}
+.content-section h3{font-family:var(--serif);font-size:20px;font-weight:400;color:#332a3d;margin:1.5rem 0 .5rem}
+.content-section p{font-size:14px;color:#332a3d;line-height:1.9;margin-bottom:1rem}
 .content-section ul{padding-left:1.25rem;margin-bottom:1rem}
-.content-section ul li{font-size:14px;color:#d6d3e0;line-height:1.85;margin-bottom:.4rem}
+.content-section ul li{font-size:14px;color:#332a3d;line-height:1.85;margin-bottom:.4rem}
 
 /* CTA STRIP */
 .cta-strip{background:var(--gold);padding:5rem 3rem;text-align:center}

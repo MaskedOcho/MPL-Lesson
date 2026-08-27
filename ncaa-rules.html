@@ -14,12 +14,19 @@
   .notice-box p{font-size:12px;color:#b6b2c2;line-height:1.6;text-align:left}
 
   /* COMMS GRID */
-  .comms-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
-  @media(max-width:768px){.comms-grid{grid-template-columns:1fr}}
+  .comms-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.comms-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.comms-grid{grid-template-columns:1fr}}
   .comms-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.75rem}
   .comms-card i{font-size:22px;color:var(--gold);margin-bottom:.75rem;display:block}
   .comms-card h4{font-size:15px;color:#EDEBF2;margin-bottom:.5rem}
   .comms-card p{font-size:12px;color:#b6b2c2;line-height:1.6}
+  .comms-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-top:.6rem}
+  .comms-card ul li{font-size:11px;color:#b6b2c2;padding-left:14px;position:relative;line-height:1.5}
+  .comms-card ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+  .mini-label{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--gold);margin-top:.75rem;margin-bottom:.35rem}
+  .key-takeaway{background:#100d14;border-left:2px solid var(--gold);padding:.6rem .75rem;margin-top:.75rem}
+  .key-takeaway p{font-size:11px;color:#d6d3e0;line-height:1.5;margin-top:0}
 
   /* CALENDAR GRID */
   .calendar-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
@@ -41,6 +48,54 @@
   .myth-card .myth-text{font-size:13px;color:#EDEBF2;font-style:italic;margin-bottom:.9rem}
   .myth-card .reality-label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.4rem}
   .myth-card .reality-text{font-size:12px;color:#b6b2c2;line-height:1.6}
+
+  /* DIVISION BREAKDOWN */
+  .division-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.division-grid{grid-template-columns:1fr}}
+  .division-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.75rem}
+  .division-card h4{font-size:16px;color:#EDEBF2;margin-bottom:.6rem}
+  .division-card p{font-size:12px;color:#b6b2c2;line-height:1.6}
+
+  /* SPORT-SPECIFIC CALENDARS */
+  .sport-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin-top:2rem;max-width:900px}
+  @media(max-width:768px){.sport-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.sport-grid{grid-template-columns:1fr}}
+  .sport-grid a{background:#1a1720;border:0.5px solid #2b2833;color:#d6d3e0;font-size:12px;text-align:center;padding:.85rem .5rem;text-decoration:none;transition:border-color .2s}
+  .sport-grid a:hover{border-color:var(--gold);color:#EDEBF2}
+  .calendar-note{font-size:11px;color:#8a7a9c;margin-top:1rem;max-width:680px}
+
+  /* RECRUITING TIMELINE REALITY */
+  .timeline-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.timeline-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.timeline-grid{grid-template-columns:1fr}}
+  .timeline-item{border-top:3px solid var(--gold);padding-top:1rem}
+  .timeline-year{font-family:var(--serif);font-size:16px;color:#241c30;margin-bottom:.5rem}
+  .timeline-item p{font-size:12px;color:#4a3f57;line-height:1.6}
+
+  /* KEY RECRUITING FACTS */
+  .facts-check{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.85rem 2rem;margin-top:2.5rem;max-width:820px}
+  @media(max-width:600px){.facts-check{grid-template-columns:1fr}}
+  .facts-check li{font-size:13px;color:#332a3d;padding-left:22px;position:relative;line-height:1.5}
+  .facts-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* PRACTICAL STRATEGY */
+  .strategy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem 1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.strategy-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.strategy-grid{grid-template-columns:1fr}}
+  .strategy-item{text-align:center}
+  .strategy-num{width:40px;height:40px;border-radius:50%;background:var(--purple);color:#fff;font-size:15px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem}
+  .strategy-item h4{font-size:13px;color:#241c30;margin-bottom:.35rem}
+  .strategy-item p{font-size:11px;color:#4a3f57;line-height:1.5}
+
+  /* OFFICIAL RESOURCES */
+  .resource-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.resource-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.resource-grid{grid-template-columns:1fr}}
+  .resource-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.5rem;display:block;text-decoration:none;transition:border-color .2s}
+  .resource-card:hover{border-color:var(--gold)}
+  .resource-card i{font-size:20px;color:var(--gold);margin-bottom:.6rem;display:block}
+  .resource-card h4{font-size:13px;color:#EDEBF2;margin-bottom:.4rem}
+  .resource-card p{font-size:11px;color:#b6b2c2;line-height:1.5}
 
   /* FREE VS PREMIUM */
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
@@ -91,9 +146,54 @@
     <div class="eyebrow">Communication Rules</div>
     <h2 class="serif-h" style="font-size:36px">How coaches can <em>reach you.</em></h2>
     <div class="comms-grid">
-      <div class="comms-card"><i class="ti ti-phone"></i><h4>Phone Calls</h4><p>Calls are governed by sport-specific communication dates. These rules differ by sport and division.</p></div>
-      <div class="comms-card"><i class="ti ti-message-circle"></i><h4>Text &amp; Direct Messaging</h4><p>Texting and social media DMs have become common as NCAA rules continue to evolve around them.</p></div>
-      <div class="comms-card"><i class="ti ti-brand-instagram"></i><h4>Social Media Recruiting</h4><p>Coaches assess character and maturity online &mdash; in reality, your public presence becomes part of your recruiting profile.</p></div>
+      <div class="comms-card">
+        <i class="ti ti-phone"></i>
+        <h4>Phone Calls</h4>
+        <p>Calls are governed by sport-specific communication dates. These rules differ by sport and division. Athletes, however, may call coaches at any time &mdash; it's only coach-initiated calls that NCAA rules restrict.</p>
+        <div class="key-takeaway"><div class="mini-label">Key Takeaway</div><p>A lack of response doesn't mean a lack of interest &mdash; coaches may simply be restricted by NCAA rules during certain periods.</p></div>
+      </div>
+      <div class="comms-card">
+        <i class="ti ti-message-circle"></i>
+        <h4>Text &amp; Direct Messaging</h4>
+        <p>Texting and social media DMs have become common as NCAA rules continue to evolve around them. Because these rules can change by division and sport, review the recruiting calendar for your sport annually to stay current.</p>
+      </div>
+      <div class="comms-card">
+        <i class="ti ti-brand-instagram"></i>
+        <h4>Social Media Recruiting</h4>
+        <p>Coaches assess character and maturity online &mdash; in reality, your public presence becomes part of your recruiting profile. Many coaches review public profiles before ever initiating contact.</p>
+        <div class="mini-label">What Coaches Evaluate</div>
+        <ul>
+          <li>Athletic performance</li>
+          <li>Character &amp; maturity</li>
+          <li>Competition results</li>
+          <li>Recruiting interest</li>
+        </ul>
+      </div>
+      <div class="comms-card">
+        <i class="ti ti-mail"></i>
+        <h4>Email Communication</h4>
+        <p>Email remains one of the most reliable, unrestricted ways to reach coaches &mdash; make every message count.</p>
+        <div class="mini-label">Best Practices</div>
+        <ul>
+          <li>Use a professional email address</li>
+          <li>Include your graduation year</li>
+          <li>Include GPA &amp; test scores</li>
+          <li>Attach highlight video links</li>
+          <li>Personalize every message</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">NCAA Division Breakdown</div>
+    <h2 class="serif-h" style="font-size:36px">D1, D2, D3 &mdash; <em>know the difference.</em></h2>
+    <div class="division-grid">
+      <div class="division-card"><h4>Division I</h4><p>The most competitive level, with full athletic scholarships available and the earliest, most aggressive recruiting timelines.</p></div>
+      <div class="division-card"><h4>Division II</h4><p>Offers athletic scholarships (often partial), with a slightly slower recruiting pace and more balance between academics and athletics.</p></div>
+      <div class="division-card"><h4>Division III</h4><p>No athletic scholarships are offered &mdash; recruiting centers on academic fit, and admissions timelines often matter more than athletic ones.</p></div>
     </div>
   </div>
 </section>
@@ -110,7 +210,9 @@
       </div>
       <div class="calendar-card">
         <h4>Evaluation Period</h4>
-        <p>Coaches may observe athletes at competitions, showcases, and camps to gather information &mdash; rather than direct recruiting.</p>
+        <p>Coaches may observe athletes at competitions, showcases, camps, and tournaments to gather information &mdash; rather than direct recruiting.</p>
+        <div class="mini-label">What's Being Evaluated</div>
+        <ul><li>Skill level</li><li>Athletic upside</li><li>Character</li><li>Competitive behavior</li><li>Coachability</li></ul>
       </div>
       <div class="calendar-card">
         <h4>Quiet Period</h4>
@@ -122,11 +224,60 @@
       <div class="calendar-card">
         <h4>Dead Period</h4>
         <div class="allow-label">Allowed</div>
-        <ul><li>Text messages &amp; video calls</li><li>Digital communication</li></ul>
+        <ul><li>Text messages &amp; video calls</li><li>Email</li><li>Phone calls (if permitted)</li><li>Digital communication</li></ul>
         <div class="deny-label">Not Allowed</div>
         <ul><li>Meeting recruits in person</li><li>Visiting schools or attending competitions</li></ul>
       </div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Sport-Specific Recruiting Calendars</div>
+    <h2 class="serif-h" style="font-size:36px">Every sport, <em>its own timeline.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Recruiting windows are sport-specific and division-specific &mdash; use the official NCAA calendar for your sport before you plan any outreach, visits, or events.</p>
+    <div class="sport-grid">
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Baseball</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Basketball</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Football</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Soccer</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Volleyball</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Tennis</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Golf</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Lacrosse</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Swimming &amp; Diving</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Track &amp; Field / Cross Country</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Wrestling</a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank">Gymnastics</a>
+    </div>
+    <p class="calendar-note">Exact contact, evaluation, quiet, and dead period windows vary by sport and division and are updated by the NCAA &mdash; always confirm current dates rather than relying on prior years.</p>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Recruiting Timeline Reality</div>
+    <h2 class="serif-h" style="font-size:36px">What to focus on, <em>year by year.</em></h2>
+    <div class="timeline-grid">
+      <div class="timeline-item"><div class="timeline-year">Freshman</div><p>Build foundational skills, establish strong academic habits, and start learning how recruiting works.</p></div>
+      <div class="timeline-item"><div class="timeline-year">Sophomore</div><p>Begin building exposure &mdash; attend camps and showcases, and start a highlight video.</p></div>
+      <div class="timeline-item"><div class="timeline-year">Junior</div><p>Increase outreach to coaches, take standardized tests, and build a target school list.</p></div>
+      <div class="timeline-item"><div class="timeline-year">Senior</div><p>Finalize official visits, communicate directly with coaches, and make your commitment decision.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Key Recruiting Facts</div>
+    <h2 class="serif-h" style="font-size:36px">What every family <em>should know.</em></h2>
+    <ul class="facts-check">
+      <li>Coaches often recruit 1&ndash;3 years ahead of a player's graduation year.</li>
+      <li>Evaluation includes academics, character, and coachability &mdash; not just athletic skill.</li>
+      <li>Division III offers no athletic scholarships.</li>
+      <li>Recruiting is timeline-driven, so starting early matters.</li>
+    </ul>
   </div>
 </section>
 
@@ -159,6 +310,34 @@
         <div class="reality-label">Reality</div>
         <div class="reality-text">Academics, character, and potential are critical parts of the evaluation.</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Practical Strategy</div>
+    <h2 class="serif-h" style="font-size:36px">A smarter approach <em>for athletes.</em></h2>
+    <div class="strategy-grid">
+      <div class="strategy-item"><div class="strategy-num">1</div><h4>Build Exposure Early</h4><p>Get on coaches' radar well before your graduation year.</p></div>
+      <div class="strategy-item"><div class="strategy-num">2</div><h4>Maintain Academic Eligibility</h4><p>Grades and test scores open doors just as much as performance.</p></div>
+      <div class="strategy-item"><div class="strategy-num">3</div><h4>Track Sport-Specific Calendars</h4><p>Know your sport's contact, evaluation, quiet, and dead periods.</p></div>
+      <div class="strategy-item"><div class="strategy-num">4</div><h4>Build Verified Results &amp; Video</h4><p>Rankings, stats, and highlight film back up your name.</p></div>
+      <div class="strategy-item"><div class="strategy-num">5</div><h4>Diversify Communication</h4><p>Don't rely on one channel &mdash; combine email, calls, and social media.</p></div>
+      <div class="strategy-item"><div class="strategy-num">6</div><h4>Think in a Timeline</h4><p>Recruiting is timeline-driven &mdash; starting early is the advantage.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Official NCAA Recruiting Resources</div>
+    <h2 class="serif-h" style="font-size:36px">Go straight <em>to the source.</em></h2>
+    <div class="resource-grid">
+      <a href="https://www.ncaa.org/recruiting" target="_blank" class="resource-card"><i class="ti ti-external-link"></i><h4>NCAA Recruiting Homepage</h4><p>The NCAA's official overview of recruiting rules and guidelines.</p></a>
+      <a href="https://www.ncaa.org/sports/2018/12/3/recruiting-calendars.aspx" target="_blank" class="resource-card"><i class="ti ti-calendar"></i><h4>Division I &amp; II Recruiting Calendars</h4><p>Sport-by-sport contact, evaluation, quiet, and dead period dates.</p></a>
+      <a href="https://on.ncaa.com/EligibilityCenter" target="_blank" class="resource-card"><i class="ti ti-certificate"></i><h4>NCAA Eligibility Center</h4><p>Register and confirm your academic &amp; amateurism eligibility.</p></a>
+      <a href="https://www.ncaa.org" target="_blank" class="resource-card"><i class="ti ti-world"></i><h4>NCAA Official Website</h4><p>The full library of NCAA rules, news, and resources.</p></a>
     </div>
   </div>
 </section>

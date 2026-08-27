@@ -47,6 +47,69 @@
   .hydration-steps li::before{content:'\2192';position:absolute;left:0;color:var(--gold)}
   .hydration-steps strong{display:block;color:#241c30;font-size:11px;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px}
 
+  /* WHY NUTRITION MATTERS GRID */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.75rem;margin-top:2.5rem}
+  @media(max-width:900px){.why-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.why-grid{grid-template-columns:1fr}}
+  .why-item{text-align:center}
+  .why-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .why-item h4{font-family:var(--serif);font-size:16px;font-weight:400;color:#241c30;margin-bottom:.4rem}
+  .why-item p{font-size:12px;color:#4a3f57;line-height:1.5}
+
+  /* NUTRITION IMPACTS CHECKLIST */
+  .impact-grid{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.6rem 2rem;margin-top:2rem;max-width:760px}
+  @media(max-width:600px){.impact-grid{grid-template-columns:1fr}}
+  .impact-grid li{font-size:13px;color:#332a3d;padding-left:22px;position:relative;line-height:1.6}
+  .impact-grid li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
+  /* DEHYDRATION BOX */
+  .dehydration-box{background:#1a1720;border:0.5px solid #2b2833;padding:1.75rem 2rem;margin-top:2.5rem}
+  .dehydration-box h4{font-family:var(--serif);font-size:18px;font-weight:400;color:#EDEBF2;margin-bottom:1rem}
+  .dehydration-box ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:.5rem 2rem;margin-bottom:1rem}
+  @media(max-width:600px){.dehydration-box ul{grid-template-columns:1fr}}
+  .dehydration-box ul li{font-size:12px;color:#b6b2c2;padding-left:14px;position:relative}
+  .dehydration-box ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+  .dehydration-box .tip{font-size:11px;color:#8d8a9c;line-height:1.6;border-top:0.5px solid #2b2833;padding-top:.9rem}
+
+  /* PRE/POST WORKOUT */
+  .workout-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:768px){.workout-grid{grid-template-columns:1fr}}
+  .workout-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.75rem}
+  .workout-card h4{font-family:var(--serif);font-size:19px;font-weight:400;color:#EDEBF2;margin-bottom:.3rem}
+  .workout-card .macro-tag{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-bottom:.9rem}
+  .workout-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-bottom:.9rem}
+  .workout-card ul li{font-size:12px;color:#b6b2c2;padding-left:14px;position:relative}
+  .workout-card ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+  .workout-card .macro-sources{font-size:11px;color:#8d8a9c;line-height:1.6}
+  .anabolic-note{font-size:13px;color:#4a3f57;line-height:1.85;max-width:680px;margin-top:1.5rem}
+  .anabolic-note strong{color:#241c30}
+
+  /* SUPPLEMENTS */
+  .supp-intro{font-size:13px;color:#4a3f57;line-height:1.85;max-width:680px;margin-top:.75rem}
+  .supp-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2rem}
+  @media(max-width:768px){.supp-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:480px){.supp-grid{grid-template-columns:1fr}}
+  .supp-item{background:#1a1720;border:0.5px solid #2b2833;padding:1.25rem}
+  .supp-item h5{font-size:13px;color:#EDEBF2;margin-bottom:.35rem}
+  .supp-item p{font-size:11px;color:#b6b2c2;line-height:1.5}
+
+  /* DAILY ACTIVITY GRID */
+  .daily-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
+  @media(max-width:900px){.daily-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:500px){.daily-grid{grid-template-columns:1fr}}
+  .daily-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.25rem 1.5rem}
+  .daily-card h5{font-family:var(--serif);font-size:15px;font-weight:400;color:#EDEBF2;margin-bottom:.6rem}
+  .daily-card ul{list-style:none;display:flex;flex-direction:column;gap:.3rem}
+  .daily-card ul li{font-size:11px;color:#b6b2c2;padding-left:14px;position:relative;line-height:1.5}
+  .daily-card ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
+
+  /* CLOSING TAGLINE */
+  .tagline-strip{text-align:center;margin-top:1rem}
+  .tagline-strip p{font-family:var(--serif);font-size:22px;font-style:italic;font-weight:400;color:#241c30;line-height:1.5}
+  .tagline-icons{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem 2.5rem;margin-top:1.5rem}
+  .tagline-icons div{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:#332a3d;text-transform:uppercase;letter-spacing:1px}
+  .tagline-icons i{color:var(--gold);font-size:20px}
+
   /* FREE VS PREMIUM */
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
   @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
@@ -97,6 +160,41 @@
 
 <section>
   <div class="inner">
+    <div class="eyebrow">Why Nutrition Matters</div>
+    <h2 class="serif-h" style="font-size:36px">Every choice, <em>a competitive edge.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">What you eat doesn't just fill you up &mdash; it fuels how you move, recover, think, and feel every single day. Here's how nutrition shows up in your game.</p>
+    <div class="why-grid">
+      <div class="why-item"><i class="ti ti-bolt"></i><h4>Performance</h4><p>Proper fueling gives you the energy to train harder and compete at your peak.</p></div>
+      <div class="why-item"><i class="ti ti-refresh"></i><h4>Recovery</h4><p>The right nutrients repair muscle and reduce soreness between sessions.</p></div>
+      <div class="why-item"><i class="ti ti-shield-check"></i><h4>Immunity</h4><p>Balanced nutrition keeps your immune system strong through heavy training loads.</p></div>
+      <div class="why-item"><i class="ti ti-brain"></i><h4>Mental Edge</h4><p>Stable blood sugar and hydration sharpen focus and decision-making on court.</p></div>
+      <div class="why-item"><i class="ti ti-scale"></i><h4>Body Composition</h4><p>Smart food choices help you build strength while staying lean and mobile.</p></div>
+      <div class="why-item"><i class="ti ti-heart"></i><h4>Long-Term Health</h4><p>Good habits today protect your body for a long, healthy career.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Full Picture</div>
+    <h2 class="serif-h" style="font-size:36px">Nutrition impacts <em>every area.</em></h2>
+    <ul class="impact-grid">
+      <li>Increases Energy &amp; Endurance</li>
+      <li>Improves Strength &amp; Power</li>
+      <li>Enhances Focus &amp; Mental Clarity</li>
+      <li>Speeds Recovery &amp; Reduces Soreness</li>
+      <li>Supports Immune Function</li>
+      <li>Builds Lean Muscle</li>
+      <li>Improves Body Composition</li>
+      <li>Supports Hormone Balance</li>
+      <li>Reduces Injury Risk</li>
+      <li>Supports Long-Term Health</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
     <div class="eyebrow">The Building Blocks</div>
     <h2 class="serif-h" style="font-size:36px">Macronutrients: <em>build, fuel, support.</em></h2>
     <p class="body-copy" style="margin-top:.75rem;max-width:680px">Macronutrients are the nutrients your body needs in large amounts to fuel performance, support growth, and maintain daily function. There's no single "perfect" nutrient &mdash; it's the balance that creates results.</p>
@@ -131,6 +229,7 @@
           <li>Aids absorption of vitamins A, D, E, K</li>
           <li>Provides long-lasting energy</li>
           <li>Supports brain and heart health</li>
+          <li>Reduces inflammation</li>
         </ul>
         <div class="macro-sources">Best sources: avocados, nuts, seeds, olive oil, nut butters, fatty fish, eggs.</div>
       </div>
@@ -152,6 +251,7 @@
       <div class="micro-item"><h5>Magnesium</h5><p>Muscle function &amp; recovery.</p></div>
       <div class="micro-item"><h5>Potassium</h5><p>Fluid balance &amp; muscle function.</p></div>
       <div class="micro-item"><h5>Sodium</h5><p>Fluid balance &amp; nerve function.</p></div>
+      <div class="micro-item"><h5>Zinc</h5><p>Immune function &amp; tissue repair.</p></div>
     </div>
   </div>
 </section>
@@ -177,9 +277,134 @@
         <ul class="hydration-steps">
           <li><strong>Before</strong>Drink 16&ndash;24 oz of water 2&ndash;3 hours before activity, then another 8&ndash;12 oz 10&ndash;20 minutes before you start.</li>
           <li><strong>During</strong>Drink 7&ndash;10 oz every 10&ndash;20 minutes and include electrolytes for longer sessions.</li>
-          <li><strong>After</strong>Refuel within 30&ndash;60 minutes to replace fluid and electrolytes lost in sweat.</li>
+          <li><strong>After</strong>Refuel within 2 hours, drinking 16&ndash;24 oz of fluid for every pound of body weight lost.</li>
+          <li><strong>How Much Will You Sweat</strong>Weigh yourself before and after exercise &mdash; for every pound lost, replace it with roughly 16&ndash;32 oz of fluid.</li>
+          <li><strong>Electrolyte Replenishment</strong>Replace electrolytes based on your sweat loss, intensity, duration, and environment &mdash; through sports drinks, electrolyte tablets, coconut water, or whole foods.</li>
         </ul>
       </div>
+    </div>
+    <div class="dehydration-box">
+      <h4>What Dehydration Can Cause</h4>
+      <ul>
+        <li>Decreased strength &amp; endurance</li>
+        <li>Increased fatigue</li>
+        <li>Slower reaction time</li>
+        <li>Higher perceived effort</li>
+        <li>Muscle cramps</li>
+        <li>Headaches &amp; dizziness</li>
+        <li>Impaired focus &amp; decision-making</li>
+        <li>Increased heat-illness risk</li>
+      </ul>
+      <p class="tip">Tip: Urine color is a simple, reliable indicator of hydration &mdash; pale yellow means you're well hydrated, dark yellow means it's time to drink up.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Daily Habits</div>
+    <h2 class="serif-h" style="font-size:36px">Replenish <em>every day.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Fluid and electrolyte loss isn't just a workout problem &mdash; heat, travel, school days, and everyday activity all add up. Building daily habits keeps you topped off before you ever step on court.</p>
+    <div class="daily-grid">
+      <div class="daily-card">
+        <h5>Everyday Sources of Loss</h5>
+        <ul>
+          <li>Heat &amp; humidity</li>
+          <li>Air travel &amp; car rides</li>
+          <li>Long school or study days</li>
+          <li>Illness &amp; poor sleep</li>
+        </ul>
+      </div>
+      <div class="daily-card">
+        <h5>How to Replenish Daily</h5>
+        <ul>
+          <li>Drink water consistently, not just around workouts</li>
+          <li>Add electrolytes on hot or high-sweat days</li>
+          <li>Eat water-rich foods &mdash; fruit, vegetables, soup</li>
+          <li>Keep a water bottle with you at all times</li>
+        </ul>
+      </div>
+      <div class="daily-card">
+        <h5>Daily Habits for Balance</h5>
+        <ul>
+          <li>Drink a glass of water first thing in the morning</li>
+          <li>Sip fluids steadily through the day, not all at once</li>
+          <li>Check in with yourself before and after activity</li>
+          <li>Prioritize sleep &mdash; it affects fluid balance too</li>
+        </ul>
+      </div>
+      <div class="daily-card">
+        <h5>Signs You Need More</h5>
+        <ul>
+          <li>Fatigue</li>
+          <li>Headache</li>
+          <li>Dark urine</li>
+          <li>Muscle cramps</li>
+          <li>Dizziness</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Timing Matters</div>
+    <h2 class="serif-h" style="font-size:36px">Pre &amp; post-workout <em>nutrition.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">What you eat before and after you train shapes how well you perform and how fast you bounce back.</p>
+    <div class="workout-grid">
+      <div class="workout-card">
+        <h4>Before You Train</h4>
+        <div class="macro-tag">Carbs. Moderate Protein. Light Fat.</div>
+        <ul>
+          <li>Carb-focused to top off energy stores</li>
+          <li>Moderate protein to support muscle</li>
+          <li>Low-to-moderate fat so digestion stays easy</li>
+          <li>Hydrate well in the hours beforehand</li>
+        </ul>
+        <div class="macro-sources">Try: oatmeal with banana, or toast with peanut butter.</div>
+      </div>
+      <div class="workout-card">
+        <h4>After You Train</h4>
+        <div class="macro-tag">Replenish. Repair. Rehydrate.</div>
+        <ul>
+          <li>Replenish glycogen with quality carbs</li>
+          <li>Restore protein to repair muscle tissue</li>
+          <li>Replace electrolytes lost in sweat</li>
+          <li>Aim to eat within 30&ndash;90 minutes of finishing</li>
+        </ul>
+        <div class="macro-sources">Try: grilled chicken with rice and vegetables, or a protein smoothie with fruit.</div>
+      </div>
+    </div>
+    <p class="anabolic-note"><strong>The Anabolic Window:</strong> The 30&ndash;90 minutes after training is when your muscles are primed to absorb nutrients and start repairing. Eating a balanced meal or snack in that window helps you recover faster and get more out of every session.</p>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Supplements</div>
+    <h2 class="serif-h" style="font-size:36px">Use them <em>with purpose.</em></h2>
+    <p class="supp-intro">Supplements can support a solid diet &mdash; they can't replace one. Real food first, supplements second, and always with a clear purpose.</p>
+    <div class="supp-grid">
+      <div class="supp-item"><h5>Whey Protein</h5><p>Convenient way to hit protein needs around training.</p></div>
+      <div class="supp-item"><h5>Creatine</h5><p>Supports strength, power, and recovery.</p></div>
+      <div class="supp-item"><h5>Omega-3s</h5><p>Supports joint, brain, and heart health.</p></div>
+      <div class="supp-item"><h5>Multivitamin</h5><p>Fills small gaps in a busy training diet.</p></div>
+      <div class="supp-item"><h5>Vitamin D</h5><p>Supports bone, immune, and hormone health.</p></div>
+      <div class="supp-item"><h5>Electrolytes</h5><p>Replaces what's lost through sweat and training.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner tagline-strip">
+    <p>&ldquo;Knowledge Fuels Progress. Nutrition Builds Champions.&rdquo;</p>
+    <div class="tagline-icons">
+      <div><i class="ti ti-flame"></i>Fuel</div>
+      <div><i class="ti ti-run"></i>Train</div>
+      <div><i class="ti ti-refresh"></i>Recover</div>
+      <div><i class="ti ti-repeat"></i>Repeat</div>
+      <div><i class="ti ti-trophy"></i>Succeed</div>
     </div>
   </div>
 </section>

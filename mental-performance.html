@@ -17,6 +17,29 @@
   @media(max-width:900px){.feat-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:500px){.feat-grid{grid-template-columns:1fr}}
 
+  /* HERO PULL QUOTE */
+  .pull-quote{font-family:var(--serif);font-size:20px;font-style:italic;font-weight:400;color:#241c30;text-align:center;max-width:640px;margin:2.5rem auto 0;line-height:1.5}
+  .pull-quote-cite{display:block;margin-top:.6rem;font-style:normal;font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--gold)}
+
+  /* WHY MENTAL TRAINING IS ESSENTIAL */
+  .essential-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin-top:2.5rem}
+  @media(max-width:900px){.essential-grid{grid-template-columns:1fr 1fr 1fr}}
+  @media(max-width:560px){.essential-grid{grid-template-columns:1fr 1fr}}
+  .essential-item{text-align:center}
+  .essential-item i{font-size:24px;color:var(--purple);margin-bottom:.75rem;display:block}
+  .essential-item h4{font-size:13px;color:#241c30;margin-bottom:.35rem}
+  .essential-item p{font-size:11px;color:#4a3f57;line-height:1.5}
+
+  /* SCIENCE BEHIND IT */
+  .science-wrap{display:grid;grid-template-columns:260px 1fr;gap:3rem;margin-top:2.5rem;align-items:center}
+  @media(max-width:800px){.science-wrap{grid-template-columns:1fr}}
+  .science-stat{background:#1a1720;border:0.5px solid #2b2833;padding:2.25rem;text-align:center}
+  .science-stat-num{font-family:var(--serif);font-size:46px;font-weight:400;color:var(--gold);line-height:1}
+  .science-stat-label{font-size:11px;color:#d6d3e0;margin-top:.6rem;line-height:1.5}
+  .science-check{list-style:none;display:flex;flex-direction:column;gap:.75rem}
+  .science-check li{font-size:13px;color:#332a3d;padding-left:20px;position:relative;line-height:1.5}
+  .science-check li::before{content:'\2713';position:absolute;left:0;color:var(--gold);font-weight:700}
+
   /* CORE AREAS GRID */
   .core-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
   @media(max-width:900px){.core-grid{grid-template-columns:1fr 1fr}}
@@ -97,6 +120,27 @@
 
 <section>
   <div class="inner">
+    <p class="pull-quote">&ldquo;You don't rise to the level of your goals. You fall to the level of your systems.&rdquo;<span class="pull-quote-cite">&mdash; James Clear</span></p>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">Why Mental Training Is Essential</div>
+    <h2 class="serif-h" style="font-size:36px">The mind is a skill. <em>Train it like one.</em></h2>
+    <p class="body-copy" style="margin-top:.75rem;max-width:680px">Every player practices strokes and footwork &mdash; few practice their mind. Mental training closes that gap, giving you the consistency, composure, and belief to perform when it counts.</p>
+    <div class="essential-grid">
+      <div class="essential-item"><i class="ti ti-repeat"></i><h4>Perform Consistently</h4><p>Bring your best game more often, not just on your good days.</p></div>
+      <div class="essential-item"><i class="ti ti-bolt"></i><h4>Handle Pressure</h4><p>Stay composed in tiebreaks and big moments instead of tightening up.</p></div>
+      <div class="essential-item"><i class="ti ti-mountain"></i><h4>Overcome Challenges</h4><p>Turn losses, slumps, and setbacks into fuel for your next step forward.</p></div>
+      <div class="essential-item"><i class="ti ti-focus-2"></i><h4>Enhance Focus</h4><p>Stay locked into the point in front of you, not the last one or the next.</p></div>
+      <div class="essential-item"><i class="ti ti-key"></i><h4>Unlock Your Potential</h4><p>Close the gap between how you practice and how you compete.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
     <div class="eyebrow">Core Areas of Mental Performance</div>
     <h2 class="serif-h" style="font-size:36px">Train your mind <em>like you train your body.</em></h2>
     <div class="core-grid">
@@ -139,6 +183,7 @@
           <li>Take 5 deep breaths to reset between points</li>
           <li>Reflect on what you did well each day</li>
           <li>Review and adjust your goals weekly</li>
+          <li>End the day with a win &mdash; no matter how small</li>
         </ol>
       </div>
       <div>
@@ -157,8 +202,29 @@
           <li>"You have to believe in yourself when no one else does."<span>Venus Williams</span></li>
           <li>"Pressure is a privilege. It means you've earned the opportunity."<span>Billie Jean King</span></li>
           <li>"I don't focus on what I'm up against. I focus on my goals."<span>Serena Williams</span></li>
+          <li>"The mind is everything. What you think you become."<span>Buddha</span></li>
+          <li>"Your biggest opponent is always the one you see in the mirror."<span>MPL Pursuits</span></li>
         </ul>
       </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <div class="eyebrow">The Science Behind It</div>
+    <h2 class="serif-h" style="font-size:36px">This isn't guesswork. <em>It's research-backed.</em></h2>
+    <div class="science-wrap">
+      <div class="science-stat">
+        <div class="science-stat-num">23%</div>
+        <div class="science-stat-label">Improvement in performance with mental training<br>&mdash; Journal of Applied Sport Psychology</div>
+      </div>
+      <ul class="science-check">
+        <li>Reduces stress &amp; anxiety before and during competition</li>
+        <li>Enhances focus &amp; reaction time under pressure</li>
+        <li>Increases confidence &amp; self-efficacy on the court</li>
+        <li>Builds resilience so setbacks don't derail your game</li>
+      </ul>
     </div>
   </div>
 </section>
@@ -190,12 +256,21 @@
         <ul>
           <li>In-depth mental performance courses</li>
           <li>Guided visualization &amp; routines</li>
-          <li>Goal tracking &amp; progress tools</li>
+          <li>Match-day routines, scripts &amp; checklists</li>
+          <li>Monthly expert Q&amp;A &amp; live sessions</li>
+          <li>Personalized assessments &amp; a tailored mental training plan</li>
+          <li>Performance benchmarks &amp; tracking tools</li>
           <li>1-on-1 expert guidance</li>
         </ul>
         <a href="index.html#membership" class="btn-orange">Upgrade to Premium</a>
       </div>
     </div>
+  </div>
+</section>
+
+<section>
+  <div class="inner">
+    <p class="pull-quote">&ldquo;The difference between good and great is what happens in your mind.&rdquo;<span class="pull-quote-cite">&mdash; MPL Pursuits</span></p>
   </div>
 </section>
 

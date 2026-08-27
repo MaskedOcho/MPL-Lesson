@@ -51,6 +51,17 @@
   .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
   .compare-card ul li{font-size:13px;color:#d6d3e0;padding-left:18px;position:relative;line-height:1.5}
   .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+
+  /* NCAA RESOURCE LINKS */
+  .resource-row{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1rem}
+  .resource-link{display:flex;align-items:center;gap:8px;font-size:12px;color:#332a3d;background:#fff;border:0.5px solid var(--border);padding:.7rem 1.1rem;text-decoration:none;transition:border-color .2s}
+  .resource-link:hover{border-color:var(--gold)}
+  .resource-link i{color:var(--gold);font-size:14px}
+
+  /* REFLECTION QUESTIONS */
+  .question-list{list-style:none;margin-top:1.5rem;display:flex;flex-direction:column;gap:.9rem;max-width:640px}
+  .question-list li{font-size:14px;color:#332a3d;line-height:1.6;padding-left:20px;position:relative}
+  .question-list li::before{content:'\2022';position:absolute;left:0;color:var(--gold);font-weight:700}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
 <link rel="stylesheet" href="css/global.css"/>
@@ -82,6 +93,16 @@
 </section>
 
 <div class="content-wrap" style="margin:0 auto;padding:4rem 2rem 1rem">
+  <section class="content-section" style="margin-bottom:2.5rem">
+    <div class="eyebrow">Before You Begin</div>
+    <h2 class="section-title" style="font-size:clamp(20px,2.5vw,26px)">Official NCAA <em>Resources</em></h2>
+    <div class="resource-row">
+      <a href="https://www.ncaa.org/sports/2018/10/15/ncaa-transfer-portal.aspx" target="_blank" class="resource-link"><i class="ti ti-external-link"></i> NCAA Transfer Portal</a>
+      <a href="https://on.ncaa.com/EligibilityCenter" target="_blank" class="resource-link"><i class="ti ti-external-link"></i> NCAA Eligibility Center</a>
+      <a href="https://www.ncaa.org/sports/2017/8/16/division-i-manual.aspx" target="_blank" class="resource-link"><i class="ti ti-external-link"></i> NCAA Division I Manual</a>
+    </div>
+  </section>
+
   <section class="content-section">
     <h2 class="section-title">Why Student-Athletes <em>Transfer</em></h2>
     <p class="section-body">Transferring can open new doors academically, athletically, and personally. Here's what typically drives the decision:</p>
@@ -118,6 +139,7 @@
           <li><strong style="color:#241c30">One-Time Transfer Exception (D1):</strong> may be immediately eligible if you haven't used a season of competition</li>
           <li><strong style="color:#241c30">Season of Competition:</strong> used when you compete in more than 30% of your team's contests</li>
           <li><strong style="color:#241c30">Residence Requirements:</strong> may need a year in residence before becoming eligible</li>
+          <li><strong style="color:#241c30">Academic Requirements:</strong> must be in good academic standing and making progress toward your degree</li>
           <li>Always check with the NCAA Eligibility Center and your compliance office before deciding</li>
         </ul>
       </div>
@@ -147,11 +169,35 @@
     </ul>
     <p class="section-body" style="margin-top:1.5rem"><strong style="color:#241c30">Timeline:</strong> the best time to enter the portal is typically after your season ends. The most active recruiting periods are Spring and Summer, though fall transfers are possible.</p>
   </section>
+
+  <section class="content-section">
+    <h2 class="section-title">Things to Consider <em>Before Transferring</em></h2>
+    <p class="section-body">Before you make the move, sit with these questions honestly:</p>
+    <ul class="question-list">
+      <li>Will this move help me grow academically and athletically?</li>
+      <li>Can I afford the cost of attendance at my new school?</li>
+      <li>Do I connect with the coaching staff, team, and campus culture?</li>
+      <li>Will this school help me achieve my long-term goals?</li>
+      <li>Have I taken time to reflect and make the right decision for me?</li>
+    </ul>
+  </section>
+
+  <section class="content-section">
+    <h2 class="section-title">Transfer Resources <em>&amp; Support</em></h2>
+    <p class="section-body">You don't have to navigate this alone &mdash; lean on these resources along the way:</p>
+    <div class="info-grid">
+      <div class="info-card"><h4>NCAA Transfer Portal</h4><p>Create your profile and connect directly with programs looking for your skill set.</p></div>
+      <div class="info-card"><h4>NCAA Eligibility Center</h4><p>Confirm your eligibility status before you commit to a decision.</p></div>
+      <div class="info-card"><h4>Speak With Your Compliance Office</h4><p>Get clarity on rules, timelines, and requirements specific to your situation.</p></div>
+      <div class="info-card"><h4>Academic Advisor</h4><p>Make sure credits transfer and your degree progress stays on track.</p></div>
+      <div class="info-card"><h4>Family &amp; Mentors</h4><p>Lean on the people who know you best to help you think it through.</p></div>
+    </div>
+  </section>
 </div>
 
 <section class="cta-strip">
   <div class="eyebrow" style="color:rgba(255,255,255,.7)">Considering a Transfer?</div>
-  <h2>A transfer is not giving up. <em style="font-style:italic;color:#fff">It's choosing a better path.</em></h2>
+  <h2>A transfer is not giving up. <em style="font-style:italic;color:#fff">It's choosing a better path.</em> Take control. Make the move. Build the life you want.</h2>
   <p>Get help evaluating your options, navigating the portal, and making the right decision for your future.</p>
   <a href="mailto:mary.profit@gmail.com?subject=Transfer%20Guidance%20Consultation" class="btn-white">Get Transfer Guidance</a>
 </section>
