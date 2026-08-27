@@ -9,18 +9,18 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
 <style>
   /* SERVICE CARDS */
-  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:#2b2833;margin-top:2rem}
-  .svc-card{background:#1a1720;padding:2.5rem 2rem;display:flex;flex-direction:column}
+  .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--border);margin-top:2rem}
+  .svc-card{background:#fff;border:0.5px solid var(--border);box-shadow:0 2px 10px rgba(20,15,30,.06);padding:2.5rem 2rem;display:flex;flex-direction:column}
   .svc-card.full{grid-column:1/-1}
   .svc-icon{font-size:28px;color:var(--gold);margin-bottom:1.25rem}
-  .svc-name{font-family:var(--serif);font-size:26px;font-weight:300;color:#EDEBF2;margin-bottom:8px}
+  .svc-name{font-family:var(--serif);font-size:26px;font-weight:300;color:#241c30;margin-bottom:8px}
   .svc-name em{font-style:italic;color:var(--gold)}
   .svc-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:1rem}
   .svc-price{font-family:var(--serif);font-size:40px;font-weight:300;color:var(--gold)}
-  .svc-duration{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8d8a9c}
-  .svc-desc{font-size:13px;color:#d6d3e0;line-height:1.75;margin-bottom:1.5rem}
+  .svc-duration{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#6b6578}
+  .svc-desc{font-size:13px;color:#332a3d;line-height:1.75;margin-bottom:1.5rem}
   .svc-features{list-style:none;display:flex;flex-direction:column;gap:8px;margin-bottom:2rem;flex:1}
-  .svc-features li{font-size:13px;color:#d6d3e0;padding-left:18px;position:relative;line-height:1.6}
+  .svc-features li{font-size:13px;color:#332a3d;padding-left:18px;position:relative;line-height:1.6}
   .svc-features li::before{content:'\2014';position:absolute;left:0;color:var(--gold);font-size:11px;top:2px}
   .svc-features-two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
   .btn-book{background:var(--gold);color:#fff;padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;transition:background .2s;text-decoration:none;display:inline-block;align-self:flex-start}

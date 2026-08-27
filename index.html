@@ -95,13 +95,13 @@
   /* --- PROVIDES --- */
   .provides-header { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: end; margin-bottom: 3rem; }
   .provides-heading { font-size: 44px; }
-  .provides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: #2b2833; }
-  .pillar { background: #1a1720; padding: 2.5rem 2rem; }
-  .pillar h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; color: #EDEBF2; margin-bottom: 1.25rem; }
+  .provides-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; background: var(--border); }
+  .pillar { background: #fff; border: 0.5px solid var(--border); box-shadow: 0 2px 10px rgba(20,15,30,.06); padding: 2.5rem 2rem; }
+  .pillar h3 { font-family: var(--serif); font-size: 24px; font-weight: 400; color: #241c30; margin-bottom: 1.25rem; }
   .pillar ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .pillar ul li { font-size: 13px; color: #d6d3e0; line-height: 1.65; padding-left: 18px; position: relative; }
+  .pillar ul li { font-size: 13px; color: #332a3d; line-height: 1.65; padding-left: 18px; position: relative; }
   .pillar ul li::before { content: '\2014'; position: absolute; left: 0; color: var(--gold); font-size: 11px; top: 1px; }
-  .pillar-body { font-size: 13px; color: #d6d3e0; line-height: 1.85; }
+  .pillar-body { font-size: 13px; color: #332a3d; line-height: 1.85; }
 
   /* --- ADVANCED --- */
   .advanced { background: var(--ink); border-bottom: 0.5px solid #211d27; }
@@ -146,9 +146,9 @@
   .tier-cta:hover { border-color: var(--gold); color: var(--gold); }
   .tier-card.featured .tier-cta { background: var(--gold); border-color: var(--gold); color: #fff; }
   .tier-card.featured .tier-cta:hover { background: var(--gold-dk); }
-  .single-purchase { margin-top: 2rem; padding: 1.5rem 2rem; background: #1a1720; border: 0.5px solid #2b2833; display: flex; align-items: center; justify-content: space-between; }
-  .single-purchase-left h4 { font-family: var(--serif); font-size: 22px; font-weight: 400; color: #EDEBF2; margin-bottom: 4px; }
-  .single-purchase-left p { font-size: 13px; color: #d6d3e0; }
+  .single-purchase { margin-top: 2rem; padding: 1.5rem 2rem; background: #fff; border: 0.5px solid var(--border); box-shadow: 0 2px 10px rgba(20,15,30,.06); display: flex; align-items: center; justify-content: space-between; }
+  .single-purchase-left h4 { font-family: var(--serif); font-size: 22px; font-weight: 400; color: #241c30; margin-bottom: 4px; }
+  .single-purchase-left p { font-size: 13px; color: #332a3d; }
   .single-price { font-family: var(--serif); font-size: 32px; font-weight: 300; color: var(--gold); }
 
   /* --- TESTIMONIALS --- */
@@ -465,12 +465,12 @@
           <input class="form-input" type="text" placeholder="First &amp; last name" required />
           <input class="form-input" type="email" placeholder="Email address" required />
           <input class="form-input" type="tel" placeholder="Phone number" />
-          <select class="form-input" style="cursor:pointer;background:#1a1720;color:#EDEBF2">
+          <select class="form-input" style="cursor:pointer;background:#fff;color:#241c30">
             <option value="">Select a coach</option>
             <option>Mary Lewis &mdash; Tennis Coach & Mentor</option>
             <option>Elizabeth Profit &mdash; Tennis Coach & Mentor</option>
           </select>
-          <select class="form-input" required style="cursor:pointer;background:#1a1720;color:#EDEBF2">
+          <select class="form-input" required style="cursor:pointer;background:#fff;color:#241c30">
             <option value="">Select a service</option>
             <option>Online Consultation &mdash; 20 min &middot; $45</option>
             <option>1-on-1 Virtual Coaching &mdash; 30 min &middot; $100</option>

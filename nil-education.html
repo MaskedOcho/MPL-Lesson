@@ -21,18 +21,18 @@
   .income-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:2.5rem}
   @media(max-width:768px){.income-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:480px){.income-grid{grid-template-columns:1fr}}
-  .income-item{background:#1a1720;border:0.5px solid #2b2833;padding:1.1rem;font-size:13px;color:#d6d3e0;display:flex;align-items:center;gap:10px}
+  .income-item{background:#fff;border:0.5px solid var(--border);box-shadow:0 2px 10px rgba(20,15,30,.06);padding:1.1rem;font-size:13px;color:#332a3d;display:flex;align-items:center;gap:10px}
   .income-item i{color:var(--gold);font-size:16px}
 
   /* ROADMAP STEPS */
   .roadmap-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
   @media(max-width:768px){.roadmap-steps{grid-template-columns:1fr 1fr}}
   @media(max-width:500px){.roadmap-steps{grid-template-columns:1fr}}
-  .roadmap-step{background:#1a1720;border-top:3px solid var(--gold);padding:1.5rem;text-align:center}
+  .roadmap-step{background:#fff;border:0.5px solid var(--border);border-top:3px solid var(--gold);box-shadow:0 2px 10px rgba(20,15,30,.06);padding:1.5rem;text-align:center}
   .roadmap-num{width:34px;height:34px;border-radius:50%;background:var(--purple);color:#fff;font-size:14px;font-weight:600;display:flex;align-items:center;justify-content:center;margin:0 auto .75rem}
-  .roadmap-step h4{font-size:13px;color:#EDEBF2}
+  .roadmap-step h4{font-size:13px;color:#241c30}
   .roadmap-step ul{list-style:none;display:flex;flex-direction:column;gap:.3rem;margin-top:.75rem;text-align:left}
-  .roadmap-step ul li{font-size:11px;color:#b6b2c2;padding-left:14px;position:relative;line-height:1.5}
+  .roadmap-step ul li{font-size:11px;color:#4a3f57;padding-left:14px;position:relative;line-height:1.5}
   .roadmap-step ul li::before{content:'\2022';position:absolute;left:0;color:var(--gold)}
 
   /* WHY NIL MATTERS */
@@ -48,18 +48,18 @@
   .pitfall-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;margin-top:2.5rem}
   @media(max-width:900px){.pitfall-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:560px){.pitfall-grid{grid-template-columns:1fr}}
-  .pitfall-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.75rem}
+  .pitfall-card{background:#fff;border:0.5px solid var(--border);box-shadow:0 2px 10px rgba(20,15,30,.06);padding:1.75rem}
   .pitfall-card i{font-size:24px;color:var(--gold);margin-bottom:.75rem;display:block}
-  .pitfall-card h4{font-family:var(--serif);font-size:16px;font-weight:400;color:#EDEBF2;margin-bottom:.5rem}
-  .pitfall-card p{font-size:12px;color:#b6b2c2;line-height:1.6}
+  .pitfall-card h4{font-family:var(--serif);font-size:16px;font-weight:400;color:#241c30;margin-bottom:.5rem}
+  .pitfall-card p{font-size:12px;color:#4a3f57;line-height:1.6}
 
   /* EXPLORE MORE NIL RESOURCES */
   .locked-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin-top:2.5rem}
   @media(max-width:768px){.locked-grid{grid-template-columns:1fr 1fr}}
   @media(max-width:500px){.locked-grid{grid-template-columns:1fr}}
-  .locked-card{background:#1a1720;border:0.5px solid #2b2833;padding:1.5rem;position:relative;display:flex;align-items:center;gap:12px}
+  .locked-card{background:#fff;border:0.5px solid var(--border);box-shadow:0 2px 10px rgba(20,15,30,.06);padding:1.5rem;position:relative;display:flex;align-items:center;gap:12px}
   .locked-card i{color:var(--gold);font-size:18px;flex-shrink:0}
-  .locked-card span{font-size:13px;color:#d6d3e0;line-height:1.4}
+  .locked-card span{font-size:13px;color:#332a3d;line-height:1.4}
   .locked-card::after{content:'Members Only';position:absolute;top:10px;right:10px;font-size:8px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);border:1px solid var(--gold);padding:3px 7px;background:#100d14}
 
   /* TWO COL */
@@ -73,13 +73,13 @@
   /* FREE VS PREMIUM */
   .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2.5rem;max-width:820px}
   @media(max-width:700px){.compare-grid{grid-template-columns:1fr}}
-  .compare-card{background:#1a1720;border:0.5px solid #2b2833;padding:2rem;position:relative}
+  .compare-card{background:#fff;border:0.5px solid var(--border);box-shadow:0 2px 10px rgba(20,15,30,.06);padding:2rem;position:relative}
   .compare-card.featured{border-color:var(--gold)}
   .compare-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
-  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8d8a9c;margin-bottom:1rem}
+  .compare-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#6b6578;margin-bottom:1rem}
   .compare-card.featured .compare-label{color:var(--gold)}
   .compare-card ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;margin-bottom:1.5rem}
-  .compare-card ul li{font-size:13px;color:#d6d3e0;padding-left:18px;position:relative;line-height:1.5}
+  .compare-card ul li{font-size:13px;color:#332a3d;padding-left:18px;position:relative;line-height:1.5}
   .compare-card ul li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
 </style>
 <link rel="stylesheet" href="css/core.css"/>

@@ -17,20 +17,20 @@
   /* PRODUCTS */
   .products-inner{max-width:1200px;margin:0 auto;padding:4rem 3rem}
   .products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border)}
-  .product-card{background:#1a1720;display:flex;flex-direction:column;cursor:pointer;transition:background .2s}
-  .product-card:hover{background:#0d0c11}
+  .product-card{background:#fff;border:0.5px solid var(--border);box-shadow:0 2px 10px rgba(20,15,30,.06);display:flex;flex-direction:column;cursor:pointer;transition:box-shadow .2s}
+  .product-card:hover{box-shadow:0 4px 16px rgba(20,15,30,.1)}
   .product-img{display:none}
   .product-img-icon{display:none}
   .product-info{padding:1.25rem 1.5rem 1.5rem;flex:1;display:flex;flex-direction:column}
   .product-category{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);margin-bottom:6px}
-  .product-name{font-family:var(--serif);font-size:20px;font-weight:400;color:#fff;margin-bottom:6px}
-  .product-desc{font-size:12px;color:#d6d3e0;line-height:1.6;flex:1;margin-bottom:1rem}
+  .product-name{font-family:var(--serif);font-size:20px;font-weight:400;color:#241c30;margin-bottom:6px}
+  .product-desc{font-size:12px;color:#332a3d;line-height:1.6;flex:1;margin-bottom:1rem}
   .product-footer{display:flex;align-items:center;justify-content:space-between;margin-top:auto}
   .product-price{font-family:var(--serif);font-size:26px;font-weight:300;color:var(--gold)}
   .btn-add{background:var(--ink);color:var(--ivory);padding:8px 16px;font-size:10px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);transition:background .2s}
   .btn-add:hover{background:var(--purple)}
   .badge-digital{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--purple);border:0.5px solid var(--purple);padding:2px 8px;margin-left:8px}
-  .badge-coming{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#8d8a9c;border:1px solid #2b2833;padding:2px 8px}
+  .badge-coming{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:#6b6578;border:1px solid var(--border);padding:2px 8px}
   /* DIGITAL DARK */
   .digital-dark{background:#1a1720;border-bottom:1px solid #2b2833}
   .digital-dark .inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center}
@@ -128,8 +128,8 @@
         <p class="product-desc">A complete step-by-step recruiting guide covering timelines, coach outreach templates, visit preparation, and everything in between.</p>
         <div class="product-footer" style="flex-direction:column;align-items:flex-start;gap:8px">
           <div><span class="product-price" style="text-decoration:line-through;opacity:.4;font-size:18px">$29</span><span class="product-price" style="margin-left:10px;color:var(--gold)">$10</span><span style="font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-left:8px;border:1px solid var(--gold);padding:2px 7px">Presale</span></div>
-          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d6d3e0;border:1px solid #3a3742;padding:8px 16px;display:inline-block">Coming Soon</div>
-          <p style="font-size:11px;color:#b6b2c2">&rarr; <a href="index.html#booking" style="color:var(--gold);text-decoration:none">Join presale list</a></p>
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#332a3d;border:1px solid var(--border);padding:8px 16px;display:inline-block">Coming Soon</div>
+          <p style="font-size:11px;color:#4a3f57">&rarr; <a href="index.html#booking" style="color:var(--gold);text-decoration:none">Join presale list</a></p>
         </div>
       </div>
     </div>
@@ -140,8 +140,8 @@
         <p class="product-desc">Sports psychology principles applied to match play. Overcome anxiety, build focus, and perform under pressure consistently.</p>
         <div class="product-footer" style="flex-direction:column;align-items:flex-start;gap:8px">
           <div></div>
-          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#d6d3e0;border:1px solid #3a3742;padding:8px 16px;display:inline-block">Coming Soon</div>
-          <p style="font-size:11px;color:#b6b2c2">&rarr; <a href="index.html#booking" style="color:var(--gold);text-decoration:none">Join presale list</a></p>
+          <div style="font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#332a3d;border:1px solid var(--border);padding:8px 16px;display:inline-block">Coming Soon</div>
+          <p style="font-size:11px;color:#4a3f57">&rarr; <a href="index.html#booking" style="color:var(--gold);text-decoration:none">Join presale list</a></p>
         </div>
       </div>
     </div>
@@ -152,9 +152,9 @@
         <p class="product-desc">12-week structured training templates for competitive juniors covering technical drills, footwork, conditioning, and match play.</p>
         <div class="product-footer" style="flex-direction:column;align-items:flex-start;gap:8px">
           <div><span class="product-price" style="text-decoration:line-through;opacity:.4;font-size:18px">$250</span><span class="product-price" style="margin-left:10px;color:var(--gold)">$117</span><span style="font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--gold);margin-left:8px;border:1px solid var(--gold);padding:2px 7px">Presale</span></div>
-          <p style="font-size:11px;color:#d6d3e0">Coming August 1st</p>
+          <p style="font-size:11px;color:#332a3d">Coming August 1st</p>
           <button class="btn-add">Purchase Now</button>
-          <p style="font-size:11px;color:#b6b2c2">Lock in presale price today</p>
+          <p style="font-size:11px;color:#4a3f57">Lock in presale price today</p>
         </div>
       </div>
     </div>
