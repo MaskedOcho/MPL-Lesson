@@ -92,11 +92,8 @@ section{
 .btn-book{background:var(--gold);color:#fff;padding:12px 24px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;transition:background .2s;text-decoration:none;display:inline-block;align-self:flex-start}
 .btn-book:hover{background:var(--gold-dk)}
 
-/* PAGE HERO — wide hero (hub pages: about, tennis, coaching, etc.)
-   No border-bottom: the ::after fade blends the dark hero into the light
-   section below instead of a hard line. */
-.page-hero{background:var(--ink);padding:6rem 3rem 5rem;text-align:center;position:relative}
-.page-hero::after{content:'';position:absolute;left:0;right:0;bottom:0;height:90px;background:linear-gradient(to bottom,transparent,var(--ivory));pointer-events:none}
+/* PAGE HERO — wide hero (hub pages: about, tennis, coaching, etc.) */
+.page-hero{background:var(--ink);padding:6rem 3rem 5rem;border-bottom:0.5px solid #2b2833;text-align:center}
 .page-hero-inner{max-width:1200px;margin:0 auto}
 .page-hero h1{font-family:var(--serif);font-size:60px;font-weight:300;line-height:1.05;color:var(--ivory)}
 .page-hero h1 em{font-style:italic;color:var(--gold)}
