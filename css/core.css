@@ -176,7 +176,8 @@ footer{background:#160830;border-top:0.5px solid #2b2833;padding:4rem 3rem 2rem}
 .cs-h{font-family:var(--serif);font-size:clamp(48px,7vw,80px);font-weight:300;line-height:1.05;color:#EDEBF2;margin-bottom:1.5rem}
 .cs-h em{font-style:italic;color:var(--gold)}
 .cs-body{font-size:14px;color:#d6d3e0;line-height:1.85;max-width:480px;margin-bottom:2.5rem}
-.cs-btn{display:inline-block;background:var(--gold);color:#fff;padding:12px 26px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s;margin-right:10px}
+.cs-btns{display:flex;gap:14px;flex-wrap:wrap}
+.cs-btn{display:inline-block;background:var(--gold);border:0.5px solid var(--gold);color:#fff;padding:12px 26px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .2s}
 .cs-btn:hover{background:var(--gold-dk)}
 .cs-btn-ghost{display:inline-block;border:0.5px solid rgba(255,255,255,.3);color:#EDEBF2;padding:12px 26px;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .2s}
 .cs-btn-ghost:hover{border-color:#fff}
