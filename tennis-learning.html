@@ -143,19 +143,10 @@
 <div class="lock-cta" id="visitorLockCta">
   <i class="ti ti-lock-filled"></i>
   <h3>Create a free account to unlock full access.</h3>
-  <p>You're seeing a preview. Sign up free, then upgrade to Performance Athlete or higher to unlock this page.</p>
+  <p>You're seeing a preview. Sign up free to unlock this entire page.</p>
   <div class="lock-cta-btns">
     <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="btn-orange" target="_blank">Create Free Account</a>
     <a href="login.html" class="btn-ghost-dark">Log In</a>
-  </div>
-</div>
-
-<div class="lock-cta" id="tierLockCta">
-  <i class="ti ti-lock-filled"></i>
-  <h3>This page needs a higher membership tier.</h3>
-  <p><span class="tier-lock-need">Performance Athlete or higher</span> unlocks this subpage. Upgrade anytime to get full access.</p>
-  <div class="lock-cta-btns">
-    <a href="index.html#membership" class="btn-orange">Upgrade Membership</a>
   </div>
 </div>
 
@@ -361,7 +352,7 @@ document.querySelectorAll('.filter-tab').forEach(function(tab){
 </script>
 <script type="module">
   import { initPage } from './js/auth.js';
-  initPage({ gate: 'subpage' });
+  initPage({ gate: 'visitor' });
 </script>
 </body>
 </html>
