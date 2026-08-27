@@ -65,7 +65,7 @@ section{
 
 /* Center each section's intro (eyebrow/heading/intro copy) without
    forcing alignment on nested grids, cards, or lists. */
-.inner>.eyebrow,.inner>.section-eyebrow{text-align:center}
+.inner>.eyebrow,.inner>.section-eyebrow{text-align:center;justify-content:center}
 .inner>h2.serif-h,.inner>h2.serif-heading{text-align:center}
 .inner>p.body-copy{text-align:center;margin-left:auto;margin-right:auto}
 
