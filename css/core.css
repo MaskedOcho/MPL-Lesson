@@ -10,7 +10,7 @@
    Base is a neutral near-black graphite so purple and orange read as
    true accents instead of blending into a same-hued background. */
 :root{
-  --ink:#2e1065;--ivory:#f7f5fa;--warm:#f5eeff;--border:#ddd0f0;
+  --ink:#190f28;--ivory:#f7f5fa;--warm:#f5eeff;--border:#ddd0f0;
   --muted:#8d8a9c;--hint:#b6b2c2;--gold:#e8620a;--gold-dk:#c85208;
   --purple:#7c3aed;--serif:'Cormorant Garamond',Georgia,serif;
   --sans:'DM Sans',system-ui,sans-serif;
