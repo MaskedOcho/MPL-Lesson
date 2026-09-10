@@ -11,13 +11,13 @@
   /* STEPS */
   .two-col{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
   .steps-list{display:flex;flex-direction:column}
-  .step{display:flex;gap:1.5rem;border-top:0.5px solid #2b2833;padding:1.5rem 0}
-  .step:last-child{border-bottom:0.5px solid #2b2833}
-  .step-num{font-family:var(--serif);font-size:36px;font-weight:300;color:#2b2833;line-height:1;flex-shrink:0;width:44px}
+  .step{display:flex;gap:1.5rem;border-top:0.5px solid #35204d;padding:1.5rem 0}
+  .step:last-child{border-bottom:0.5px solid #35204d}
+  .step-num{font-family:var(--serif);font-size:36px;font-weight:300;color:#35204d;line-height:1;flex-shrink:0;width:44px}
   .step-title{font-size:14px;font-weight:500;color:#241c30;margin-bottom:6px}
   .step-body{font-size:13px;color:#332a3d;line-height:1.7}
   /* INCLUDED */
-  .included-dark{background:#1a1720;border-bottom:1px solid #2b2833}
+  .included-dark{background:#251536;border-bottom:1px solid #35204d}
   .included-dark .eyebrow{color:#e8620a}
   .included-dark h2{font-family:var(--serif);font-size:44px;font-weight:300;color:#fff}
   .included-dark h2 em{font-style:italic;color:var(--gold)}
@@ -27,12 +27,12 @@
   .inc-item i{font-size:18px;color:var(--gold);flex-shrink:0;margin-top:1px}
   /* NCAA GRID */
   .ncaa-grid{display:flex;flex-direction:column;gap:2px;background:var(--border)}
-  .ncaa-box{background:#1a1720;padding:1.5rem 2rem}
+  .ncaa-box{background:#251536;padding:1.5rem 2rem}
   .ncaa-box-title{font-family:var(--serif);font-size:20px;font-weight:400;color:#EDEBF2;margin-bottom:6px}
   .ncaa-box-body{font-size:13px;color:#d6d3e0;line-height:1.7}
   /* PRICING - COMING SOON */
   .pricing-section .inner{text-align:center}
-  .pricing-card{max-width:480px;margin:0 auto;border:1px solid #2b2833;padding:3rem;background:#1a1720;position:relative;overflow:hidden}
+  .pricing-card{max-width:480px;margin:0 auto;border:1px solid #35204d;padding:3rem;background:#251536;position:relative;overflow:hidden}
   .coming-soon-overlay{position:absolute;inset:0;background:rgba(30,10,46,.88);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
   .coming-soon-label{font-family:var(--serif);font-size:48px;font-weight:300;color:#fff;font-style:italic}
   .coming-soon-sub{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#8d8a9c}
@@ -46,12 +46,12 @@
   @media(max-width:768px){.two-col,.included-dark .inner{grid-template-columns:1fr}.included-items{grid-template-columns:1fr}.stats-bar-inner{grid-template-columns:repeat(2,1fr)}}
 
   /* QUICK LINKS BAR */
-  .quick-links-bar{display:flex;justify-content:center;gap:0;border-bottom:0.5px solid #2b2833;overflow-x:auto;background:#100d14;position:sticky;top:72px;z-index:90}
+  .quick-links-bar{display:flex;justify-content:center;gap:0;border-bottom:0.5px solid #35204d;overflow-x:auto;background:#190f28;position:sticky;top:72px;z-index:90}
   .quick-link{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#8d8a9c;text-decoration:none;padding:1rem 1.5rem;border-bottom:2px solid transparent;white-space:nowrap;transition:all .2s;display:block}
   .quick-link:hover{color:#EDEBF2;border-bottom-color:var(--gold)}
 
   /* SUBPAGE DETAIL SECTIONS */
-  .subpage-detail{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2.5rem 0;border-bottom:0.5px solid #211e28;align-items:start;scroll-margin-top:140px}
+  .subpage-detail{display:grid;grid-template-columns:auto 1fr;gap:2rem;padding:2.5rem 0;border-bottom:0.5px solid #2c1a42;align-items:start;scroll-margin-top:140px}
   .subpage-detail:last-child{border-bottom:none}
   .subpage-detail-icon{width:60px;height:60px;border-radius:50%;background:rgba(232,98,10,.12);display:flex;align-items:center;justify-content:center;font-size:26px;color:var(--gold);flex-shrink:0}
   .subpage-detail h3{font-family:var(--serif);font-size:26px;font-weight:300;color:#241c30;margin-bottom:.6rem}
@@ -230,26 +230,27 @@
       <div class="pricing-card">
         <div class="pricing-tier-label">Free</div>
         <div class="pricing-price">$0</div>
-        <div class="pricing-desc">Basic educational content</div>
+        <div class="pricing-desc">Full access to core educational pages</div>
         <a href="https://buy.stripe.com/6oUaEZ1Iu6i28CG4oia3u07" class="pricing-btn-ghost" target="_blank">Create Free Account</a>
       </div>
-      <div class="pricing-card pricing-featured">
-        <div class="pricing-badge">Most Popular</div>
+      <div class="pricing-card">
         <div class="pricing-tier-label">Performance Athlete</div>
         <div class="pricing-price">$80<span>/mo</span></div>
-        <div class="pricing-desc">Advanced coaching &amp; systems</div>
+        <div class="pricing-desc">Full subpages & tools &mdash; 5% off lessons</div>
         <a href="https://buy.stripe.com/6oU4gB0Eq8qacSW1c6a3u09" class="pricing-btn" target="_blank">Get Started</a>
       </div>
-      <div class="pricing-card">
+      <div class="pricing-card pricing-featured">
+        <div class="pricing-badge">Most Popular &middot; Limited Time</div>
         <div class="pricing-tier-label">Elite Athlete</div>
         <div class="pricing-price">$150<span>/mo</span></div>
-        <div class="pricing-desc">Complete support system</div>
+        <div class="pricing-desc">Complete support system &mdash; 10% off lessons</div>
         <a href="https://buy.stripe.com/aFa9AVgDobCm2ei2gaa3u08" class="pricing-btn" target="_blank">Get Started</a>
       </div>
       <div class="pricing-card">
+        <div class="pricing-badge">Best Value</div>
         <div class="pricing-tier-label">Annual Membership</div>
-        <div class="pricing-price">$500<span>/yr</span></div>
-        <div class="pricing-desc">All-access pass &mdash; save vs. monthly</div>
+        <div class="pricing-price"><span style="font-size:15px;text-decoration:line-through;opacity:.45;margin-right:4px">$850</span>$500<span>/yr</span></div>
+        <div class="pricing-desc">Limited time &mdash; regularly $850/yr</div>
         <a href="https://buy.stripe.com/5kQ5kFbj4ayiaKOcUOa3u0b" class="pricing-btn" target="_blank">Get Started</a>
       </div>
     </div>
