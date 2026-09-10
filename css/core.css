@@ -88,10 +88,6 @@ section{
    hero/card), where .btn-ghost's light-on-transparent styling disappears. */
 .btn-ghost-dark{background:none;color:#241c30;padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:0.5px solid #cabfd6;cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block;transition:all .2s}
 .btn-ghost-dark:hover{border-color:var(--purple);color:var(--purple)}
-/* Gold ghost button for use directly on a light section/card, where an
-   orange outline is wanted instead of the neutral .btn-ghost-dark. */
-.btn-ghost-gold{background:none;color:var(--gold);padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:0.5px solid var(--gold);cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block;transition:all .2s}
-.btn-ghost-gold:hover{background:var(--gold);color:#fff}
 .btn-ivory{background:var(--ink);color:#EDEBF2;padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);text-decoration:none;display:inline-block}
 .btn-white{background:#fff;color:var(--gold);padding:13px 28px;font-size:11px;letter-spacing:2px;text-transform:uppercase;border:none;cursor:pointer;font-family:var(--sans);font-weight:500;text-decoration:none;display:inline-block;margin:0 6px}
 .btn-white:hover{background:#170f26;color:var(--purple)}
