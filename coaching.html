@@ -31,14 +31,46 @@
   .bundles-dark .eyebrow{color:#8868b3}
   .bundles-dark h2{font-family:var(--serif);font-size:44px;font-weight:300;color:var(--ivory);margin-bottom:.5rem}
   .bundles-dark h2 em{font-style:italic;color:var(--gold)}
-  .bundles-dark .body-copy{color:#d6d3e0}
-  .bundles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#2a1a3a;margin-top:2.5rem}
-  .bundle-card{background:#4a2b7a;padding:2.5rem 2rem;display:flex;flex-direction:column;border:1px solid #4a2b7a}
+  .bundles-dark .body-copy{color:#d6d3e0;max-width:640px}
+  .bundles-wrap{display:grid;grid-template-columns:1fr 300px;gap:2px;background:#2a1a3a;margin-top:2.5rem}
+  @media(max-width:1000px){.bundles-wrap{grid-template-columns:1fr}}
+  .bundles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#2a1a3a}
+  .bundle-card{background:#4a2b7a;padding:2.5rem 2rem;display:flex;flex-direction:column;border:1px solid #4a2b7a;position:relative}
+  .bundle-badge{position:absolute;top:-1px;right:-1px;background:var(--gold);color:#fff;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;padding:4px 10px}
   .bundle-name{font-family:var(--serif);font-size:22px;font-weight:300;color:var(--ivory);margin-bottom:10px}
+  .bundle-name em{font-style:italic;color:var(--gold)}
   .bundle-price{font-family:var(--serif);font-size:48px;font-weight:300;color:var(--gold);line-height:1;margin-bottom:1rem}
-  .bundle-desc{font-size:13px;color:#d6d3e0;line-height:1.7;flex:1}
+  .bundle-desc{font-size:13px;color:#d6d3e0;line-height:1.7}
+  .bundle-features{list-style:none;display:flex;flex-direction:column;gap:7px;margin:1.25rem 0;flex:1}
+  .bundle-features li{font-size:12px;color:#d6d3e0;padding-left:18px;position:relative;line-height:1.5}
+  .bundle-features li::before{content:'\2713';position:absolute;left:0;color:var(--gold)}
+  .bundle-leaves{background:rgba(255,255,255,.06);border-left:2px solid var(--gold);padding:.85rem 1rem;font-size:11.5px;color:#d6d3e0;line-height:1.6;margin-bottom:1.5rem}
+  .bundle-leaves strong{display:block;color:var(--ivory);font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:.35rem}
+  .btn-bundle{background:var(--gold);color:#fff;padding:12px 0;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-align:center;text-decoration:none;display:block;margin-top:auto;transition:background .2s}
+  .btn-bundle:hover{background:var(--gold-dk)}
   .btn-coming-soon{display:inline-block;margin-top:1.5rem;background:none;border:0.5px solid #3a2a4a;padding:10px 20px;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#8d8a9c;font-family:var(--sans);cursor:default;text-align:center}
   .presale-note{font-size:12px;color:#b6b2c2;margin-top:8px;letter-spacing:.5px}
+  /* ADD-ON SERVICES PANEL */
+  .addons-panel{background:rgba(255,255,255,.04);padding:2rem 1.75rem;display:flex;flex-direction:column}
+  .addons-panel h3{font-family:var(--serif);font-size:19px;font-weight:400;color:var(--ivory);margin-bottom:.5rem}
+  .addon-item{display:flex;align-items:flex-start;justify-content:space-between;gap:.6rem;padding:1rem 0;border-top:1px solid rgba(255,255,255,.1)}
+  .addon-item-left{display:flex;gap:10px;align-items:flex-start}
+  .addon-icon{color:var(--gold);font-size:15px;margin-top:2px;flex-shrink:0}
+  .addon-name{font-size:12.5px;color:var(--ivory);font-weight:500;margin-bottom:3px}
+  .addon-desc{font-size:11px;color:#b6b2c2;line-height:1.5}
+  .addon-price{font-family:var(--serif);font-size:17px;color:var(--gold);flex-shrink:0;white-space:nowrap}
+  /* FEATURE ICON ROW (light) */
+  .feat-row-light{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem}
+  .feat-row-light .feat-item{text-align:center}
+  .feat-row-light .feat-item i{font-size:26px;color:var(--gold);margin-bottom:.75rem;display:block}
+  .feat-row-light .feat-item h4{font-family:var(--serif);font-size:15px;font-weight:400;color:#241c30;margin-bottom:.35rem}
+  .feat-row-light .feat-item p{font-size:11.5px;color:#4a3f57;line-height:1.5}
+  @media(max-width:900px){.feat-row-light{grid-template-columns:1fr 1fr 1fr}}
+  @media(max-width:560px){.feat-row-light{grid-template-columns:1fr 1fr}}
+  /* TRUST ROW (light) */
+  .trust-row{display:flex;flex-wrap:wrap;justify-content:center;gap:2rem 2.5rem}
+  .trust-row div{display:flex;align-items:center;gap:8px;font-size:12px;color:#332a3d}
+  .trust-row i{color:var(--gold);font-size:16px}
   @media(max-width:768px){.services-grid,.bundles-grid{grid-template-columns:1fr}.svc-card.full{grid-column:auto}.svc-features-two{grid-template-columns:1fr}}
 </style>
 <link rel="stylesheet" href="css/core.css"/>
@@ -67,9 +99,9 @@
 
 <div class="page-hero page-hero--center">
   <div class="page-hero-inner">
-    <div class="eyebrow" style="color:#8d8a9c">Coaching Services</div>
-    <h1>Coaching Built<br>for <em>Athletes.</em></h1>
-    <p class="page-hero-sub">Whether you need a technical fix, a mental game overhaul, or full recruiting support &mdash; we have a program for every athlete at every level.</p>
+    <div class="eyebrow" style="color:#8d8a9c">Coaching &amp; Athlete Development</div>
+    <h1>Personalized Coaching.<br><em>Proven Progress.</em></h1>
+    <p class="page-hero-sub">Every athlete is different. Our coaching services are designed to meet you where you are and take you to the next level.</p>
   </div>
 </div>
 
@@ -82,6 +114,124 @@
     <a href="login.html" class="btn-ghost-dark">Log In</a>
   </div>
 </div>
+
+<section>
+  <div class="inner" style="padding-bottom:3rem">
+    <div class="feat-row-light">
+      <div class="feat-item"><i class="ti ti-target-arrow"></i><h4>Personalized Game Plans</h4><p>Built around your goals and strengths.</p></div>
+      <div class="feat-item"><i class="ti ti-trending-up"></i><h4>Measurable Improvement</h4><p>Track progress and see real results.</p></div>
+      <div class="feat-item"><i class="ti ti-user-check"></i><h4>Expert Guidance</h4><p>Learn from a professional player and former D1 coach.</p></div>
+      <div class="feat-item"><i class="ti ti-calendar-stats"></i><h4>Accountability</h4><p>Stay consistent with support every step of the way.</p></div>
+      <div class="feat-item"><i class="ti ti-trophy"></i><h4>Reach Your Potential</h4><p>Unlock confidence and compete your best.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bundles-dark">
+  <div class="inner">
+    <div class="eyebrow">Multi-Week Programs</div>
+    <h2>Invest in <em>lasting progress.</em></h2>
+    <p class="body-copy">Structured, multi-week coaching built for athletes who want more than a single session &mdash; real habits, measurable growth, and a plan that carries past the last day.</p>
+
+    <div class="bundles-wrap">
+      <div class="bundles-grid">
+
+        <div class="bundle-card">
+          <div class="bundle-name">2-Week <em>Performance Intensive</em></div>
+          <div class="bundle-price">$750</div>
+          <p class="bundle-desc">Build better habits, gain consistency, and create momentum in just two weeks.</p>
+          <ul class="bundle-features">
+            <li>Four coaching sessions</li>
+            <li>Personalized practice plan</li>
+            <li>Mental performance exercises</li>
+            <li>Accountability check-ins</li>
+            <li>One video analysis</li>
+            <li>Email support throughout the program</li>
+            <li>End-of-program progress review</li>
+          </ul>
+          <div class="bundle-leaves"><strong>Athlete Leaves With</strong>Stronger habits, increased confidence, and a clear plan for continued improvement.</div>
+          <a href="index.html#booking" class="btn-bundle">Book This Program</a>
+        </div>
+
+        <div class="bundle-card">
+          <div class="bundle-name">3-Week <em>Performance Program</em></div>
+          <div class="bundle-price">$1,500</div>
+          <p class="bundle-desc">Transform your game with focused coaching and a comprehensive development plan.</p>
+          <ul class="bundle-features">
+            <li>Six coaching sessions</li>
+            <li>Two personalized video analyses</li>
+            <li>Customized practice plan</li>
+            <li>Mental performance coaching</li>
+            <li>Tournament preparation guidance</li>
+            <li>Email support</li>
+            <li>Goal tracking &amp; performance evaluations</li>
+            <li>End-of-program development roadmap</li>
+          </ul>
+          <div class="bundle-leaves"><strong>Athlete Leaves With</strong>Measurable improvement across all areas of your game and the tools to perform at your best.</div>
+          <a href="index.html#booking" class="btn-bundle">Book This Program</a>
+        </div>
+
+        <div class="bundle-card" style="border-color:var(--gold)">
+          <div class="bundle-badge">Most Comprehensive</div>
+          <div class="bundle-name">4-Week <em>Elite Mentorship</em></div>
+          <div class="bundle-price">$2,500</div>
+          <p class="bundle-desc">Comprehensive mentorship for serious athletes committed to reaching their highest potential.</p>
+          <ul class="bundle-features">
+            <li>Eight coaching sessions</li>
+            <li>Monthly video analysis</li>
+            <li>Unlimited email support</li>
+            <li>Personalized development plan</li>
+            <li>Practice planning &amp; goal reviews</li>
+            <li>Mental performance coaching</li>
+            <li>Tournament preparation</li>
+            <li>Access to premium MPL resources</li>
+            <li>Priority scheduling</li>
+          </ul>
+          <div class="bundle-leaves"><strong>Athlete Leaves With</strong>Elite-level guidance, consistency, and a long-term roadmap for sustained success.</div>
+          <a href="index.html#booking" class="btn-bundle">Book This Program</a>
+        </div>
+
+      </div>
+
+      <div class="addons-panel">
+        <h3>Add-On Services</h3>
+        <div class="addon-item">
+          <div class="addon-item-left"><i class="ti ti-video addon-icon"></i><div><div class="addon-name">Video Analysis</div><div class="addon-desc">Detailed breakdown of match or practice footage.</div></div></div>
+          <div class="addon-price">$75</div>
+        </div>
+        <div class="addon-item">
+          <div class="addon-item-left"><i class="ti ti-mail addon-icon"></i><div><div class="addon-name">Recruiting Email Review</div><div class="addon-desc">Get expert feedback on your emails to college coaches.</div></div></div>
+          <div class="addon-price">$50</div>
+        </div>
+        <div class="addon-item">
+          <div class="addon-item-left"><i class="ti ti-school addon-icon"></i><div><div class="addon-name">College Journey Guidance</div><div class="addon-desc">One-on-one guidance for navigating the recruiting process.</div></div></div>
+          <div class="addon-price">$75</div>
+        </div>
+        <div class="addon-item">
+          <div class="addon-item-left"><i class="ti ti-heartbeat addon-icon"></i><div><div class="addon-name">Type 1 Diabetes Session</div><div class="addon-desc">30-minute session with a T1D athlete &amp; coach.</div></div></div>
+          <div class="addon-price">$50</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-strip">
+  <h2>Invest In Your Game. Invest In Your Future.</h2>
+  <p>Whether you need a short-term boost or long-term mentorship, our programs are built to help you grow as a player and as a competitor. Spots are limited &mdash; secure your time now.</p>
+  <a href="index.html#booking" class="btn-white">Book Your Program Today</a>
+</div>
+
+<section>
+  <div class="inner" style="padding:3rem">
+    <div class="trust-row">
+      <div><i class="ti ti-shield-check"></i> Professional Experience</div>
+      <div><i class="ti ti-users"></i> Athlete Focused</div>
+      <div><i class="ti ti-lock"></i> Confidential &amp; Trusted</div>
+      <div><i class="ti ti-trophy"></i> Results Driven</div>
+    </div>
+  </div>
+</section>
 
 <section>
   <div class="inner">
